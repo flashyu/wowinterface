@@ -1,0 +1,15 @@
+ConsolePortUI: disabled
+ConsolePortUI_NPC: disabled
+Bagnon: enabled
+Bagnon_GuildBank: enabled
+Bagnon_Config: enabled
+Bagnon_VoidStorage: enabled
+Guides: enabled
+ClassicCodex: enabled
+ConsolePortLoader: disabled
+ConsolePortHelp: disabled
+ConsolePortBar: disabled
+ConsolePort: disabled
+ConsolePortUI_Loot: disabled
+DHUD: enabled
+ConsolePortUI_Menu: disabled

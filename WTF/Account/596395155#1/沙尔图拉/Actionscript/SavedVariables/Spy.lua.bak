@@ -1,0 +1,35 @@
+
+SpyPerCharDB = {
+	["KOSData"] = {
+	},
+	["IgnoreData"] = {
+	},
+	["PlayerData"] = {
+		["艾伦丶丽安伦"] = {
+			["mapID"] = 1420,
+			["guild"] = "FRY",
+			["zone"] = "提瑞斯法林地",
+			["mapY"] = 0.6,
+			["class"] = "DRUID",
+			["isEnemy"] = true,
+			["mapX"] = 0.58,
+			["isGuess"] = true,
+			["race"] = "暗夜精灵",
+			["subZone"] = "",
+			["name"] = "艾伦丶丽安伦",
+			["time"] = 1568219861,
+		},
+		["Gagali"] = {
+			["mapID"] = 1420,
+			["zone"] = "提瑞斯法林地",
+			["mapY"] = 0.53,
+			["isEnemy"] = true,
+			["mapX"] = 0.61,
+			["isGuess"] = true,
+			["subZone"] = "布瑞尔",
+			["name"] = "Gagali",
+			["time"] = 1568219308,
+		},
+	},
+	["version"] = "1.1",
+}

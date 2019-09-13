@@ -1,0 +1,16 @@
+/Cache
+/Errors
+/Fonts
+/GPUCache
+/Logs
+/Screenshots
+/UTILS
+*.zip
+*.exe
+*.dll
+*.Dll
+*.mfil
+*.info
+*.app
+sikul*
+.DS_*

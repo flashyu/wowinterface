@@ -1,0 +1,40 @@
+
+GuidelimeDataChar = {
+	["mainFrameHeight"] = 400,
+	["showUnavailableSteps"] = true,
+	["guideSkip"] = {
+		["Bustea 升级导航 中文由Qcat汉化 12-21 Bustea的升级导航"] = {
+		},
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 6-12 Freezy3 亡灵新手村"] = {
+		},
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 1-6 Freezy3 亡灵新手村"] = {
+		},
+	},
+	["arrowY"] = -20,
+	["arrowRelative"] = "TOP",
+	["mainFrameX"] = -53.1989440917969,
+	["mainFrameLocked"] = false,
+	["mainFrameWidth"] = 350,
+	["arrowLocked"] = false,
+	["editorFrameY"] = 0,
+	["showCompletedSteps"] = false,
+	["editorFrameX"] = 0,
+	["arrowSize"] = 64,
+	["mainFrameAlpha"] = 0.5,
+	["currentGuide"] = "Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 6-12 Freezy3 亡灵新手村",
+	["editorFrameRelative"] = "CENTER",
+	["arrowX"] = 0,
+	["mainFrameY"] = 35.7059020996094,
+	["mainFrameShowing"] = true,
+	["showArrow"] = true,
+	["guideSize"] = {
+		["Bustea 升级导航 中文由Qcat汉化 12-21 Bustea的升级导航"] = 159,
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 6-12 Freezy3 亡灵新手村"] = 58,
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 1-6 Freezy3 亡灵新手村"] = 36,
+	},
+	["version"] = "1.015",
+	["mainFrameShowScrollBar"] = true,
+	["mainFrameFontSize"] = 14,
+	["mainFrameRelative"] = "RIGHT",
+	["arrowAlpha"] = 0.8,
+}

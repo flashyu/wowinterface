@@ -1,0 +1,6 @@
+SET instantQuestText "1"
+SET flaggedTutorials "v##M##$##&##'"
+SET actionedAdventureJournalEntries "v"
+SET lockActionBars "1"
+SET UnitNameNPC "1"
+SET cameraDistanceMaxZoomFactor "2.6"
