@@ -112,33 +112,35 @@ AutoBarDB = {
 					"AutoBarButtonTrinket1", -- [24]
 					"AutoBarButtonTrinket2", -- [25]
 				},
-				["posX"] = 896.741268377256,
+				["posX"] = 869.900680982857,
 				["DRUID"] = true,
 				["MAGE"] = true,
 				["hide"] = false,
 				["enabled"] = true,
-				["popupDirection"] = "1",
+				["PALADIN"] = true,
 				["columns"] = 32,
-				["fadeOut"] = false,
-				["buttonWidth"] = 36,
+				["popupDirection"] = "1",
 				["frameStrata"] = "LOW",
-				["alpha"] = 1,
 				["PRIEST"] = true,
-				["SHAMAN"] = true,
+				["alpha"] = 1,
+				["buttonWidth"] = 36,
 				["alignButtons"] = "3",
+				["SHAMAN"] = true,
 				["WARLOCK"] = true,
-				["posY"] = 113.481735949819,
+				["posY"] = 116.083814711797,
 				["buttonHeight"] = 36,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["PALADIN"] = true,
+				["fadeOut"] = false,
 			},
 			["AutoBarClassBarExtras"] = {
 				["HUNTER"] = true,
 				["WARRIOR"] = true,
+				["fadeOut"] = false,
 				["ROGUE"] = true,
 				["scale"] = 1,
 				["rows"] = 1,
+				["posY"] = 146.40268353379,
 				["dockShiftY"] = 0,
 				["buttonKeys"] = {
 					"AutoBarButtonSpeed", -- [1]
@@ -151,22 +153,20 @@ AutoBarDB = {
 					"AutoBarButtonReputation", -- [8]
 					"AutoBarButtonRaidTarget", -- [9]
 				},
-				["posX"] = 5.54119462669098,
+				["posX"] = 1331.79396482196,
 				["DRUID"] = true,
 				["MAGE"] = true,
 				["hide"] = false,
 				["enabled"] = true,
 				["popupDirection"] = "1",
 				["columns"] = 9,
-				["fadeOut"] = false,
-				["buttonWidth"] = 36,
 				["alpha"] = 1,
+				["buttonWidth"] = 36,
 				["frameStrata"] = "LOW",
 				["PRIEST"] = true,
 				["alignButtons"] = "3",
 				["SHAMAN"] = true,
 				["WARLOCK"] = true,
-				["posY"] = 151.532668697186,
 				["buttonHeight"] = 36,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -387,13 +387,6 @@ AutoBarDB = {
 				["equipped"] = 13,
 				["defaultButtonIndex"] = 26,
 			},
-			["AutoBarButtonFishing"] = {
-				["barKey"] = "AutoBarClassBarExtras",
-				["buttonClass"] = "AutoBarButtonFishing",
-				["enabled"] = true,
-				["buttonKey"] = "AutoBarButtonFishing",
-				["defaultButtonIndex"] = 4,
-			},
 			["AutoBarButtonReputation"] = {
 				["barKey"] = "AutoBarClassBarExtras",
 				["buttonClass"] = "AutoBarButtonReputation",
@@ -401,6 +394,13 @@ AutoBarDB = {
 				["enabled"] = true,
 				["buttonKey"] = "AutoBarButtonReputation",
 				["defaultButtonIndex"] = "*",
+			},
+			["AutoBarButtonFishing"] = {
+				["barKey"] = "AutoBarClassBarExtras",
+				["buttonClass"] = "AutoBarButtonFishing",
+				["enabled"] = true,
+				["buttonKey"] = "AutoBarButtonFishing",
+				["defaultButtonIndex"] = 4,
 			},
 			["AutoBarButtonBattleStandards"] = {
 				["barKey"] = "AutoBarClassBarExtras",
@@ -451,6 +451,9 @@ AutoBarDB = {
 	["chars"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["buttonDataList"] = {
+				["AutoBarButtonBuff"] = {
+					["arrangeOnUse"] = 1180,
+				},
 				["AutoBarButtonRaidTarget"] = {
 					["arrangeOnUse"] = "macrotext:2",
 				},

@@ -147,7 +147,7 @@ Bagnon_Sets = {
 	},
 	["engineerColor"] = {
 	},
-	["normalColor"] = {
+	["enchantColor"] = {
 	},
 	["refrigeColor"] = {
 	},
@@ -157,7 +157,7 @@ Bagnon_Sets = {
 	},
 	["inscribeColor"] = {
 	},
-	["enchantColor"] = {
+	["leatherColor"] = {
 	},
 	["herbColor"] = {
 	},
@@ -165,6 +165,6 @@ Bagnon_Sets = {
 	},
 	["quiverColor"] = {
 	},
-	["leatherColor"] = {
+	["normalColor"] = {
 	},
 }
