@@ -1,9 +1,8 @@
 
 SpyPerCharDB = {
-	["version"] = "1.1",
-	["IgnoreData"] = {
-	},
 	["KOSData"] = {
+	},
+	["IgnoreData"] = {
 	},
 	["PlayerData"] = {
 		["艾伦丶丽安伦"] = {
@@ -20,16 +19,16 @@ SpyPerCharDB = {
 			["subZone"] = "",
 			["race"] = "暗夜精灵",
 		},
-		["Ct"] = {
-			["mapID"] = 1420,
-			["zone"] = "提瑞斯法林地",
-			["mapY"] = 0.61,
+		["天道在于丶狂"] = {
+			["mapID"] = 1421,
+			["zone"] = "银松森林",
+			["mapY"] = 0.15,
 			["isEnemy"] = true,
-			["mapX"] = 0.76,
+			["mapX"] = 0.54,
 			["isGuess"] = true,
-			["subZone"] = "巴尼尔农场",
-			["name"] = "Ct",
-			["time"] = 1568313641,
+			["subZone"] = "",
+			["name"] = "天道在于丶狂",
+			["time"] = 1568308322,
 		},
 		["醉墨漓烟"] = {
 			["mapID"] = 1420,
@@ -53,6 +52,17 @@ SpyPerCharDB = {
 			["name"] = "Gagali",
 			["subZone"] = "布瑞尔",
 		},
+		["Ct"] = {
+			["mapID"] = 1420,
+			["zone"] = "提瑞斯法林地",
+			["mapY"] = 0.61,
+			["isEnemy"] = true,
+			["mapX"] = 0.76,
+			["isGuess"] = true,
+			["subZone"] = "巴尼尔农场",
+			["name"] = "Ct",
+			["time"] = 1568313641,
+		},
 		["矮仔多情"] = {
 			["mapID"] = 1420,
 			["zone"] = "提瑞斯法林地",
@@ -63,17 +73,6 @@ SpyPerCharDB = {
 			["subZone"] = "十字军前哨",
 			["name"] = "矮仔多情",
 			["time"] = 1568312230,
-		},
-		["天道在于丶狂"] = {
-			["mapID"] = 1421,
-			["zone"] = "银松森林",
-			["mapY"] = 0.15,
-			["isEnemy"] = true,
-			["mapX"] = 0.54,
-			["isGuess"] = true,
-			["subZone"] = "",
-			["name"] = "天道在于丶狂",
-			["time"] = 1568308322,
 		},
 		["最爱杀猪"] = {
 			["mapID"] = 1421,
@@ -98,4 +97,5 @@ SpyPerCharDB = {
 			["time"] = 1568308205,
 		},
 	},
+	["version"] = "1.1",
 }

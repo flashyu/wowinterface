@@ -109,6 +109,7 @@ Bagnon_Sets = {
 			},
 		},
 		["bank"] = {
+			["y"] = 423.307708740234,
 			["rules"] = {
 				"all", -- [1]
 				"all/normal", -- [2]
@@ -130,22 +131,25 @@ Bagnon_Sets = {
 				"trade/recipe", -- [18]
 				"quest", -- [19]
 				"misc", -- [20]
+				"equip/ammo", -- [21]
 			},
+			["point"] = "BOTTOMLEFT",
 			["hiddenBags"] = {
 			},
 			["color"] = {
 			},
-			["hiddenRules"] = {
-			},
 			["borderColor"] = {
 			},
+			["hiddenRules"] = {
+			},
+			["x"] = 95.0000076293945,
 		},
 	},
 	["engineerColor"] = {
 	},
-	["refrigeColor"] = {
+	["leatherColor"] = {
 	},
-	["normalColor"] = {
+	["refrigeColor"] = {
 	},
 	["profiles"] = {
 	},
@@ -153,7 +157,7 @@ Bagnon_Sets = {
 	},
 	["inscribeColor"] = {
 	},
-	["enchantColor"] = {
+	["normalColor"] = {
 	},
 	["tackleColor"] = {
 	},
@@ -161,6 +165,6 @@ Bagnon_Sets = {
 	},
 	["quiverColor"] = {
 	},
-	["leatherColor"] = {
+	["enchantColor"] = {
 	},
 }
