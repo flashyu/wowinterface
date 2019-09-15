@@ -36,7 +36,6 @@ SpyDB = {
 			},
 			["AppendUnitNameCheck"] = true,
 			["AppendUnitKoSCheck"] = true,
-			["MainWindowVis"] = false,
 		},
 	},
 }
