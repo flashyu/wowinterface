@@ -138,20 +138,32 @@ local function BuildABConfig()
 				order = 13,
 				type = "toggle",
 				name = L["Desaturate Cooldowns"],
-				customWidth = 180,
 				set = function(info, value)
 					E.db.actionbar.desaturateOnCooldown = value;
 					AB:ToggleCooldownOptions()
 				end,
 			},
-			spacer2 = {
+			transparent = {
 				order = 14,
-				type = "description",
-				name = " ",
-				width = 'full',
+				type = "toggle",
+				name = L["Transparent"],
+				set = function(info, value)
+					E.db.actionbar.transparent = value
+					E:StaticPopup_Show("PRIVATE_RL")
+				end,
+			},
+			flashAnimation = {
+				order = 15,
+				type = "toggle",
+				name = L["Button Flash"],
+				desc = L["Use a more visible flash animation for Auto Attacks."],
+				set = function(info, value)
+					E.db.actionbar.flashAnimation = value
+					E:StaticPopup_Show("PRIVATE_RL")
+				end,
 			},
 			movementModifier = {
-				order = 15,
+				order = 16,
 				type = 'select',
 				name = L["PICKUP_ACTION_KEY_TEXT"],
 				desc = L["The button you must hold down in order to drag an ability to another action button."],
@@ -164,7 +176,7 @@ local function BuildABConfig()
 				},
 			},
 			globalFadeAlpha = {
-				order = 16,
+				order = 17,
 				type = 'range',
 				name = L["Global Fade Transparency"],
 				desc = L["Transparency level when not in combat, no target exists, full health, not casting, and no focus target exists."],

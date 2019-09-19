@@ -8,8 +8,12 @@
 	--]]
 
 local L = LibStub("AceLocale-3.0"):GetLocale("NeatPlates")
-local LCD = LibStub("LibClassicDurations")
-LCD:Register("NeatPlates") -- tell library it's being used and should start working
+local LibClassicDurations = LibStub("LibClassicDurations", true)
+local LCDUnitAura = function() end
+if LibClassicDurations then
+    LibClassicDurations:Register("NeatPlates")
+    LCDUnitAura = LibClassicDurations.UnitAuraWrapper
+end
 
 
 NeatPlatesWidgets.DebuffWidgetBuild = 2
@@ -40,6 +44,7 @@ local MaxEmphasizedAuras = 1
 local AuraWidth = 16.5
 local AuraScale = 1
 local AuraAlignment = "BOTTOMLEFT"
+local ScaleOptions = {x = 1, y = 1, offset = {x = 0, y = 0}}
 
 local function DummyFunction() end
 
@@ -138,17 +143,22 @@ end
 --	if event == "SPELL_CAST_SUCCESS" then ComboPoints = GetComboPoints("player", "target") end
 
 --	if event == "SPELL_AURA_APPLIED" or event == "SPELL_AURA_REFRESH" then
---		if ComboPoints > GetComboPoints("player", "target") then points = ComboPoints end
+--		--if ComboPoints > GetComboPoints("player", "target") then points = ComboPoints end
 --		spellID = select(7, GetSpellInfo(spellName))
---		local desc = GetSpellDescription(spellID)
+--		--local desc = GetSpellDescription(spellID)
 --		local duration, expiration
 
---		if desc then
---			-- Attempt to match using locale duration pattern, if that fails fallback to english local pattern
---			-- Combo Point pattern variation, seconds pattern variation, minutes pattern variation
---			duration = tonumber(strmatch(desc, "%s%s"..points.."%s.-"..L["CLASSIC_DURATION_SEC_PATTERN"]) or strmatch(desc, L["CLASSIC_DURATION_SEC_PATTERN"]) or strmatch(desc, "%s%s"..points..".-".."([0-9]+%.?[0-9]?)%ssec") or strmatch(desc, "([0-9]+%.?[0-9]?)%ssec") or (strmatch(desc, L["CLASSIC_DURATION_MIN_PATTERN"]) or strmatch(desc, "([0-9]+%.?[0-9]?)%smin") or 0)*60 or 0)
+--		-- Lib workaround until NPC abilities get properly implemented
+--		local spell = LibClassicDurations.spells[spellID]
+--		if not spell then
+--			spell = LibClassicDurations.npc_spells[spellID]
+--			if spell then spell = {duration = spell} end
 --		end
---		if duration and duration > 0 then
+--		if spell then
+--			duration = spell.duration
+--		end
+
+--		if duration and type(duration) ~= "function" and duration > 0 then
 --			expiration = GetTime()+duration
 
 --			AuraExpiration[destGUID] = AuraExpiration[destGUID] or {}
@@ -308,8 +318,7 @@ local function UpdateIconGrid(frame, unitid)
 			local aura = {}
 
 			do
-				--local name, icon, stacks, auraType, duration, expiration, caster, canStealOrPurge, nameplateShowPersonal, spellid = UnitAura(unitid, auraIndex, auraFilter)		-- UnitaAura
-				local name, icon, stacks, auraType, duration, expiration, caster, canStealOrPurge, nameplateShowPersonal, spellid = LCD:UnitAura(unitid, auraIndex, auraFilter)		-- UnitaAura
+				local name, icon, stacks, auraType, duration, expiration, caster, canStealOrPurge, nameplateShowPersonal, spellid = LCDUnitAura(unitid, auraIndex, auraFilter)		-- UnitaAura
 				local casterGUID
 
 				aura.name = name
@@ -324,21 +333,13 @@ local function UpdateIconGrid(frame, unitid)
 				aura.expiration = expiration
 				aura.duration = duration
 
-
-				--local durationNew, expirationTimeNew = LibClassicDurations:GetAuraDurationByUnit(unit, spellId, unitCaster, name)
-		  --  if duration == 0 and durationNew then
-		  --      duration = durationNew
-		  --      expirationTime = expirationTimeNew
-		  --  end
-
-				--if caster then casterGUID = UnitGUID(caster) end
-				--if AuraExpiration[unitGUID] and AuraExpiration[unitGUID][casterGUID] and AuraExpiration[unitGUID][casterGUID][spellid] then
-				--	aura.duration = AuraExpiration[unitGUID][casterGUID][spellid].duration
-				--	aura.expiration = AuraExpiration[unitGUID][casterGUID][spellid].expiration
-				--else
-				--	aura.duration = 0
-				--	aura.expiration = 0
-				--end		
+				--if aura.duration == 0 and aura.expiration == 0 then
+				--	if caster then casterGUID = UnitGUID(caster) end
+				--	if AuraExpiration[unitGUID] and AuraExpiration[unitGUID][casterGUID] and AuraExpiration[unitGUID][casterGUID][spellid] then
+				--		aura.duration = AuraExpiration[unitGUID][casterGUID][spellid].duration
+				--		aura.expiration = AuraExpiration[unitGUID][casterGUID][spellid].expiration
+				--	end
+				--end
 
 				-- Pandemic Base duration
 				if spellid and caster == "player" then
@@ -829,6 +830,7 @@ local function SetAuraOptions(LocalVars)
 	HideAuraDuration = LocalVars.HideAuraDuration
 	AuraScale = LocalVars.AuraScale
 	AuraAlignment = Alignments[LocalVars.WidgetAuraAlignment]
+	ScaleOptions = LocalVars.WidgetAuraScaleOptions
 end
 
 local function SetPandemic(enabled, color)

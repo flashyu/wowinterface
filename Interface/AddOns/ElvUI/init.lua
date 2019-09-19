@@ -46,7 +46,7 @@ Engine[2] = {}
 Engine[3] = AddOn.privateVars.profile
 Engine[4] = AddOn.DF.profile
 Engine[5] = AddOn.DF.global
-_G[AddOnName] = Engine
+_G.ElvUI = Engine
 
 do
 	local locale = GetLocale()
@@ -80,7 +80,6 @@ do
 	AddOn:AddLib('LAB', 'LibActionButton-1.0-ElvUI')
 	AddOn:AddLib('LDB', 'LibDataBroker-1.1')
 	AddOn:AddLib('SimpleSticky', 'LibSimpleSticky-1.0')
-	AddOn:AddLib('SpellRange', 'SpellRange-1.0')
 	AddOn:AddLib('ButtonGlow', 'LibButtonGlow-1.0', true)
 	AddOn:AddLib('ItemSearch', 'LibItemSearch-1.2-ElvUI')
 	AddOn:AddLib('Compress', 'LibCompress')
@@ -89,6 +88,7 @@ do
 	AddOn:AddLib('Translit', 'LibTranslit-1.0')
 	AddOn:AddLib('LCD', 'LibClassicDurations')
 	AddOn:AddLib('LCC', 'LibClassicCasterino')
+	AddOn:AddLib('RC', 'LibRangeCheck-2.0')
 
 	-- added on ElvUI_OptionsUI load: AceGUI, AceConfig, AceConfigDialog, AceConfigRegistry, AceDBOptions
 

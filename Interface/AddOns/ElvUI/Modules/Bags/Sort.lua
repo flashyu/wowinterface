@@ -21,6 +21,7 @@ local GetItemInfo = GetItemInfo
 local GetTime = GetTime
 local InCombatLockdown = InCombatLockdown
 local PickupContainerItem = PickupContainerItem
+local SplitContainerItem = SplitContainerItem
 
 local LE_ITEM_CLASS_ARMOR = LE_ITEM_CLASS_ARMOR
 local LE_ITEM_CLASS_WEAPON = LE_ITEM_CLASS_WEAPON
@@ -419,7 +420,7 @@ function B:CanItemGoInBag(bag, slot, targetBag)
 	end
 	local bagFamily = select(2, GetContainerNumFreeSlots(targetBag))
 	if itemFamily then
-		return (bagFamily == 0) or band(itemFamily, bagFamily) > 0
+		return (bagFamily == 0) or (itemFamily == bagFamily)
 	else
 		return false
 	end

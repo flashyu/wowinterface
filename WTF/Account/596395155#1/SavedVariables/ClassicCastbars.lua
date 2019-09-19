@@ -4,6 +4,7 @@ ClassicCastbarsDB = {
 		["castFontSize"] = 8,
 		["autoPosition"] = true,
 		["iconPositionX"] = -3,
+		["textPositionX"] = 0,
 		["hideIconBorder"] = false,
 		["castStatusBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
 		["borderColor"] = {
@@ -18,7 +19,8 @@ ClassicCastbarsDB = {
 		["castFont"] = "Fonts\\ARKai_T.ttf",
 		["showCastInfoOnly"] = false,
 		["width"] = 106,
-		["showTimer"] = false,
+		["textPositionY"] = 0,
+		["iconPositionY"] = 0,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -31,13 +33,13 @@ ClassicCastbarsDB = {
 			-23.1, -- [3]
 		},
 		["height"] = 11,
-		["iconPositionY"] = 0,
 		["statusColor"] = {
 			1, -- [1]
 			0.7, -- [2]
 			0, -- [3]
 			1, -- [4]
 		},
+		["showTimer"] = false,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -45,11 +47,12 @@ ClassicCastbarsDB = {
 			1, -- [4]
 		},
 	},
-	["version"] = "8",
+	["version"] = "9",
 	["target"] = {
 		["castFontSize"] = 10,
 		["autoPosition"] = true,
 		["iconPositionX"] = -5,
+		["textPositionX"] = 0,
 		["hideIconBorder"] = false,
 		["castStatusBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
 		["borderColor"] = {
@@ -64,7 +67,8 @@ ClassicCastbarsDB = {
 		["castFont"] = "Fonts\\ARKai_T.ttf",
 		["showCastInfoOnly"] = false,
 		["width"] = 150,
-		["showTimer"] = false,
+		["textPositionY"] = 0,
+		["iconPositionY"] = 0,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -77,13 +81,13 @@ ClassicCastbarsDB = {
 			-87, -- [3]
 		},
 		["height"] = 15,
-		["iconPositionY"] = 0,
 		["statusColor"] = {
 			1, -- [1]
 			0.7, -- [2]
 			0, -- [3]
 			1, -- [4]
 		},
+		["showTimer"] = false,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]

@@ -1,7 +1,7 @@
 
 AtlasLootClassicDB = {
 	["global"] = {
-		["__addonrevision"] = 1010004,
+		["__addonrevision"] = 1010012,
 	},
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
@@ -9,13 +9,13 @@ AtlasLootClassicDB = {
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["minimap"] = {
-				["minimapPos"] = 192.367296432435,
+				["minimapPos"] = 186.286822109322,
 			},
 			["GUI"] = {
 				["selected"] = {
 					nil, -- [1]
-					"Ragefire", -- [2]
-					nil, -- [3]
+					"ShadowfangKeep", -- [2]
+					11, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

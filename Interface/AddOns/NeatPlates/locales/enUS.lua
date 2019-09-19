@@ -26,10 +26,12 @@ L["Friendly Nameplates"] = true
 	L["No Automation"] = true
 	L["Show during Combat, Hide when Combat ends"] = true
 	L["Hide when Combat starts, Show when Combat ends"] = true
+	L["Hide in instances, Show outside of instances"] = true
 
 L["General Aura Filters"] = true
 
 L["Other Options"] = true
+L["Emulate Target Nameplate"] = true
 L["Disable Cast Bars"] = true
 L["Force Multi-Lingual Font (Requires /reload)"] = true
 L["Use Frequent Health Updates"] = true
@@ -86,6 +88,8 @@ L["Friendly Health Bars"] = true
 	-- Healthbar Options
 	L["All NPCs"] = true
 	L["Exclude Instances"] = true
+	L["Exclude Minions"] = true
+	L["Exclude Totems"] = true
 	L["Elite Units"] = true
 	L["Players"] = true
 	L["Active/Damaged Units"] = true
@@ -170,9 +174,11 @@ L["Friendly Headline Subtext"] = true
 -- Buffs & Debuffs
 ------------------------------
 L["Buffs & Debuffs"] = true
+L["Aura Widget"] = true
 
 L["Enable Aura Widget"] = true
 	-- Aura Widget Options
+	L["Include All Auras"] = true
 	L["Include My Debuffs"] = true
 	L["Include My Buffs"] = true
 	L["Enable Pandemic Highlighting"] = true
@@ -184,6 +190,7 @@ L["Enable Aura Widget"] = true
 
 L["Space Between buffs & debuffs"] = true
 L["Aura Scale"] = true
+L["Aura Offsets"] = true
 L["Amount of Emphasized Auras"] = true
 L["Additional Auras"] = true
 L["Emphasized Auras"] = true
@@ -298,6 +305,7 @@ L["Text Color"] = true
 	L["Hostile NPC"] = true
 	L["Hostile Player"] = true
 	L["Guild Member"] = true
+	L["Party Member"] = true
 	L["Elite"] = true
 	L["Boss"] = true
 
@@ -330,6 +338,8 @@ L["Threat Mode"] = true
 	L["DPS/Healer"] = true
 
 L["Enable Warning Glow"] = true
+L["Enable Threat while Solo"] = true
+L["Use Safe Color while Solo"] = true
 
 L["Threat Colors"] = true
 	L["Warning"] = true
@@ -423,6 +433,8 @@ L["Show Target Highlight"] = true
 L["Show Elite Icon"] = true
 L["Show Enemy Class Art"] = true
 L["Show Friendly Class Art"] = true
+L["Class Icon"] = true
+L["Class Icon Scale Options"] = true
 L["Show Totem Art"] = true
 L["Show Quest Icon on Units"] = true
 L["Show Personal Resource on Target"] = true
@@ -451,6 +463,7 @@ L["Enable Title Caching"] = true
 
 L["Vertical Position of Artwork: (May cause targeting problems)"] = true
 L["Health Bar Width (%)"] = true
+L["Cast Bar Width (%)"] = true
 
 L["Clear Cache"] = true
 L["Blizzard Nameplate Motion & Visibility..."] = true
@@ -498,9 +511,11 @@ L["Offset Y"] = true
 L["Might resolve some issues with health not updating properly"] = true
 L["Allows some CVars to work(Might require a /reload)"] = true
 L["CVars could not applied due to combat"] = true
+L["This feature is highly experimental, use on your own risk"] = true
 
 -- Profile Panel
 L["Makes the Nameplates non-interactable"] = true
+L["Display all auras that have been applied regardless of source or duration."] = true
 L["Display Debuffs that have been applied by you"] = true
 L["Display Buffs that have been applied by you"] = true
 L["Highlight auras when they have less than 30% of their original duration remaining"] = true
@@ -526,8 +541,6 @@ L["Display Scale Options"] = true
 
 -- Classic Specific
 
-L["CLASSIC_DURATION_SEC_PATTERN"] = "([0-9]+%.?[0-9]?)%ssec" -- Used to determine aura durations ex. in english it's '15 sec' or '15.5 sec' where the numbers are '([0-9]+%.?[0-9]?)', the white space between the word is '%s', and the suffix is 'sec'
-L["CLASSIC_DURATION_MIN_PATTERN"] = "([0-9]+%.?[0-9]?)%smin" -- Used to determine aura durations ex. in english it's '15 min' or '15.5 min' where the numbers are '([0-9]+%.?[0-9]?)', the white space between the word is '%s', and the suffix is 'min'
 L["Clear Spell Database"] = true
 L["Cleared Spell Database of entries."] = true
 L["Color Cast Bars by School"] = true

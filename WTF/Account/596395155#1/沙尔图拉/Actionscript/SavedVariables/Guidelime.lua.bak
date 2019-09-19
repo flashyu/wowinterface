@@ -40,9 +40,9 @@ GuidelimeDataChar = {
 			[5] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_3"] = {
-			[12] = true,
 			[9] = true,
 			[7] = true,
+			[12] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 12-15 贫瘠之地(路线1)"] = {
 		},
@@ -69,11 +69,11 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 6-10 提瑞斯法林地"] = {
 			[2] = true,
 			[8] = true,
-			[34] = true,
-			[29] = true,
 			[14] = false,
-			[9] = true,
+			[29] = true,
 			[19] = true,
+			[9] = true,
+			[34] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 1-6 亡灵出身地"] = {
 			[5] = true,
@@ -86,10 +86,22 @@ GuidelimeDataChar = {
 			[12] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 16-20 贫瘠之地"] = {
-			[7] = true,
 			[8] = true,
+			[7] = true,
+			[11] = true,
 		},
 		["其他指南 1-60 法师AOE指南"] = {
+		},
+		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_5"] = {
+			[6] = true,
+			[13] = true,
+			[8] = true,
+			[3] = true,
+			[9] = true,
+			[5] = true,
+			[10] = true,
+		},
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 15- 贫瘠之地(亡灵)"] = {
 			[6] = true,
@@ -97,17 +109,6 @@ GuidelimeDataChar = {
 			[10] = true,
 			[12] = true,
 			[13] = true,
-		},
-		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = {
-		},
-		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_5"] = {
-			[6] = true,
-			[13] = true,
-			[8] = true,
-			[3] = true,
-			[5] = true,
-			[9] = true,
-			[10] = true,
 		},
 		["Bustea 升级导航 中文由Qcat汉化 12-21 Bustea的升级导航"] = {
 		},
@@ -126,9 +127,8 @@ GuidelimeDataChar = {
 	["currentGuide"] = "Thacen 导航, 中文由Qcat汉化 16-20 贫瘠之地",
 	["showArrow"] = true,
 	["arrowX"] = 0,
-	["mainFrameFontSize"] = 14,
+	["mainFrameY"] = -67.2444229125977,
 	["mainFrameShowing"] = true,
-	["version"] = "1.015",
 	["editorFrameRelative"] = "CENTER",
 	["guideSize"] = {
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林(路线2)"] = 12,
@@ -145,13 +145,14 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_2"] = 16,
 		["Thacen 导航, 中文由Qcat汉化 16-20 贫瘠之地"] = 85,
 		["其他指南 1-60 法师AOE指南"] = 78,
-		["Thacen 导航, 中文由Qcat汉化 15- 贫瘠之地(亡灵)"] = 17,
-		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = 94,
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_5"] = 17,
+		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = 94,
+		["Thacen 导航, 中文由Qcat汉化 15- 贫瘠之地(亡灵)"] = 17,
 		["Bustea 升级导航 中文由Qcat汉化 12-21 Bustea的升级导航"] = 159,
 	},
+	["version"] = "1.015",
 	["mainFrameShowScrollBar"] = true,
-	["mainFrameY"] = -67.2444229125977,
+	["mainFrameFontSize"] = 14,
 	["mainFrameRelative"] = "RIGHT",
 	["arrowAlpha"] = 0.8,
 }

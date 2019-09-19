@@ -11,6 +11,12 @@ local HBD = LibStub("HereBeDragonsQuestie-2.0")
 local HBDPins = LibStub("HereBeDragonsQuestie-Pins-2.0")
 local HBDMigrate = LibStub("HereBeDragonsQuestie-Migrate")
 
+-- set pins parent to QuestieFrameGroup for easier compatibility with other addons 
+-- cant use this because it fucks with everything, but we gotta stick with HereBeDragonsQuestie anyway
+HBDPins.MinimapGroup = CreateFrame("Frame", "QuestieFrameGroup", Minimap)
+--HBDPins:SetMinimapObject(_CreateMinimapParent())
+
+
 _QuestieFramePool.addonPath = "Interface\\Addons\\Questie\\"
 
 --TODO: Add all types (we gotta stop using globals, needs refactoring)
@@ -23,6 +29,7 @@ ICON_TYPE_EVENT =  _QuestieFramePool.addonPath.."Icons\\event.blp"
 ICON_TYPE_OBJECT =  _QuestieFramePool.addonPath.."Icons\\object.blp"
 ICON_TYPE_GLOW = _QuestieFramePool.addonPath.."Icons\\glow.blp"
 ICON_TYPE_BLACK = _QuestieFramePool.addonPath.."Icons\\black.blp"
+ICON_TYPE_REPEATABLE =  _QuestieFramePool.addonPath.."Icons\\repeatable.blp"
 
 StaticPopupDialogs["QUESTIE_CONFIRMHIDE"] = {
     text = "", -- set before showing
@@ -76,6 +83,7 @@ function QuestieFramePool:GetFrame()
         f._hide = nil
     end
     f.fadeLogic = nil
+    f.faded = nil
     f.miniMapIcon = nil
     f._hidden_toggle_hack = nil -- TODO: this will be removed later, see QuestieQuest:UpdateHiddenNotes()
 
@@ -137,6 +145,26 @@ function QuestieFramePool:UpdateGlowConfig(mini, mode)
         for _, icon in pairs(usedFrames) do
             if ((mini and icon.miniMapIcon) or (not mini and not icon.miniMapIcon)) and icon.glow then
                 icon.glow:Hide()
+            end
+        end
+    end
+end
+
+function QuestieFramePool:UpdateColorConfig(mini, enable)
+    if enable then
+        for _, icon in pairs(usedFrames) do
+            if (mini and icon.miniMapIcon) or not mini then
+                local colors = {1, 1, 1}
+                if icon.data.IconColor ~= nil then
+                    colors = icon.data.IconColor
+                end
+                icon.texture:SetVertexColor(colors[1], colors[2], colors[3], 1)
+            end
+        end
+    else
+        for _, icon in pairs(usedFrames) do
+            if (mini and icon.miniMapIcon) or not mini then
+                icon.texture:SetVertexColor(1, 1, 1, 1)
             end
         end
     end
@@ -241,6 +269,9 @@ function _QuestieFramePool:QuestieCreateFrame()
                 TomTom:RemoveWaypoint(Questie.db.char._tom_waypoint)
             end
             Questie.db.char._tom_waypoint = TomTom:AddWaypoint(self.data.UiMapID, self.x/100, self.y/100,  {title = self.data.Name, crazy = true})
+        elseif self.miniMapIcon then
+            local _, _, _, x, y = self:GetPoint()
+            Minimap:PingLocation(x, y)
         end
     end);
     f.glowUpdate = function(self)--f:HookScript("OnUpdate", function(self)
@@ -292,18 +323,20 @@ function _QuestieFramePool:QuestieCreateFrame()
             self._hide = nil
         end
         self.shouldBeShowing = nil
-        HBDPins:RemoveMinimapIcon(Questie, self);
-        HBDPins:RemoveWorldMapIcon(Questie, self);
+        self.faded = nil
+        HBDPins:RemoveMinimapIcon(Questie, self)
+        HBDPins:RemoveWorldMapIcon(Questie, self)
         if(self.texture) then
-            self.texture:SetVertexColor(1, 1, 1, 1);
+            self.texture:SetVertexColor(1, 1, 1, 1)
         end
         self.miniMapIcon = nil;
         self:SetScript("OnUpdate", nil)
-        self:Hide();
+        self:Hide()
+        self.glow:Hide()
         --self.glow:Hide()
-        self.data = nil; -- Just to be safe
-        self.loaded = nil;
-        self.x = nil;self.y = nil;self.AreaID = nil;
+        self.data = nil -- Just to be safe
+        self.loaded = nil
+        self.x = nil;self.y = nil;self.AreaID = nil
         if usedFrames[self:GetName()] then
             usedFrames[self:GetName()] = nil
             unusedframes[self:GetName()] = self--table.insert(unusedframes, self)
@@ -311,6 +344,62 @@ function _QuestieFramePool:QuestieCreateFrame()
     end
     f.data = {}
     f:Hide()
+    
+    -- functions for fake hide/unhide
+    function f:FadeOut()
+        if not self.faded then
+            self.faded = true
+            if self.texture then
+                local r,g,b = self.texture:GetVertexColor()
+                self.texture:SetVertexColor(r,g,b, Questie.db.global.iconFadeLevel)
+            end
+            if self.glowTexture then
+                local r,g,b = self.glowTexture:GetVertexColor()
+                self.glowTexture:SetVertexColor(r,g,b, Questie.db.global.iconFadeLevel)
+            end
+        end
+    end
+    
+    function f:FadeIn()
+        if self.faded then
+            self.faded = nil
+            if self.texture then
+                local r,g,b = self.texture:GetVertexColor()
+                self.texture:SetVertexColor(r,g,b, 1)
+            end
+            if self.glowTexture then
+                local r,g,b = self.glowTexture:GetVertexColor()
+                self.glowTexture:SetVertexColor(r,g,b, 1)
+            end
+        end
+    end
+    function f:FakeHide()
+        if not self.hidden then
+            self.shouldBeShowing = self:IsShown();
+            self._show = self.Show;
+            self.Show = function()
+                self.shouldBeShowing = true;
+            end
+            self:Hide();
+            self._hide = self.Hide;
+            self.Hide = function()
+                self.shouldBeShowing = false;
+            end
+            self.hidden = true
+        end
+    end
+    function f:FakeUnhide()
+        if self.hidden then
+            self.hidden = false
+            self.Show = self._show;
+            self.Hide = self._hide;
+            self._show = nil
+            self._hide = nil
+            if self.shouldBeShowing then
+                self:Show();
+            end
+        end
+    end
     --f.glow:Hide()
     table.insert(allframes, f)
     return f
@@ -376,9 +465,9 @@ function _QuestieFramePool:Questie_Tooltip(self)
     end
     if self.miniMapIcon then
         if _QuestieFramePool:isMinimapInside() then
-            maxDistCluster = 1 / (1+Minimap:GetZoom())
+            maxDistCluster = 0.3 / (1+Minimap:GetZoom())
         else
-            maxDistCluster = 2 / (1+Minimap:GetZoom())
+            maxDistCluster = 0.5 / (1+Minimap:GetZoom())
         end
     end
     local already = {}; -- per quest
@@ -440,6 +529,8 @@ function _QuestieFramePool:Questie_Tooltip(self)
                             end
                             --table.insert(questOrder[key], text);--questOrder[key][icon.data.ObjectiveData.Description] = tostring(icon.data.ObjectiveData.Collected) .. "/" .. tostring(icon.data.ObjectiveData.Needed) .. " " .. icon.data.ObjectiveData.Description--table.insert(questOrder[key], tostring(icon.data.ObjectiveData.Collected) .. "/" .. tostring(icon.data.ObjectiveData.Needed) .. " " .. icon.data.ObjectiveData.Description);
                         end
+                    elseif icon.data.CustomTooltipData then
+                        questOrder[icon.data.CustomTooltipData.Title] = icon.data.CustomTooltipData.Body
                     end
                 end
             end
@@ -459,8 +550,13 @@ function _QuestieFramePool:Questie_Tooltip(self)
                     self:AddDoubleLine("   " .. v2.title, v2.type);
                 end
                 if v2.subData and shift then
-                    for _,line in pairs(v2.subData) do
-                        self:AddLine("      |cFFDDDDDD" .. line);
+                    local dataType = type(v2.subData)
+                    if dataType == "table" then
+                        for _,line in pairs(v2.subData) do
+                            self:AddLine("      |cFFDDDDDD" .. line);
+                        end
+                    elseif dataType == "string" then
+                        self:AddLine("      |cFFDDDDDD" .. v2.subData);
                     end
                 end
             end
@@ -475,10 +571,13 @@ function _QuestieFramePool:Questie_Tooltip(self)
             end
             if shift then
                 for k2, v2 in pairs(v) do
-                    if type(v2) == "table" then
+                    local dataType = type(v2)
+                    if dataType == "table" then
                         for k3 in pairs(v2) do
                             self:AddLine("   |cFFDDDDDD" .. k3);
                         end
+                    elseif dataType == "string" then
+                        self:AddLine("   |cFFDDDDDD" .. v2);
                     end
                     self:AddLine("      |cFF33FF33" .. k2);
                 end

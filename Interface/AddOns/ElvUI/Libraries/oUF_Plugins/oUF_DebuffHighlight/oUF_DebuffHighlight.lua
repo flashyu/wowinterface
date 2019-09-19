@@ -1,21 +1,17 @@
 local _, ns = ...
-local oUF = _G.oUF or ns.oUF
+local oUF = ns.oUF or oUF
 if not oUF then return end
 
 local playerClass = select(2,UnitClass("player"))
 local CanDispel = {
-	PRIEST = { Magic = true, Disease = true },
-	SHAMAN = { Magic = false, Curse = true },
-	PALADIN = { Magic = false, Poison = true, Disease = true },
-	DRUID = { Magic = false, Curse = true, Poison = true, Disease = false },
-	MONK = { Magic = false, Poison = true, Disease = true },
-	MAGE = { Curse = true },
+	PRIEST = {Magic = true, Disease = true},
+	SHAMAN = {Poison = true, Disease = true},
+	PALADIN = {Magic = true, Poison = true, Disease = true},
+	MAGE = {Curse = true},
+	DRUID = {Curse = true, Poison = true}
 }
 
 local dispellist = CanDispel[playerClass] or {}
-local origColors = {}
-local origBorderColors = {}
-local origPostUpdateAura = {}
 
 local function GetDebuffType(unit, filter, filterTable)
 	if not unit or not UnitCanAssist("player", unit) then return nil end
@@ -23,7 +19,6 @@ local function GetDebuffType(unit, filter, filterTable)
 	while true do
 		local name, texture, _, debufftype, _,_,_,_,_, spellID = UnitAura(unit, i, "HARMFUL")
 		if not texture then break end
-
 		local filterSpell = filterTable[spellID] or filterTable[name]
 
 		if(filterTable and filterSpell and filterSpell.enable) then
@@ -35,49 +30,11 @@ local function GetDebuffType(unit, filter, filterTable)
 	end
 end
 
-local function CheckTalentTree(tree)
-	local activeGroup = GetActiveSpecGroup()
-
-	if activeGroup and GetSpecialization(false, false, activeGroup) then
-		return tree == GetSpecialization(false, false, activeGroup)
-	end
-end
-
-local function CheckSpec(self, event, levels)
-	if event == "CHARACTER_POINTS_CHANGED" and levels > 0 then return end
-
-	--Check for certain talents to see if we can dispel magic or not
-	if playerClass == "PALADIN" then
-		if CheckTalentTree(1) then
-			dispellist.Magic = true
-		else
-			dispellist.Magic = false
-		end
-	elseif playerClass == "SHAMAN" then
-		if CheckTalentTree(3) then
-			dispellist.Magic = true
-		else
-			dispellist.Magic = false
-		end
-	elseif playerClass == "DRUID" then
-		if CheckTalentTree(4) then
-			dispellist.Magic = true
-		else
-			dispellist.Magic = false
-		end
-	elseif playerClass == "MONK" then
-		if CheckTalentTree(2) then
-			dispellist.Magic = true
-		else
-			dispellist.Magic = false
-		end
-	end
-end
-
 local function Update(object, event, unit)
 	if unit ~= object.unit then return; end
 
 	local debuffType, texture, wasFiltered, style, color = GetDebuffType(unit, object.DebuffHighlightFilter, object.DebuffHighlightFilterTable)
+
 	if(wasFiltered) then
 		if style == "GLOW" and object.DBHGlow then
 			object.DBHGlow:Show()
@@ -131,20 +88,9 @@ end
 local function Disable(object)
 	object:UnregisterEvent("UNIT_AURA", Update)
 
-	if object.DBHGlow then
-		object.DBHGlow:Hide()
-	end
-
-	if object.DebuffHighlight then
-		local color = origColors[object]
-		if color then
-			object.DebuffHighlight:SetVertexColor(color.r, color.g, color.b, color.a)
-		end
-	end
+	if object.DBHGlow then object.DBHGlow:Hide() end
+	if object.DebuffHighlightBackdrop then object.DebuffHighlightBackdrop:Hide() end
+	if object.DebuffHighlight then object.DebuffHighlight:Hide() end
 end
-
-local f = CreateFrame("Frame")
-f:RegisterEvent("CHARACTER_POINTS_CHANGED")
-f:SetScript("OnEvent", CheckSpec)
 
 oUF:AddElement('DebuffHighlight', Update, Enable, Disable)

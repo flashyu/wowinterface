@@ -42,7 +42,7 @@ function UF:Construct_PartyFrames()
 		self.Health = UF:Construct_HealthBar(self, true, true, 'RIGHT')
 		self.Power = UF:Construct_PowerBar(self, true, true, 'LEFT')
 		self.Power.frequentUpdates = false;
-		--self.PowerPrediction = UF:Construct_PowerPrediction(self)
+		self.PowerPrediction = UF:Construct_PowerPrediction(self)
 
 		self.Portrait3D = UF:Construct_Portrait(self, 'model')
 		self.Portrait2D = UF:Construct_Portrait(self, 'texture')
@@ -52,14 +52,14 @@ function UF:Construct_PartyFrames()
 		self.Debuffs = UF:Construct_Debuffs(self)
 		self.AuraWatch = UF:Construct_AuraWatch(self)
 		self.RaidDebuffs = UF:Construct_RaidDebuffs(self)
-		--self.DebuffHighlight = UF:Construct_DebuffHighlight(self)
+		self.DebuffHighlight = UF:Construct_DebuffHighlight(self)
 		self.RaidRoleFramesAnchor = UF:Construct_RaidRoleFrames(self)
 		self.MouseGlow = UF:Construct_MouseGlow(self)
 		self.PhaseIndicator = UF:Construct_PhaseIcon(self)
 		self.TargetGlow = UF:Construct_TargetGlow(self)
 		self.RaidTargetIndicator = UF:Construct_RaidIcon(self)
 		self.ReadyCheckIndicator = UF:Construct_ReadyCheckIcon(self)
-		--self.HealthPrediction = UF:Construct_HealComm(self)
+		self.HealthPrediction = UF:Construct_HealComm(self)
 		self.customTexts = {}
 
 		self.Sparkle = CreateFrame("Frame", nil, self)
@@ -68,7 +68,7 @@ function UF:Construct_PartyFrames()
 		self.unitframeType = "party"
 	end
 
-	--self.Fader = UF:Construct_Fader()
+	self.Fader = UF:Construct_Fader()
 	self.Cutaway = UF:Construct_Cutaway(self)
 
 	return self
@@ -220,6 +220,9 @@ function UF:Update_PartyFrames(frame, db)
 
 		UF:Configure_Power(frame)
 
+		-- Power Predicition
+		UF:Configure_PowerPrediction(frame)
+
 		UF:Configure_Portrait(frame)
 
 		UF:EnableDisable_Auras(frame)
@@ -230,9 +233,9 @@ function UF:Update_PartyFrames(frame, db)
 
 		UF:Configure_RaidIcon(frame)
 
-	--	UF:Configure_DebuffHighlight(frame)
+		UF:Configure_DebuffHighlight(frame)
 
-	--	UF:Configure_HealComm(frame)
+		UF:Configure_HealComm(frame)
 
 		UF:Configure_RaidRoleIcons(frame)
 
@@ -244,7 +247,7 @@ function UF:Update_PartyFrames(frame, db)
 	end
 
 	--Fader
-	--UF:Configure_Fader(frame)
+	UF:Configure_Fader(frame)
 
 	--Cutaway
 	UF:Configure_Cutaway(frame)

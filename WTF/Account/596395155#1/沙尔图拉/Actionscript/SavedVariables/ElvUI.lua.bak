@@ -1,72 +1,28 @@
 
 ElvCharacterDB = {
 	["ChatEditHistory"] = {
-		"/p 走", -- [1]
-		"/p 快", -- [2]
-		"/p 等国来", -- [3]
-		"/p 我都在这边打好几个了", -- [4]
-		"/p 来我这", -- [5]
-		"/p 我没了", -- [6]
-		"/p 龙太难找了", -- [7]
-		"/p 交任务下线了", -- [8]
-		"/p 晚安", -- [9]
-		"/p 我准备下了", -- [10]
-		"/p 几个？", -- [11]
-		"/p 差2", -- [12]
-		"/p 差1", -- [13]
-		"/p ok", -- [14]
-		"/p 谢谢", -- [15]
-		"/p ok了", -- [16]
-		"/p 下了 晚安", -- [17]
-		"/s 你完成了就走吧", -- [18]
-		"/s 没事", -- [19]
-		"/p 下了 上班 慢慢玩", -- [20]
+		"/p 等国来", -- [1]
+		"/p 我都在这边打好几个了", -- [2]
+		"/p 来我这", -- [3]
+		"/p 我没了", -- [4]
+		"/p 龙太难找了", -- [5]
+		"/p 交任务下线了", -- [6]
+		"/p 晚安", -- [7]
+		"/p 我准备下了", -- [8]
+		"/p 几个？", -- [9]
+		"/p 差2", -- [10]
+		"/p 差1", -- [11]
+		"/p ok", -- [12]
+		"/p 谢谢", -- [13]
+		"/p ok了", -- [14]
+		"/p 下了 晚安", -- [15]
+		"/s 你完成了就走吧", -- [16]
+		"/s 没事", -- [17]
+		"/p 下了 上班 慢慢玩", -- [18]
+		"/s ok", -- [19]
+		"/s xx", -- [20]
 	},
 	["ChatHistoryLog"] = {
-		{
-			"大脚任务进度提示: 暴食者镣铐：5/6", -- [1]
-			"黄鼠狼偷花-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"黄鼠狼偷花", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			9634, -- [11]
-			"Player-4511-00AF73F8", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6ea黄鼠狼偷花|r",
-			[51] = 1568387159,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [1]
-		{
-			"我陪打", -- [1]
-			"Actionscript-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Actionscript", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			9639, -- [11]
-			"Player-4511-00A04559", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaActionscript|r",
-			[51] = 1568387188,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [2]
 		{
 			"我还没接到", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -88,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568387194,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [3]
+		}, -- [1]
 		{
 			"人这么多 我就走了 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -110,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568387328,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [4]
+		}, -- [2]
 		{
 			"。", -- [1]
 			"|Km3|k", -- [2]
@@ -132,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6d威廉萌|r",
 			[51] = 1568387952,
 			[50] = "CHAT_MSG_BN_WHISPER",
-		}, -- [5]
+		}, -- [3]
 		{
 			"。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -154,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388144,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [6]
+		}, -- [4]
 		{
 			"你还差几个", -- [1]
 			"一片苍白-沙尔图拉", -- [2]
@@ -176,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea一片苍白|r",
 			[51] = 1568388186,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [7]
+		}, -- [5]
 		{
 			"5个 不用管我 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -198,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388197,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [8]
+		}, -- [6]
 		{
 			"你完事走就行 我慢慢打", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -220,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388204,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [9]
+		}, -- [7]
 		{
 			"你完事了么？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -242,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388276,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [10]
+		}, -- [8]
 		{
 			"嗯", -- [1]
 			"一片苍白-沙尔图拉", -- [2]
@@ -264,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea一片苍白|r",
 			[51] = 1568388281,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [11]
+		}, -- [9]
 		{
 			"你这个等级做这个？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -286,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388282,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [12]
+		}, -- [10]
 		{
 			"在清任务", -- [1]
 			"一片苍白-沙尔图拉", -- [2]
@@ -308,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea一片苍白|r",
 			[51] = 1568388296,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [13]
+		}, -- [11]
 		{
 			"强迫症 哈哈", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -330,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388323,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [14]
+		}, -- [12]
 		{
 			"感谢 起了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -352,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388425,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [15]
+		}, -- [13]
 		{
 			"谢谢", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -374,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388427,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [16]
+		}, -- [14]
 		{
 			"不客气886", -- [1]
 			"一片苍白-沙尔图拉", -- [2]
@@ -396,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea一片苍白|r",
 			[51] = 1568388435,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [17]
+		}, -- [15]
 		{
 			"88", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -418,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388439,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [18]
+		}, -- [16]
 		{
 			"1", -- [1]
 			"|Km4|k", -- [2]
@@ -441,7 +397,7 @@ ElvCharacterDB = {
 			[51] = 1568388522,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "GhostDragon",
-		}, -- [19]
+		}, -- [17]
 		{
 			"<大脚组队提示>欢迎新的小队成员  [法师] Actionscript", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -463,7 +419,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568388545,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [20]
+		}, -- [18]
 		{
 			"掉了", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -485,7 +441,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568388560,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [21]
+		}, -- [19]
 		{
 			"排队  刚排上来", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -507,7 +463,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568388572,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [22]
+		}, -- [20]
 		{
 			"哦", -- [1]
 			"|Km4|k", -- [2]
@@ -530,7 +486,7 @@ ElvCharacterDB = {
 			[51] = 1568388578,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "GhostDragon",
-		}, -- [23]
+		}, -- [21]
 		{
 			"zuo sha ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -552,7 +508,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388801,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [24]
+		}, -- [22]
 		{
 			"破旧渡口", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -574,7 +530,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568388861,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [25]
+		}, -- [23]
 		{
 			"en  ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -596,7 +552,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388903,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [26]
+		}, -- [24]
 		{
 			"我刚做玩", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -618,7 +574,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568388908,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [27]
+		}, -- [25]
 		{
 			"大脚任务进度提示: 魔魂镣铐：1/3", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -640,7 +596,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568389553,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [28]
+		}, -- [26]
 		{
 			"大脚任务进度提示: 暴食者镣铐：1/6", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -662,7 +618,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568389613,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [29]
+		}, -- [27]
 		{
 			"大脚任务进度提示: 暴食者镣铐：2/6", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -684,7 +640,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568389822,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [30]
+		}, -- [28]
 		{
 			"大脚任务进度提示: 暴食者镣铐：3/6", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -706,7 +662,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568389862,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [31]
+		}, -- [29]
 		{
 			"大脚任务进度提示: 暴食者镣铐：4/6", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -728,7 +684,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568389937,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [32]
+		}, -- [30]
 		{
 			"免费附魔护腕胸甲 需要的交易我 ", -- [1]
 			"美汁汁-沙尔图拉", -- [2]
@@ -750,7 +706,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed美汁汁|r",
 			[51] = 1568390091,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [33]
+		}, -- [31]
 		{
 			"大脚任务进度提示: 暴食者镣铐：5/6", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -772,7 +728,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390134,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [34]
+		}, -- [32]
 		{
 			"免费附魔护腕胸甲 需要的交易我 ", -- [1]
 			"美汁汁-沙尔图拉", -- [2]
@@ -794,7 +750,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed美汁汁|r",
 			[51] = 1568390137,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [35]
+		}, -- [33]
 		{
 			"有大佬有不要的亚麻布 毛料可以送给我", -- [1]
 			"美汁汁-沙尔图拉", -- [2]
@@ -816,7 +772,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed美汁汁|r",
 			[51] = 1568390137,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [36]
+		}, -- [34]
 		{
 			"大脚任务进度提示: 暴食者镣铐：6/6(完成)", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -838,7 +794,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390235,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [37]
+		}, -- [35]
 		{
 			"大脚任务进度提示: 魔魂镣铐：2/3", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -860,7 +816,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390419,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [38]
+		}, -- [36]
 		{
 			"大脚任务进度提示: 魔魂镣铐：3/3(完成)", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -882,7 +838,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390490,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [39]
+		}, -- [37]
 		{
 			"阿鲁高的愚行 (任务完成)", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -904,7 +860,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390491,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [40]
+		}, -- [38]
 		{
 			"不行了 困了。。。下了先", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -926,7 +882,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390670,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [41]
+		}, -- [39]
 		{
 			"嗯 晚安", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -948,7 +904,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568390681,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [42]
+		}, -- [40]
 		{
 			"白天再干。。", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -970,7 +926,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390683,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [43]
+		}, -- [41]
 		{
 			"安~", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -992,7 +948,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568390688,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [44]
+		}, -- [42]
 		{
 			"你咋跑贫瘠了", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -1014,7 +970,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568556803,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [45]
+		}, -- [43]
 		{
 			"跟着任务导航来的呀", -- [1]
 			"|Km5|k", -- [2]
@@ -1037,7 +993,7 @@ ElvCharacterDB = {
 			[51] = 1568556924,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "GhostDragon",
-		}, -- [46]
+		}, -- [44]
 		{
 			"看来咋俩任务导航不一样呢", -- [1]
 			"|Km5|k", -- [2]
@@ -1060,7 +1016,7 @@ ElvCharacterDB = {
 			[51] = 1568556935,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "GhostDragon",
-		}, -- [47]
+		}, -- [45]
 		{
 			"不一样", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -1082,7 +1038,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568556955,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [48]
+		}, -- [46]
 		{
 			"组我个  调插件", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -1104,7 +1060,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568557654,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [49]
+		}, -- [47]
 		{
 			"<大脚组队提示>欢迎新的小队成员  [法师] Actionscript", -- [1]
 			"Postscript-沙尔图拉", -- [2]
@@ -1126,7 +1082,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPostscript|r",
 			[51] = 1568557663,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [50]
+		}, -- [48]
 		{
 			"哥们 能来点水吗", -- [1]
 			"招行范行长-沙尔图拉", -- [2]
@@ -1148,7 +1104,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd招行范行长|r",
 			[51] = 1568562871,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [51]
+		}, -- [49]
 		{
 			"兄弟 能来点水吗", -- [1]
 			"招行范行长-沙尔图拉", -- [2]
@@ -1170,7 +1126,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd招行范行长|r",
 			[51] = 1568562884,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [52]
+		}, -- [50]
 		{
 			"。。。刚看到", -- [1]
 			"招行范行长-沙尔图拉", -- [2]
@@ -1192,7 +1148,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd招行范行长|r",
 			[51] = 1568563016,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [53]
+		}, -- [51]
 		{
 			"还在吗？", -- [1]
 			"招行范行长-沙尔图拉", -- [2]
@@ -1214,7 +1170,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd招行范行长|r",
 			[51] = 1568563020,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [54]
+		}, -- [52]
 		{
 			"zu ge", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1236,7 +1192,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568563292,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [55]
+		}, -- [53]
 		{
 			"qiu zu ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1258,7 +1214,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568563294,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [56]
+		}, -- [54]
 		{
 			"求组", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1280,7 +1236,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568563296,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [57]
+		}, -- [55]
 		{
 			"求组", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1302,7 +1258,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568563301,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [58]
+		}, -- [56]
 		{
 			"求组", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1324,7 +1280,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568563317,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [59]
+		}, -- [57]
 		{
 			"<大脚组队提示>欢迎新的小队成员  [法师] Actionscript", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1346,7 +1302,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563323,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [60]
+		}, -- [58]
 		{
 			"我去找物资", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1368,7 +1324,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563384,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [61]
+		}, -- [59]
 		{
 			"被那个人那列", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1390,7 +1346,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563393,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [62]
+		}, -- [60]
 		{
 			"唉", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1412,7 +1368,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563416,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [63]
+		}, -- [61]
 		{
 			"大脚任务进度提示: 已消灭钢鬃地卜师：8/8(完成)", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1434,7 +1390,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563472,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [64]
+		}, -- [62]
 		{
 			"大脚任务进度提示: 十字路口的补给箱：1/1(完成)", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1456,7 +1412,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563487,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [65]
+		}, -- [63]
 		{
 			"十字路口的补给品 (任务完成)", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1478,7 +1434,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563488,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [66]
+		}, -- [64]
 		{
 			"我去找找BOSS", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1500,7 +1456,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563600,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [67]
+		}, -- [65]
 		{
 			"有人啥任务 有倒计时", -- [1]
 			"千年以后-沙尔图拉", -- [2]
@@ -1522,7 +1478,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea千年以后|r",
 			[51] = 1568563630,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [68]
+		}, -- [66]
 		{
 			"就是那个颗粒你个啥的任务", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1544,7 +1500,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563710,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [69]
+		}, -- [67]
 		{
 			"一个怪", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1566,7 +1522,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563716,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [70]
+		}, -- [68]
 		{
 			"大脚任务进度提示: 克里尼格·糟鼻的獠牙：1/1(完成)", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1588,7 +1544,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563926,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [71]
+		}, -- [69]
 		{
 			"去拿", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1610,7 +1566,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563938,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [72]
+		}, -- [70]
 		{
 			"野猪人的头目 (任务完成)", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1632,7 +1588,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563941,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [73]
+		}, -- [71]
 		{
 			"走起", -- [1]
 			"魔獣大头哥-沙尔图拉", -- [2]
@@ -1654,7 +1610,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468魔獣大头哥|r",
 			[51] = 1568563954,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [74]
+		}, -- [72]
 		{
 			"组我", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1676,7 +1632,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564037,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [75]
+		}, -- [73]
 		{
 			"来救一下我", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1698,7 +1654,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564144,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [76]
+		}, -- [74]
 		{
 			"我是FS", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1720,7 +1676,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564164,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [77]
+		}, -- [75]
 		{
 			"打BOSS- -", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1742,7 +1698,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564274,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [78]
+		}, -- [76]
 		{
 			"帮个忙", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1764,7 +1720,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564279,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [79]
+		}, -- [77]
 		{
 			"|cffffff00贫瘠之地遭到攻击！|r", -- [1]
 			"", -- [2]
@@ -1786,7 +1742,7 @@ ElvCharacterDB = {
 			[52] = "",
 			[51] = 1568564301,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [80]
+		}, -- [78]
 		{
 			"走", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1808,7 +1764,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564311,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [81]
+		}, -- [79]
 		{
 			"打吧0 0", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1830,7 +1786,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564329,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [82]
+		}, -- [80]
 		{
 			"就那个BOSS", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1852,7 +1808,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564417,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [83]
+		}, -- [81]
 		{
 			"快", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1874,7 +1830,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564424,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [84]
+		}, -- [82]
 		{
 			"等国来", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1896,7 +1852,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564440,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [85]
+		}, -- [83]
 		{
 			"地卜师", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1918,7 +1874,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564488,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [86]
+		}, -- [84]
 		{
 			"4个", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1940,7 +1896,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564491,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [87]
+		}, -- [85]
 		{
 			"2", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -1962,7 +1918,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564570,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [88]
+		}, -- [86]
 		{
 			"我都在这边打好几个了 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1984,7 +1940,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564609,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [89]
+		}, -- [87]
 		{
 			"1", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2006,7 +1962,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564611,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [90]
+		}, -- [88]
 		{
 			"1个", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2028,7 +1984,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564617,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [91]
+		}, -- [89]
 		{
 			"来我这", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2050,7 +2006,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564627,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [92]
+		}, -- [90]
 		{
 			"在呢", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2072,7 +2028,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564631,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [93]
+		}, -- [91]
 		{
 			"OK ", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2094,7 +2050,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564657,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [94]
+		}, -- [92]
 		{
 			"还有龙- -", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2116,7 +2072,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564693,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [95]
+		}, -- [93]
 		{
 			"我没了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2138,7 +2094,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564707,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [96]
+		}, -- [94]
 		{
 			"龙太难找了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2160,7 +2116,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564714,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [97]
+		}, -- [95]
 		{
 			"交任务下线了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2182,7 +2138,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564739,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [98]
+		}, -- [96]
 		{
 			"晚安", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2204,7 +2160,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568564742,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [99]
+		}, -- [97]
 		{
 			"..", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2226,7 +2182,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568564990,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [100]
+		}, -- [98]
 		{
 			"这里", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2248,7 +2204,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568565005,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [101]
+		}, -- [99]
 		{
 			"..", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2270,7 +2226,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568565025,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [102]
+		}, -- [100]
 		{
 			"龙", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2292,7 +2248,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568565029,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [103]
+		}, -- [101]
 		{
 			"我准备下了 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2314,7 +2270,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568565041,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [104]
+		}, -- [102]
 		{
 			"最后几个", -- [1]
 			"斗鱼丶卢老板-沙尔图拉", -- [2]
@@ -2336,7 +2292,7 @@ ElvCharacterDB = {
 			[52] = "|cff8787ed斗鱼丶卢老板|r",
 			[51] = 1568565046,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [105]
+		}, -- [103]
 		{
 			"几个？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2358,7 +2314,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568565059,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [106]
+		}, -- [104]
 		{
 			"你们呢？", -- [1]
 			"我是一个矮子-沙尔图拉", -- [2]
@@ -2380,7 +2336,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea我是一个矮子|r",
 			[51] = 1568566416,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [107]
+		}, -- [105]
 		{
 			"差2", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2402,7 +2358,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566418,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [108]
+		}, -- [106]
 		{
 			"没有", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2424,7 +2380,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566427,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [109]
+		}, -- [107]
 		{
 			"直接开自由拾取吧", -- [1]
 			"我是一个矮子-沙尔图拉", -- [2]
@@ -2446,7 +2402,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea我是一个矮子|r",
 			[51] = 1568566428,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [110]
+		}, -- [108]
 		{
 			"大脚任务进度提示: 鹰身人首领之戒：6/6(完成)", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2468,7 +2424,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566537,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [111]
+		}, -- [109]
 		{
 			"鹰身人首领 (任务完成)", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2490,7 +2446,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566538,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [112]
+		}, -- [110]
 		{
 			"差1", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2512,7 +2468,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566543,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [113]
+		}, -- [111]
 		{
 			"ok", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2534,7 +2490,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566543,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [114]
+		}, -- [112]
 		{
 			"有20级就好了，直接暴风雪", -- [1]
 			"我是一个矮子-沙尔图拉", -- [2]
@@ -2556,7 +2512,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea我是一个矮子|r",
 			[51] = 1568566593,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [115]
+		}, -- [113]
 		{
 			"ok", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2578,7 +2534,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566611,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [116]
+		}, -- [114]
 		{
 			"谢谢", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2600,7 +2556,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566616,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [117]
+		}, -- [115]
 		{
 			"ok了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2622,7 +2578,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566622,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [118]
+		}, -- [116]
 		{
 			"go", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2644,7 +2600,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566631,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [119]
+		}, -- [117]
 		{
 			"下了 晚安", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2666,7 +2622,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568566637,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [120]
+		}, -- [118]
 		{
 			"溜了溜了~", -- [1]
 			"我是一个矮子-沙尔图拉", -- [2]
@@ -2688,7 +2644,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6ea我是一个矮子|r",
 			[51] = 1568566645,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [121]
+		}, -- [119]
 		{
 			"好", -- [1]
 			"阿玛西掰十帝-沙尔图拉", -- [2]
@@ -2710,7 +2666,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372阿玛西掰十帝|r",
 			[51] = 1568566646,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [122]
+		}, -- [120]
 		{
 			"大脚任务进度提示: 塞瑞娜·血羽的头颅：1/1(完成)", -- [1]
 			"丸丸偶最爱-沙尔图拉", -- [2]
@@ -2732,7 +2688,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd丸丸偶最爱|r",
 			[51] = 1568683620,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [123]
+		}, -- [121]
 		{
 			"塞瑞娜·血羽 (任务完成)", -- [1]
 			"丸丸偶最爱-沙尔图拉", -- [2]
@@ -2754,7 +2710,7 @@ ElvCharacterDB = {
 			[52] = "|cff0270dd丸丸偶最爱|r",
 			[51] = 1568683621,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [124]
+		}, -- [122]
 		{
 			"你完成了就走吧 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2776,7 +2732,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568683726,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [125]
+		}, -- [123]
 		{
 			"没事", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2798,7 +2754,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568683728,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [126]
+		}, -- [124]
 		{
 			"下了 上班 慢慢玩", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2820,6 +2776,50 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1568684107,
 			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [125]
+		{
+			"ok", -- [1]
+			"Actionscript-沙尔图拉", -- [2]
+			"兽人语", -- [3]
+			"", -- [4]
+			"Actionscript", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			168, -- [11]
+			"Player-4511-00A04559", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaActionscript|r",
+			[51] = 1568855058,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [126]
+		{
+			"xx", -- [1]
+			"Actionscript-沙尔图拉", -- [2]
+			"兽人语", -- [3]
+			"", -- [4]
+			"Actionscript", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			171, -- [11]
+			"Player-4511-00A04559", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaActionscript|r",
+			[51] = 1568855075,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [127]
 	},
 }

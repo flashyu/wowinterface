@@ -243,7 +243,7 @@ function AB:CreateBar(id)
 	local point, anchor, attachTo, x, y = strsplit(',', self.barDefaults['bar'..id].position)
 	bar:Point(point, anchor, attachTo, x, y)
 	bar.id = id
-	bar:CreateBackdrop()
+	bar:CreateBackdrop(self.db.transparent and 'Transparent')
 	bar:SetFrameStrata("LOW")
 
 	--Use this method instead of :SetAllPoints, as the size of the mover would otherwise be incorrect
@@ -481,11 +481,6 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 	if normal2 then normal2:SetTexture(); normal2:Hide(); normal2:SetAlpha(0) end
 	if border and not button.useMasque then border:Kill() end
 
-	if flash then
-		flash:SetInside()
-		flash:SetTexCoord(unpack(E.TexCoords))
-	end
-
 	if count then
 		count:ClearAllPoints()
 		count:Point(countPosition, countXOffset, countYOffset)
@@ -501,8 +496,21 @@ function AB:StyleButton(button, noBackdrop, useMasque, ignoreNormal)
 	end
 
 	if not button.noBackdrop and not button.backdrop and not button.useMasque then
-		button:CreateBackdrop(nil, true)
+		button:CreateBackdrop(self.db.transparent and 'Transparent', true)
 		button.backdrop:SetAllPoints()
+	end
+
+	if self.db.flashAnimation then
+		if flash then
+			flash:SetColorTexture(1.0, 0.2, 0.2, 0.45)
+			flash:ClearAllPoints()
+			flash:SetOutside(icon, 2, 2)
+			flash:SetDrawLayer("BACKGROUND", -1)
+		end
+	else
+		if flash then
+			flash:SetTexture()
+		end
 	end
 
 	if icon then
@@ -624,34 +632,27 @@ function AB:DisableBlizzard()
 
 	-- Hide MultiBar Buttons, but keep the bars alive
 	for i=1,12 do
-		_G["ActionButton" .. i]:Hide()
 		_G["ActionButton" .. i]:UnregisterAllEvents()
 		_G["ActionButton" .. i]:SetAttribute("statehidden", true)
 
-		_G["MultiBarBottomLeftButton" .. i]:Hide()
 		_G["MultiBarBottomLeftButton" .. i]:UnregisterAllEvents()
 		_G["MultiBarBottomLeftButton" .. i]:SetAttribute("statehidden", true)
 
-		_G["MultiBarBottomRightButton" .. i]:Hide()
 		_G["MultiBarBottomRightButton" .. i]:UnregisterAllEvents()
 		_G["MultiBarBottomRightButton" .. i]:SetAttribute("statehidden", true)
 
-		_G["MultiBarRightButton" .. i]:Hide()
 		_G["MultiBarRightButton" .. i]:UnregisterAllEvents()
 		_G["MultiBarRightButton" .. i]:SetAttribute("statehidden", true)
 
-		_G["MultiBarLeftButton" .. i]:Hide()
 		_G["MultiBarLeftButton" .. i]:UnregisterAllEvents()
 		_G["MultiBarLeftButton" .. i]:SetAttribute("statehidden", true)
 
 		if _G["VehicleMenuBarActionButton" .. i] then
-			_G["VehicleMenuBarActionButton" .. i]:Hide()
 			_G["VehicleMenuBarActionButton" .. i]:UnregisterAllEvents()
 			_G["VehicleMenuBarActionButton" .. i]:SetAttribute("statehidden", true)
 		end
 
 		if _G['OverrideActionBarButton'..i] then
-			_G['OverrideActionBarButton'..i]:Hide()
 			_G['OverrideActionBarButton'..i]:UnregisterAllEvents()
 			_G['OverrideActionBarButton'..i]:SetAttribute("statehidden", true)
 		end
@@ -664,11 +665,9 @@ function AB:DisableBlizzard()
 	_G.MainMenuBar:SetFrameLevel(0)
 
 	_G.MainMenuBarArtFrame:UnregisterAllEvents()
-	_G.MainMenuBarArtFrame:Hide()
 	_G.MainMenuBarArtFrame:SetParent(UIHider)
 
 	_G.StanceBarFrame:UnregisterAllEvents()
-	_G.StanceBarFrame:Hide()
 	_G.StanceBarFrame:SetParent(UIHider)
 
 	--Enable/disable functionality to automatically put spells on the actionbar.

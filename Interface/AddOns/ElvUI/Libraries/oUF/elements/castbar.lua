@@ -193,7 +193,7 @@ local function CastUpdate(self, event, unit, castID, spellID)
 	if(self.unit ~= unit) then return end
 
 	local element = self.Castbar
-	if(not element:IsShown() or spellID ~= nil and element.spellID ~= spellID) then
+	if(not element:IsShown() or element.castID ~= castID or element.spellID ~= spellID) then
 		return
 	end
 
@@ -246,7 +246,7 @@ local function CastStop(self, event, unit, castID, spellID)
 	if(self.unit ~= unit) then return end
 
 	local element = self.Castbar
-	if(not element:IsShown() or spellID ~= nil and element.spellID ~= spellID) then
+	if(not element:IsShown() or element.castID ~= castID or element.spellID ~= spellID) then
 		return
 	end
 
@@ -268,7 +268,7 @@ local function CastFail(self, event, unit, castID, spellID)
 	if(self.unit ~= unit) then return end
 
 	local element = self.Castbar
-	if(not element:IsShown() or spellID ~= nil and element.spellID ~= spellID) then
+	if(not element:IsShown() or element.castID ~= castID or element.spellID ~= spellID) then
 		return
 	end
 
@@ -367,7 +367,7 @@ local function Enable(self, unit)
 		element.__owner = self
 		element.ForceUpdate = ForceUpdate
 
-		if unit ~= 'player' and LibClassicCasterino then
+		if LibClassicCasterino then
 			local CastbarEventHandler = function(event, ...)
 				return EventFunctions[event](self, event, ...)
 			end
