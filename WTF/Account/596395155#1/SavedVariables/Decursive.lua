@@ -1,11 +1,7 @@
 
 DecursiveDB = {
-	["global"] = {
-		["NonRelease"] = "2.7.6.4-beta_3",
-		["LastVersionAnnounce"] = 1569261553,
-		["NewerVersionName"] = "2.7.6.4",
-		["NewerVersionAlert"] = 1569253166,
-		["NewerVersionDetected"] = 1568358925,
+	["profileKeys"] = {
+		["Actionscript - 沙尔图拉"] = "Default",
 	},
 	["class"] = {
 		["MAGE"] = {
@@ -20,8 +16,12 @@ DecursiveDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["Actionscript - 沙尔图拉"] = "Default",
+	["global"] = {
+		["NonRelease"] = "2.7.6.4-beta_3",
+		["LastVersionAnnounce"] = 1569285651,
+		["NewerVersionName"] = "2.7.6.4",
+		["NewerVersionAlert"] = 1569253166,
+		["NewerVersionDetected"] = 1568358925,
 	},
 	["profiles"] = {
 		["Default"] = {
