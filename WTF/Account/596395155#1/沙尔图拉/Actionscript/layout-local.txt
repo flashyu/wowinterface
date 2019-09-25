@@ -1,4 +1,11 @@
 Version: 1
+Frame: Spy_MainWindow
+FrameLevel: 10
+Anchor: TOPLEFT
+X: 4
+Y: -176
+W: 170
+H: 35
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER

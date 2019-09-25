@@ -6,6 +6,8 @@ CHANNELS
 综合 0 1 0
 交易 0 2 0
 本地防务 0 3 0
+寻求组队 1 4 0
+世界防务 1 5 0
 END
 
 ZONECHANNELS 0
@@ -159,6 +161,8 @@ COMBAT_HONOR_GAIN
 END
 
 CHANNELS
+寻求组队
+世界防务
 END
 
 ZONECHANNELS 2097155
