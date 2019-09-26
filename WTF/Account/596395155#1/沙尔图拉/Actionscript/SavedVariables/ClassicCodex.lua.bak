@@ -9,8 +9,8 @@ CodexConfig = {
 	["showFestival"] = true,
 	["autoTurnin"] = false,
 	["currentQuestGivers"] = true,
-	["trackingMethod"] = 1,
 	["spawnMarkerSize"] = 10,
+	["trackingMethod"] = 1,
 	["questMarkerSize"] = 14,
 }
 CodexHiddenQuests = {

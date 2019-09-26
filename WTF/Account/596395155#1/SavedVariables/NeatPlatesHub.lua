@@ -77,13 +77,13 @@ NeatPlatesHubSettings = {
 		["StyleEnemyMode"] = 1,
 		["HighlightTargetMode"] = 1,
 		["HeadlineFriendlySubtext"] = "RoleGuildLevel",
-		["ThreatSoloEnable"] = false,
-		["WidgetBuffPurgeable"] = false,
-		["WidgetThreatIndicator"] = true,
 		["OpacityFilterLookup"] = {
 			["Fanged Pit Viper"] = true,
 			["Liberated Karabor Prisoner"] = true,
 		},
+		["WidgetBuffPurgeable"] = false,
+		["WidgetThreatIndicator"] = true,
+		["HeadlineEnemyColor"] = 4,
 		["TextColorNeutral"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.988233149051666,
@@ -230,14 +230,14 @@ NeatPlatesHubSettings = {
 		["EmphasizedAuraPriority"] = {
 		},
 		["FrameBarWidth"] = 1,
-		["TextUseBlizzardFont"] = false,
-		["HighHealthThreshold"] = 0.7,
 		["ColorAttackingOtherTank"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.058823399245739,
 			["g"] = 0.666665196418762,
 			["b"] = 0.784312009811401,
 		},
+		["HighHealthThreshold"] = 0.7,
+		["UnitSpotlightScaleEnable"] = true,
 		["ThreatWarningMode"] = "Auto",
 		["ColorPartyAggroText"] = false,
 		["ColorSchoolShadow"] = {
@@ -262,13 +262,13 @@ NeatPlatesHubSettings = {
 		["StyleEnemyBarsOnNPC"] = true,
 		["EnemyAlphaSpotlightMode"] = "ByThreat",
 		["OpacitySpotlightRaidMarked"] = false,
-		["ScaleIgnoreInactive"] = false,
 		["ColorFriendlyPlayer"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0,
 			["g"] = 0,
 			["b"] = 0.999997794628143,
 		},
+		["ScaleIgnoreInactive"] = false,
 		["EmphasizedUnique"] = true,
 		["FocusAsTarget"] = false,
 		["ColorRangeClose"] = {
@@ -307,8 +307,8 @@ NeatPlatesHubSettings = {
 		},
 		["OpacityFilterList"] = "Fanged Pit Viper\nLiberated Karabor Prisoner",
 		["WidgetAbsorbUnits"] = 1,
-		["AdvancedEnableUnitCache"] = true,
 		["WidgetRangeIndicator"] = false,
+		["AdvancedEnableUnitCache"] = true,
 		["ColorThreatSafe"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.058823399245739,
@@ -354,7 +354,7 @@ NeatPlatesHubSettings = {
 				["x"] = 0,
 			},
 		},
-		["StyleEnemyBarsNoMinions"] = false,
+		["TextNameColorMode"] = 1,
 		["EmphasizedAuraLookup"] = {
 		},
 		["ColorHostilePlayer"] = {
@@ -383,7 +383,7 @@ NeatPlatesHubSettings = {
 		["WidgetDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339\nMy Regrowth\nMy Rejuvenation\nNot Facepalm Bolt",
 		["ClassEnemyIcon"] = false,
 		["StatusTextCenter"] = 5,
-		["OpacityFiltered"] = 0,
+		["OpacitySpotlight"] = 0.85,
 		["OpacityTarget"] = 1,
 		["HighlightFocusMode"] = 1,
 		["ColorSchoolArcane"] = {
@@ -405,7 +405,7 @@ NeatPlatesHubSettings = {
 			["g"] = 0.501959681510925,
 			["b"] = 0,
 		},
-		["OpacitySpotlight"] = 0.85,
+		["OpacityFiltered"] = 0,
 		["TextShowServerIndicator"] = true,
 		["TextColorHostilePlayer"] = {
 			["a"] = 0.999997794628143,
@@ -423,7 +423,7 @@ NeatPlatesHubSettings = {
 		["WidgetComboPointsStyle"] = 2,
 		["TextHealthTextMode"] = 1,
 		["StyleEnemyBarsOnPlayers"] = true,
-		["TextNameColorMode"] = 1,
+		["StyleEnemyBarsNoMinions"] = false,
 		["ColorMouseover"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.999997794628143,
@@ -478,7 +478,7 @@ NeatPlatesHubSettings = {
 			["b"] = 0,
 		},
 		["CustomFocusColor"] = false,
-		["UnitSpotlightScaleEnable"] = true,
+		["TextUseBlizzardFont"] = false,
 		["StyleEnemyBarsOnActive"] = true,
 		["ColorNormalSpellCast"] = {
 			["a"] = 0.999997794628143,
@@ -546,7 +546,7 @@ NeatPlatesHubSettings = {
 				["x"] = 0,
 			},
 		},
-		["HeadlineEnemyColor"] = 4,
+		["ThreatSoloEnable"] = false,
 	},
 	["profiles"] = {
 		["默认"] = "FFFFFFFF",
