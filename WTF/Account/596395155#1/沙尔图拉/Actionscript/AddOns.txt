@@ -52,7 +52,7 @@ SortBags: enabled
 Spy: enabled
 TipTop: enabled
 TomTom: enabled
-zTip: enabled
+zTip: disabled
 SpeedyAutoLoot: enabled
 ElvUI: enabled
 ElvUI_OptionsUI: enabled
