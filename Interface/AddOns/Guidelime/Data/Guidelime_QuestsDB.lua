@@ -10304,6 +10304,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Deaths in the Family";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 11;
 	   ["source"] = {
@@ -10317,6 +10318,7 @@ addon.questsDB = {
 	[355] = {
 	   ["objective"] = "Speak with Magistrate Sevren in Brill.";
 	   ["zone"] = "Tirisfal Glades";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["repgain"] = {
 	      [68] = 10;
@@ -10359,6 +10361,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Rear Guard Patrol";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 11;
 	   ["source"] = {
@@ -10370,6 +10373,7 @@ addon.questsDB = {
 	   ["req"] = 6;
 	};
 	[357] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring the Lich's Spellbook to Bethor Iceshard in the Undercity.";
 	   ["zone"] = "Undercity";
 	   ["sort"] = "Undercity";
@@ -10535,6 +10539,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Haunted Mills";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -10622,6 +10627,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Fields of Grief";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -10633,6 +10639,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[366] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Return Gunther's Spellbook to him, on the island of Gunther's Retreat.";
 	   ["zone"] = "Tirisfal Glades";
 	   ["sort"] = "Tirisfal Glades";
@@ -10687,6 +10694,7 @@ addon.questsDB = {
 	   ["races"] = {
 	      [1] = "Undead";
 	   };
+	   ["faction"] = "Horde";
 	   ["name"] = "A New Plague";
 	   ["level"] = 6;
 	   ["source"] = {
@@ -10698,63 +10706,49 @@ addon.questsDB = {
 	   ["req"] = 6;
 	};
 	[368] = {
-	   ["series"] = 2;
-	   ["name"] = "A New Plague";
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 1518;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["next"] = 369;
 	   ["objective"] = "Apothecary Johaan of the town of Brill needs 5 Vile Fin Scales from Murlocs in Tirisfal Glades.";
 	   ["zone"] = "Tirisfal Glades";
 	   ["gather"] = {
 	      [1] = 2859;
 	   };
-	   ["repgain"] = {
-	      [68] = 250;
-	   };
-	   ["reward"] = {
-	      [1] = 3434;
-	   };
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 1518;
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["races"] = {
-	      [1] = "Undead";
-	   };
-	   ["prev"] = 367;
-	   ["prequests"] = {
-	      [1] = 367;
-	   };
-	   ["level"] = 9;
 	   ["sort"] = "Tirisfal Glades";
-	   ["req"] = 6;
-	};
-	[369] = {
-	   ["series"] = 3;
-	   ["name"] = "A New Plague";
+	   ["level"] = 9;
+	   ["repgain"] = {
+	      [68] = 250;
+	   };
+	   ["faction"] = "Horde";
+	   ["reward"] = {
+	      [1] = 3434;
+	   };
+	   ["next"] = 369;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 1518;
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["next"] = 492;
+	   ["name"] = "A New Plague";
+	   ["prev"] = 367;
+	   ["prequests"] = {
+	      [1] = 367;
+	   };
+	   ["series"] = 2;
+	   ["races"] = {
+	      [1] = "Undead";
+	   };
+	   ["req"] = 6;
+	};
+	[369] = {
 	   ["objective"] = "Apothecary Johaan in the town of Brill wants you to bring him 4 samples of venom from a Vicious Night Web Spider.";
 	   ["zone"] = "Tirisfal Glades";
 	   ["gather"] = {
 	      [1] = 2872;
-	   };
-	   ["repgain"] = {
-	      [68] = 25;
-	   };
-	   ["reward"] = {
-	      [1] = 3442;
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -10762,18 +10756,35 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["races"] = {
-	      [1] = "Undead";
+	   ["sort"] = "Tirisfal Glades";
+	   ["level"] = 11;
+	   ["repgain"] = {
+	      [68] = 25;
 	   };
+	   ["faction"] = "Horde";
+	   ["reward"] = {
+	      [1] = 3442;
+	   };
+	   ["next"] = 492;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 1518;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["name"] = "A New Plague";
 	   ["prev"] = 368;
 	   ["prequests"] = {
 	      [1] = 368;
 	   };
-	   ["level"] = 11;
-	   ["sort"] = "Tirisfal Glades";
+	   ["series"] = 3;
+	   ["races"] = {
+	      [1] = "Undead";
+	   };
 	   ["req"] = 6;
 	};
 	[370] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Executor Zygand in Brill wants you to kill Captain Perrine, 3 Scarlet Zealots and 3 Scarlet Missionaries.";
 	   ["zone"] = "Tirisfal Glades";
@@ -10808,6 +10819,7 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[371] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 3;
 	   ["objective"] = "Executor Zygand in Brill has commissioned you to slay Captain Vachon and 5 Scarlet Friars.";
 	   ["zone"] = "Tirisfal Glades";
@@ -10841,6 +10853,16 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[372] = {
+	   ["faction"] = "Horde";
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 1515;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["repgain"] = {
+	      [68] = 250;
+	   };
 	   ["series"] = 4;
 	   ["sort"] = "Tirisfal Glades";
 	   ["objective"] = "Executor Zygand in the town of Brill wants you to assassinate Captain Melrache and his two bodyguards.";
@@ -10848,13 +10870,6 @@ addon.questsDB = {
 	   ["kill"] = {
 	      [1] = 1665;
 	      [2] = 1660;
-	   };
-	   ["repgain"] = {
-	      [68] = 250;
-	   };
-	   ["reward"] = {
-	      [1] = 3445;
-	      [2] = 3071;
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -10868,11 +10883,9 @@ addon.questsDB = {
 	      [1] = 371;
 	   };
 	   ["level"] = 12;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 1515;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 3445;
+	      [2] = 3071;
 	   };
 	   ["req"] = 5;
 	};
@@ -10925,6 +10938,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Proof of Demise";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -11657,6 +11671,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Wanted: Maggot Eye";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -11758,6 +11773,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Guarded Thunderbrew Barrel";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Dun Morogh";
 	   ["level"] = 1;
 	   ["source"] = {
@@ -11784,6 +11800,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Putrid Task";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 6;
 	   ["source"] = {
@@ -11795,6 +11812,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[405] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Present Sevren's Orders to Bethor Iceshard in the Undercity.";
 	   ["zone"] = "Tirisfal Glades";
 	   ["sort"] = "Tirisfal Glades";
@@ -11826,6 +11844,7 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[407] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Take the Laced Pumpkin to the Captured Scarlet Zealot who is being held in the cellar of the Gallow's End Tavern.";
 	   ["zone"] = "Tirisfal Glades";
@@ -11857,22 +11876,25 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[408] = {
-	   ["sort"] = "Tirisfal Glades";
-	   ["objective"] = "Kill 8 Wailing Ancestors and 8 Rotting Ancestors.$B$BKill Captain Dargol, and bring his skull to Magistrate Sevren in Brill.";
-	   ["zone"] = "Tirisfal Glades";
-	   ["kill"] = {
-	      [1] = 1534;
-	      [2] = 1530;
-	   };
-	   ["gather"] = {
-	      [1] = 3082;
+	   ["faction"] = "Horde";
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 1499;
+	         ["type"] = "npc";
+	      };
 	   };
 	   ["repgain"] = {
 	      [68] = 250;
 	   };
-	   ["reward"] = {
-	      [1] = 3446;
-	      [2] = 3440;
+	   ["sort"] = "Tirisfal Glades";
+	   ["objective"] = "Kill 8 Wailing Ancestors and 8 Rotting Ancestors.$B$BKill Captain Dargol, and bring his skull to Magistrate Sevren in Brill.";
+	   ["gather"] = {
+	      [1] = 3082;
+	   };
+	   ["zone"] = "Tirisfal Glades";
+	   ["kill"] = {
+	      [1] = 1534;
+	      [2] = 1530;
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -11886,15 +11908,14 @@ addon.questsDB = {
 	      [1] = 355;
 	   };
 	   ["level"] = 13;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 1499;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 3446;
+	      [2] = 3440;
 	   };
 	   ["req"] = 7;
 	};
 	[409] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Obtain a Candle of Beckoning.$B$BSummon Lillith Nefara and kill her.$B$BReturn to Gunther on his island.";
 	   ["zone"] = "Tirisfal Glades";
 	   ["sort"] = "Tirisfal Glades";
@@ -11938,6 +11959,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Dormant Shade";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -11949,6 +11971,7 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[411] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["objective"] = "Bring the Nether Gem to Bethor Iceshard in the Undercity.";
 	   ["zone"] = "Tirisfal Glades";
@@ -12426,6 +12449,7 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[426] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["objective"] = "Gather 5 Notched Ribs and 3 Blackened Skulls, then return to Deathguard Dillinger in Brill.";
 	   ["zone"] = "Tirisfal Glades";
@@ -12461,6 +12485,7 @@ addon.questsDB = {
 	   ["req"] = 6;
 	};
 	[427] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 1;
 	   ["objective"] = "Executor Zygand of Brill wants you to kill 10 Scarlet Warriors.";
 	   ["zone"] = "Tirisfal Glades";
@@ -12594,6 +12619,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Candles of Beckoning";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -13012,6 +13038,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Delivery to Silverpine Forest";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -13570,9 +13597,7 @@ addon.questsDB = {
 	   };
 	   ["name"] = "War Banners";
 	   ["prev"] = 473;
-	   ["prequests"] = {
-	      [1] = 473;
-	   };
+	   ["prequests"] = {};
 	   ["level"] = 28;
 	   ["source"] = {
 	      [1] = {
@@ -13810,6 +13835,7 @@ addon.questsDB = {
 	[473] = {
 	   ["objective"] = "Speak with Captain Stoutfist.";
 	   ["zone"] = "Wetlands";
+	   ["sort"] = "Wetlands";
 	   ["next"] = 464;
 	   ["repgain"] = {
 	      [47] = 25;
@@ -13821,7 +13847,9 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Report to Captain Stoutfist";
-	   ["sort"] = "Wetlands";
+	   ["prequests"] = {
+	      [1] = 455;
+	   };
 	   ["level"] = 28;
 	   ["source"] = {
 	      [1] = {
@@ -13895,6 +13923,7 @@ addon.questsDB = {
 	[476] = {
 	   ["objective"] = "Return to Athridas Bearmantle in Dolanaar.";
 	   ["zone"] = "Teldrassil";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["repgain"] = {
 	      [69] = 100;
@@ -14100,6 +14129,7 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[483] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Retrieve the Relics of Wakening and bring them to Athridas Bearmantle in Dolanaar.";
 	   ["zone"] = "Teldrassil";
@@ -14196,6 +14226,7 @@ addon.questsDB = {
 	   ["req"] = 43;
 	};
 	[486] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Kill Ursal the Mauler and return to Athridas Bearmantle in Dolanaar.";
 	   ["zone"] = "Teldrassil";
@@ -14245,6 +14276,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Road to Darnassus";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -14273,6 +14305,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Zenn's Bidding";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 5;
 	   ["source"] = {
@@ -14284,6 +14317,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[489] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Collect 3 Fel Cones and give them to Zenn Foulhoof outside of Dolanaar.";
 	   ["zone"] = "Teldrassil";
 	   ["sort"] = "Teldrassil";
@@ -15760,6 +15794,7 @@ addon.questsDB = {
 	[538] = {
 	   ["objective"] = "Speak with Loremaster Dibbs in Southshore.";
 	   ["zone"] = "Stormwind City";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Stormwind City";
 	   ["repgain"] = {
 	      [72] = 25;
@@ -15820,6 +15855,7 @@ addon.questsDB = {
 	   ["req"] = 19;
 	};
 	[540] = {
+	   ["faction"] = "Alliance";
 	   ["type"] = "Elite";
 	   ["objective"] = "Bring 5 Recovered Tomes and the Worn Leather Book containing The Arm of Gri'lek to Loremaster Dibbs in Southshore.";
 	   ["zone"] = "Stormwind City";
@@ -15890,6 +15926,7 @@ addon.questsDB = {
 	   ["req"] = 19;
 	};
 	[542] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Bring the Tomes of Alterac to Milton Sheaf in Stormwind.";
 	   ["zone"] = "Stormwind City";
 	   ["sort"] = "Stormwind City";
@@ -19047,6 +19084,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Ripple Recovery";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 48;
 	   ["source"] = {
@@ -19058,6 +19096,7 @@ addon.questsDB = {
 	   ["req"] = 42;
 	};
 	[650] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Talk to Gilveradin Sunchaser; his camp is located in the Hinterlands.";
 	   ["zone"] = "Orgrimmar";
 	   ["series"] = 2;
@@ -21508,6 +21547,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Trouble In Darkshore?";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Darnassus";
 	   ["level"] = 14;
 	   ["source"] = {
@@ -21885,6 +21925,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Dangers of the Windfury";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -21948,6 +21989,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Sharing the Land";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 6;
 	   ["source"] = {
@@ -21978,6 +22020,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Dwarven Digging";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -22037,6 +22080,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Poison Water";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 5;
 	   ["source"] = {
@@ -22062,6 +22106,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Ravaged Caravan";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -22108,6 +22153,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[751] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Return the Venture Co. Documents to Morin Cloudstalker near Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
@@ -22198,6 +22244,7 @@ addon.questsDB = {
 	[754] = {
 	   ["objective"] = "Use the Winterhoof Cleansing Totem at the Winterhoof Water Well, then return to Mull Thunderhorn.";
 	   ["zone"] = "Mulgore";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["repgain"] = {
 	      [81] = 250;
@@ -22251,6 +22298,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[756] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring 6 Stalker Claws and 6 Cougar Claws to Mull Thunderhorn.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22320,6 +22368,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[758] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Use the Thunderhorn Cleansing Totem at the Thunderhorn Water Well, then return to Mull.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22350,6 +22399,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[759] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring 8 Prairie Alpha Teeth to Mull Thunderhorn in Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22380,6 +22430,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[760] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Use the Wildmane Cleansing Totem at the Wildmane Water Well, then return to Mull Thunderhorn.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22426,6 +22477,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Swoop Hunting";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 6;
 	   ["source"] = {
@@ -22503,6 +22555,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[764] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Kill 14 Venture Co. Workers and 6 Venture Co. Supervisors for Morin Cloudstalker at Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22534,6 +22587,7 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[765] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["objective"] = "Kill Supervisor Fizsprocket and return his clipboard to Morin Cloudstalker at Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
@@ -22590,6 +22644,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Mazzranache";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -22601,6 +22656,7 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[767] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Speak with Zarlman Two-Moons in Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
 	   ["series"] = 1;
@@ -22712,6 +22768,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Demon Scarred Cloak";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -22723,6 +22780,7 @@ addon.questsDB = {
 	   ["req"] = 6;
 	};
 	[771] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Collect 2 Well Stones and 2 Ambercorn and bring them back to Zarlman Two-Moons in Bloodhoof Village.";
 	   ["zone"] = "Mulgore";
@@ -22756,6 +22814,7 @@ addon.questsDB = {
 	   ["req"] = 3;
 	};
 	[772] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Consume the Water of the Seers in front of the tribal fire in Bloodhoof Village and follow the vision once it appears.";
 	   ["zone"] = "Mulgore";
 	   ["sort"] = "Mulgore";
@@ -22790,6 +22849,7 @@ addon.questsDB = {
 	[773] = {
 	   ["objective"] = "Travel to Red Rocks east of Thunder Bluff and speak with the Ancestral Spirit.";
 	   ["zone"] = "Mulgore";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["repgain"] = {
 	      [81] = 250;
@@ -22818,6 +22878,7 @@ addon.questsDB = {
 	[775] = {
 	   ["objective"] = "Speak with Cairne Bloodhoof in Thunder Bluff.";
 	   ["zone"] = "Mulgore";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["repgain"] = {
 	      [81] = 75;
@@ -23104,6 +23165,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Vanquish the Betrayers";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -23142,6 +23204,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Thwarting Kolkar Aggression";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -23288,6 +23351,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Carry Your Weight";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -23500,6 +23564,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[806] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["objective"] = "Bring Fizzle's Claw to Orgnil Soulscar in Razor Hill.";
 	   ["zone"] = "Durotar";
@@ -23553,6 +23618,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Minshina's Skull";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 9;
 	   ["source"] = {
@@ -23564,6 +23630,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[809] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Speak with Ak'Zeloth in the Barrens.";
 	   ["zone"] = "Durotar";
 	   ["sort"] = "Durotar";
@@ -23616,6 +23683,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Need for a Cure";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 9;
 	   ["source"] = {
@@ -23642,6 +23710,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Finding the Antidote";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 9;
 	   ["source"] = {
@@ -23673,6 +23742,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Break a Few Eggs";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -23703,6 +23773,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Lost But Not Forgotten";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 11;
 	   ["source"] = {
@@ -23730,6 +23801,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Practical Prey";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -23761,6 +23833,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Solvent Spirit";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -23889,6 +23962,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Report to Orgnil";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -23936,6 +24010,7 @@ addon.questsDB = {
 	   ["req"] = 23;
 	};
 	[825] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["objective"] = "Gar'Thok of Razor Hill wants you to retrieve 3 Gnomish Tools from the wreckage off the coast.";
 	   ["zone"] = "Durotar";
@@ -23996,6 +24071,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Zalazane";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -24007,6 +24083,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[827] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["objective"] = "Gather Searing Collars from the cultists in Skull Rock.$B$BBring them to Margoz at his camp.";
 	   ["zone"] = "Durotar";
@@ -24045,6 +24122,7 @@ addon.questsDB = {
 	[828] = {
 	   ["objective"] = "Speak with Margoz.";
 	   ["zone"] = "Durotar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["repgain"] = {
 	      [530] = 10;
@@ -24072,6 +24150,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[829] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring an Example Collar to Neeru Fireblade in Orgrimmar.";
 	   ["zone"] = "Durotar";
 	   ["sort"] = "Durotar";
@@ -24122,6 +24201,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Admiral's Orders";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -24133,6 +24213,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[831] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Deliver Admiral Proudmoore's Orders to Nazgrel in Thrall's chamber in Orgrimmar.";
 	   ["zone"] = "Durotar";
@@ -24181,6 +24262,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Burning Shadows";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -24207,6 +24289,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Sacred Burial";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -24236,6 +24319,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Winds in the Desert";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 9;
 	   ["source"] = {
@@ -24247,6 +24331,7 @@ addon.questsDB = {
 	   ["req"] = 7;
 	};
 	[835] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["objective"] = "Kill 12 Dustwind Savages and 8 Dustwind Storm Witches for Rezlak near Drygulch Ravine.";
 	   ["zone"] = "Durotar";
@@ -24336,6 +24421,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Encroachment";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -24390,6 +24476,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Conscript of the Horde";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -24432,6 +24519,7 @@ addon.questsDB = {
 	   ["req"] = 38;
 	};
 	[842] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Follow the western road from Kargal's Far Watch Outpost.$B$BAt the T intersection, turn left and follow the road south. $B$BFind Sergra Darkthorn at the crossing of roads within the Crossroads.";
 	   ["zone"] = "Durotar";
 	   ["sort"] = "Durotar";
@@ -24832,6 +24920,7 @@ addon.questsDB = {
 	   ["races"] = {
 	      [1] = "Tauren";
 	   };
+	   ["faction"] = "Horde";
 	   ["name"] = "Journey to the Crossroads";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -24968,6 +25057,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Hunter's Way";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Mulgore";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -26651,6 +26741,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[918] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Bring 8 Timberling Seeds to Denelan at Lake Al'Ameth.";
 	   ["zone"] = "Teldrassil";
@@ -26704,6 +26795,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Timberling Sprouts";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -26775,6 +26867,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[922] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Bring a Timberling Seed to Rellian Greenspyre in Darnassus.";
 	   ["zone"] = "Teldrassil";
 	   ["sort"] = "Teldrassil";
@@ -26806,6 +26899,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[923] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Bring 5 Mossy Tumors to Rellian Greenspyre in Darnassus.";
 	   ["zone"] = "Teldrassil";
@@ -26840,21 +26934,25 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[924] = {
-	   ["sort"] = "Durotar";
 	   ["interact"] = {
 	      [1] = 3525;
 	   };
-	   ["objective"] = "Grab a Flawed Power Stone.  Bring it to the Altar of Fire before the stone expires, then return to Ak'Zeloth.";
-	   ["zone"] = "Durotar";
-	   ["objectivetext"] = {
-	      ["1"] = "Destroy the Demon Seed";
-	   };
-	   ["reward"] = {
-	      [1] = 5420;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 3521;
+	         ["type"] = "npc";
+	      };
 	   };
 	   ["repgain"] = {
 	      [76] = 350;
 	   };
+	   ["faction"] = "Horde";
+	   ["objectivetext"] = {
+	      ["1"] = "Destroy the Demon Seed";
+	   };
+	   ["sort"] = "Durotar";
+	   ["objective"] = "Grab a Flawed Power Stone.  Bring it to the Altar of Fire before the stone expires, then return to Ak'Zeloth.";
+	   ["zone"] = "Durotar";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 3521;
@@ -26867,11 +26965,8 @@ addon.questsDB = {
 	      [1] = 809;
 	   };
 	   ["level"] = 14;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 3521;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 5420;
 	   };
 	   ["req"] = 9;
 	};
@@ -26924,6 +27019,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Flawed Power Stone";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 14;
 	   ["source"] = {
@@ -26958,6 +27054,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Moss-twined Heart";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -27001,6 +27098,7 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[929] = {
+	   ["faction"] = "Alliance";
 	   ["series"] = 3;
 	   ["objective"] = "Fill the Jade Phial and bring it back to Corithras Moonrage in Dolanaar.";
 	   ["zone"] = "Teldrassil";
@@ -27048,6 +27146,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Glowing Fruit";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -27074,6 +27173,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Shimmering Frond";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -27104,6 +27204,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Twisted Hatred";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 7;
 	   ["source"] = {
@@ -27115,6 +27216,7 @@ addon.questsDB = {
 	   ["req"] = 4;
 	};
 	[933] = {
+	   ["faction"] = "Alliance";
 	   ["series"] = 4;
 	   ["objective"] = "Fill the Tourmaline Phial and bring it back to Corithras Moonrage in Dolanaar.";
 	   ["zone"] = "Teldrassil";
@@ -27149,6 +27251,12 @@ addon.questsDB = {
 	[934] = {
 	   ["objective"] = "Fill the Amethyst Phial and bring it back to Corithras Moonrage in Dolanaar.";
 	   ["zone"] = "Teldrassil";
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 3515;
+	         ["type"] = "npc";
+	      };
+	   };
 	   ["repgain"] = {
 	      [69] = 250;
 	   };
@@ -27159,31 +27267,30 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Crown of the Earth";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 11;
+	   ["replacement"] = 7383;
+	   ["req"] = 1;
+	};
+	[935] = {
+	   ["faction"] = "Alliance";
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 3515;
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["req"] = 1;
-	};
-	[935] = {
-	   ["series"] = 6;
-	   ["sort"] = "Teldrassil";
-	   ["objective"] = "Bring the Filled Vessel to Arch Druid Fandral Staghelm in Darnassus.";
-	   ["zone"] = "Teldrassil";
-	   ["gather"] = {
-	      [1] = 5188;
-	   };
 	   ["repgain"] = {
 	      [69] = 350;
 	   };
-	   ["reward"] = {
-	      [1] = 5596;
-	      [2] = 5595;
+	   ["series"] = 6;
+	   ["sort"] = "Teldrassil";
+	   ["gather"] = {
+	      [1] = 5188;
 	   };
+	   ["objective"] = "Bring the Filled Vessel to Arch Druid Fandral Staghelm in Darnassus.";
+	   ["zone"] = "Teldrassil";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 3516;
@@ -27196,11 +27303,9 @@ addon.questsDB = {
 	      [1] = 7383;
 	   };
 	   ["level"] = 11;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 3515;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 5596;
+	      [2] = 5595;
 	   };
 	   ["req"] = 1;
 	};
@@ -27247,6 +27352,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Enchanted Glade";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 11;
 	   ["source"] = {
@@ -27275,6 +27381,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Mist";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -27312,6 +27419,7 @@ addon.questsDB = {
 	   ["req"] = 49;
 	};
 	[940] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Deliver the Oracle Tree's report to Arch Druid Fandral Staghelm in Darnassus.";
 	   ["zone"] = "Teldrassil";
 	   ["sort"] = "Teldrassil";
@@ -27646,6 +27754,7 @@ addon.questsDB = {
 	   ["req"] = 12;
 	};
 	[952] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Deliver Fandral's message to Onu in the Grove of the Ancients in Darkshore, south of Auberdine.";
 	   ["zone"] = "Darnassus";
 	   ["sort"] = "Darnassus";
@@ -28871,6 +28980,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Denalan's Earth";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 5;
 	   ["source"] = {
@@ -30868,22 +30978,16 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[8936] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22070;
-	      [2] = 22077;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16702;
 	      [2] = 16705;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Warlock";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -30891,17 +30995,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Warlock";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 22070;
+	      [2] = 22077;
 	   };
 	   ["req"] = 58;
 	};
@@ -31413,6 +31524,7 @@ addon.questsDB = {
 	   ["req"] = 52;
 	};
 	[2459] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Tallonkai Swiftroot in Dolanaar wants you to kill 7 Gnarlpine Mystics and find the Missing Jewel.";
 	   ["zone"] = "Teldrassil";
@@ -31495,20 +31607,23 @@ addon.questsDB = {
 	   ["req"] = 55;
 	};
 	[2499] = {
-	   ["sort"] = "Teldrassil";
 	   ["type"] = "Elite";
-	   ["objective"] = "Denalan at Lake Al'Ameth wants you to collect the Gargantuan Tumor from Oakenscowl.";
-	   ["zone"] = "Teldrassil";
-	   ["gather"] = {
-	      [1] = 8136;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 2080;
+	         ["type"] = "npc";
+	      };
 	   };
 	   ["repgain"] = {
 	      [69] = 350;
 	   };
-	   ["reward"] = {
-	      [1] = 5458;
-	      [2] = 5589;
+	   ["faction"] = "Alliance";
+	   ["sort"] = "Teldrassil";
+	   ["gather"] = {
+	      [1] = 8136;
 	   };
+	   ["objective"] = "Denalan at Lake Al'Ameth wants you to collect the Gargantuan Tumor from Oakenscowl.";
+	   ["zone"] = "Teldrassil";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 2080;
@@ -31521,11 +31636,9 @@ addon.questsDB = {
 	      [1] = 2498;
 	   };
 	   ["level"] = 9;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 2080;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 5458;
+	      [2] = 5589;
 	   };
 	   ["req"] = 4;
 	};
@@ -33305,22 +33418,16 @@ addon.questsDB = {
 	   ["req"] = 58;
 	};
 	[8937] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Belt of Valor and a set of Gauntlets of Valor to Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 21994;
-	      [2] = 21998;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16736;
 	      [2] = 16737;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Warrior";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -33328,17 +33435,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Warrior";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Belt of Valor and a set of Gauntlets of Valor to Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 21994;
+	      [2] = 21998;
 	   };
 	   ["req"] = 58;
 	};
@@ -33899,6 +34013,7 @@ addon.questsDB = {
 	[3483] = {
 	   ["objective"] = "";
 	   ["zone"] = "Ironforge";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Ironforge";
 	   ["reward"] = {
 	      [1] = 10444;
@@ -33947,20 +34062,23 @@ addon.questsDB = {
 	   ["req"] = 15;
 	};
 	[3507] = {
-	   ["series"] = 4;
-	   ["sort"] = "Orgrimmar";
-	   ["objective"] = "Speak to Belgrom Rockmaul in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["gather"] = {
-	      [1] = 10597;
+	   ["faction"] = "Horde";
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 8576;
+	         ["type"] = "npc";
+	      };
 	   };
 	   ["repgain"] = {
 	      [76] = 350;
 	   };
-	   ["reward"] = {
-	      [1] = 10709;
-	      [2] = 11120;
+	   ["series"] = 4;
+	   ["sort"] = "Orgrimmar";
+	   ["gather"] = {
+	      [1] = 10597;
 	   };
+	   ["objective"] = "Speak to Belgrom Rockmaul in Orgrimmar.";
+	   ["zone"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 4485;
@@ -33973,11 +34091,9 @@ addon.questsDB = {
 	      [1] = 3506;
 	   };
 	   ["level"] = 56;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 8576;
-	         ["type"] = "npc";
-	      };
+	   ["reward"] = {
+	      [1] = 10709;
+	      [2] = 11120;
 	   };
 	   ["req"] = 44;
 	};
@@ -34367,6 +34483,7 @@ addon.questsDB = {
 	[7493] = {
 	   ["objective"] = "";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
@@ -34479,6 +34596,7 @@ addon.questsDB = {
 	[3787] = {
 	   ["objective"] = "Speak with Quintis Jonespyre in Feathermoon Stronghold.";
 	   ["zone"] = "Stormwind City";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Stormwind City";
 	   ["repgain"] = {
 	      [69] = 25;
@@ -35968,22 +36086,16 @@ addon.questsDB = {
 	   ["req"] = 30;
 	};
 	[8938] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Mokvar in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22010;
-	      [2] = 22015;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16680;
 	      [2] = 16676;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Hunter";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -35991,17 +36103,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Hunter";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Mokvar in Orgrimmar.";
+	   ["reward"] = {
+	      [1] = 22010;
+	      [2] = 22015;
 	   };
 	   ["req"] = 58;
 	};
@@ -37239,6 +37358,7 @@ addon.questsDB = {
 	   ["req"] = 55;
 	};
 	[1358] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Undercity";
 	   ["objective"] = "Bring the Wolf Heart Sample to Apothecary Helbrim in the Barrens.";
 	   ["zone"] = "Undercity";
@@ -38724,34 +38844,37 @@ addon.questsDB = {
 	   ["req"] = 60;
 	};
 	[6342] = {
+	   ["race"] = {
+	      [1] = "NightElf";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 3838;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6343;
 	   ["faction"] = "Alliance";
 	   ["name"] = "Flight to Auberdine";
-	   ["objective"] = "Ride a hippogryph to Auberdine from the hippogryph master Vesprystus, then bring Nessa's Collection to Laird.";
-	   ["zone"] = "Darkshore";
-	   ["repgain"] = {
-	      [69] = 75;
-	   };
 	   ["gather"] = {
 	      [1] = 16262;
 	   };
-	   ["next"] = 6343;
-	   ["sort"] = "Darkshore";
+	   ["objective"] = "Ride a hippogryph to Auberdine from the hippogryph master Vesprystus, then bring Nessa's Collection to Laird.";
+	   ["zone"] = "Darkshore";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 4200;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Darkshore";
 	   ["prev"] = 6341;
 	   ["prequests"] = {
 	      [1] = 6341;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 3838;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [69] = 75;
 	   };
 	   ["req"] = 10;
 	};
@@ -39028,22 +39151,16 @@ addon.questsDB = {
 	   ["req"] = 50;
 	};
 	[8939] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Magister's Belt and a set of Magister's Gloves to Mokvar in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22062;
-	      [2] = 22066;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16685;
 	      [2] = 16684;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Mage";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -39051,17 +39168,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Mage";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Magister's Belt and a set of Magister's Gloves to Mokvar in Orgrimmar.";
+	   ["reward"] = {
+	      [1] = 22062;
+	      [2] = 22066;
 	   };
 	   ["req"] = 58;
 	};
@@ -39092,6 +39216,7 @@ addon.questsDB = {
 	[6566] = {
 	   ["objective"] = "Listen to Thrall.";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["next"] = 6567;
 	   ["deliver"] = {
@@ -40928,6 +41053,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Darkmoon Faire";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 60;
 	   ["source"] = {
@@ -41934,22 +42060,16 @@ addon.questsDB = {
 	   ["req"] = 58;
 	};
 	[8940] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Devout Belt and a set of Devout Gloves to Mokvar in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22078;
-	      [2] = 22081;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16696;
 	      [2] = 16692;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Priest";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -41957,17 +42077,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Priest";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Devout Belt and a set of Devout Gloves to Mokvar in Orgrimmar.";
+	   ["reward"] = {
+	      [1] = 22078;
+	      [2] = 22081;
 	   };
 	   ["req"] = 58;
 	};
@@ -43957,34 +44084,37 @@ addon.questsDB = {
 	   ["req"] = 60;
 	};
 	[6343] = {
-	   ["faction"] = "Alliance";
-	   ["name"] = "Return to Nessa";
-	   ["objective"] = "Bring Laird's Response to Nessa Shadowsong.";
-	   ["zone"] = "Darkshore";
-	   ["gather"] = {
-	      [1] = 16263;
-	   };
-	   ["repgain"] = {
-	      [69] = 350;
-	   };
-	   ["sort"] = "Darkshore";
-	   ["deliver"] = {
-	      [1] = {
-	         ["id"] = 10118;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["prev"] = 6342;
-	   ["prequests"] = {
-	      [1] = 6342;
-	   };
-	   ["level"] = 10;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 4200;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["repgain"] = {
+	      [69] = 350;
+	   };
+	   ["race"] = {
+	      [1] = "NightElf";
+	   };
+	   ["faction"] = "Alliance";
+	   ["gather"] = {
+	      [1] = 16263;
+	   };
+	   ["name"] = "Return to Nessa";
+	   ["objective"] = "Bring Laird's Response to Nessa Shadowsong.";
+	   ["deliver"] = {
+	      [1] = {
+	         ["id"] = 10118;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["sort"] = "Darkshore";
+	   ["prev"] = 6342;
+	   ["prequests"] = {
+	      [1] = 6342;
+	   };
+	   ["level"] = 10;
+	   ["zone"] = "Darkshore";
 	   ["req"] = 10;
 	};
 	[8621] = {
@@ -44048,35 +44178,39 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[6391] = {
+	   ["race"] = {
+	      [1] = "Dwarf";
+	      [2] = "Gnome";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 1572;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6388;
 	   ["faction"] = "Alliance";
 	   ["name"] = "Ride to Ironforge";
-	   ["objective"] = "Buy a gryphon to Ironforge from the gryphon master Thorgrum Borrelson, then bring Brock's List to Golnir Bouldertoe in Ironforge.";
-	   ["zone"] = "Loch Modan";
-	   ["repgain"] = {
-	      [54] = 75;
-	      [47] = 75;
-	   };
 	   ["gather"] = {
 	      [1] = 16310;
 	   };
-	   ["next"] = 6388;
-	   ["sort"] = "Loch Modan";
+	   ["objective"] = "Buy a gryphon to Ironforge from the gryphon master Thorgrum Borrelson, then bring Brock's List to Golnir Bouldertoe in Ironforge.";
+	   ["zone"] = "Loch Modan";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 4256;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Loch Modan";
 	   ["prev"] = 6387;
 	   ["prequests"] = {
 	      [1] = 6387;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 1572;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [54] = 75;
+	      [47] = 75;
 	   };
 	   ["req"] = 10;
 	};
@@ -44278,22 +44412,16 @@ addon.questsDB = {
 	   ["req"] = 19;
 	};
 	[8941] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Mokvar in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22006;
-	      [2] = 22002;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16713;
 	      [2] = 16712;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Rogue";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -44301,17 +44429,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Rogue";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Mokvar in Orgrimmar.";
+	   ["reward"] = {
+	      [1] = 22006;
+	      [2] = 22002;
 	   };
 	   ["req"] = 58;
 	};
@@ -44355,6 +44490,7 @@ addon.questsDB = {
 	[6567] = {
 	   ["objective"] = "Seek out Rexxar. The Warchief has instructed you as to his whereabouts. Search the paths of Desolace, between the Stonetalon Mountains and Feralas.";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["next"] = 6568;
 	   ["deliver"] = {
@@ -45054,6 +45190,7 @@ addon.questsDB = {
 	   ["req"] = 51;
 	};
 	[7383] = {
+	   ["faction"] = "Alliance";
 	   ["series"] = 5;
 	   ["objective"] = "Fill the Amethyst Phial and bring it back to Corithras Moonrage in Dolanaar.";
 	   ["zone"] = "Teldrassil";
@@ -45596,7 +45733,7 @@ addon.questsDB = {
 	   ["gather"] = {
 	      [1] = 4338;
 	   };
-	   ["followup"] = 7836;
+	   ["followup"] = 7824;
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
@@ -46704,23 +46841,16 @@ addon.questsDB = {
 	   ["req"] = 58;
 	};
 	[8942] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Cord of Elements and a set of Gauntlets of Elements to Mokvar in Orgrimmar.\
-";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22098;
-	      [2] = 22099;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16673;
 	      [2] = 16672;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Shaman";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -46728,17 +46858,25 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Shaman";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Cord of Elements and a set of Gauntlets of Elements to Mokvar in Orgrimmar.\
+";
+	   ["reward"] = {
+	      [1] = 22098;
+	      [2] = 22099;
 	   };
 	   ["req"] = 58;
 	};
@@ -47207,6 +47345,7 @@ addon.questsDB = {
 	   ["req"] = 51;
 	};
 	[5048] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Find Ol' Emma in Stormwind and see if she is in fact Emma Felstone.  If she is, then perhaps she'd like the package Janice Felstone made for her.";
 	   ["zone"] = "Stormwind City";
 	   ["sort"] = "Stormwind City";
@@ -48218,35 +48357,39 @@ addon.questsDB = {
 	   ["req"] = 60;
 	};
 	[6392] = {
-	   ["faction"] = "Alliance";
-	   ["name"] = "Return to Brock";
-	   ["objective"] = "Buy a gryphon to Thelsamar from the gryphon master Gryth Thurden, then bring the Honorary Picks to Brock Stoneseeker in Thelsamar.";
-	   ["zone"] = "Loch Modan";
-	   ["gather"] = {
-	      [1] = 16311;
-	   };
-	   ["repgain"] = {
-	      [54] = 350;
-	      [47] = 350;
-	   };
-	   ["sort"] = "Loch Modan";
-	   ["deliver"] = {
-	      [1] = {
-	         ["id"] = 1681;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["prev"] = 6388;
-	   ["prequests"] = {
-	      [1] = 6388;
-	   };
-	   ["level"] = 10;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 1573;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["repgain"] = {
+	      [54] = 350;
+	      [47] = 350;
+	   };
+	   ["race"] = {
+	      [1] = "Dwarf";
+	      [2] = "Gnome";
+	   };
+	   ["faction"] = "Alliance";
+	   ["gather"] = {
+	      [1] = 16311;
+	   };
+	   ["name"] = "Return to Brock";
+	   ["objective"] = "Buy a gryphon to Thelsamar from the gryphon master Gryth Thurden, then bring the Honorary Picks to Brock Stoneseeker in Thelsamar.";
+	   ["deliver"] = {
+	      [1] = {
+	         ["id"] = 1681;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["sort"] = "Loch Modan";
+	   ["prev"] = 6388;
+	   ["prequests"] = {
+	      [1] = 6388;
+	   };
+	   ["level"] = 10;
+	   ["zone"] = "Loch Modan";
 	   ["req"] = 10;
 	};
 	[8719] = {
@@ -48458,23 +48601,16 @@ addon.questsDB = {
 	   ["req"] = 58;
 	};
 	[8943] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Mokvar in Orgrimmar.\
-";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22070;
-	      [2] = 22077;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16702;
 	      [2] = 16705;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Warlock";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -48482,17 +48618,25 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Warlock";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Dreadmist Belt and a set of Dreadmist Wraps to Mokvar in Orgrimmar.\
+";
+	   ["reward"] = {
+	      [1] = 22070;
+	      [2] = 22077;
 	   };
 	   ["req"] = 58;
 	};
@@ -48889,6 +49033,7 @@ addon.questsDB = {
 	   ["req"] = 57;
 	};
 	[7496] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Seek out Major Mattingly in the Valley of Heroes.";
 	   ["zone"] = "Stormwind City";
 	   ["sort"] = "Stormwind City";
@@ -49188,7 +49333,7 @@ addon.questsDB = {
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
-	         ["id"] = 14727;
+	         ["id"] = 14726;
 	         ["type"] = "npc";
 	      };
 	   };
@@ -50219,23 +50364,16 @@ addon.questsDB = {
 	   ["req"] = 58;
 	};
 	[8944] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Belt of Valor and a set of Gauntlets of Valor to Mokvar in Orgrimmar.\
-";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 21994;
-	      [2] = 21998;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16736;
 	      [2] = 16737;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Warrior";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -50243,17 +50381,25 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Warrior";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Belt of Valor and a set of Gauntlets of Valor to Mokvar in Orgrimmar.\
+";
+	   ["reward"] = {
+	      [1] = 21994;
+	      [2] = 21998;
 	   };
 	   ["req"] = 58;
 	};
@@ -50910,6 +51056,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Sleeping Druid";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 8;
 	   ["source"] = {
@@ -51883,6 +52030,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Threat in Feralas";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 43;
 	   ["source"] = {
@@ -52312,34 +52460,37 @@ addon.questsDB = {
 	   ["req"] = 40;
 	};
 	[6281] = {
+	   ["race"] = {
+	      [1] = "Human";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 523;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6261;
 	   ["faction"] = "Alliance";
 	   ["name"] = "Continue to Stormwind";
-	   ["objective"] = "Buy a gryphon ride from the gryphon master Thor, then bring Lewis' Note to Osric Strang, in the shop Limited Immunity, in the Old Town of Stormwind.";
-	   ["zone"] = "Westfall";
-	   ["repgain"] = {
-	      [72] = 75;
-	   };
 	   ["gather"] = {
 	      [1] = 15998;
 	   };
-	   ["next"] = 6261;
-	   ["sort"] = "Westfall";
+	   ["objective"] = "Buy a gryphon ride from the gryphon master Thor, then bring Lewis' Note to Osric Strang, in the shop Limited Immunity, in the Old Town of Stormwind.";
+	   ["zone"] = "Westfall";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 1323;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Westfall";
 	   ["prev"] = 6181;
 	   ["prequests"] = {
 	      [1] = 6181;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 523;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [72] = 75;
 	   };
 	   ["req"] = 10;
 	};
@@ -53803,6 +53954,7 @@ addon.questsDB = {
 	[7497] = {
 	   ["objective"] = "";
 	   ["zone"] = "Stormwind City";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Stormwind City";
 	   ["deliver"] = {
 	      [1] = {
@@ -56727,6 +56879,7 @@ addon.questsDB = {
 	   ["req"] = 50;
 	};
 	[1359] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring the Wolf Heart Samples to Apothecary Zinge in the Undercity.";
 	   ["zone"] = "Undercity";
 	   ["sort"] = "Undercity";
@@ -56809,6 +56962,7 @@ addon.questsDB = {
 	   ["req"] = 30;
 	};
 	[5482] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Collect 10 Doom Weed and deliver them back to Junior Apothecary Holland.\
 ";
 	   ["zone"] = "Tirisfal Glades";
@@ -57210,6 +57364,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Alliance Relations";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 30;
 	   ["source"] = {
@@ -61859,6 +62014,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Emerald Dreamcatcher";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["level"] = 6;
 	   ["source"] = {
@@ -62844,6 +63000,7 @@ addon.questsDB = {
 	   ["req"] = 48;
 	};
 	[2950] = {
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["objective"] = "Bring the Brilliant Gold Ring, a Silver Bar, a Moss Agate, and 30 silver coins to Nogg in Orgrimmar.";
 	   ["zone"] = "Orgrimmar";
@@ -65043,7 +65200,7 @@ addon.questsDB = {
 	   ["gather"] = {
 	      [1] = 4338;
 	   };
-	   ["followup"] = 7824;
+	   ["followup"] = 7836;
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
@@ -68568,18 +68725,18 @@ addon.questsDB = {
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
-	         ["id"] = 14726;
+	         ["id"] = 14727;
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["prev"] = 7831;
+	   ["prev"] = 7835;
 	   ["prequests"] = {
-	      [1] = 7831;
+	      [1] = 7835;
 	   };
 	   ["level"] = 60;
 	   ["source"] = {
 	      [1] = {
-	         ["id"] = 14726;
+	         ["id"] = 14727;
 	         ["type"] = "npc";
 	      };
 	   };
@@ -70062,6 +70219,7 @@ addon.questsDB = {
 	   ["req"] = 31;
 	};
 	[2399] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "";
 	   ["zone"] = "Teldrassil";
 	   ["sort"] = "Teldrassil";
@@ -70231,6 +70389,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Peon's Burden";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Durotar";
 	   ["level"] = 5;
 	   ["source"] = {
@@ -70273,6 +70432,7 @@ addon.questsDB = {
 	[4941] = {
 	   ["objective"] = "Speak with Eitrigg in Orgrimmar. When you have discussed matters with Eitrigg, seek council from Thrall.$B$BYou recall having seen Eitrigg in Thrall's chamber.";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["next"] = 4974;
 	   ["deliver"] = {
@@ -70640,6 +70800,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Hidden Enemies";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 12;
 	   ["source"] = {
@@ -72661,34 +72822,37 @@ addon.questsDB = {
 	   ["req"] = 40;
 	};
 	[6285] = {
-	   ["faction"] = "Alliance";
-	   ["name"] = "Return to Lewis";
-	   ["objective"] = "Buy a gryphon ride to Sentinel Hill from the gryphon master Dungar Longdrink, then take Osric's Crate to Lewis at Sentinel Hill.";
-	   ["zone"] = "Westfall";
-	   ["gather"] = {
-	      [1] = 16115;
-	   };
-	   ["repgain"] = {
-	      [72] = 350;
-	   };
-	   ["sort"] = "Westfall";
-	   ["deliver"] = {
-	      [1] = {
-	         ["id"] = 491;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["prev"] = 6261;
-	   ["prequests"] = {
-	      [1] = 6261;
-	   };
-	   ["level"] = 10;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 352;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["repgain"] = {
+	      [72] = 350;
+	   };
+	   ["race"] = {
+	      [1] = "Human";
+	   };
+	   ["faction"] = "Alliance";
+	   ["gather"] = {
+	      [1] = 16115;
+	   };
+	   ["name"] = "Return to Lewis";
+	   ["objective"] = "Buy a gryphon ride to Sentinel Hill from the gryphon master Dungar Longdrink, then take Osric's Crate to Lewis at Sentinel Hill.";
+	   ["deliver"] = {
+	      [1] = {
+	         ["id"] = 491;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["sort"] = "Westfall";
+	   ["prev"] = 6261;
+	   ["prequests"] = {
+	      [1] = 6261;
+	   };
+	   ["level"] = 10;
+	   ["zone"] = "Westfall";
 	   ["req"] = 10;
 	};
 	[8505] = {
@@ -74712,6 +74876,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "A Fair Trade";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 60;
 	   ["source"] = {
@@ -75052,6 +75217,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Bone-Bladed Weapons";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 52;
 	   ["source"] = {
@@ -75647,7 +75813,7 @@ addon.questsDB = {
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
-	         ["id"] = 14726;
+	         ["id"] = 14727;
 	         ["type"] = "npc";
 	      };
 	   };
@@ -75658,7 +75824,7 @@ addon.questsDB = {
 	   ["level"] = 60;
 	   ["source"] = {
 	      [1] = {
-	         ["id"] = 14726;
+	         ["id"] = 14727;
 	         ["type"] = "npc";
 	      };
 	   };
@@ -78892,6 +79058,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Mazen's Behest";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Stormwind City";
 	   ["level"] = 41;
 	   ["source"] = {
@@ -79361,6 +79528,7 @@ addon.questsDB = {
 	   ["req"] = 35;
 	};
 	[1432] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Speak to Takata Steelblade in Desolace.";
 	   ["zone"] = "Orgrimmar";
 	   ["series"] = 2;
@@ -81178,6 +81346,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "March of the Silithid";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Darnassus";
 	   ["level"] = 53;
 	   ["source"] = {
@@ -81286,34 +81455,37 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[6261] = {
+	   ["race"] = {
+	      [1] = "Human";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 1323;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6285;
 	   ["faction"] = "Alliance";
 	   ["name"] = "Dungar Longdrink";
-	   ["objective"] = "Bring Osric's Crate to Dungar Longdrink the gryphon master.";
-	   ["zone"] = "Westfall";
-	   ["repgain"] = {
-	      [72] = 25;
-	   };
 	   ["gather"] = {
 	      [1] = 16115;
 	   };
-	   ["next"] = 6285;
-	   ["sort"] = "Westfall";
+	   ["objective"] = "Bring Osric's Crate to Dungar Longdrink the gryphon master.";
+	   ["zone"] = "Westfall";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 352;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Westfall";
 	   ["prev"] = 6281;
 	   ["prequests"] = {
 	      [1] = 6281;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 1323;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [72] = 25;
 	   };
 	   ["req"] = 10;
 	};
@@ -81493,34 +81665,37 @@ addon.questsDB = {
 	   ["req"] = 17;
 	};
 	[6324] = {
-	   ["faction"] = "Horde";
-	   ["name"] = "Return to Podrig";
-	   ["objective"] = "Buy a bat ride to the Sepulcher from the bat master Michael Garrett, then bring Gordon's Crate to Deathguard Podrig in the Sepulcher.";
-	   ["zone"] = "Silverpine Forest";
-	   ["gather"] = {
-	      [1] = 16210;
-	   };
-	   ["repgain"] = {
-	      [68] = 350;
-	   };
-	   ["sort"] = "Silverpine Forest";
-	   ["deliver"] = {
-	      [1] = {
-	         ["id"] = 6389;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["prev"] = 6322;
-	   ["prequests"] = {
-	      [1] = 6322;
-	   };
-	   ["level"] = 10;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 4551;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["repgain"] = {
+	      [68] = 350;
+	   };
+	   ["race"] = {
+	      [1] = "Undead";
+	   };
+	   ["faction"] = "Horde";
+	   ["gather"] = {
+	      [1] = 16210;
+	   };
+	   ["name"] = "Return to Podrig";
+	   ["objective"] = "Buy a bat ride to the Sepulcher from the bat master Michael Garrett, then bring Gordon's Crate to Deathguard Podrig in the Sepulcher.";
+	   ["deliver"] = {
+	      [1] = {
+	         ["id"] = 6389;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["sort"] = "Silverpine Forest";
+	   ["prev"] = 6322;
+	   ["prequests"] = {
+	      [1] = 6322;
+	   };
+	   ["level"] = 10;
+	   ["zone"] = "Silverpine Forest";
 	   ["req"] = 10;
 	};
 	[9000] = {
@@ -81679,6 +81854,10 @@ addon.questsDB = {
 	   ["req"] = 17;
 	};
 	[6387] = {
+	   ["race"] = {
+	      [1] = "Dwarf";
+	      [2] = "Gnome";
+	   };
 	   ["objective"] = "Bring Brock's List to Thorgrum Borrelson in Thelsamar.";
 	   ["zone"] = "Loch Modan";
 	   ["sort"] = "Loch Modan";
@@ -82156,6 +82335,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "March of the Silithid";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 53;
 	   ["source"] = {
@@ -85087,6 +85267,9 @@ addon.questsDB = {
 	   ["req"] = 50;
 	};
 	[6362] = {
+	   ["race"] = {
+	      [1] = "Tauren";
+	   };
 	   ["name"] = "Ride to Thunder Bluff";
 	   ["objective"] = "Buy a wind rider to Thunder Bluff from the wind rider master Devrak, then bring the Bundle of Hides to Ahanu in Thunder Bluff.";
 	   ["zone"] = "The Barrens";
@@ -85528,6 +85711,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Gordo's Task";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Tirisfal Glades";
 	   ["level"] = 5;
 	   ["source"] = {
@@ -87173,6 +87357,7 @@ addon.questsDB = {
 	   ["races"] = {
 	      [1] = "NightElf";
 	   };
+	   ["faction"] = "Alliance";
 	   ["name"] = "The Hunter's Path";
 	   ["level"] = 10;
 	   ["source"] = {
@@ -89424,6 +89609,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Betrayed";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["level"] = 53;
 	   ["source"] = {
@@ -90073,34 +90259,37 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[6341] = {
+	   ["race"] = {
+	      [1] = "NightElf";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 10118;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6342;
 	   ["faction"] = "Alliance";
 	   ["name"] = "The Bounty of Teldrassil";
-	   ["objective"] = "Bring Nessa's Collection to Vesprystus.";
-	   ["zone"] = "Darkshore";
-	   ["repgain"] = {
-	      [69] = 25;
-	   };
 	   ["gather"] = {
 	      [1] = 16262;
 	   };
-	   ["next"] = 6342;
-	   ["sort"] = "Darkshore";
+	   ["objective"] = "Bring Nessa's Collection to Vesprystus.";
+	   ["zone"] = "Darkshore";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 3838;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Darkshore";
 	   ["prev"] = 6344;
 	   ["prequests"] = {
 	      [1] = 6344;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 10118;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [69] = 25;
 	   };
 	   ["req"] = 10;
 	};
@@ -92130,6 +92319,7 @@ addon.questsDB = {
 	[8734] = {
 	   ["objective"] = "Travel to the Moonglade and speak to Keeper Remulos. ";
 	   ["zone"] = "Teldrassil";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["repgain"] = {
 	      [910] = 10;
@@ -93728,6 +93918,7 @@ addon.questsDB = {
 	[5727] = {
 	   ["objective"] = "Take the Lieutenant's Insignia to Neeru Fireblade and speak to him. Gauge if he believes you are a member of the Burning Blade and then return to Thrall in Orgrimmar.";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["repgain"] = {
 	      [76] = 75;
@@ -96227,22 +96418,16 @@ addon.questsDB = {
 	   ["req"] = 60;
 	};
 	[8927] = {
-	   ["sort"] = "Orgrimmar";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Wildheart Belt and a set of Wildheart Gloves to Mokvar in Orgrimmar.";
-	   ["zone"] = "Orgrimmar";
-	   ["followup"] = 8930;
-	   ["reward"] = {
-	      [1] = 22106;
-	      [2] = 22110;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16012;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Orgrimmar";
 	   ["gather"] = {
 	      [1] = 16716;
 	      [2] = 16717;
-	   };
-	   ["next"] = 8930;
-	   ["classes"] = {
-	      [1] = "Druid";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -96250,17 +96435,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8930;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8930;
+	   ["faction"] = "Horde";
+	   ["classes"] = {
+	      [1] = "Druid";
+	   };
+	   ["sort"] = "Orgrimmar";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8978;
 	   ["prequests"] = {
 	      [1] = 8978;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16012;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Wildheart Belt and a set of Wildheart Gloves to Mokvar in Orgrimmar.";
+	   ["reward"] = {
+	      [1] = 22106;
+	      [2] = 22110;
 	   };
 	   ["req"] = 58;
 	};
@@ -98770,18 +98962,18 @@ addon.questsDB = {
 	   ["sort"] = "Orgrimmar";
 	   ["deliver"] = {
 	      [1] = {
-	         ["id"] = 14727;
+	         ["id"] = 14726;
 	         ["type"] = "npc";
 	      };
 	   };
-	   ["prev"] = 7835;
+	   ["prev"] = 7831;
 	   ["prequests"] = {
-	      [1] = 7835;
+	      [1] = 7831;
 	   };
 	   ["level"] = 60;
 	   ["source"] = {
 	      [1] = {
-	         ["id"] = 14727;
+	         ["id"] = 14726;
 	         ["type"] = "npc";
 	      };
 	   };
@@ -101434,6 +101626,7 @@ addon.questsDB = {
 	   ["req"] = 12;
 	};
 	[2561] = {
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["objective"] = "Oben Rageclaw wants you to kill his soulless body, and then use the Voodoo Charm.";
 	   ["zone"] = "Teldrassil";
@@ -101831,6 +102024,10 @@ addon.questsDB = {
 	   ["req"] = 37;
 	};
 	[6385] = {
+	   ["race"] = {
+	      [1] = "Orc";
+	      [2] = "Troll";
+	   };
 	   ["name"] = "Doras the Wind Rider Master";
 	   ["objective"] = "Bring Gryshka's Letter to Doras in Orgrimmar.";
 	   ["zone"] = "The Barrens";
@@ -102563,6 +102760,7 @@ addon.questsDB = {
 	[5729] = {
 	   ["objective"] = "Speak to Neeru Fireblade in Orgrimmar.";
 	   ["zone"] = "Orgrimmar";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Orgrimmar";
 	   ["next"] = 5730;
 	   ["deliver"] = {
@@ -103120,6 +103318,9 @@ addon.questsDB = {
 	   ["req"] = 40;
 	};
 	[6361] = {
+	   ["race"] = {
+	      [1] = "Tauren";
+	   };
 	   ["objective"] = "Bring the Bundle of Hides to the wind rider master Devrak in the Crossroads.";
 	   ["zone"] = "The Barrens";
 	   ["sort"] = "The Barrens";
@@ -104967,6 +105168,7 @@ addon.questsDB = {
 	   ["req"] = 16;
 	};
 	[3505] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 2;
 	   ["objective"] = "Kill 10 Blood Elf Reclaimers, and 10 Blood Elf Surveyors before seeking out Magus Rimtori's camp. Once you've found it, look for something that might be important to her that can be used to draw her into a fight.";
 	   ["zone"] = "Orgrimmar";
@@ -105664,6 +105866,10 @@ addon.questsDB = {
 	   ["req"] = 14;
 	};
 	[6384] = {
+	   ["race"] = {
+	      [1] = "Orc";
+	      [2] = "Troll";
+	   };
 	   ["name"] = "Ride to Orgrimmar";
 	   ["objective"] = "Buy a wind rider to Orgrimmar from the wind rider master Devrak, then bring Zargh's Meats to Gryshka in Orgrimmar.";
 	   ["zone"] = "The Barrens";
@@ -106534,6 +106740,7 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[1242] = {
+	   ["faction"] = "Alliance";
 	   ["objective"] = "Delivery Jorgen's Sealed Note to Elling Trias in Stormwind City.";
 	   ["zone"] = "Stormwind City";
 	   ["series"] = 3;
@@ -107482,6 +107689,7 @@ addon.questsDB = {
 	   ["req"] = 13;
 	};
 	[1065] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Bring Zamah's Note to Apothecary Lydon in Tarren Mill.";
 	   ["zone"] = "Thunder Bluff";
 	   ["sort"] = "Thunder Bluff";
@@ -111243,34 +111451,37 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[6322] = {
+	   ["race"] = {
+	      [1] = "Undead";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 4556;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6324;
 	   ["faction"] = "Horde";
 	   ["name"] = "Michael Garrett";
-	   ["objective"] = "Bring Gordon's Crate to Michael Garrett.";
-	   ["zone"] = "Silverpine Forest";
-	   ["repgain"] = {
-	      [68] = 25;
-	   };
 	   ["gather"] = {
 	      [1] = 16210;
 	   };
-	   ["next"] = 6324;
-	   ["sort"] = "Silverpine Forest";
+	   ["objective"] = "Bring Gordon's Crate to Michael Garrett.";
+	   ["zone"] = "Silverpine Forest";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 4551;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Silverpine Forest";
 	   ["prev"] = 6323;
 	   ["prequests"] = {
 	      [1] = 6323;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 4556;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [68] = 25;
 	   };
 	   ["req"] = 10;
 	};
@@ -111349,6 +111560,10 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[6386] = {
+	   ["race"] = {
+	      [1] = "Orc";
+	      [2] = "Troll";
+	   };
 	   ["name"] = "Return to the Crossroads.";
 	   ["objective"] = "Buy a wind rider to the Crossroads from the wind rider master Doras, then bring Gryshka's Letter to Zargh at the Crossroads.";
 	   ["zone"] = "The Barrens";
@@ -111574,22 +111789,16 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[8931] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22010;
-	      [2] = 22015;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16680;
 	      [2] = 16676;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Hunter";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -111597,17 +111806,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Hunter";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Beaststalker's Belt and a set of Beaststalker's Gloves to Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 22010;
+	      [2] = 22015;
 	   };
 	   ["req"] = 58;
 	};
@@ -112922,6 +113138,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "Bodleys Unfortunate Fate";
+	   ["faction"] = "Horde";
 	   ["prequests"] = {
 	      [1] = 9016;
 	      [2] = 9017;
@@ -113627,6 +113844,9 @@ addon.questsDB = {
 	[6344] = {
 	   ["objective"] = "Speak with Nessa Shadowsong.";
 	   ["zone"] = "Darnassus";
+	   ["race"] = {
+	      [1] = "NightElf";
+	   };
 	   ["sort"] = "Darnassus";
 	   ["repgain"] = {
 	      [69] = 25;
@@ -114079,22 +114299,16 @@ addon.questsDB = {
 	   ["req"] = 15;
 	};
 	[8926] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Wildheart Belt and a set of Wildheart Gloves Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22106;
-	      [2] = 22110;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16716;
 	      [2] = 16717;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Druid";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -114102,17 +114316,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Druid";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Wildheart Belt and a set of Wildheart Gloves Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 22106;
+	      [2] = 22110;
 	   };
 	   ["req"] = 58;
 	};
@@ -116336,6 +116557,7 @@ addon.questsDB = {
 	[2498] = {
 	   ["objective"] = "Rellian Greenspyre wants you to speak with Denalan at Lake Al'Ameth.";
 	   ["zone"] = "Teldrassil";
+	   ["faction"] = "Alliance";
 	   ["sort"] = "Teldrassil";
 	   ["repgain"] = {
 	      [69] = 10;
@@ -117049,6 +117271,7 @@ addon.questsDB = {
 	   ["req"] = 47;
 	};
 	[5730] = {
+	   ["faction"] = "Horde";
 	   ["objective"] = "Speak to Thrall in Orgrimmar and tell him what you've learned.";
 	   ["zone"] = "Orgrimmar";
 	   ["sort"] = "Orgrimmar";
@@ -117221,6 +117444,7 @@ addon.questsDB = {
 	      };
 	   };
 	   ["name"] = "The Champion of the Banshee Queen";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Undercity";
 	   ["level"] = 56;
 	   ["source"] = {
@@ -117560,6 +117784,9 @@ addon.questsDB = {
 	   ["req"] = 5;
 	};
 	[6321] = {
+	   ["race"] = {
+	      [1] = "Undead";
+	   };
 	   ["objective"] = "Bring Podrig's Order to Karos Razok.";
 	   ["zone"] = "Silverpine Forest";
 	   ["sort"] = "Silverpine Forest";
@@ -118765,34 +118992,37 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[6323] = {
+	   ["race"] = {
+	      [1] = "Undead";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 2226;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6322;
 	   ["faction"] = "Horde";
 	   ["name"] = "Ride to the Undercity";
-	   ["objective"] = "Buy a bat ride to the Undercity from the bat master Karos Razok, then take Podrig's Order to Gordon Wendham in the Undercity.";
-	   ["zone"] = "Silverpine Forest";
-	   ["repgain"] = {
-	      [68] = 75;
-	   };
 	   ["gather"] = {
 	      [1] = 16209;
 	   };
-	   ["next"] = 6322;
-	   ["sort"] = "Silverpine Forest";
+	   ["objective"] = "Buy a bat ride to the Undercity from the bat master Karos Razok, then take Podrig's Order to Gordon Wendham in the Undercity.";
+	   ["zone"] = "Silverpine Forest";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 4556;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Silverpine Forest";
 	   ["prev"] = 6321;
 	   ["prequests"] = {
 	      [1] = 6321;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 2226;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [68] = 75;
 	   };
 	   ["req"] = 10;
 	};
@@ -119130,23 +119360,16 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[8933] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Lightforge Belt and a set of Lightforge Gauntlets to Deliana in Ironforge.\
-";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22086;
-	      [2] = 22090;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16723;
 	      [2] = 16724;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Paladin";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -119154,17 +119377,25 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Paladin";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Lightforge Belt and a set of Lightforge Gauntlets to Deliana in Ironforge.\
+";
+	   ["reward"] = {
+	      [1] = 22086;
+	      [2] = 22090;
 	   };
 	   ["req"] = 58;
 	};
@@ -120042,6 +120273,10 @@ addon.questsDB = {
 	   ["req"] = 40;
 	};
 	[6365] = {
+	   ["race"] = {
+	      [1] = "Orc";
+	      [2] = "Troll";
+	   };
 	   ["objective"] = "Bring Zargh's Meats to Devrak in the Crossroads.";
 	   ["zone"] = "The Barrens";
 	   ["sort"] = "The Barrens";
@@ -120074,6 +120309,7 @@ addon.questsDB = {
 	   ["req"] = 10;
 	};
 	[3506] = {
+	   ["faction"] = "Horde";
 	   ["series"] = 3;
 	   ["objective"] = "Destroy the arcane focusing crystal tied to Magus Rimtori and then slay her. Afterwards, take the Head of Magus Rimtori to Ag'tor Bloodfist in Azshara.";
 	   ["zone"] = "Orgrimmar";
@@ -120310,6 +120546,7 @@ addon.questsDB = {
 	[3570] = {
 	   ["objective"] = "";
 	   ["zone"] = "Undercity";
+	   ["faction"] = "Horde";
 	   ["sort"] = "Undercity";
 	   ["repgain"] = {
 	      [68] = 250;
@@ -122990,22 +123227,16 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[8934] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Devout Belt and a set of Devout Gloves to Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22078;
-	      [2] = 22081;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16696;
 	      [2] = 16692;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Priest";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -123013,17 +123244,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Priest";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Devout Belt and a set of Devout Gloves to Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 22078;
+	      [2] = 22081;
 	   };
 	   ["req"] = 58;
 	};
@@ -123481,34 +123719,37 @@ addon.questsDB = {
 	   ["req"] = 17;
 	};
 	[6363] = {
+	   ["race"] = {
+	      [1] = "Tauren";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 8359;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6364;
 	   ["faction"] = "Horde";
 	   ["name"] = "Tal the Wind Rider Master";
-	   ["objective"] = "Bring Ahanu's Leather Goods to Tal in Thunder Bluff.";
-	   ["zone"] = "The Barrens";
-	   ["repgain"] = {
-	      [81] = 25;
-	   };
 	   ["gather"] = {
 	      [1] = 16283;
 	   };
-	   ["next"] = 6364;
-	   ["sort"] = "The Barrens";
+	   ["objective"] = "Bring Ahanu's Leather Goods to Tal in Thunder Bluff.";
+	   ["zone"] = "The Barrens";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 2995;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "The Barrens";
 	   ["prev"] = 6362;
 	   ["prequests"] = {
 	      [1] = 6362;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 8359;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [81] = 25;
 	   };
 	   ["req"] = 10;
 	};
@@ -123751,23 +123992,16 @@ addon.questsDB = {
 	   ["req"] = 30;
 	};
 	[8932] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Magister's Belt and a set of Magister's Gloves to Deliana in Ironforge.\
-";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22062;
-	      [2] = 22066;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16685;
 	      [2] = 16684;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Mage";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -123775,17 +124009,25 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Mage";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Magister's Belt and a set of Magister's Gloves to Deliana in Ironforge.\
+";
+	   ["reward"] = {
+	      [1] = 22062;
+	      [2] = 22066;
 	   };
 	   ["req"] = 58;
 	};
@@ -123999,6 +124241,9 @@ addon.questsDB = {
 	   ["req"] = 35;
 	};
 	[6181] = {
+	   ["race"] = {
+	      [1] = "Human";
+	   };
 	   ["objective"] = "Bring Lewis' Note to Thor the gryphon master.";
 	   ["zone"] = "Westfall";
 	   ["sort"] = "Westfall";
@@ -125376,34 +125621,37 @@ addon.questsDB = {
 	   ["req"] = 8;
 	};
 	[6364] = {
-	   ["faction"] = "Horde";
-	   ["name"] = "Return to Jahan";
-	   ["objective"] = "Buy a wind rider to the Crossroads from the wind rider master Tal, then bring Ahanu's Leather Goods to Jahan Hawkwing.";
-	   ["zone"] = "The Barrens";
-	   ["gather"] = {
-	      [1] = 16283;
-	   };
-	   ["repgain"] = {
-	      [81] = 350;
-	   };
-	   ["sort"] = "The Barrens";
-	   ["deliver"] = {
-	      [1] = {
-	         ["id"] = 3483;
-	         ["type"] = "npc";
-	      };
-	   };
-	   ["prev"] = 6363;
-	   ["prequests"] = {
-	      [1] = 6363;
-	   };
-	   ["level"] = 10;
 	   ["source"] = {
 	      [1] = {
 	         ["id"] = 2995;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["repgain"] = {
+	      [81] = 350;
+	   };
+	   ["race"] = {
+	      [1] = "Tauren";
+	   };
+	   ["faction"] = "Horde";
+	   ["gather"] = {
+	      [1] = 16283;
+	   };
+	   ["name"] = "Return to Jahan";
+	   ["objective"] = "Buy a wind rider to the Crossroads from the wind rider master Tal, then bring Ahanu's Leather Goods to Jahan Hawkwing.";
+	   ["deliver"] = {
+	      [1] = {
+	         ["id"] = 3483;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["sort"] = "The Barrens";
+	   ["prev"] = 6363;
+	   ["prequests"] = {
+	      [1] = 6363;
+	   };
+	   ["level"] = 10;
+	   ["zone"] = "The Barrens";
 	   ["req"] = 10;
 	};
 	[4341] = {
@@ -126598,35 +126846,39 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[6388] = {
+	   ["race"] = {
+	      [1] = "Dwarf";
+	      [2] = "Gnome";
+	   };
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 4256;
+	         ["type"] = "npc";
+	      };
+	   };
+	   ["next"] = 6392;
 	   ["faction"] = "Alliance";
 	   ["name"] = "Gryth Thurden";
-	   ["objective"] = "Bring the Honorary Picks to Gryth Thurden in Ironforge.";
-	   ["zone"] = "Loch Modan";
-	   ["repgain"] = {
-	      [54] = 25;
-	      [47] = 25;
-	   };
 	   ["gather"] = {
 	      [1] = 16311;
 	   };
-	   ["next"] = 6392;
-	   ["sort"] = "Loch Modan";
+	   ["objective"] = "Bring the Honorary Picks to Gryth Thurden in Ironforge.";
+	   ["zone"] = "Loch Modan";
 	   ["deliver"] = {
 	      [1] = {
 	         ["id"] = 1573;
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["sort"] = "Loch Modan";
 	   ["prev"] = 6391;
 	   ["prequests"] = {
 	      [1] = 6391;
 	   };
 	   ["level"] = 10;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 4256;
-	         ["type"] = "npc";
-	      };
+	   ["repgain"] = {
+	      [54] = 25;
+	      [47] = 25;
 	   };
 	   ["req"] = 10;
 	};
@@ -126844,22 +127096,16 @@ addon.questsDB = {
 	   ["req"] = 1;
 	};
 	[8935] = {
-	   ["sort"] = "Ironforge";
-	   ["type"] = "Dungeon";
-	   ["objective"] = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Deliana in Ironforge.";
-	   ["zone"] = "Ironforge";
-	   ["followup"] = 8929;
-	   ["reward"] = {
-	      [1] = 22002;
-	      [2] = 22006;
+	   ["source"] = {
+	      [1] = {
+	         ["id"] = 16013;
+	         ["type"] = "npc";
+	      };
 	   };
+	   ["zone"] = "Ironforge";
 	   ["gather"] = {
 	      [1] = 16713;
 	      [2] = 16712;
-	   };
-	   ["next"] = 8929;
-	   ["classes"] = {
-	      [1] = "Rogue";
 	   };
 	   ["deliver"] = {
 	      [1] = {
@@ -126867,17 +127113,24 @@ addon.questsDB = {
 	         ["type"] = "npc";
 	      };
 	   };
+	   ["followup"] = 8929;
+	   ["level"] = 60;
+	   ["type"] = "Dungeon";
+	   ["next"] = 8929;
+	   ["faction"] = "Alliance";
+	   ["classes"] = {
+	      [1] = "Rogue";
+	   };
+	   ["sort"] = "Ironforge";
 	   ["name"] = "Just Compensation";
 	   ["prev"] = 8977;
 	   ["prequests"] = {
 	      [1] = 8977;
 	   };
-	   ["level"] = 60;
-	   ["source"] = {
-	      [1] = {
-	         ["id"] = 16013;
-	         ["type"] = "npc";
-	      };
+	   ["objective"] = "Bring a Shadowcraft Belt and a set of Shadowcraft Gloves to Deliana in Ironforge.";
+	   ["reward"] = {
+	      [1] = 22002;
+	      [2] = 22006;
 	   };
 	   ["req"] = 58;
 	};

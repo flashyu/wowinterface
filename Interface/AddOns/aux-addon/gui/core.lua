@@ -1,6 +1,5 @@
 select(2, ...) 'aux.gui'
 
-local T = require 'T'
 local aux = require 'aux'
 
 M.font = [[Fonts\ARHei.TTF]]
@@ -25,8 +24,7 @@ M.font_size = aux.immutable-{
 --		aux_background:SetAllPoints(DropDownList1Backdrop)
 --		blizzard_backdrop = DropDownList1Backdrop:GetBackdrop()
 --		aux.hook('ToggleDropDownMenu', function(...)
---			T.temp(arg)
---			local ret = T.temp-T.list(aux.orig.ToggleDropDownMenu(unpack(arg)))
+--			local ret = {aux.orig.ToggleDropDownMenu(unpack(arg))}
 --			local dropdown = _G[arg[4] or ''] or this:GetParent()
 --			if strfind(dropdown:GetName() or '', '^aux.frame%d+$') then
 --				set_aux_dropdown_style(dropdown)
@@ -37,7 +35,7 @@ M.font_size = aux.immutable-{
 --		end)
 --
 --		function set_aux_dropdown_style(dropdown)
---			DropDownList1Backdrop:SetBackdrop(T.empty)
+--			DropDownList1Backdrop:SetBackdrop(empty)
 --			aux_border:Show()
 --			aux_background:Show()
 --			DropDownList1:SetWidth(dropdown:GetWidth() * .9)
@@ -194,7 +192,7 @@ function M.button(parent, text_height)
 end
 
 do
-	local mt = {__index=T.acquire()}
+	local mt = {__index={}}
 	function mt.__index:create_tab(text)
 		local id = #self._tabs + 1
 
@@ -279,7 +277,7 @@ do
 		local self = {
 			_frame = parent,
 			_orientation = orientation,
-			_tabs = T.acquire(),
+			_tabs = {},
 		}
 	    return setmetatable(self, mt)
 	end
@@ -324,10 +322,10 @@ function M.editbox(parent)
     end)
     editbox:SetScript('OnChar', function(self) (self.char or pass)(self) end)
     do
-        local last_click = T.map('t', 0)
+        local last_click = { t = 0 }
         editbox:SetScript('OnMouseDown', function(self, button)
 	        if button == 'RightButton' then
-                self:SetText('')
+                self:SetText(self.reset_text or '')
                 self:ClearFocus()
                 self.block_focus = true
 	        else
@@ -335,9 +333,12 @@ function M.editbox(parent)
 	            -- local offset = x - editbox:GetLeft()*editbox:GetEffectiveScale() TODO use a fontstring to measure getstringwidth for structural highlighting
 	            -- or use an overlay with itemlinks
 	            if GetTime() - last_click.t < .5 and x == last_click.x and y == last_click.y then
-	                aux.thread(function() editbox:HighlightText() end)
+	                aux.coro_thread(function()
+                        aux.coro_wait()
+                        editbox:HighlightText()
+                    end)
 	            end
-	            T.wipe(last_click)
+                aux.wipe(last_click)
 	            last_click.t = GetTime()
 	            last_click.x = x
 	            last_click.y = y

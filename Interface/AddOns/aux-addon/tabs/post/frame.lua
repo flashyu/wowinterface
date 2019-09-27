@@ -99,11 +99,11 @@ end)
 
 buyout_listing = listing.new(frame.buyout_listing)
 buyout_listing:SetColInfo{
-	{name='拍卖数', width=.17, align='CENTER'},
-	{name='剩余\n时间', width=.11, align='CENTER'},
-	{name='堆叠\n数量', width=.12, align='CENTER'},
-	{name='一口价\n(每件)', width=.4, align='RIGHT'},
-	{name='% 价格\n对比', width=.20, align='CENTER'},
+    {name='拍卖数', width=.17, align='CENTER'},
+    {name='剩余\n时间', width=.11, align='CENTER'},
+    {name='堆叠\n数量', width=.12, align='CENTER'},
+    {name='一口价\n(每件)', width=.4, align='RIGHT'},
+    {name='% 价格\n对比', width=.20, align='CENTER'},
 }
 buyout_listing:SetSelection(function(data)
 	return data.record == get_buyout_selection() or data.record.historical_value and get_buyout_selection() and get_buyout_selection().historical_value
@@ -187,6 +187,7 @@ do
     end)
     slider.editbox:SetNumeric(true)
     slider.editbox:SetMaxLetters(3)
+    slider.editbox.reset_text = '1'
     slider.label:SetText('堆叠数量')
     stack_size_slider = slider
 end
@@ -317,11 +318,11 @@ function aux.handle.LOAD()
 		frame.bid_listing:Hide()
 		frame.buyout_listing:SetPoint('BOTTOMLEFT', frame.inventory, 'BOTTOMRIGHT', 2.5, 0)
 		buyout_listing:SetColInfo{
-			{name='拍卖数', width=.15, align='CENTER'},
-			{name='剩余时间', width=.15, align='CENTER'},
-			{name='堆叠数量', width=.15, align='CENTER'},
-			{name='一口价 (每件)', width=.4, align='RIGHT'},
-			{name='% 价格对比', width=.15, align='CENTER'},
+            {name='拍卖数', width=.15, align='CENTER'},
+            {name='剩余时间', width=.15, align='CENTER'},
+            {name='堆叠数量', width=.15, align='CENTER'},
+            {name='一口价 (每件)', width=.4, align='RIGHT'},
+            {name='% 价格对比', width=.15, align='CENTER'},
 		}
 	end
 end

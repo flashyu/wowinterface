@@ -1,6 +1,5 @@
 select(2, ...) 'aux.tabs.search'
 
-local T = require 'T'
 local aux = require 'aux'
 local info = require 'aux.util.info'
 local completion = require 'aux.util.completion'
@@ -142,7 +141,7 @@ do
     btn:SetPoint('TOPRIGHT', -5, -8)
     btn:SetText('暂停')
     btn:SetScript('OnClick', function()
-        scan.abort(search_scan_id)
+        scan.abort()
     end)
     stop_button = btn
 end
@@ -445,14 +444,14 @@ do
 	input:SetPoint('CENTER', filter_dropdown, 'CENTER', 0, 0)
 	input:SetWidth(150)
 	input:SetScript('OnTabPressed', function() filter_parameter_input:SetFocus() end)
-	input.complete = completion.complete(function() return T.temp-T.list('and', 'or', 'not', unpack(aux.keys(filter_util.filters))) end)
+	input.complete = completion.complete(function() return {'and', 'or', 'not', unpack(aux.keys(filter_util.filters))} end)
 	input.char = function(self) self:complete() end
 	input.change = function(self)
 		local text = self:GetText()
 		if filter_util.filters[text] and filter_util.filters[text].input_type ~= '' then
 			local _, _, suggestions = filter_util.parse_filter_string(text .. '/')
 			filter_parameter_input:SetNumeric(filter_util.filters[text].input_type == 'number')
-			filter_parameter_input.complete = completion.complete(function() return suggestions or T.empty end)
+			filter_parameter_input.complete = completion.complete(function() return suggestions or empty end)
 			filter_parameter_input:Show()
 		else
 			filter_parameter_input:Hide()
@@ -488,7 +487,7 @@ do
     scroll_frame:EnableMouseWheel(true)
     scroll_frame:SetScript('OnMouseWheel', function(self, arg1)
 	    local child = self:GetScrollChild()
-	    child:SetFont('p', [[Fonts\ARHei.TTF]], aux.bounded(gui.font_size.small, gui.font_size.large, select(2, child:GetFont()) + arg1 * 2))
+	    child:SetFont('p', [[Fonts\ARIALN.TTF]], aux.bounded(gui.font_size.small, gui.font_size.large, select(2, child:GetFont()) + arg1 * 2))
 	    update_filter_display()
     end)
     scroll_frame:RegisterForDrag('LeftButton')
@@ -513,7 +512,7 @@ do
     gui.set_content_style(scroll_frame, -2, -2, -2, -2)
     local scroll_child = CreateFrame('SimpleHTML', nil, scroll_frame)
     scroll_frame:SetScrollChild(scroll_child)
-    scroll_child:SetFont('p', [[Fonts\ARHei.TTF]], gui.font_size.large)
+    scroll_child:SetFont('p', [[Fonts\ARIALN.TTF]], gui.font_size.large)
     scroll_child:SetTextColor('p', aux.color.label.enabled())
     scroll_child:SetWidth(1)
     scroll_child:SetHeight(1)
@@ -541,7 +540,6 @@ for _ = 1, 5 do
 			    end
 		    end
 	    elseif button == 'RightButton' then
-	        aux.set_tab(1)
 		    set_filter(strlower(info.item(row.record.item_id).name) .. '/exact')
 		    execute(nil, false)
 	    end
@@ -562,7 +560,7 @@ favorite_searches_listing:SetColInfo{{name='状态', width=.07, align='CENTER'},
 recent_searches_listing = listing.new(frame.saved.recent)
 recent_searches_listing:SetColInfo{{name='最近查询', width=1}}
 
-for listing in pairs(T.temp-T.set(favorite_searches_listing, recent_searches_listing)) do
+for listing in aux.iter(favorite_searches_listing, recent_searches_listing) do
 	for k, v in pairs(handlers) do
 		listing:SetHandler(k, v)
 	end

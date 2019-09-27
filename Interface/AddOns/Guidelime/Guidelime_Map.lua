@@ -124,17 +124,21 @@ end
 local function getTooltip(element)
 	if not GuidelimeData.showTooltips then return end
 	local tooltip
-	if element.questId ~= nil then 
-		tooltip = addon.getQuestIcon(element.questId, element.questType, element.objective) .. 
-			addon.getQuestText(element.questId, element.questType, nil, element.step and element.step.active) 
-		if element.questType ~= "ACCEPT" then
+	if element.attached ~= nil and element.attached.questId ~= nil then 
+		tooltip = addon.getQuestIcon(element.attached.questId, element.attached.t, element.attached.objective) .. 
+			addon.getQuestText(element.attached.questId, element.attached.t, nil, element.step and element.step.active) 
+		if element.attached.t ~= "ACCEPT" then
 			local objectives
-			if element.questType == "TURNIN" or element.objective == nil then
+			if element.attached.t == "TURNIN" then
 				objectives = true
+			elseif element.attached.objective ~= nil then
+				objectives = {element.attached.objective}
+			elseif element.objectives ~= nil then
+				objectives = element.objectives
 			else
-				objectives = {element.objective}
+				objectives = true
 			end
-			local obj = addon.getQuestObjectiveText(element.questId, objectives, "    ")
+			local obj = addon.getQuestObjectiveText(element.attached.questId, objectives, "    ", element.npcId, element.objectId)
 			if obj ~= "" then tooltip = tooltip .. "\n" .. obj end
 		end
 	end
@@ -299,13 +303,13 @@ function addon.showArrow(element)
 	if GuidelimeDataChar.showArrow then
 		if addon.arrowFrame == nil then
 			addon.arrowFrame = CreateFrame("FRAME", nil, UIParent)
-			addon.arrowFrame:SetWidth(GuidelimeDataChar.arrowSize)
-			addon.arrowFrame:SetHeight(GuidelimeDataChar.arrowSize)
 			addon.arrowFrame:SetPoint(GuidelimeDataChar.arrowRelative, UIParent, GuidelimeDataChar.arrowRelative, GuidelimeDataChar.arrowX, GuidelimeDataChar.arrowY)
 		    addon.arrowFrame.texture = addon.arrowFrame:CreateTexture(nil, "OVERLAY")
 		    addon.setArrowTexture()
 		    addon.arrowFrame.texture:SetAllPoints()
 			addon.arrowFrame:SetAlpha(GuidelimeDataChar.arrowAlpha)
+			addon.arrowFrame:SetWidth(GuidelimeDataChar.arrowSize)
+			addon.arrowFrame:SetHeight(GuidelimeDataChar.arrowSize)
 			addon.arrowFrame:SetMovable(true)
 			addon.arrowFrame:EnableMouse(true)
 			addon.arrowFrame:SetScript("OnMouseDown", function(this) 

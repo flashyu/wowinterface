@@ -5,7 +5,6 @@
 /Logs
 /Screenshots
 /UTILS
-*.zip
 *.exe
 *.dll
 *.Dll

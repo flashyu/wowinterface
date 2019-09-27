@@ -1,6 +1,5 @@
 select(2, ...) 'aux.tabs.search'
 
-local T = require 'T'
 local aux = require 'aux'
 local filter_util = require 'aux.util.filter'
 local gui = require 'aux.gui'
@@ -10,27 +9,27 @@ function aux.handle.LOAD()
 end
 
 function update_search_listings()
-	local favorite_search_rows = T.acquire()
+	local favorite_search_rows = {}
 	for i = 1, #favorite_searches do
 		local search = favorite_searches[i]
 		local name = strsub(search.prettified, 1, 250)
-		tinsert(favorite_search_rows, T.map(
-			'cols', T.list(T.map('value', search.alert and aux.color.red'X' or ''), T.map('value', name)),
-			'search', search,
-			'index', i
-		))
+		tinsert(favorite_search_rows, {
+			cols = {{ value = search.alert and aux.color.red'X' or '' }, { value = name }},
+			search = search,
+			index = i,
+        })
 	end
 	favorite_searches_listing:SetData(favorite_search_rows)
 
-	local recent_search_rows = T.acquire()
+	local recent_search_rows = {}
 	for i = 1, #recent_searches do
 		local search = recent_searches[i]
 		local name = strsub(search.prettified, 1, 250)
-		tinsert(recent_search_rows, T.map(
-			'cols', T.list(T.map('value', name)),
-			'search', search,
-			'index', i
-		))
+		tinsert(recent_search_rows, {
+			cols = {{ value = name }},
+			search = search,
+			index = i,
+        })
 	end
 	recent_searches_listing:SetData(recent_search_rows)
 end
@@ -41,10 +40,10 @@ function new_recent_search(filter_string, prettified)
 			tremove(recent_searches, i)
 		end
 	end
-	tinsert(recent_searches, 1, T.map(
-		'filter_string', filter_string,
-		'prettified', prettified
-	))
+	tinsert(recent_searches, 1, {
+		filter_string = filter_string,
+		prettified = prettified,
+    })
 	while #recent_searches > 50 do
 		tremove(recent_searches)
 	end
@@ -90,7 +89,7 @@ handlers = {
 }
 
 function get_alert_validator()
-	local validators = T.acquire()
+	local validators = {}
 	for _, search in pairs(favorite_searches) do
 		if search.alert then
 			local queries, error = filter_util.queries(search.filter_string)
@@ -109,10 +108,10 @@ end
 function add_favorite(filter_string)
 	local queries, error = filter_util.queries(filter_string)
 	if queries then
-		tinsert(favorite_searches, 1, T.map(
-			'filter_string', filter_string,
-			'prettified', aux.join(aux.map(queries, function(query) return query.prettified end), ';')
-		))
+		tinsert(favorite_searches, 1, {
+			filter_string = filter_string,
+			prettified = aux.join(aux.map(queries, function(query) return query.prettified end), ';')
+        })
 		update_search_listings()
 	else
 		aux.print('Invalid filter:', error)
