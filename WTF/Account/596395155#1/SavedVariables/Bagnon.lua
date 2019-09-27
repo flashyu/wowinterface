@@ -18,6 +18,15 @@ Bagnon_Sets = {
 	},
 	["gemColor"] = {
 	},
+	["enchantColor"] = {
+	},
+	["glowAlpha"] = 0.5,
+	["normalColor"] = {
+	},
+	["profiles"] = {
+	},
+	["mineColor"] = {
+	},
 	["global"] = {
 		["inventory"] = {
 			["rules"] = {
@@ -55,9 +64,9 @@ Bagnon_Sets = {
 			["x"] = -11.0438232421875,
 			["borderColor"] = {
 			},
-			["itemScale"] = 1,
-			["scale"] = 1,
 			["alpha"] = 1,
+			["scale"] = 1,
+			["itemScale"] = 1,
 		},
 		["vault"] = {
 			["rules"] = {
@@ -154,21 +163,12 @@ Bagnon_Sets = {
 			},
 			["color"] = {
 			},
-			["borderColor"] = {
-			},
+			["x"] = 95.0000076293945,
 			["hiddenRules"] = {
 			},
-			["x"] = 95.0000076293945,
+			["borderColor"] = {
+			},
 		},
-	},
-	["glowAlpha"] = 0.5,
-	["normalColor"] = {
-	},
-	["profiles"] = {
-	},
-	["mineColor"] = {
-	},
-	["enchantColor"] = {
 	},
 	["herbColor"] = {
 	},
