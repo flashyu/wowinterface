@@ -24,6 +24,7 @@ AutoBarDB = {
 						"AutoBarButtonInterrupt", -- [3]
 						"AutoBarButtonER", -- [4]
 						"AutoBarButtonConjure", -- [5]
+						"AutoBarButtonClassBuff", -- [6]
 					},
 					["popupDirection"] = "1",
 					["posY"] = 39.8765731680733,
@@ -47,6 +48,14 @@ AutoBarDB = {
 					["buttonKey"] = "AutoBarButtonStealth",
 					["defaultButtonIndex"] = "*",
 				},
+				["AutoBarButtonInterrupt"] = {
+					["barKey"] = "AutoBarClassBarMage",
+					["buttonClass"] = "AutoBarButtonInterrupt",
+					["arrangeOnUse"] = true,
+					["enabled"] = true,
+					["buttonKey"] = "AutoBarButtonInterrupt",
+					["defaultButtonIndex"] = "*",
+				},
 				["AutoBarButtonER"] = {
 					["barKey"] = "AutoBarClassBarMage",
 					["buttonClass"] = "AutoBarButtonER",
@@ -63,18 +72,17 @@ AutoBarDB = {
 					["buttonKey"] = "AutoBarButtonShields",
 					["defaultButtonIndex"] = "*",
 				},
-				["AutoBarButtonInterrupt"] = {
+				["AutoBarButtonClassBuff"] = {
 					["barKey"] = "AutoBarClassBarMage",
-					["buttonClass"] = "AutoBarButtonInterrupt",
-					["arrangeOnUse"] = true,
+					["buttonClass"] = "AutoBarButtonClassBuff",
 					["enabled"] = true,
-					["buttonKey"] = "AutoBarButtonInterrupt",
-					["defaultButtonIndex"] = "*",
+					["buttonKey"] = "AutoBarButtonClassBuff",
+					["defaultButtonIndex"] = 6,
 				},
 			},
 		},
 	},
-	["whatsnew_version"] = "1.13.2.03",
+	["whatsnew_version"] = "1.13.2.04",
 	["account"] = {
 		["customCategoriesVersion"] = 3,
 		["barList"] = {
@@ -95,9 +103,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["MAGE"] = true,
 				["WARRIOR"] = true,
-				["PRIEST"] = true,
-				["frameStrata"] = "LOW",
 				["buttonWidth"] = 36,
+				["alpha"] = 1,
+				["PRIEST"] = true,
 				["posY"] = 114.69846258976,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -110,7 +118,7 @@ AutoBarDB = {
 					"AutoBarButtonTrinket2", -- [8]
 				},
 				["WARLOCK"] = true,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["scale"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -144,13 +152,13 @@ AutoBarDB = {
 				["posY"] = 146.40268353379,
 				["popupDirection"] = "1",
 				["columns"] = 9,
-				["frameStrata"] = "LOW",
 				["alpha"] = 1,
-				["PRIEST"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["SHAMAN"] = true,
 				["alignButtons"] = "3",
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
+				["PRIEST"] = true,
 				["buttonHeight"] = 36,
 				["padding"] = 0,
 				["dockShiftX"] = 0,

@@ -14,6 +14,7 @@ LeaMapsDB = {
 	["MapPosR"] = "CENTER",
 	["MapPosX"] = 0,
 	["FadeMap"] = "Off",
+	["UseClassIcons"] = "On",
 	["MainPanelX"] = 0,
 	["ShowPointsOfInterest"] = "On",
 	["RememberZoom"] = "On",
