@@ -21,7 +21,7 @@ SpyDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 263.166748046875,
+					["y"] = 263,
 					["h"] = 34.9999923706055,
 					["w"] = 170,
 					["x"] = 12,
@@ -35,7 +35,6 @@ SpyDB = {
 				},
 			},
 			["AppendUnitNameCheck"] = true,
-			["MainWindowVis"] = false,
 			["AppendUnitKoSCheck"] = true,
 		},
 	},
