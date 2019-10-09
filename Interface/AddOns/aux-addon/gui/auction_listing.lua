@@ -637,7 +637,6 @@ local methods = {
 	        GameTooltip:SetOwner(self, 'ANCHOR_RIGHT')
             GameTooltip:SetHyperlink(row.record.link)
             GameTooltip_ShowCompareItem()
---            info.set_shopping_tooltip(row.record.slot)
         end
     end,
 
@@ -651,11 +650,11 @@ local methods = {
         if not rt.rowInfo.single_item then
             if rt.expanded[self.expandKey] then
                 GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
-                GameTooltip:AddLine('Double-click to collapse this item.', 1, 1, 1, true)
+                GameTooltip:AddLine('双击可折叠此物品', 1, 1, 1, true)
                 GameTooltip:Show()
             elseif self.expandable then
                 GameTooltip_SetDefaultAnchor(GameTooltip, UIParent)
-                GameTooltip:AddLine('Double-click to expand this item.', 1, 1, 1, true)
+                GameTooltip:AddLine('双击可展开此物品', 1, 1, 1, true)
                 GameTooltip:Show()
             end
         end
@@ -704,7 +703,7 @@ local methods = {
 
 	    local records = self.records
 
-	    self.rowInfo.single_item = aux.all(records, function(record) return record.item_key == records[1].item_key end)
+        self.rowInfo.single_item = aux.all(records, function(record) return record.item_key == records[1].item_key end)
 
         sort(records, function(a, b) return a.search_signature < b.search_signature or a.search_signature == b.search_signature and tostring(a) < tostring(b) end)
 

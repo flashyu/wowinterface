@@ -303,13 +303,13 @@ Guidelime.registerGuide(
 [OC]===================================
 [OC]古博拉采掘场里
      参议员梅尔·圣石处, [QA433 The Public Servant]
-     工头乔尼·石眉处, [QA432 Those Blasted Troggs]
+     工头乔尼·石眉处, [QA432]
      [OC]东南穿过采石场和洞穴
-          去做[QC432 Those Blasted Troggs] (击杀6石腭击颅者)
+          去做[QC432] (击杀6石腭击颅者)
           去做[QC433 The Public Servant] (击杀10石腭断骨者)
      [OC]杀回到任务给予者
           [OC]弗拉斯特·多克南处, [R][V]
-          工头乔尼·石眉处, [QT432 Those Blasted Troggs]
+          工头乔尼·石眉处, [QT432]
           参议员梅尔·圣石处, [QT433 The Public Servant]
 
 [OC]===================================

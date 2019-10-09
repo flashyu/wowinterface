@@ -142,7 +142,8 @@ M.filters = {
         input_type = 'money',
         validator = function(amount)
             return function(auction_record)
-                local disenchant_value = disenchant.value(auction_record.slot, auction_record.quality, auction_record.level)
+                local item_info = info.item(auction_record.item_id)
+                local disenchant_value = item_info and disenchant.value(item_info.slot, item_info.quality, item_info.level)
                 return disenchant_value and disenchant_value - auction_record.bid_price >= amount
             end
         end
@@ -152,7 +153,8 @@ M.filters = {
         input_type = 'money',
         validator = function(amount)
             return function(auction_record)
-                local disenchant_value = disenchant.value(auction_record.slot, auction_record.quality, auction_record.level)
+                local item_info = info.item(auction_record.item_id)
+                local disenchant_value = item_info and disenchant.value(item_info.slot, item_info.quality, item_info.level)
                 return auction_record.buyout_price > 0 and disenchant_value and disenchant_value - auction_record.buyout_price >= amount
             end
         end
@@ -236,10 +238,9 @@ do
 			if not self[str] and (str == 'usable' or str == 'exact' and self.name and aux.size(self) == 1) then
 				self[str] = {str, 1}
 				return {'blizzard', str, str, 1}
-			elseif i == 1 and strlen(str) <= 63 then
+            elseif i == 1 then
 				self.name = unquote(str)
 				return {'blizzard', 'name', unquote(str), str}
---				return nil, 'The name filter must not be longer than 63 characters' TODO
 			end
 		end,
 	}

@@ -19,6 +19,11 @@ addon.MAINFRAME_ALPHA_MAX = 85
 addon.AUTO_COMPLETE_DELAY = 0.01
 addon.DEFAULT_GOTO_RADIUS = 10
 
+addon.CONTACT_DISCORD = "Borick#7318"
+addon.CONTACT_CURSEFORGE = "rickrob"
+addon.CONTACT_REDDIT = "u/borick23"
+
+
 function addon.getLevelColor(level)
 	if level > addon.level + 4 then
 		return addon.COLOR_LEVEL_RED
@@ -287,14 +292,7 @@ function addon.loadCurrentGuide()
 	local completed = GetQuestsCompleted()
 
 	for _, step in ipairs(guide.steps) do
-		local loadLine = true
-		if step.race ~= nil then
-			if not addon.contains(step.race, addon.race) then loadLine = false end
-		end
-		if step.class ~= nil then
-			if not addon.contains(step.class, addon.class) then loadLine = false end
-		end
-		if step.faction ~= nil and step.faction ~= addon.faction then loadLine = false end
+		local loadLine = addon.applies(step)
 		local filteredElements = {}
 		for _, element in ipairs(step.elements) do
 			if not element.generated and
@@ -332,9 +330,7 @@ function addon.loadCurrentGuide()
 					addon.quests[element.questId].finished = addon.quests[element.questId].completed
 					if addon.questsDB[element.questId] ~= nil and addon.questsDB[element.questId].prequests ~= nil then
 						for _, id in ipairs(addon.questsDB[element.questId].prequests) do
-							if (addon.questsDB[id].faction or addon.faction) == addon.faction and 
-								(addon.questsDB[id].races == nil or addon.contains(addon.questsDB[id].races, addon.race)) and 
-								(addon.questsDB[id].classes == nil or addon.contains(addon.questsDB[id].classes, addon.class)) then
+							if addon.applies(addon.questsDB[id]) then
 								if addon.quests[id] == nil then addon.quests[id] = {} end
 								addon.quests[id].completed = completed[id] ~= nil and completed[id]
 								if addon.quests[id].followup == nil then addon.quests[id].followup = {} end
@@ -801,17 +797,13 @@ local function updateStepAvailability(i, changedIndexes, scheduled)
 	for _, element in ipairs(step.elements) do
 		element.available = true
 		if element.t == "ACCEPT" then
-			if addon.questsDB[element.questId] ~= nil and addon.questsDB[element.questId].prequests ~= nil then
-				for _, id in ipairs(addon.questsDB[element.questId].prequests) do
-					if (addon.questsDB[id].faction or addon.faction) == addon.faction and 
-						(addon.questsDB[id].races == nil or addon.contains(addon.questsDB[id].races, addon.race)) and 
-						(addon.questsDB[id].classes == nil or addon.contains(addon.questsDB[id].classes, addon.class)) and
-						not addon.quests[id].completed and not scheduled.TURNIN[id] then
-						element.available = false
-						if not addon.contains(step.missingPrequests, id) then
-							table.insert(step.missingPrequests, id)
-						end
-						addon.currentGuide.unavailableQuests[element.questId] = true
+			local missingPrequests = addon.getMissingPrequests(element.questId, function(id) return addon.quests[id].completed or scheduled.TURNIN[id] end)
+			if #missingPrequests > 0 then
+				element.available = false
+				addon.currentGuide.unavailableQuests[element.questId] = true
+				for _, id in ipairs(missingPrequests) do
+					if not addon.contains(step.missingPrequests, id) then
+						table.insert(step.missingPrequests, id)
 					end
 				end
 			end
@@ -1441,6 +1433,64 @@ local function simulateCompleteCurrentSteps()
 	end
 end
 
+local function listAliasQuests(completed, id, excludeIds)
+	local text = ""
+	for _, id2 in ipairs(addon.getPossibleQuestIdsByName(addon.questsDB[id].name)) do
+		if id2 ~= id and not addon.contains(excludeIds, ids) then
+			text = text .. "Quest \"" .. addon.questsDB[id2].name .. "\"(" .. id2 .. ") "
+			if not completed[id2] then text = text .. "not " end
+			text = text .. "completed.\r"
+		end
+	end
+	return text
+end
+
+function addon.checkQuests()
+	local completed = GetQuestsCompleted()
+	local count = 0
+	local text = ""
+	for id, value in pairs(completed) do
+		count = count + 1
+		if addon.questsDB[id] == nil then
+			text = text .. "Unknown quest " .. id .. " completed.\r"
+		else
+			local missingPrequests = addon.getMissingPrequests(id, function(id) return completed[id] end)
+			local found = false
+			local ids = {id}
+			for _, pid in ipairs(missingPrequests) do
+				text = text .. "Quest \"" .. addon.questsDB[id].name .. "\"(" .. id .. ") was completed but prequest \"" .. addon.questsDB[pid].name .. "\"(" .. pid .. ") was not.\r"
+				text = text .. listAliasQuests(completed, pid, ids)
+				table.insert(ids, pid)
+				found = true
+			end
+			if addon.questsDB[id].replacement ~= nil and not completed[addon.questsDB[id].replacement] then
+				text = text .. "Quest \"" .. addon.questsDB[id].name .. "\"(" .. id .. ") was completed but is marked as being replaced by \"" .. addon.questsDB[addon.questsDB[id].replacement].name .. "\"(" .. addon.questsDB[id].replacement .. ") which is not completed.\r"
+				table.insert(ids, addon.questsDB[id].replacement)
+				found = true
+			end
+			--[[if addon.questsDB[id].replaces ~= nil and not completed[addon.questsDB[id].replaces] then
+				text = text .. "Quest \"" .. addon.questsDB[id].name .. "\"(" .. id .. ") was completed but is marked as being replacement for \"" .. addon.questsDB[addon.questsDB[id].replaces].name .. "\"(" .. addon.questsDB[id].replaces .. ") which is not completed.\r"
+				table.insert(ids, addon.questsDB[id].replaces)
+				found = true
+			end]]
+			if found then text = text .. listAliasQuests(completed, id, ids) .. "\r" end
+		end
+	end
+	if text == "" then 
+		print ("LIME: " .. string.format(L.CHECK_QUESTS_COMPLETED, count))
+		print ("LIME: " .. L.CHECK_QUESTS_NO_INCONSISTENCIES) 
+	else 
+		local regions = {"US", "KR", "EU", "TW", "CN", "?"}
+		text = "Reported by " .. (UnitName("player") or "?") .. "-" .. (GetRealmName() or "?")  .. "(" .. regions[GetCurrentRegion() or 6] .. "), " .. 
+			(addon.level or "?")  .. " " .. (addon.race or "?")  .. " " .. (addon.class or "?")  .. "," ..
+			" at " .. date("%Y/%m/%d %H:%M:%S", GetServerTime()) .. 
+			" with " .. GetAddOnMetadata(addonName, "title") .. " " .. GetAddOnMetadata(addonName, "version") .. "\r\n" .. text
+		text = string.format(L.CHECK_QUESTS, addon.CONTACT_DISCORD, addon.CONTACT_CURSEFORGE, addon.CONTACT_REDDIT) .. "\r\n" .. text
+		text = string.format(L.CHECK_QUESTS_COMPLETED, count) .. ".\r" .. text
+		local popup = addon.showCopyPopup(text, "", 0, 500, true)
+	end
+end
+
 SLASH_Guidelime1 = "/lime"
 SLASH_Guidelime2 = "/guidelime"
 function SlashCmdList.Guidelime(msg)
@@ -1451,5 +1501,6 @@ function SlashCmdList.Guidelime(msg)
 	elseif msg == 'skip' then skipCurrentSteps()
 	elseif msg == 'questie true' and not GuidelimeData.dataSourceQuestie then GuidelimeData.dataSourceQuestie = true; ReloadUI()
 	elseif msg == 'questie false' and GuidelimeData.dataSourceQuestie then GuidelimeData.dataSourceQuestie = false; ReloadUI()
+	elseif msg == 'quests' then addon.checkQuests()
 	end
 end

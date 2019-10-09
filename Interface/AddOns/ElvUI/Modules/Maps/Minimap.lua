@@ -92,8 +92,6 @@ end
 function M:ADDON_LOADED(_, addon)
 	if addon == "Blizzard_TimeManager" then
 		_G.TimeManagerClockButton:Kill()
-	elseif addon == "Blizzard_FeedbackUI" then
-		_G.FeedbackUIButton:Kill()
 	end
 end
 
@@ -311,6 +309,8 @@ function M:GetMinimapShape()
 		function GetMinimapShape()
 			return 'SQUARE'
 		end
+
+		_G.Minimap:Size(E.db.general.minimap.size, E.db.general.minimap.size)
 	end
 end
 

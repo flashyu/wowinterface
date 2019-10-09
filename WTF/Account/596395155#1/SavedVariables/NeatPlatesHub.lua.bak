@@ -75,17 +75,17 @@ NeatPlatesHubSettings = {
 			["g"] = 0.658822059631348,
 			["r"] = 0.235293596982956,
 		},
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-			["Liberated Karabor Prisoner"] = true,
-		},
+		["ThreatSoloEnable"] = false,
 		["StyleEnemyMode"] = 1,
 		["HighlightTargetMode"] = 1,
 		["HeadlineFriendlySubtext"] = "RoleGuildLevel",
 		["ColorEnemyNameMode"] = 1,
 		["WidgetBuffPurgeable"] = false,
 		["WidgetThreatIndicator"] = true,
-		["HeadlineEnemyColor"] = 4,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
+			["Liberated Karabor Prisoner"] = true,
+		},
 		["WidgetAuraScaleOptions"] = {
 			["y"] = 1,
 			["x"] = 1,
@@ -122,8 +122,8 @@ NeatPlatesHubSettings = {
 			["r"] = 0.999997794628143,
 		},
 		["StatusTextLeftColor"] = true,
-		["HeadlineFriendlyColor"] = 4,
 		["WidgetAuraTrackCurse"] = true,
+		["HeadlineFriendlyColor"] = 4,
 		["ColorHighHealth"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.199999555945396,
@@ -227,13 +227,13 @@ NeatPlatesHubSettings = {
 		["EmphasizedAuraPriority"] = {
 		},
 		["FrameBarWidth"] = 1,
-		["UnitSpotlightScaleEnable"] = true,
 		["ColorNeutral"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0,
 			["g"] = 0.999997794628143,
 			["r"] = 0.999997794628143,
 		},
+		["UnitSpotlightScaleEnable"] = true,
 		["ColorAttackingOtherTank"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.784312009811401,
@@ -548,7 +548,7 @@ NeatPlatesHubSettings = {
 			["g"] = 0.70588082075119,
 			["r"] = 0.988233149051666,
 		},
-		["ThreatSoloEnable"] = false,
+		["HeadlineEnemyColor"] = 4,
 	},
 	["profiles"] = {
 		["默认"] = "FFFFFFFF",

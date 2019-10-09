@@ -1,6 +1,7 @@
 select(2, ...) 'aux.gui'
 
 local aux = require 'aux'
+local completion = require 'aux.util.completion'
 
 M.font = [[Fonts\ARHei.TTF]]
 
@@ -10,102 +11,11 @@ M.font_size = aux.immutable-{
 	large = 18,
 }
 
---function aux.handle.LOAD()
---	do
---		local blizzard_backdrop, aux_background, aux_border
---
---		aux_border = DropDownList1:CreateTexture()
---		aux_border:SetColorTexture(1, 1, 1, .02)
---		aux_border:SetPoint('TOPLEFT', DropDownList1Backdrop, 'TOPLEFT', -2, 2)
---		aux_border:SetPoint('BOTTOMRIGHT', DropDownList1Backdrop, 'BOTTOMRIGHT', 1.5, -1.5)
---		aux_border:SetBlendMode('ADD')
---		aux_background = DropDownList1:CreateTexture(nil, 'OVERLAY')
---		aux_background:SetTexture(aux.color.content.background())
---		aux_background:SetAllPoints(DropDownList1Backdrop)
---		blizzard_backdrop = DropDownList1Backdrop:GetBackdrop()
---		aux.hook('ToggleDropDownMenu', function(...)
---			local ret = {aux.orig.ToggleDropDownMenu(unpack(arg))}
---			local dropdown = _G[arg[4] or ''] or this:GetParent()
---			if strfind(dropdown:GetName() or '', '^aux.frame%d+$') then
---				set_aux_dropdown_style(dropdown)
---			else
---				set_blizzard_dropdown_style()
---			end
---			return unpack(ret)
---		end)
---
---		function set_aux_dropdown_style(dropdown)
---			DropDownList1Backdrop:SetBackdrop(empty)
---			aux_border:Show()
---			aux_background:Show()
---			DropDownList1:SetWidth(dropdown:GetWidth() * .9)
---			DropDownList1:SetHeight(DropDownList1:GetHeight() - 10)
---			DropDownList1:ClearAllPoints()
---			DropDownList1:SetPoint('TOPLEFT', dropdown, 'BOTTOMLEFT', -2, -2)
---			for i = 1, UIDROPDOWNMENU_MAXBUTTONS do
---				local button = _G['DropDownList1Button' .. i]
---				button:SetPoint('TOPLEFT', 0, -((button:GetID() - 1) * UIDROPDOWNMENU_BUTTON_HEIGHT) - 7)
---				button:SetPoint('TOPRIGHT', 0, -((button:GetID() - 1) * UIDROPDOWNMENU_BUTTON_HEIGHT) - 7)
---				local text = button:GetFontString()
---				text:SetFont(font, 14)
---				text:SetPoint('TOPLEFT', 18, 0)
---				text:SetPoint('BOTTOMRIGHT', -8, 0)
---				local highlight = _G['DropDownList1Button' .. i .. 'Highlight']
---				highlight:ClearAllPoints()
---				highlight:SetDrawLayer('OVERLAY')
---				highlight:SetHeight(14)
---				highlight:SetPoint('LEFT', 5, 0)
---				highlight:SetPoint('RIGHT', -3, 0)
---				local check = _G['DropDownList1Button' .. i .. 'Check']
---				check:SetWidth(16)
---				check:SetHeight(16)
---				check:SetPoint('LEFT', 3, -1)
---			end
---		end
---
---		function set_blizzard_dropdown_style()
---			DropDownList1Backdrop:SetBackdrop(blizzard_backdrop)
---			aux_border:Hide()
---			aux_background:Hide()
---			for i = 1, UIDROPDOWNMENU_MAXBUTTONS do
---				local button = _G['DropDownList1Button' .. i]
---				local text = button:GetFontString()
---				text:SetFont([[Fonts\FRIZQT__.ttf]], 10)
---				text:SetShadowOffset(1, -1)
---				local highlight = _G['DropDownList1Button' .. i .. 'Highlight']
---				highlight:SetAllPoints()
---				highlight:SetDrawLayer('BACKGROUND')
---				local check = _G['DropDownList1Button' .. i .. 'Check']
---				check:SetWidth(24)
---				check:SetHeight(24)
---				check:SetPoint('LEFT', 0, 0)
---			end
---		end
---	end
---end
-
 do
 	local id = 1
 	function M.unique_name()
 		id = id + 1
 		return 'aux.frame' .. id
-	end
-end
-
-do
-	local menu = CreateFrame('Frame', unique_name(), UIParent, 'UIDropDownMenuTemplate')
-	function M.menu(...)
-        local numArgs = select('#', ...)
-        local arg = {...}
-		HideDropDownMenu(1)
-		UIDropDownMenu_Initialize(menu, function()
-            local info = UIDropDownMenu_CreateInfo()
-			for i = 1, numArgs, 2 do
-                info.text, info.notCheckable, info.func = arg[i], true, arg[i + 1] -- TODO notCheckable needed?
-				UIDropDownMenu_AddButton(info)
-			end
-		end, 'MENU')
-		ToggleDropDownMenu(1, nil, menu, 'cursor')
 	end
 end
 
@@ -364,58 +274,45 @@ function M.editbox(parent)
 end
 
 do
-	local function update_bar(self)
-		if self:GetValue() < 1 then
-            self:SetAlpha(1 - (sin(GetTime() * 180) + 1) / 4)
-		else
-            self:SetAlpha(1)
-		end
-	end
+	local function update_alpha(self)
+		self:SetAlpha(1 - (sin(GetTime() * 180) + 1) / 4)
+    end
+
 	function M.status_bar(parent)
 	    local self = CreateFrame('Frame', nil, parent)
-	    local level = parent:GetFrameLevel()
-	    self:SetFrameLevel(level + 1)
+        set_window_style(self)
 	    do
 	        local status_bar = CreateFrame('StatusBar', nil, self, 'TextStatusBar')
 	        status_bar:SetOrientation('HORIZONTAL')
 	        status_bar:SetMinMaxValues(0, 1)
-	        status_bar:SetAllPoints()
-	        status_bar:SetStatusBarTexture([[Interface\Buttons\WHITE8X8]])
+	        status_bar:SetPoint('TOPLEFT', 1.5, -1.5)
+            status_bar:SetPoint('BOTTOMRIGHT', -1.5, 1.5)
+            status_bar:SetStatusBarTexture([[Interface\Buttons\WHITE8X8]])
 	        status_bar:SetStatusBarColor(.42, .42, .42, .7)
-	        status_bar:SetFrameLevel(level + 2)
-	        status_bar:SetScript('OnUpdate', update_bar)
 	        self.secondary_status_bar = status_bar
 	    end
 	    do
-	        local status_bar = CreateFrame('StatusBar', nil, self, 'TextStatusBar')
+	        local status_bar = CreateFrame('StatusBar', nil, self.secondary_status_bar, 'TextStatusBar')
 	        status_bar:SetOrientation('HORIZONTAL')
 	        status_bar:SetMinMaxValues(0, 1)
 	        status_bar:SetAllPoints()
 	        status_bar:SetStatusBarTexture([[Interface\Buttons\WHITE8X8]])
 	        status_bar:SetStatusBarColor(.19, .22, .33, .9)
-	        status_bar:SetFrameLevel(level + 3)
-	        status_bar:SetScript('OnUpdate', update_bar)
 	        self.primary_status_bar = status_bar
 	    end
-	    do
-	        local text_frame = CreateFrame('Frame', nil, self)
-	        text_frame:SetFrameLevel(level + 4)
-	        text_frame:SetAllPoints(self)
-	        local text = label(text_frame, font_size.medium)
-	        text:SetTextColor(aux.color.text.enabled())
-	        text:SetPoint('CENTER', 0, 0)
-	        self.text = text
-	    end
 	    function self:update_status(primary_status, secondary_status)
+            if max(primary_status or 0, secondary_status or 0) < 1 then
+                self:SetScript('OnUpdate', update_alpha)
+            else
+                self:SetScript('OnUpdate', nil)
+                self:SetAlpha(1)
+            end
 	        if primary_status then
 	            self.primary_status_bar:SetValue(primary_status)
 	        end
 	        if secondary_status then
 	            self.secondary_status_bar:SetValue(secondary_status)
 	        end
-	    end
-	    function self:set_text(text)
-	        self.text:SetText(text)
 	    end
 	    return self
 	end
@@ -474,28 +371,120 @@ function M.vertical_line(parent, x_offset, top_offset, bottom_offset, inverted_c
     return texture
 end
 
-function M.dropdown(parent)
-    local dropdown = CreateFrame('Frame', unique_name(), parent, 'UIDropDownMenuTemplate')
-	set_content_style(dropdown, 0, 0, 4, 4)
+do
+    local dropdown_frame = panel()
+    dropdown_frame:SetFrameStrata('FULLSCREEN_DIALOG')
+    dropdown_frame:SetHeight(1)
+    local dropdown_item_buttons = {}
 
-    _G[dropdown:GetName() .. 'Left']:Hide()
-    _G[dropdown:GetName() .. 'Middle']:Hide()
-    _G[dropdown:GetName() .. 'Right']:Hide()
+    function M.dropdown(parent, text_height)
+        text_height = text_height or font_size.medium
 
-    local button = _G[dropdown:GetName() .. 'Button']
-    button:ClearAllPoints()
-    button:SetScale(.9)
-    button:SetPoint('RIGHT', dropdown, 0, 0)
-    dropdown.button = button
+        local index, set_index, update_dropdown
+        local options = {}
 
-    local text = _G[dropdown:GetName() .. 'Text']
-    text:ClearAllPoints()
-    text:SetPoint('RIGHT', button, 'LEFT', -2, 0)
-    text:SetPoint('LEFT', 8, 0)
-    text:SetFont(font, font_size.medium)
-    text:SetShadowColor(0, 0, 0, 0)
+        local editbox = editbox(parent)
 
-    return dropdown
+        editbox.complete = completion.complete(function() return options end)
+
+        function editbox:char()
+            self:complete()
+            for i, choice in pairs(options) do
+                if editbox:GetText() == choice then
+                    set_index(i)
+                end
+            end
+        end
+
+        function set_index(new_index)
+            if new_index then
+                new_index = max(1, min(#options, new_index))
+                if editbox:GetText() ~= options[new_index] then
+                    editbox:SetText(options[new_index])
+                end
+            else
+                editbox:SetText('')
+            end
+            if new_index ~= index then
+                index = new_index
+                do (editbox.selection_change or pass)() end
+            end
+        end
+
+        local function update_dropdown()
+            if #options == 0 then
+                dropdown_frame:Hide()
+                return
+            end
+
+            dropdown_frame:SetScale(editbox:GetEffectiveScale())
+            dropdown_frame:ClearAllPoints()
+            local width = editbox:GetWidth() + 4
+            dropdown_frame:SetWidth(width)
+            dropdown_frame:SetPoint('TOP', editbox, 'BOTTOM', 0, 0)
+            for i = 1, max(#options, #dropdown_item_buttons) do
+                local item_button = dropdown_item_buttons[i]
+                if not item_button then
+                    item_button = button(dropdown_frame, text_height)
+                    item_button:GetFontString():SetJustifyH('LEFT')
+                    dropdown_item_buttons[i] = item_button
+                end
+                if i > #options then
+                    item_button:Hide()
+                else
+                    item_button:ClearAllPoints()
+                    item_button:SetWidth(width - 4)
+                    item_button:SetText(' ' .. options[i])
+                    if i == 1 then
+                        item_button:SetPoint('TOP', editbox, 'BOTTOM', 0, -2)
+                    else
+                        item_button:SetPoint('TOP', dropdown_item_buttons[i - 1], 'BOTTOM', 0, -2)
+                    end
+                    item_button:SetScript('OnClick', function()
+                        set_index(i)
+                        editbox:ClearFocus()
+                    end)
+                    if index == i then
+                        item_button:LockHighlight()
+                    else
+                        item_button:UnlockHighlight()
+                    end
+                    item_button:Show()
+                end
+                if i == #options then
+                    dropdown_frame:SetPoint('BOTTOM', item_button, 'BOTTOM', 0, -2)
+                end
+                dropdown_frame:Show()
+            end
+        end
+
+        editbox.focus_gain = function()
+            update_dropdown()
+        end
+
+        editbox.focus_loss = function()
+            set_index(index)
+            dropdown_frame:Hide()
+        end
+
+        function editbox:SetOptions(new_options)
+            options = new_options
+            set_index(nil)
+            if editbox:HasFocus() then
+                update_dropdown()
+            end
+        end
+
+        function editbox:GetIndex()
+            return index
+        end
+
+        function editbox:SetIndex(new_index)
+            set_index(new_index)
+        end
+
+        return editbox
+    end
 end
 
 function M.slider(parent)
@@ -551,7 +540,7 @@ function M.checkbox(parent)
 end
 
 do
-	local editbox = CreateFrame'EditBox'
+	local editbox = CreateFrame('EditBox')
 	editbox:SetAutoFocus(false)
 	function M.clear_focus()
 		editbox:SetFocus()

@@ -80,18 +80,31 @@ E.Options.args.bags = {
 					name = L["Transparent Buttons"],
 					set = function(info, value) E.db.bags[info[#info]] = value; E:StaticPopup_Show("PRIVATE_RL"); end,
 				},
+				questIcon = {
+					order = 5,
+					type = "toggle",
+					name = L["Show Quest Icon"],
+					desc = L["Display an exclamation mark on items that starts a quest."],
+					set = function(info, value) E.db.bags[info[#info]] = value B:UpdateAllBagSlots() end
+				},
+				junkIcon = {
+					order = 6,
+					type = "toggle",
+					name = L["Show Junk Icon"],
+					desc = L["Display the junk icon on all grey items that can be vendored."],
+					set = function(info, value) E.db.bags[info[#info]] = value B:UpdateAllBagSlots() end
+				},
+				junkDesaturate = {
+					order = 7,
+					type = "toggle",
+					name = L["Desaturate Junk Items"],
+					set = function(info, value) E.db.bags[info[#info]] = value B:UpdateAllBagSlots() end,
+				},
 				newItemGlow = {
 					order = 8,
 					type = 'toggle',
 					name = L["Show New Item Glow"],
 					desc = L["Display the New Item Glow"],
-					set = function(info, value) E.db.bags[info[#info]] = value; B:UpdateAllBagSlots(); end,
-				},
-				showAssignedColor = {
-					order = 9,
-					type = 'toggle',
-					name = L["Show Assigned Color"],
-					desc = L["Colors the border according to the type of items assigned to the bag."],
 					set = function(info, value) E.db.bags[info[#info]] = value; B:UpdateAllBagSlots(); end,
 				},
 				qualityColors = {
@@ -199,7 +212,6 @@ E.Options.args.bags = {
 						},
 					},
 				},
---[=[
 				itemLevelGroup = {
 					order = 35,
 					type = "group",
@@ -240,7 +252,7 @@ E.Options.args.bags = {
 							name = L["Item Level Threshold"],
 							desc = L["The minimum item level required for it to be shown."],
 							type = 'range',
-							min = 1, max = 1000, step = 1,
+							min = 1, max = 200, step = 1,
 							disabled = function() return not E.db.bags.itemLevel end,
 							set = function(info, value) E.db.bags.itemLevelThreshold = value; B:UpdateItemLevelDisplay() end,
 						},
@@ -271,7 +283,6 @@ E.Options.args.bags = {
 						},
 					},
 				},
-]=]
 			},
 		},
 		sizeGroup = {
@@ -323,7 +334,6 @@ E.Options.args.bags = {
 			order = 5,
 			type = "group",
 			name = L["COLORS"],
-			disabled = function() return not E.Bags.Initialized end,
 			args = {
 				header = {
 					order = 1,
@@ -335,104 +345,50 @@ E.Options.args.bags = {
 					type = "group",
 					name = L["Bags"],
 					guiInline = true,
+					get = function(info)
+						local t = E.db.bags.colors.profession[info[#info]]
+						local d = P.bags.colors.profession[info[#info]]
+						return t.r, t.g, t.b, t.a, d.r, d.g, d.b
+					end,
+					set = function(info, r, g, b)
+						local t = E.db.bags.colors.profession[info[#info]]
+						t.r, t.g, t.b = r, g, b
+						if not E.Bags.Initialized then return end
+						B:UpdateBagColors('ProfessionColors', info[#info], r, g, b)
+						B:UpdateAllBagSlots()
+					end,
 					args = {
-						profession = {
+						colorBackdrop = {
 							order = 1,
-							type = "group",
-							name = L["Profession Bags"],
-							guiInline = true,
-							get = function(info)
-								local t = E.db.bags.colors.profession[info[#info]]
-								local d = P.bags.colors.profession[info[#info]]
-								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
-							end,
-							set = function(info, r, g, b)
-								local t = E.db.bags.colors.profession[info[#info]]
-								t.r, t.g, t.b = r, g, b
-								B:UpdateBagColors('ProfessionColors', info[#info], r, g, b)
-								B:UpdateAllBagSlots()
-							end,
-							args = {
-								leatherworking = {
-									order = 1,
-									type = 'color',
-									name = L["Leatherworking"],
-								},
-								inscription = {
-									order = 2,
-									type = 'color',
-									name = L["INSCRIPTION"],
-								},
-								herbs = {
-									order = 3,
-									type = 'color',
-									name = L["Herbalism"],
-								},
-								enchanting = {
-									order = 4,
-									type = 'color',
-									name = L["Enchanting"],
-								},
-								engineering = {
-									order = 5,
-									type = 'color',
-									name = L["Engineering"],
-								},
-								gems = {
-									order = 6,
-									type = 'color',
-									name = L["Gems"],
-								},
-								mining = {
-									order = 7,
-									type = 'color',
-									name = L["Mining"],
-								},
-								fishing = {
-									order = 8,
-									type = 'color',
-									name = L["PROFESSIONS_FISHING"],
-								},
-								cooking = {
-									order = 9,
-									type = 'color',
-									name = L["PROFESSIONS_COOKING"],
-								},
-							},
+							type = 'toggle',
+							name = L["Color Backdrop"],
+							get = function(info, value) return E.db.bags.colors.profession.colorBackdrop end,
+							set = function(info, value) E.db.bags.colors.profession.colorBackdrop = value; B:UpdateAllBagSlots() end,
 						},
-						assignment = {
+						quiver = {
+							order = 1,
+							type = 'color',
+							name = L["Quiver"],
+						},
+						ammoPouch = {
 							order = 2,
-							type = "group",
-							name = L["Bag Assignment"],
-							guiInline = true,
-							get = function(info)
-								local t = E.db.bags.colors.assignment[info[#info]]
-								local d = P.bags.colors.assignment[info[#info]]
-								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
-							end,
-							set = function(info, r, g, b)
-								local t = E.db.bags.colors.assignment[info[#info]]
-								t.r, t.g, t.b = r, g, b
-								B:UpdateBagColors('AssignmentColors', info[#info], r, g, b)
-								B:UpdateAllBagSlots()
-							end,
-							args = {
-								equipment = {
-									order = 1,
-									type = 'color',
-									name = L["BAG_FILTER_EQUIPMENT"],
-								},
-								consumables = {
-									order = 2,
-									type = 'color',
-									name = L["BAG_FILTER_CONSUMABLES"],
-								},
-								tradegoods = {
-									order = 3,
-									type = 'color',
-									name = L["BAG_FILTER_TRADE_GOODS"],
-								},
-							},
+							type = 'color',
+							name = L["Ammo Pouch"],
+						},
+						soulBag = {
+							order = 3,
+							type = 'color',
+							name = L["Soul Bag"],
+						},
+						herbs = {
+							order = 4,
+							type = 'color',
+							name = L["Herbalism"],
+						},
+						enchanting = {
+							order = 5,
+							type = 'color',
+							name = L["Enchanting"],
 						},
 					},
 				},

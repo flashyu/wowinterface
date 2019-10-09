@@ -1,4 +1,5 @@
 SET showTargetOfTarget "1"
+SET scriptErrors "1"
 SET countdownForCooldowns "1"
 SET instantQuestText "1"
 SET flaggedTutorials "v##M##$##&##'"

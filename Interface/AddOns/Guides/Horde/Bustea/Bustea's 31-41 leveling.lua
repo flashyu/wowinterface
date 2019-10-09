@@ -1,6 +1,6 @@
 Guidelime.registerGuide([[
 
-[N31-41 Bustea的升级导航]
+[N31-41 Bustea的部落升级导航]
 [D Bustea的部落升级导航,此版本适合全职业！ https://twitch.tv/bustea/ 中文由Qcat汉化]
 [NX41-45 Bustea的部落升级导航]
 [GA Horde]

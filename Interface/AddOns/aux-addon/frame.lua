@@ -1,8 +1,9 @@
 select(2, ...) 'aux'
 
 local gui = require 'aux.gui'
+local scan = require 'aux.core.scan'
 
-function handle.LOAD()
+function event.AUX_LOADED()
 	for _, v in ipairs(tab_info) do
 		tabs:create_tab(v.name)
 	end
@@ -31,6 +32,14 @@ do
 	M.frame = frame
 end
 do
+    local status_bar = gui.status_bar(frame.content)
+    status_bar:SetWidth(265)
+    status_bar:SetHeight(27)
+    status_bar:SetPoint('TOPLEFT', frame.content, 'BOTTOMLEFT', 0, -3)
+    status_bar:update_status(1, 1)
+    M.status_bar = status_bar
+end
+do
 	tabs = gui.tabs(frame, 'DOWN')
 	tabs._on_select = on_tab_click
 	function M.set_tab(id) tabs:select(id) end
@@ -39,7 +48,7 @@ do
 	local btn = gui.button(frame)
 	btn:SetPoint('BOTTOMRIGHT', -5, 5)
 	gui.set_size(btn, 60, 24)
-	btn:SetText('Close')
+	btn:SetText('退出')
 	btn:SetScript('OnClick', function() frame:Hide() end)
 	close_button = btn
 end
@@ -55,4 +64,45 @@ do
             AuctionFrame_Show()
         end
 	end)
+    blizzard_button = btn
+end
+do
+    local btn = gui.button(frame)
+    btn:SetPoint('RIGHT', blizzard_button, 'LEFT' , -5, 0)
+    gui.set_size(btn, 60, 24)
+    btn:SetText('扫描')
+    btn:SetScript('OnUpdate', function(self)
+        if select(2, CanSendAuctionQuery()) then
+            self:Enable()
+            self:SetBackdropColor(color.state.enabled())
+        else
+            self:Disable()
+            self:SetBackdropColor(color.content.background())
+        end
+    end)
+    btn:SetScript('OnClick', function()
+        local total
+        local count = 0
+        scan.start{
+            type = 'list',
+            queries = {{blizzard_query = {}}},
+            get_all = true,
+            on_scan_start = function()
+                status_bar:update_status(0, 0)
+            end,
+            on_page_loaded = function(_, _, _, page_size)
+                total = page_size
+            end,
+            on_auction = function()
+                count = count + 1
+                status_bar:update_status(count / total, 0)
+            end,
+            on_abort = function()
+                status_bar:update_status(1, 1)
+            end,
+            on_complete = function()
+                status_bar:update_status(1, 1)
+            end,
+        }
+    end)
 end

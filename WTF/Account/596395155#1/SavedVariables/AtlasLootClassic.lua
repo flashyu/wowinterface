@@ -1,7 +1,7 @@
 
 AtlasLootClassicDB = {
 	["global"] = {
-		["__addonrevision"] = 1010012,
+		["__addonrevision"] = 1020002,
 	},
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",

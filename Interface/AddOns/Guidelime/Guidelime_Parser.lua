@@ -84,7 +84,7 @@ function addon.parseGuide(guide, group, strict, nameOnly)
 		guide.next = {}
 		guide.autoAddCoordinatesGOTO = true
 		guide.autoAddCoordinatesLOC = true
-		local t = guide.text:gsub("([^\n\r]-)[\n\r]", function(c)
+		local t = guide.text:gsub("\\\\[\n\r]", "\\\\"):gsub("([^\n\r]-)[\n\r]", function(c)
 			if c ~= nil and c ~= "" then
 				local step = {text = c:gsub("\\\\"," \n"), startPos = pos, line = guide.lines, guide = guide}
 				table.insert(guide.steps, step)
@@ -133,7 +133,7 @@ local function textFormatting(text, color)
 	local formatted = text:gsub("(https://[%w%./#%-%?=#]*)", function(u) url = u; return "|cFFAAAAAA" .. u .. "|r" end)
 		:gsub("(http://[%w%./#%-%?=#]*)", function(u) url = u; return "|cFFAAAAAA" .. u .. "|r" end)
 		:gsub("(www%.[%w%./#%-%?=#]*)", function(u) if url == nil then url = u end; return "|cFFAAAAAA" .. u .. "|r" end)
-		:gsub("%*([^%*]+)%*", (color or "|cFFFFD100") .. "%1|r")
+		:gsub("%*([^\n\r]-)%*", (color or "|cFFFFD100") .. "%1|r")
 		:gsub("%*%*","%*")
 	local formattedInactive = formatted:gsub("|r", addon.COLOR_INACTIVE)
 	return formatted, formattedInactive, url, formatted:gsub("%s", "") == ""
@@ -220,11 +220,11 @@ function addon.parseLine(step, guide, strict, nameOnly)
 		elseif element.t == "GUIDE_APPLIES" then
 			tag:upper():gsub(" ",""):gsub("([^,]+)", function(c)
 				if addon.isClass(c) then
-					if guide.class == nil then guide.class = {} end
-					table.insert(guide.class, addon.getClass(c))
+					if guide.classes == nil then guide.classes = {} end
+					table.insert(guide.classes, addon.getClass(c))
 				elseif addon.isRace(c) then
-					if guide.race == nil then guide.race = {} end
-					table.insert(guide.race, addon.getRace(c))
+					if guide.races == nil then guide.races = {} end
+					table.insert(guide.races, addon.getRace(c))
 				elseif addon.isFaction(c) then
 					guide.faction = addon.getFaction(c)
 				else
@@ -286,13 +286,13 @@ function addon.parseLine(step, guide, strict, nameOnly)
 				--	error("loading guide \"" .. GuidelimeDataChar.currentGuide.title .. "\": wrong title for quest " .. element.questId .. " \"" .. element.title .. "\" instead of \"" .. addon.questsDB[element.questId].name .. "\" in line \"" .. step.text .. "\"")
 				--end
 				if addon.questsDB[element.questId] ~= nil then
-					if step.race == nil and addon.getQuestRaces(element.questId) ~= nil then 
-						step.race = {}
-						for i, r in pairs(addon.getQuestRaces(element.questId)) do step.race[i] = r end
+					if step.races == nil and addon.getQuestRaces(element.questId) ~= nil then 
+						step.races = {}
+						for i, r in pairs(addon.getQuestRaces(element.questId)) do step.races[i] = r end
 					end
-					if step.class == nil and addon.getQuestClasses(element.questId) ~= nil then 
-						step.class = {}
-						for i, r in pairs(addon.getQuestClasses(element.questId)) do step.class[i] = r end
+					if step.classes == nil and addon.getQuestClasses(element.questId) ~= nil then 
+						step.classes = {}
+						for i, r in pairs(addon.getQuestClasses(element.questId)) do step.classes[i] = r end
 					end
 					if step.faction == nil and addon.getQuestFaction(element.questId) ~= nil then step.faction = addon.getQuestFaction(element.questId) end
 					if addon.questsDB[element.questId].sort ~= nil and addon.mapIDs[addon.questsDB[element.questId].sort] ~= nil then 
@@ -311,11 +311,11 @@ function addon.parseLine(step, guide, strict, nameOnly)
 		elseif element.t == "APPLIES" then
 			tag:upper():gsub(" ",""):gsub("([^,]+)", function(c)
 				if addon.isClass(c) then
-					if step.class == nil then step.class = {} end
-					table.insert(step.class, addon.getClass(c))
+					if step.classes == nil then step.classes = {} end
+					table.insert(step.classes, addon.getClass(c))
 				elseif addon.isRace(c) then
-					if step.race == nil then step.race = {} end
-					table.insert(step.race, addon.getRace(c))
+					if step.races == nil then step.races = {} end
+					table.insert(step.races, addon.getRace(c))
 				elseif addon.isFaction(c) then
 					step.faction = addon.getFaction(c)
 				else

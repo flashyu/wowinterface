@@ -1,6 +1,6 @@
 Guidelime.registerGuide([[
 
-[N12-21 Bustea的部落升级导航]
+[N12-21 Bustea的部落升级导航(兽人和巨魔)]
 [D Bustea的部落升级导航,此版本只适用兽人和巨魔! https://twitch.tv/bustea/ 中文由Qcat汉化]
 [NX21-31 Bustea的部落升级导航]
 [GA Horde,Troll,Orc]

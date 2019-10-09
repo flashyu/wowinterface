@@ -51,6 +51,7 @@ QuestieConfig = {
 				[424] = true,
 				[440] = true,
 				[2] = true,
+				[528] = true,
 				[1881] = true,
 				[879] = true,
 				[1882] = true,
@@ -66,10 +67,12 @@ QuestieConfig = {
 				[4966] = true,
 				[426] = true,
 				[882] = true,
+				[546] = true,
 				[5481] = true,
 				[8] = true,
 				[1060] = true,
 				[819] = true,
+				[502] = true,
 				[883] = true,
 				[55296] = true,
 				[6921] = true,
@@ -3512,6 +3515,49 @@ QuestieConfig = {
 					["Quest"] = 1947,
 					["Level"] = 30,
 				}, -- [322]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570636815,
+					["Quest"] = 502,
+					["Level"] = 31,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [323]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570640034,
+					["Event"] = "Level",
+					["NewLevel"] = 32,
+				}, -- [324]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570641529,
+					["Quest"] = 528,
+					["Level"] = 32,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [325]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570641535,
+					["Quest"] = 529,
+					["Level"] = 32,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [326]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1570641551,
+					["Quest"] = 546,
+					["Level"] = 32,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [327]
 			},
 			["TrackerHiddenObjectives"] = {
 			},

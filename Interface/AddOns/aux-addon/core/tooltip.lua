@@ -12,7 +12,7 @@ local UNKNOWN = GRAY_FONT_COLOR_CODE .. '?' .. FONT_COLOR_CODE_CLOSE
 local game_tooltip_hooks = {}
 --local game_tooltip_money = 0
 
-function aux.handle.LOAD()
+function aux.event.AUX_LOADED()
     settings = aux.character_data.tooltip
 --    do
 --        local inside_hook = false
@@ -75,7 +75,7 @@ function extend_tooltip(tooltip, link, quantity)
             end
             if settings.disenchant_value then
                 local disenchant_value = disenchant.value(item_info.slot, item_info.quality, item_info.level)
-                tooltip:AddLine('分解: ' .. (disenchant_value and money.to_string2(disenchant_value) or UNKNOWN), aux.color.tooltip.disenchant.value())
+                tooltip:AddLine('分解价值: ' .. (disenchant_value and money.to_string2(disenchant_value) or UNKNOWN), aux.color.tooltip.disenchant.value())
             end
         end
     end
@@ -88,7 +88,7 @@ function extend_tooltip(tooltip, link, quantity)
     if settings.merchant_sell then
         local price = item_info and item_info.sell_price
         if price ~= 0 then
-            tooltip:AddLine('商店: ' .. (price and money.to_string2(price * quantity) or UNKNOWN), aux.color.tooltip.merchant())
+            tooltip:AddLine('商店价: ' .. (price and money.to_string2(price * quantity) or UNKNOWN), aux.color.tooltip.merchant())
         end
     end
     local auctionable = not item_info or info.auctionable(info.tooltip('link', item_info.link), item_info.quality)
@@ -100,7 +100,7 @@ function extend_tooltip(tooltip, link, quantity)
         end
         if settings.daily  then
             local market_value = history.market_value(item_key)
-            tooltip:AddLine('今日价值: ' .. (market_value and money.to_string2(market_value * quantity) .. ' (' .. gui.percentage_historical(aux.round(market_value / value * 100)) .. ')' or UNKNOWN), aux.color.tooltip.value())
+            tooltip:AddLine('今日: ' .. (market_value and money.to_string2(market_value * quantity) .. ' (' .. gui.percentage_historical(aux.round(market_value / value * 100)) .. ')' or UNKNOWN), aux.color.tooltip.value())
         end
     end
 

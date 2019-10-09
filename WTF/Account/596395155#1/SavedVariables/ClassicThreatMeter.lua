@@ -51,8 +51,8 @@ CTM_Options = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
+		["height"] = 161,
 		["locked"] = false,
-		["test"] = false,
 		["position"] = {
 			"TOPLEFT", -- [1]
 			"UIParent", -- [2]
@@ -60,7 +60,7 @@ CTM_Options = {
 			6.3817310333252, -- [4]
 			-29.3576393127441, -- [5]
 		},
-		["height"] = 161,
+		["test"] = false,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]

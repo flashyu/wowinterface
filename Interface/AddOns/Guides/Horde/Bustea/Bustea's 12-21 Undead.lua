@@ -1,6 +1,6 @@
 Guidelime.registerGuide([[
 
-[N12-21 Bustea的升级导航]
+[N12-21 Bustea的部落升级导航(亡灵)]
 [D Bustea的部落升级导航,此版本只适亡灵! https://twitch.tv/bustea/ 中文由Qcat汉化]
 [NX21-31 Bustea的部落升级导航]
 [GA Horde,Undead]

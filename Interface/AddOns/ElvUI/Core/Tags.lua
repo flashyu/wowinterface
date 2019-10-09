@@ -45,7 +45,8 @@ local UnitPowerType = UnitPowerType
 local UnitReaction = UnitReaction
 local UnitPlayerControlled = UnitPlayerControlled
 
-local DEFAULT_AFK_MESSAGE = DEFAULT_AFK_MESSAGE
+local CHAT_FLAG_AFK = CHAT_FLAG_AFK:gsub('<(.-)>', '|r<|cffFF0000%1|r>')
+local CHAT_FLAG_DND = CHAT_FLAG_DND:gsub('<(.-)>', '|r<|cffFFFF00%1|r>')
 local PVP = PVP
 local UNITNAME_SUMMON_TITLE17 = UNITNAME_SUMMON_TITLE17
 local UNKNOWN = UNKNOWN
@@ -110,14 +111,26 @@ local function abbrev(name)
 	return name
 end
 
-ElvUF.Tags.Events['afk'] = 'PLAYER_FLAGS_CHANGED'
-ElvUF.Tags.Methods['afk'] = function(unit)
-	local isAFK = UnitIsAFK(unit)
-	if isAFK then
-		return format('|cffFFFFFF[|r|cffFF0000%s|r|cFFFFFFFF]|r', DEFAULT_AFK_MESSAGE)
-	else
-		return nil
+ElvUF.Tags.Events['status:text'] = 'PLAYER_FLAGS_CHANGED'
+ElvUF.Tags.Methods['status:text'] = function(unit)
+	if UnitIsAFK(unit) then
+		return CHAT_FLAG_AFK
+	elseif UnitIsDND(unit) then
+		return CHAT_FLAG_DND
 	end
+
+	return nil
+end
+
+ElvUF.Tags.Events['status:icon'] = 'PLAYER_FLAGS_CHANGED'
+ElvUF.Tags.Methods['status:icon'] = function(unit)
+	if UnitIsAFK(unit) then
+		return CreateTextureMarkup("Interface\\FriendsFrame\\StatusIcon-Away", 16, 16, 16, 16, 0, 1, 0, 1, 0, 0)
+	elseif UnitIsDND(unit) then
+		return CreateTextureMarkup("Interface\\FriendsFrame\\StatusIcon-DnD", 16, 16, 16, 16, 0, 1, 0, 1, 0, 0)
+	end
+
+	return nil
 end
 
 ElvUF.Tags.Events['healthcolor'] = 'UNIT_HEALTH_FREQUENT UNIT_MAXHEALTH UNIT_CONNECTION PLAYER_FLAGS_CHANGED'

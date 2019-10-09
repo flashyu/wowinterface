@@ -122,16 +122,8 @@ buyout_listing:SetHandler('OnDoubleClick', function(table, row_data, column, but
 end)
 
 do
-	status_bar = gui.status_bar(frame)
-    status_bar:SetWidth(265)
-    status_bar:SetHeight(25)
-    status_bar:SetPoint('TOPLEFT', aux.frame.content, 'BOTTOMLEFT', 0, -6)
-    status_bar:update_status(1, 1)
-    status_bar:set_text('')
-end
-do
     local btn = gui.button(frame.parameters)
-    btn:SetPoint('TOPLEFT', status_bar, 'TOPRIGHT', 5, 0)
+    btn:SetPoint('LEFT', aux.status_bar, 'RIGHT', 5, 0)
     btn:SetText('发布')
     btn:SetScript('OnClick', post_auction)
     post_button = btn
@@ -169,20 +161,23 @@ end
 do
     local slider = gui.slider(frame.parameters)
     slider:SetValueStep(1)
-    slider:SetPoint('TOPLEFT', 13, -82)
+    slider:SetPoint('TOPLEFT', 13, -73)
     slider:SetWidth(190)
-    slider:SetScript('OnValueChanged', function()
-        refresh = true
+    slider:SetScript('OnValueChanged', function(_, _, is_user_input)
+--        if is_user_input then -- TODO need to solve issue of slider click not counting as user input
+            quantity_update(true)
+            refresh = true
+--        end
     end)
-    slider.editbox.change = function(self)
-        slider:SetValue(self:GetNumber())
-        prepare_stack()
+    slider.editbox.change = function(self, is_user_input)
+        if is_user_input then
+            slider:SetValue(self:GetNumber())
+            quantity_update(true)
+        end
     end
     slider.editbox:SetScript('OnTabPressed', function()
-        if IsShiftKeyDown() then
-            unit_buyout_price_input:SetFocus()
-        else
-            unit_start_price_input:SetFocus()
+        if not IsShiftKeyDown() then
+            stack_count_slider.editbox:SetFocus()
         end
     end)
     slider.editbox:SetNumeric(true)
@@ -192,16 +187,49 @@ do
     stack_size_slider = slider
 end
 do
-    local dropdown = gui.dropdown(frame.parameters)
-    dropdown:SetPoint('TOPLEFT', stack_size_slider, 'BOTTOMLEFT', 0, -22)
-    dropdown:SetWidth(90)
-    local label = gui.label(dropdown, gui.font_size.small)
-    label:SetPoint('BOTTOMLEFT', dropdown, 'TOPLEFT', -2, -3)
-    label:SetText('持续时间')
-    UIDropDownMenu_Initialize(dropdown, initialize_duration_dropdown)
-    dropdown:SetScript('OnShow', function(self)
-        UIDropDownMenu_Initialize(self, initialize_duration_dropdown)
+    local slider = gui.slider(frame.parameters)
+    slider:SetValueStep(1)
+    slider:SetPoint('TOPLEFT', stack_size_slider, 'BOTTOMLEFT', 0, -32)
+    slider:SetWidth(190)
+    slider:SetScript('OnValueChanged', function(_, _, is_user_input)
+--        if is_user_input then
+            quantity_update()
+--        end
     end)
+    slider.editbox.change = function(self, is_user_input)
+        if is_user_input then
+            slider:SetValue(self:GetNumber())
+            quantity_update()
+        end
+    end
+    slider.editbox:SetScript('OnTabPressed', function()
+        if IsShiftKeyDown() then
+            stack_size_slider.editbox:SetFocus()
+        else
+            duration_dropdown:SetFocus()
+        end
+    end)
+    slider.editbox:SetNumeric(true)
+    slider.label:SetText('组数')
+    stack_count_slider = slider
+end
+do
+    local dropdown = gui.dropdown(frame.parameters, gui.font_size.large)
+    dropdown.selection_change = function() duration_selection_change() end
+    dropdown:SetPoint('TOPLEFT', stack_count_slider, 'BOTTOMLEFT', 0, -25)
+    dropdown:SetWidth(90)
+    dropdown:SetHeight(22)
+    dropdown:SetFontSize(17)
+    dropdown:SetScript('OnTabPressed', function()
+        if IsShiftKeyDown() then
+            stack_count_slider.editbox:SetFocus()
+        else
+            unit_start_price_input:SetFocus()
+        end
+    end)
+    local label = gui.label(dropdown, gui.font_size.small)
+    label:SetPoint('BOTTOMLEFT', dropdown, 'TOPLEFT', -2, 1)
+    label:SetText('持续时间')
     duration_dropdown = dropdown
 end
 do
@@ -215,7 +243,7 @@ do
     end)
     local label = gui.label(checkbox, gui.font_size.small)
     label:SetPoint('LEFT', checkbox, 'RIGHT', 4, 1)
-    label:SetText('隐藏这个物品')
+    label:SetText('隐藏此物品')
     hide_checkbox = checkbox
 end
 do
@@ -227,7 +255,7 @@ do
     editbox:SetFontSize(17)
     editbox:SetScript('OnTabPressed', function()
 	    if IsShiftKeyDown() then
-		    stack_size_slider.editbox:SetFocus()
+            duration_dropdown:SetFocus()
 	    else
 		    unit_buyout_price_input:SetFocus()
 	    end
@@ -240,7 +268,7 @@ do
         if is_user_input then
             set_bid_selection()
             set_buyout_selection()
-            set_unit_start_price(money.from_string(self:GetText()))
+            set_unit_start_price(money.from_string(self:GetText()) or 0)
         end
     end
     editbox.enter = function(self)
@@ -252,7 +280,7 @@ do
     do
         local label = gui.label(editbox, gui.font_size.small)
         label:SetPoint('BOTTOMLEFT', editbox, 'TOPLEFT', -2, 1)
-        label:SetText('起始价')
+        label:SetText('起始单价')
     end
     do
         local label = gui.label(editbox, 14)
@@ -273,8 +301,6 @@ do
     editbox:SetScript('OnTabPressed', function()
         if IsShiftKeyDown() then
             unit_start_price_input:SetFocus()
-        else
-            stack_size_slider.editbox:SetFocus()
         end
     end)
     editbox.formatter = function()
@@ -284,7 +310,7 @@ do
         refresh = true
         if is_user_input then
             set_buyout_selection()
-            set_unit_buyout_price(money.from_string(self:GetText()))
+            set_unit_buyout_price(money.from_string(self:GetText()) or 0)
         end
     end
     editbox.enter = function(self)
@@ -313,7 +339,7 @@ do
 	deposit = label
 end
 
-function aux.handle.LOAD()
+function aux.event.AUX_LOADED()
 	if not aux.account_data.post_bid then
 		frame.bid_listing:Hide()
 		frame.buyout_listing:SetPoint('BOTTOMLEFT', frame.inventory, 'BOTTOMRIGHT', 2.5, 0)

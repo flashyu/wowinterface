@@ -40,9 +40,9 @@ GuidelimeDataChar = {
 			[8] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_3"] = {
+			[12] = true,
 			[9] = true,
 			[7] = true,
-			[12] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 20-21 石爪山脉"] = {
 			true, -- [1]
@@ -65,7 +65,11 @@ GuidelimeDataChar = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 15-16 石爪山脉"] = {
 		},
+		["其他指南 1-60 法师AOE指南"] = {
+		},
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 1-6 Freezy3 亡灵新手村"] = {
+		},
+		["Thacen 导航, 中文由Qcat汉化 30-30 阿拉希高地"] = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 26-27 灰谷"] = {
 			[17] = true,
@@ -110,11 +114,11 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 6-10 提瑞斯法林地"] = {
 			[2] = true,
 			[8] = true,
-			[14] = false,
-			[29] = true,
-			[19] = true,
-			[9] = true,
 			[34] = true,
+			[29] = true,
+			[14] = false,
+			[9] = true,
+			[19] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 22-23 石爪山脉"] = {
 			true, -- [1]
@@ -192,10 +196,18 @@ GuidelimeDataChar = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 29-30 希尔斯布莱德丘陵"] = {
 			true, -- [1]
+			[25] = true,
+			[17] = true,
+			[21] = true,
+			[18] = true,
+			[22] = true,
+			[14] = true,
+			[19] = true,
+			[10] = true,
 		},
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = {
 		},
-		["其他指南 1-60 法师AOE指南"] = {
+		["Thacen 导航, 中文由Qcat汉化 31-32 闪光平原"] = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 28-29 千针石林"] = {
 			[13] = true,
@@ -224,11 +236,12 @@ GuidelimeDataChar = {
 	["arrowAlpha"] = 0.8,
 	["arrowSize"] = 64,
 	["mainFrameAlpha"] = 0.5,
-	["currentGuide"] = "Thacen 导航, 中文由Qcat汉化 29-30 希尔斯布莱德丘陵",
+	["currentGuide"] = "Thacen 导航, 中文由Qcat汉化 31-32 闪光平原",
 	["mainFrameFontSize"] = 14,
 	["arrowX"] = 262.473083496094,
 	["mainFrameY"] = 3.41089844703674,
 	["mainFrameShowScrollBar"] = true,
+	["version"] = "1.015",
 	["editorFrameRelative"] = "CENTER",
 	["guideSize"] = {
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林(路线2)"] = 12,
@@ -239,7 +252,9 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 10-12 提瑞斯法林地"] = 23,
 		["Bustea 升级导航 中文由Qcat汉化 21-31 Bustea的升级导航"] = 170,
 		["Thacen 导航, 中文由Qcat汉化 15-16 石爪山脉"] = 10,
+		["其他指南 1-60 法师AOE指南"] = 78,
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 1-6 Freezy3 亡灵新手村"] = 36,
+		["Thacen 导航, 中文由Qcat汉化 30-30 阿拉希高地"] = 15,
 		["Thacen 导航, 中文由Qcat汉化 26-27 灰谷"] = 38,
 		["Thacen 导航, 中文由Qcat汉化 16-20 贫瘠之地"] = 85,
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_4"] = 15,
@@ -257,10 +272,9 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_5"] = 17,
 		["Thacen 导航, 中文由Qcat汉化 29-30 希尔斯布莱德丘陵"] = 29,
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = 94,
-		["其他指南 1-60 法师AOE指南"] = 78,
+		["Thacen 导航, 中文由Qcat汉化 31-32 闪光平原"] = 28,
 		["Thacen 导航, 中文由Qcat汉化 28-29 千针石林"] = 42,
 	},
-	["version"] = "1.015",
 	["mainFrameShowing"] = true,
 	["showArrow"] = true,
 	["mainFrameRelative"] = "RIGHT",

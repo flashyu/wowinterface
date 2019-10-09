@@ -75,6 +75,7 @@ AutoBarDB = {
 				["AutoBarButtonClassBuff"] = {
 					["barKey"] = "AutoBarClassBarMage",
 					["buttonClass"] = "AutoBarButtonClassBuff",
+					["shuffle"] = true,
 					["enabled"] = true,
 					["buttonKey"] = "AutoBarButtonClassBuff",
 					["defaultButtonIndex"] = 6,

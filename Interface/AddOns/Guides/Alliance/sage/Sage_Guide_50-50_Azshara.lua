@@ -121,7 +121,7 @@ Guidelime.registerGuide(
               [OC]|cFF00ccff定炉石 [V]|r
 
 [OC]跑到 拉普索迪营地 [G 27,48.5 The Hinterlands] (27, 48.5)
-       [QT1452 Rhapsody's Kalimdor Kocktail], wait, [QA1469 Rhapsody's Tale]
+       [QT1452 Rhapsody's Kalimdor Kocktail], 等一会儿, [QA1469 Rhapsody's Tale]
 
 [OC]跑到瓦罗温湖 [G 41,59 The Hinterlands] (41, 59)
        [OC](发现奎尔丹尼小屋)
