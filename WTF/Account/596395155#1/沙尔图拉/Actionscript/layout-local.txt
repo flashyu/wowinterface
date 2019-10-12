@@ -6,13 +6,6 @@ X: 12
 Y: 228
 W: 170
 H: 35
-Frame: CoolLine
-FrameLevel: 1
-Anchor: CENTER
-X: -202
-Y: -203
-W: 360
-H: 18
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
