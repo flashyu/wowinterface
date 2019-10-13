@@ -1,9 +1,9 @@
 Version: 1
 Frame: Spy_MainWindow
 FrameLevel: 10
-Anchor: BOTTOMLEFT
-X: 12
-Y: 228
+Anchor: TOPLEFT
+X: 245
+Y: -10
 W: 170
 H: 35
 Frame: ColorPickerFrame
@@ -13,3 +13,10 @@ X: 0
 Y: 0
 W: 365
 H: 240
+Frame: AtlasLoot_GUI-Frame
+FrameLevel: 1
+Anchor: CENTER
+X: 0
+Y: 0
+W: 920
+H: 600
