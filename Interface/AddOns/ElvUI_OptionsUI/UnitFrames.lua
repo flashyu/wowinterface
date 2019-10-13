@@ -1713,6 +1713,11 @@ local function GetOptionsTable_Power(hasDetatchOption, updateFunc, groupName, nu
 				name = L["Attach Text To"],
 				values = attachToValues,
 			},
+			autoHide = {
+				order = 12,
+				type = 'toggle',
+				name = L["Auto-Hide"],
+			},
 		},
 	}
 
@@ -3714,6 +3719,7 @@ E.Options.args.unitframe.args.player = {
 		aurabar = GetOptionsTable_AuraBars(UF.CreateAndUpdateUF, 'player'),
 		raidicon = GetOptionsTable_RaidIcon(UF.CreateAndUpdateUF, 'player'),
 		cutaway = GetOptionsTable_Cutaway(UF.CreateAndUpdateUF, 'player'),
+		resurrectIcon = GetOptionsTable_ResurrectIcon(UF.CreateAndUpdateUF, 'player'),
 		classbar = {
 			order = 1000,
 			type = 'group',
@@ -4318,6 +4324,7 @@ E.Options.args.unitframe.args.target = {
 		aurabar = GetOptionsTable_AuraBars(UF.CreateAndUpdateUF, 'target'),
 		raidicon = GetOptionsTable_RaidIcon(UF.CreateAndUpdateUF, 'target'),
 		cutaway = GetOptionsTable_Cutaway(UF.CreateAndUpdateUF, 'target'),
+		resurrectIcon = GetOptionsTable_ResurrectIcon(UF.CreateAndUpdateUF, 'target'),
 		pvpIcon = {
 			order = 449,
 			type = 'group',

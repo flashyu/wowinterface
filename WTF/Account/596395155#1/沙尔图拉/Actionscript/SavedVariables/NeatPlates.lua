@@ -13,8 +13,8 @@ NeatPlatesOptions = {
 	["EmulatedTargetPlate"] = false,
 	["EnforceRequiredCVars"] = true,
 	["ForceBlizzardFont"] = false,
-	["SecondSpecProfile"] = "默认",
 	["OverrideOutline"] = 1,
+	["SecondSpecProfile"] = "默认",
 	["NameplateClickableWidth"] = 1,
 	["FirstSpecProfile"] = "默认",
 }

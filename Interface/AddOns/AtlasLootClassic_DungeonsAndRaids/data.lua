@@ -46,6 +46,7 @@ local KEYS = {	-- Keys
 	name = AL["Keys"],
 	TableType = NORMAL_ITTYPE,
 	ExtraList = true,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1, "INV_Box_01", nil, AL["Key"], nil },
 		{ 2, 16309,},
@@ -84,6 +85,7 @@ local T1_SET = {
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 203 }, -- Warlock
 		{ 3, 202 }, -- Priest
@@ -108,6 +110,7 @@ local T2_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	ContentPhase = 3,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 212 }, -- Warlock
 		{ 3, 211 }, -- Priest
@@ -132,6 +135,7 @@ local T3_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	ContentPhase = 6,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 529 }, -- Warlock
 		{ 3, 525 }, -- Priest
@@ -155,6 +159,7 @@ local AQ_OPENING = {	-- Keys
 	TableType = NORMAL_ITTYPE,
 	ExtraList = true,
 	ContentPhase = 5,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1,  21138 }, -- Red Scepter Shard
 		{ 2,  21529 }, -- Amulet of Shadow Shielding
@@ -179,7 +184,7 @@ local AQ_OPENING = {	-- Keys
 local DM_BOOKS = { -- DMBooks
 	name = AL["Books"],
 	ExtraList = true,
-	ContentPhase = 2,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1,  18401 }, -- Foror's Compendium of Dragon Slaying
 		{ 3,  18362 }, -- Holy Bologna: What the Light Won't Tell You
@@ -193,13 +198,13 @@ local DM_BOOKS = { -- DMBooks
 		{ 11, 18357 }, -- Codex of Defense
 		--{ 16, 18348 }, -- Quel'Serrar
 		{ 18, 18333 }, -- Libram of Focus
-		{ 19, 11733 }, -- Libram of Constitution
-		{ 20, 18334 }, -- Libram of Protection
-		{ 21, 18332 }, -- Libram of Rapidity
-		{ 22, 11736 }, -- Libram of Resilience
-		{ 23, 11732 }, -- Libram of Rumination
-		{ 24, 11734 }, -- Libram of Tenacity
-		{ 25, 11737 }, -- Libram of Voracity
+		{ 19, 18334 }, -- Libram of Protection
+		{ 20, 18332 }, -- Libram of Rapidity
+		{ 22, 11733 }, -- Libram of Constitution
+		{ 23, 11736 }, -- Libram of Resilience
+		{ 24, 11732 }, -- Libram of Rumination
+		{ 25, 11734 }, -- Libram of Tenacity
+		{ 26, 11737 }, -- Libram of Voracity
 	},
 }
 
@@ -1159,7 +1164,7 @@ data["ScarletMonasteryGraveyard"] = {
 			},
 		},
 		{ -- SMGTrash
-			name = AL["Graveyard"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1222,7 +1227,7 @@ data["ScarletMonasteryLibrary"] = {
 			},
 		},
 		{ -- SMLTrash
-			name = AL["Library"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1289,7 +1294,7 @@ data["ScarletMonasteryArmory"] = {
 			},
 		},
 		{ -- SMATrash
-			name = AL["Armory"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1372,7 +1377,7 @@ data["ScarletMonasteryCathedral"] = {
 			},
 		},
 		{ -- SMCTrash
-			name = AL["Cathedral"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -2027,6 +2032,7 @@ data["Zul'Farrak"] = {
 			DisplayIDs = {{9292}},
 			ContentPhase = 5,
 			AtlasMapBossID = 4,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12471 }, -- Desertwalker Cane
 			},
@@ -2095,6 +2101,7 @@ data["Zul'Farrak"] = {
 			Level = 45,
 			DisplayIDs = {{9293}},
 			AtlasMapBossID = 8,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12470 }, -- Sandstalker Ankleguards
 			},
@@ -2976,6 +2983,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDBSPlans
 			name = AL["Plans"],
 			ExtraList = true,
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  11614 }, -- Plans: Dark Iron Mail
 				{ 2,  11615 }, -- Plans: Dark Iron Shoulders
@@ -3513,7 +3521,6 @@ data["DireMaulEast"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
-	ContentPhase = 2,
 	items = {
 		{ -- DMEPusillin
 			name = AL["Pusillin"],
@@ -3569,6 +3576,7 @@ data["DireMaulEast"] = {
 			npcID = 11492,
 			DisplayIDs = {{14416}},
 			AtlasMapBossID = 5,
+			SubAreaID = 33730,
 			[NORMAL_DIFF] = {
 				{ 1,  18328 }, -- Shadewood Cloak
 				{ 2,  18312 }, -- Energized Chestplate
@@ -3628,13 +3636,13 @@ data["DireMaulWest"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
-	ContentPhase = 2,
 	items = {
 		{ -- DMWTendrisWarpwood
 			name = AL["Tendris Warpwood"],
 			npcID = 11489,
 			DisplayIDs = {{14383}},
 			AtlasMapBossID = 2,
+			SubAreaID = 33748,
 			[NORMAL_DIFF] = {
 				{ 1,  18393 }, -- Warpwood Binding
 				{ 2,  18390 }, -- Tanglemoss Leggings
@@ -3646,6 +3654,7 @@ data["DireMaulWest"] = {
 			name = AL["Illyanna Ravenoak"],
 			npcID = 11488,
 			DisplayIDs = {{11270}},
+			SubAreaID = 33749,
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
 				{ 1,  18383 }, -- Force Imbued Gauntlets
@@ -3659,6 +3668,7 @@ data["DireMaulWest"] = {
 			npcID = 11487,
 			DisplayIDs = {{14384}},
 			AtlasMapBossID = 4,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18374 }, -- Flamescarred Shoulders
 				{ 2,  18397 }, -- Elder Magus Pendant
@@ -3675,6 +3685,7 @@ data["DireMaulWest"] = {
 			DisplayIDs = {{11250}},
 			specialType = "rare",
 			AtlasMapBossID = 5,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18387 }, -- Brightspark Gloves
 				{ 3,  18346 }, -- Threadbare Trousers
@@ -3686,6 +3697,7 @@ data["DireMaulWest"] = {
 			npcID = 11496,
 			DisplayIDs = {{14173}},
 			AtlasMapBossID = 6,
+			SubAreaID = 33750,
 			[NORMAL_DIFF] = {
 				{ 1,  18381 }, -- Evil Eye Pendant
 				{ 2,  18384 }, -- Bile-etched Spaulders
@@ -3735,9 +3747,10 @@ data["DireMaulWest"] = {
 			DisplayIDs = {{14412}},
 			ExtraList = true,
 			AtlasMapBossID = "1'",
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  18487, [PRICE_EXTRA_ITTYPE] = "money:40000" }, -- Pattern: Mooncloth Robe
-				{ 2,  18486 }, -- Mooncloth Robe
+				--{ 2,  18486 }, -- Mooncloth Robe
 			},
 		},
 		{ -- DMWHelnurath
@@ -3768,7 +3781,6 @@ data["DireMaulNorth"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
-	ContentPhase = 2,
 	items = {
 		{ -- DMNGuardMoldar
 			name = AL["Guard Mol'dar"],
@@ -3852,6 +3864,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNThimblejack
 			name = AL["Knot Thimblejack's Cache"],
 			AtlasMapBossID = 4,
+			ObjectID = 179501,
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
 				{ 16,  18517 }, -- Pattern: Chromatic Cloak
@@ -3913,6 +3926,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNTRIBUTERUN
 			name = AL["Tribute"],
 			ExtraList = true,
+			ObjectID = 179564,
 			[NORMAL_DIFF] = {
 				{ 1,  18538 }, -- Treant's Bane
 				{ 3,  18528 }, -- Cyclone Spaulders
@@ -4617,6 +4631,7 @@ data["Stratholme"] = {
 			SubAreaID = 32303,
 			DisplayIDs = {{7856}},
 			AtlasMapBossID = 14,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13397 }, -- Stoneskin Gargoyle Cape
 				{ 2,  13954 }, -- Verdant Footpads
@@ -4802,6 +4817,7 @@ data["Stratholme"] = {
 		{ -- STRATBSPlansSerenity / STRATBSPlansCorruption
 			name = AL["Plans"],
 			ExtraList = true,
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  12827 }, -- Plans: Serenity
 				{ 2,  12781 }, -- Serenity
@@ -4848,10 +4864,173 @@ data["Stratholme"] = {
 	},
 }
 
-
 -- ########################
 -- Raids
 -- ########################
+data["WorldBosses"] = {
+	name = AL["World Bosses"],
+	AtlasMapFile = "Azuregos",
+	ContentType = RAID40_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
+	items = {
+		{ -- AAzuregos
+			name = AL["Azuregos"],
+			AtlasMapFile = "Azuregos",
+			npcID = 6109,
+			Level = 999,
+			ContentPhase = 2,
+			DisplayIDs = {{11460}},
+			AtlasMapBossID = 1,
+			[NORMAL_DIFF] = {
+				{ 1,  19132 }, -- Crystal Adorned Crown
+				{ 2,  18208 }, -- Drape of Benediction
+				{ 3,  18541 }, -- Puissant Cape
+				{ 4,  18547 }, -- Unmelting Ice Girdle
+				{ 5,  18545 }, -- Leggings of Arcane Supremacy
+				{ 6,  19131 }, -- Snowblind Shoes
+				{ 7,  19130 }, -- Cold Snap
+				{ 8,  17070 }, -- Fang of the Mystics
+				{ 9,  18202 }, -- Eskhandar's Left Claw
+				{ 10, 18542 }, -- Typhoon
+				{ 16, 18704 }, -- Mature Blue Dragon Sinew
+			},
+		},
+		{ -- KKazzak
+			name = AL["Lord Kazzak"],
+			AtlasMapFile = "LordKazzak",
+			npcID = 12397,
+			Level = 999,
+			ContentPhase = 2,
+			DisplayIDs = {{12449}},
+			AtlasMapBossID = 1,
+			[NORMAL_DIFF] = {
+				{ 1,  18546 }, -- Infernal Headcage
+				{ 2,  17111 }, -- Blazefury Medallion
+				{ 3,  18204 }, -- Eskhandar's Pelt
+				{ 4,  19135 }, -- Blacklight Bracer
+				{ 5,  18544 }, -- Doomhide Gauntlets
+				{ 6,  19134 }, -- Flayed Doomguard Belt
+				{ 7,  19133 }, -- Fel Infused Leggings
+				{ 8,  18543 }, -- Ring of Entropy
+				{ 9,  17112 }, -- Empyrean Demolisher
+				{ 10, 17113 }, -- Amberseal Keeper
+				{ 16, 18665 }, -- The Eye of Shadow
+			},
+		},
+		{ -- DLethon
+			name = AL["Lethon"],
+			AtlasMapFile = "FourDragons",
+			npcID = 14888,
+			Level = 999,
+			ContentPhase = 4,
+			DisplayIDs = {{15365}},
+			[NORMAL_DIFF] = {
+				{ 1,  20628 }, -- Deviate Growth Cap
+				{ 2,  20626 }, -- Black Bark Wristbands
+				{ 3,  20630 }, -- Gauntlets of the Shining Light
+				{ 4,  20625 }, -- Belt of the Dark Bog
+				{ 5,  20627 }, -- Dark Heart Pants
+				{ 6,  20629 }, -- Malignant Footguards
+				{ 9,  20579 }, -- Green Dragonskin Cloak
+				{ 10, 20615 }, -- Dragonspur Wraps
+				{ 11, 20616 }, -- Dragonbone Wristguards
+				{ 12, 20618 }, -- Gloves of Delusional Power
+				{ 13, 20617 }, -- Ancient Corroded Leggings
+				{ 14, 20619 }, -- Acid Inscribed Greaves
+				{ 15, 20582 }, -- Trance Stone
+				{ 16, 20644 }, -- Nightmare Engulfed Object
+				{ 17, 20600 }, -- Malfurion's Signet Ring
+				{ 24, 20580 }, -- Hammer of Bestial Fury
+				{ 25, 20581 }, -- Staff of Rampant Growth
+				{ 30, 20381 }, -- Dreamscale
+			},
+		},
+		{ -- DEmeriss
+			name = AL["Emeriss"],
+			AtlasMapFile = "FourDragons",
+			npcID = 14889,
+			Level = 999,
+			ContentPhase = 4,
+			DisplayIDs = {{15366}},
+			[NORMAL_DIFF] = {
+				{ 1,  20623 }, -- Circlet of Restless Dreams
+				{ 2,  20622 }, -- Dragonheart Necklace
+				{ 3,  20624 }, -- Ring of the Unliving
+				{ 4,  20621 }, -- Boots of the Endless Moor
+				{ 5,  20599 }, -- Polished Ironwood Crossbow
+				{ 9,  20579 }, -- Green Dragonskin Cloak
+				{ 10, 20615 }, -- Dragonspur Wraps
+				{ 11, 20616 }, -- Dragonbone Wristguards
+				{ 12, 20618 }, -- Gloves of Delusional Power
+				{ 13, 20617 }, -- Ancient Corroded Leggings
+				{ 14, 20619 }, -- Acid Inscribed Greaves
+				{ 15, 20582 }, -- Trance Stone
+				{ 16, 20644 }, -- Nightmare Engulfed Object
+				{ 17, 20600 }, -- Malfurion's Signet Ring
+				{ 24, 20580 }, -- Hammer of Bestial Fury
+				{ 25, 20581 }, -- Staff of Rampant Growth
+				{ 30, 20381 }, -- Dreamscale
+			},
+		},
+		{ -- DTaerar
+			name = AL["Taerar"],
+			AtlasMapFile = "FourDragons",
+			npcID = 14890,
+			Level = 999,
+			ContentPhase = 4,
+			DisplayIDs = {{15363}, {15367}},
+			[NORMAL_DIFF] = {
+				{ 1,  20633 }, -- Unnatural Leather Spaulders
+				{ 2,  20631 }, -- Mendicant's Slippers
+				{ 3,  20634 }, -- Boots of Fright
+				{ 4,  20632 }, -- Mindtear Band
+				{ 5,  20577 }, -- Nightmare Blade
+				{ 9,  20579 }, -- Green Dragonskin Cloak
+				{ 10, 20615 }, -- Dragonspur Wraps
+				{ 11, 20616 }, -- Dragonbone Wristguards
+				{ 12, 20618 }, -- Gloves of Delusional Power
+				{ 13, 20617 }, -- Ancient Corroded Leggings
+				{ 14, 20619 }, -- Acid Inscribed Greaves
+				{ 15, 20582 }, -- Trance Stone
+				{ 16, 20644 }, -- Nightmare Engulfed Object
+				{ 17, 20600 }, -- Malfurion's Signet Ring
+				{ 24, 20580 }, -- Hammer of Bestial Fury
+				{ 25, 20581 }, -- Staff of Rampant Growth
+				{ 30, 20381 }, -- Dreamscale
+			},
+		},
+		{ -- DYsondre
+			name = AL["Ysondre"],
+			AtlasMapFile = "FourDragons",
+			npcID = 14887,
+			Level = 999,
+			ContentPhase = 4,
+			DisplayIDs = {{15364}},
+			[NORMAL_DIFF] = {
+				{ 1,  20637 }, -- Acid Inscribed Pauldrons
+				{ 2,  20635 }, -- Jade Inlaid Vestments
+				{ 3,  20638 }, -- Leggings of the Demented Mind
+				{ 4,  20639 }, -- Strangely Glyphed Legplates
+				{ 5,  20636 }, -- Hibernation Crystal
+				{ 6,  20578 }, -- Emerald Dragonfang
+				{ 9,  20579 }, -- Green Dragonskin Cloak
+				{ 10, 20615 }, -- Dragonspur Wraps
+				{ 11, 20616 }, -- Dragonbone Wristguards
+				{ 12, 20618 }, -- Gloves of Delusional Power
+				{ 13, 20617 }, -- Ancient Corroded Leggings
+				{ 14, 20619 }, -- Acid Inscribed Greaves
+				{ 15, 20582 }, -- Trance Stone
+				{ 16, 20644 }, -- Nightmare Engulfed Object
+				{ 17, 20600 }, -- Malfurion's Signet Ring
+				{ 24, 20580 }, -- Hammer of Bestial Fury
+				{ 25, 20581 }, -- Staff of Rampant Growth
+				{ 30, 20381 }, -- Dreamscale
+			},
+		},
+	}
+}
+
 data["MoltenCore"] = {
 	MapID = 2717,
 	InstanceID = 409,
@@ -5149,23 +5328,15 @@ data["MoltenCore"] = {
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  18264 }, -- Plans: Elemental Sharpening Stone
-				{ 2,  18262 }, -- Elemental Sharpening Stone
-				{ 4,  18292 }, -- Schematic: Core Marksman Rifle
-				{ 5,  18282 }, -- Core Marksman Rifle
-				{ 7,  18291 }, -- Schematic: Force Reactive Disk
-				{ 8,  18168 }, -- Force Reactive Disk
-				{ 10, 18290 }, -- Schematic: Biznicks 247x128 Accurascope
-				{ 11, 18283 }, -- Biznicks 247x128 Accurascope
-				{ 13, 18259 }, -- Formula: Enchant Weapon - Spell Power
+				{ 3,  18292 }, -- Schematic: Core Marksman Rifle
+				{ 4,  18291 }, -- Schematic: Force Reactive Disk
+				{ 5, 18290 }, -- Schematic: Biznicks 247x128 Accurascope
+				{ 7, 18259 }, -- Formula: Enchant Weapon - Spell Power
+				{ 8, 18260 }, -- Formula: Enchant Weapon - Healing Power
 				{ 16, 18252 }, -- Pattern: Core Armor Kit
-				{ 17, 18251 }, -- Core Armor Kit
-				{ 19, 18265 }, -- Pattern: Flarecore Wraps
-				{ 20, 18263 }, -- Flarecore Wraps
-				{ 22, 21371 }, -- Pattern: Core Felcloth Bag
-				{ 23, 21342 }, -- Core Felcloth Bag
-				{ 25, 18257 }, -- Recipe: Major Rejuvenation Potion
-				{ 26, 18253 }, -- Major Rejuvenation Potion
-				{ 28, 18260 }, -- Formula: Enchant Weapon - Healing Power
+				{ 18, 18265 }, -- Pattern: Flarecore Wraps
+				{ 19, 21371 }, -- Pattern: Core Felcloth Bag
+				{ 21, 18257 }, -- Recipe: Major Rejuvenation Potion
 			},
 		},
 		{ -- MCTrashMobs
