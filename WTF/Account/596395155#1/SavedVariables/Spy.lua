@@ -21,10 +21,10 @@ SpyDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 991.481628417969,
-					["h"] = 35.0000228881836,
-					["w"] = 170,
-					["x"] = 234.971618652344,
+					["y"] = 991.615417480469,
+					["h"] = 55,
+					["w"] = 169.999984741211,
+					["x"] = 235,
 				},
 			},
 			["Colors"] = {
@@ -35,8 +35,8 @@ SpyDB = {
 				},
 			},
 			["AppendUnitNameCheck"] = true,
-			["AppendUnitKoSCheck"] = true,
 			["Enabled"] = false,
+			["AppendUnitKoSCheck"] = true,
 		},
 	},
 }
