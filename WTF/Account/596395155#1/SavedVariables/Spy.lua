@@ -22,7 +22,7 @@ SpyDB = {
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 991.615417480469,
-					["h"] = 55,
+					["h"] = 134.999984741211,
 					["w"] = 169.999984741211,
 					["x"] = 235,
 				},
@@ -35,7 +35,6 @@ SpyDB = {
 				},
 			},
 			["AppendUnitNameCheck"] = true,
-			["Enabled"] = false,
 			["AppendUnitKoSCheck"] = true,
 		},
 	},

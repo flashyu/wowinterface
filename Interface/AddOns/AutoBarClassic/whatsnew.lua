@@ -4,11 +4,12 @@ local ADDON_NAME, AB = ... -- Pulls back the Addon-Local Variables and store the
 
 local WHATSNEW_TEXT = "" ..
 [[
- - Fix: Issue with Health/Mana stones
- - Druid: Added Mark/Gift of the Wild, Thorns
- - Paladin: Divine Protection
- - Mage: Frost Armor, Arcane Intellect, Conjure Food/Water
- - Fix: Issue with Aquatic, Buff Weapon, and Mana buttons
+ - Hunter: Track Hidden & Elementals
+ - Shaman: Earth Shock isn`t a totem
+ - Warlock: Fixed Demon Skin
+ - Warrior: Berserker/Battle Stance
+ - Lots of cleanup
+ - Really ugly hack to try to workaround Bagnon conflicts
  - NOTE: LOTS of items/spells are missing but there shouldn`t be any lua errors
  - Go to MuffinManGames.com to report any issues or for information on my Patreon
 ]] .. "|n"

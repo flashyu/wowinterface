@@ -65,14 +65,14 @@ AutoBarDB = {
 					["defaultButtonIndex"] = "*",
 				},
 				["AutoBarButtonShields"] = {
-					["arrangeOnUse"] = true,
-					["buttonClass"] = "AutoBarButtonShields",
-					["max_popup_height"] = 1,
 					["barKey"] = "AutoBarClassBarMage",
-					["enabled"] = true,
-					["drag"] = false,
+					["max_popup_height"] = 1,
 					["buttonKey"] = "AutoBarButtonShields",
 					["defaultButtonIndex"] = "*",
+					["arrangeOnUse"] = true,
+					["buttonClass"] = "AutoBarButtonShields",
+					["enabled"] = true,
+					["drag"] = false,
 				},
 				["AutoBarButtonClassBuff"] = {
 					["barKey"] = "AutoBarClassBarMage",
@@ -85,7 +85,7 @@ AutoBarDB = {
 			},
 		},
 	},
-	["whatsnew_version"] = "1.13.2.04",
+	["whatsnew_version"] = "1.13.2.06",
 	["chars"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["buttonDataList"] = {
@@ -156,23 +156,23 @@ AutoBarDB = {
 				["popupDirection"] = "1",
 				["fadeOut"] = false,
 				["ROGUE"] = true,
-				["SHAMAN"] = true,
 				["buttonHeight"] = 36,
 				["rows"] = 1,
-				["MAGE"] = true,
 				["dockShiftY"] = 0,
 				["alignButtons"] = "3",
 				["posX"] = 1331.56754393183,
 				["DRUID"] = true,
-				["HUNTER"] = true,
+				["SHAMAN"] = true,
 				["hide"] = false,
 				["enabled"] = true,
-				["WARRIOR"] = true,
+				["HUNTER"] = true,
 				["columns"] = 9,
+				["posY"] = 162.499121236833,
+				["WARRIOR"] = true,
 				["scale"] = 1,
 				["alpha"] = 1,
-				["frameStrata"] = "LOW",
 				["PRIEST"] = true,
+				["PALADIN"] = true,
 				["buttonKeys"] = {
 					"AutoBarButtonRaidTarget", -- [1]
 					"AutoBarButtonSpeed", -- [2]
@@ -183,13 +183,14 @@ AutoBarDB = {
 					"AutoBarButtonMiscFun", -- [7]
 					"AutoBarButtonReputation", -- [8]
 					"AutoBarButtonBattleStandards", -- [9]
+					"AutoBarButtonMount", -- [10]
 				},
-				["PALADIN"] = true,
 				["WARLOCK"] = true,
-				["posY"] = 162.499121236833,
+				["buttonWidth"] = 36,
+				["frameStrata"] = "LOW",
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["buttonWidth"] = 36,
+				["MAGE"] = true,
 			},
 		},
 		["ldbIcon"] = {
@@ -241,7 +242,7 @@ AutoBarDB = {
 				["barKey"] = "AutoBarClassBarBasic",
 				["buttonClass"] = "AutoBarButtonWater",
 				["disableConjure"] = true,
-				["enabled"] = true,
+				["enabled"] = false,
 				["buttonKey"] = "AutoBarButtonWater",
 				["defaultButtonIndex"] = "AutoBarButtonFood",
 			},
@@ -375,13 +376,13 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonBandages",
 				["defaultButtonIndex"] = 3,
 			},
-			["AutoBarCustomButton自定义3"] = {
-				"Misc.Hearth", -- [1]
-				["hasCustomCategories"] = true,
-				["buttonClass"] = "AutoBarButtonCustom",
-				["name"] = "自定义3",
-				["buttonKey"] = "AutoBarCustomButton自定义3",
+			["AutoBarButtonMount"] = {
+				["barKey"] = "AutoBarClassBarExtras",
+				["buttonClass"] = "AutoBarButtonMount",
+				["arrangeOnUse"] = true,
 				["enabled"] = true,
+				["buttonKey"] = "AutoBarButtonMount",
+				["defaultButtonIndex"] = "*",
 			},
 			["AutoBarButtonMiscFun"] = {
 				["barKey"] = "AutoBarClassBarExtras",
@@ -391,18 +392,26 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonMiscFun",
 				["defaultButtonIndex"] = 8,
 			},
-			["AutoBarButtonCooldownPotionMana"] = {
-				["enabled"] = false,
-				["buttonClass"] = "AutoBarButtonCooldownPotionMana",
-				["shuffle"] = true,
-				["buttonKey"] = "AutoBarButtonCooldownPotionMana",
-				["defaultButtonIndex"] = 7,
+			["AutoBarCustomButton自定义3"] = {
+				"Misc.Hearth", -- [1]
+				["hasCustomCategories"] = true,
+				["buttonClass"] = "AutoBarButtonCustom",
+				["name"] = "自定义3",
+				["buttonKey"] = "AutoBarCustomButton自定义3",
+				["enabled"] = true,
 			},
 			["AutoBarButtonFoodCombo"] = {
 				["enabled"] = true,
 				["buttonClass"] = "AutoBarButtonFoodCombo",
 				["buttonKey"] = "AutoBarButtonFoodCombo",
 				["defaultButtonIndex"] = 17,
+			},
+			["AutoBarButtonCooldownPotionMana"] = {
+				["enabled"] = false,
+				["buttonClass"] = "AutoBarButtonCooldownPotionMana",
+				["shuffle"] = true,
+				["buttonKey"] = "AutoBarButtonCooldownPotionMana",
+				["defaultButtonIndex"] = 7,
 			},
 			["AutoBarButtonCooldownPotionCombat"] = {
 				["enabled"] = true,
@@ -420,8 +429,8 @@ AutoBarDB = {
 				["enabled"] = false,
 			},
 			["AutoBarButtonBattleStandards"] = {
-				["buttonClass"] = "AutoBarButtonBattleStandards",
 				["enabled"] = false,
+				["buttonClass"] = "AutoBarButtonBattleStandards",
 				["buttonKey"] = "AutoBarButtonBattleStandards",
 				["defaultButtonIndex"] = 6,
 			},

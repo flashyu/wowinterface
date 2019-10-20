@@ -6,13 +6,19 @@
 -- http://muffinmangames.com
 --
 
+-- GLOBALS: GetSpellBookItemName, ClearCursor, GetCursorInfo, SecureHandlerWrapScript, CreateFrame, RegisterStateDriver, RegisterAutoHide, InCombatLockdown, GetInventoryItemLink
+-- GLOBALS: GetContainerItemLink, GetShapeshiftForm, GetShapeshiftFormInfo, GetTotemInfo, PickupInventoryItem, CooldownFrame_Set
+
+
+local tostring, print, assert, math, pairs, strfind, ipairs, tonumber = tostring, print, assert, math, pairs, strfind, ipairs, tonumber
+
 local AutoBar = AutoBar
 
 local ABGCode = AutoBarGlobalCodeSpace
 local ABGData = AutoBarGlobalDataObject
 local spellIconList = ABGData.spell_icon_list
 
-local AceOO = AceLibrary("AceOO-2.0")
+local AceOO = MMGHACKAceLibrary("AceOO-2.0")
 local LibKeyBound = LibStub("LibKeyBound-1.0")
 local L = AutoBarGlobalDataObject.locale
 local _G = getfenv(0)
@@ -1029,6 +1035,14 @@ end
 --	end
 --end
 
+local AutoBarButtonMount = AceOO.Class(AutoBarButton)
+AutoBar.Class["AutoBarButtonMount"] = AutoBarButtonMount
+
+function AutoBarButtonMount.prototype:init(parentBar, buttonDB)
+	AutoBarButtonMount.super.prototype.init(self, parentBar, buttonDB)
+
+	self:AddCategory("Muffin.Mount")
+end
 
 local AutoBarButtonAspect = AceOO.Class(AutoBarButton)
 AutoBar.Class["AutoBarButtonAspect"] = AutoBarButtonAspect
@@ -1184,6 +1198,7 @@ function AutoBarButtonConjure.prototype:init(parentBar, buttonDB)
 		self:AddCategory("Spell.Mage.Conjure Water")
 	elseif (AutoBar.CLASS == "WARLOCK") then
 		self:AddCategory("Spell.Warlock.Create Healthstone")
+		self:AddCategory("Spell.Warlock.Create Soulstone")
 	end
 end
 

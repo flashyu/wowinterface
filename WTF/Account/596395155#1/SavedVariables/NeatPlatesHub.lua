@@ -66,7 +66,10 @@ NeatPlatesHubSettings = {
 			["r"] = 0.501959681510925,
 		},
 		["WidgetQuestIcon"] = false,
-		["ThreatSoloEnable"] = false,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
+			["Liberated Karabor Prisoner"] = true,
+		},
 		["StatusTextCenterColor"] = true,
 		["ColorFriendlyNameMode"] = 1,
 		["TextColorGuildMember"] = {
@@ -89,10 +92,7 @@ NeatPlatesHubSettings = {
 		["OpacityFilterNonPartyMembers"] = false,
 		["WidgetBuffPurgeable"] = false,
 		["WidgetThreatIndicator"] = true,
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-			["Liberated Karabor Prisoner"] = true,
-		},
+		["HeadlineEnemyColor"] = 4,
 		["TextColorNeutral"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.105882123112679,
@@ -547,7 +547,7 @@ NeatPlatesHubSettings = {
 		["WidgetRangeStyle"] = 1,
 		["ScaleCastingSpotlight"] = false,
 		["StyleFriendlyBarsOnNPC"] = false,
-		["HeadlineEnemyColor"] = 4,
+		["ThreatSoloEnable"] = false,
 		["StyleFriendlyBarsNoTotem"] = false,
 	},
 	["profiles"] = {

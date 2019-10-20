@@ -40,9 +40,9 @@ GuidelimeDataChar = {
 			[8] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林_3"] = {
-			[9] = true,
 			[7] = true,
 			[12] = true,
+			[9] = true,
 		},
 		["Thacen 导航, 中文由Qcat汉化 20-21 石爪山脉"] = {
 			true, -- [1]
@@ -114,11 +114,11 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 6-10 提瑞斯法林地"] = {
 			[2] = true,
 			[8] = true,
-			[14] = false,
-			[29] = true,
 			[19] = true,
-			[9] = true,
+			[29] = true,
 			[34] = true,
+			[9] = true,
+			[14] = false,
 		},
 		["Thacen 导航, 中文由Qcat汉化 15- 贫瘠之地(亡灵)"] = {
 			[6] = true,
@@ -196,14 +196,14 @@ GuidelimeDataChar = {
 		},
 		["Thacen 导航, 中文由Qcat汉化 29-30 希尔斯布莱德丘陵"] = {
 			true, -- [1]
-			[18] = true,
+			[10] = true,
 			[17] = true,
 			[21] = true,
-			[10] = true,
+			[25] = true,
 			[22] = true,
 			[14] = true,
 			[19] = true,
-			[25] = true,
+			[18] = true,
 		},
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 12-16 贫瘠之地"] = {
 		},
@@ -241,7 +241,6 @@ GuidelimeDataChar = {
 	["arrowX"] = 262.473083496094,
 	["mainFrameFontSize"] = 14,
 	["mainFrameShowScrollBar"] = true,
-	["editorFrameRelative"] = "CENTER",
 	["guideSize"] = {
 		["Thacen 导航, 中文由Qcat汉化 12-15 银松森林(路线2)"] = 12,
 		["Ettern 兽人/巨魔/亡灵 - 中文由Qcat汉化 6-12 Freezy3 亡灵新手村"] = 58,
@@ -275,6 +274,7 @@ GuidelimeDataChar = {
 		["Thacen 导航, 中文由Qcat汉化 28-29 千针石林"] = 42,
 	},
 	["version"] = "1.015",
+	["editorFrameRelative"] = "CENTER",
 	["mainFrameShowing"] = false,
 	["showArrow"] = true,
 	["mainFrameRelative"] = "RIGHT",

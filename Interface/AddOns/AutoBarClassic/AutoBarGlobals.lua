@@ -2,9 +2,13 @@
 -- Separate tables for code and data. Splitting the code off from the data makes it easier to inspect data objects.
 -- The names are verbose to reduce likelihood of conflict with another addon
 
+-- GLOBALS: GetItemInfo, GetItemInfoInstant, GetSpellInfo
+
 local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
-AutoBar = AceLibrary("AceAddon-2.0"):new("AceDB-2.0");
+local print, select, ipairs, tostring, table, pairs = print, select, ipairs, tostring, table, pairs
+
+AutoBar = MMGHACKAceLibrary("AceAddon-2.0"):new("AceDB-2.0");
 AutoBar.warning_log = {}
 
 -- All global code with be a child of this table.
@@ -119,12 +123,11 @@ function AutoBarGlobalCodeSpace:InfoFromGUID(p_guid)
 end
 
 function AutoBarGlobalCodeSpace:GetIconForItemID(p_item_id)
-	local i_texture, ii_texture, _;
-	_,_,_,_,_,_,_,_,_, texture = GetItemInfo(p_item_id)
+	local i_texture = select(10, GetItemInfo(p_item_id))
 
-	_, _, _, _, ii_texture, _, _ = GetItemInfoInstant(p_item_id)
+	local ii_texture = select(5, GetItemInfoInstant(p_item_id))
 
-	return ii_texture or texture;
+	return ii_texture or i_texture;
 end
 
 

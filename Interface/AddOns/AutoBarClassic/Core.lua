@@ -13,17 +13,23 @@ Description: Dynamic 24 button bar automatically adds potions, water, food and o
 -- Maintained by MuffinManKen.  Original author Saien of Hyjal
 -- http://muffinmangames.com
 
+-- GLOBALS: GetTime, GetItemInfo, GetSpellLink, SecureCmdOptionParse, GetSpellInfo, InCombatLockdown, UnitFactionGroup, UnitName, GetRealmName
+-- GLOBALS: UnitClass, GetAddOnMemoryUsage, UpdateAddOnMemoryUsage, ClearOverrideBindings, C_Timer, GetMaxBattlefieldID, GetBattlefieldStatus
+-- GLOBALS: NUM_BAG_SLOTS
 
 local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
+local _G = _G
 local LibKeyBound = LibStub("LibKeyBound-1.0")
 local LibStickyFrames = LibStub("LibStickyFrames-2.0")
-local AceOO = AceLibrary("AceOO-2.0")
+local AceOO = MMGHACKAceLibrary("AceOO-2.0")
 local Masque = LibStub("Masque", true)
 local AceCfgDlg = LibStub("AceConfigDialog-3.0")
 local _
 
---AutoBar = AceLibrary("AceAddon-2.0"):new("AceDB-2.0");
+local print, string, select, pairs, tonumber, type, tostring, next, ipairs, unpack, table, assert = print, string, select, pairs, tonumber, type, tostring, next, ipairs, unpack, table, assert
+
+--AutoBar = MMGHACKAceLibrary("AceAddon-2.0"):new("AceDB-2.0");
 
 local AutoBar = AutoBar
 local ABGCS = AutoBarGlobalCodeSpace
@@ -296,14 +302,15 @@ local logMemory = {}	-- n = startMemory
 local event_name_colour = "|cFFFFFF7F"
 
 function AutoBar:LogEvent(eventName, arg1)
+	local memory
 	if (AutoBar.db.account.logMemory) then
 		UpdateAddOnMemoryUsage()
-		local memory = GetAddOnMemoryUsage("AutoBar")
+		memory = GetAddOnMemoryUsage("AutoBar")
 		print(eventName, "memory" , memory)
 	end
 	if (AutoBar.db.account.logEvents) then
 		if (arg1) then
-			print(event_name_colour .. eventName .. "|r", "arg1" , arg1, "time:", GetTime(), memString, memory)
+			print(event_name_colour .. eventName .. "|r", "arg1" , arg1, "time:", GetTime(), memory)
 		else
 			print(event_name_colour .. eventName .. "|r", "time:", GetTime())
 		end
@@ -518,8 +525,8 @@ end
 
 
 
-function AutoBar.events:PLAYER_CONTROL_GAINED()
-	AutoBar:LogEvent("PLAYER_CONTROL_GAINED", arg1)
+function AutoBar.events:PLAYER_CONTROL_GAINED(p_arg1)
+	AutoBar:LogEvent("PLAYER_CONTROL_GAINED", p_arg1)
 	ABGCS:ABScheduleUpdate(tick.UpdateButtonsID)
 end
 
@@ -553,7 +560,7 @@ function AutoBar.events:PLAYER_REGEN_DISABLED(arg1)
 --print("   PLAYER_REGEN_DISABLED")
 
 	ABGCS:UpdateActive()
-	AceCfgDlg:Close(appName)
+	AceCfgDlg:Close("AutoBar")
 end
 
 
@@ -1072,7 +1079,7 @@ function ABGCS:UpdateCategories(p_behaviour)
 			end
 		end
 		if (delete) then
-			otherStickyFrames = nil
+			tick.OtherStickyFrames = nil
 		end
 	end
 

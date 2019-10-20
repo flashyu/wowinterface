@@ -85,7 +85,7 @@ AutoBarDB = {
 			},
 		},
 	},
-	["whatsnew_version"] = "1.13.2.04",
+	["whatsnew_version"] = "1.13.2.06",
 	["account"] = {
 		["customCategoriesVersion"] = 3,
 		["barList"] = {
@@ -138,14 +138,14 @@ AutoBarDB = {
 				["alignButtons"] = "3",
 				["posX"] = 1331.56754393183,
 				["DRUID"] = true,
-				["buttonWidth"] = 36,
+				["MAGE"] = true,
 				["hide"] = false,
 				["enabled"] = true,
-				["MAGE"] = true,
-				["columns"] = 9,
 				["HUNTER"] = true,
+				["columns"] = 9,
 				["posY"] = 162.499121236833,
 				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["alpha"] = 1,
 				["PRIEST"] = true,
 				["PALADIN"] = true,
@@ -159,6 +159,7 @@ AutoBarDB = {
 					"AutoBarButtonMiscFun", -- [7]
 					"AutoBarButtonReputation", -- [8]
 					"AutoBarButtonBattleStandards", -- [9]
+					"AutoBarButtonMount", -- [10]
 				},
 				["WARLOCK"] = true,
 				["scale"] = 1,
@@ -217,7 +218,7 @@ AutoBarDB = {
 				["barKey"] = "AutoBarClassBarBasic",
 				["buttonClass"] = "AutoBarButtonWater",
 				["disableConjure"] = true,
-				["enabled"] = true,
+				["enabled"] = false,
 				["buttonKey"] = "AutoBarButtonWater",
 				["defaultButtonIndex"] = "AutoBarButtonFood",
 			},
@@ -310,7 +311,7 @@ AutoBarDB = {
 			["AutoBarButtonTrinket2"] = {
 				["barKey"] = "AutoBarClassBarBasic",
 				["buttonClass"] = "AutoBarButtonTrinket2",
-				["enabled"] = true,
+				["enabled"] = false,
 				["buttonKey"] = "AutoBarButtonTrinket2",
 				["targeted"] = 14,
 				["equipped"] = 14,
@@ -351,13 +352,13 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonBandages",
 				["defaultButtonIndex"] = 3,
 			},
-			["AutoBarCustomButton自定义3"] = {
-				"Misc.Hearth", -- [1]
-				["hasCustomCategories"] = true,
-				["buttonClass"] = "AutoBarButtonCustom",
-				["name"] = "自定义3",
-				["buttonKey"] = "AutoBarCustomButton自定义3",
+			["AutoBarButtonMount"] = {
+				["barKey"] = "AutoBarClassBarExtras",
+				["buttonClass"] = "AutoBarButtonMount",
+				["arrangeOnUse"] = true,
 				["enabled"] = true,
+				["buttonKey"] = "AutoBarButtonMount",
+				["defaultButtonIndex"] = "*",
 			},
 			["AutoBarButtonTrinket1"] = {
 				["barKey"] = "AutoBarClassBarBasic",
@@ -403,18 +404,26 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonCooldownPotionCombat",
 				["defaultButtonIndex"] = 9,
 			},
-			["AutoBarButtonFoodCombo"] = {
-				["enabled"] = true,
-				["buttonClass"] = "AutoBarButtonFoodCombo",
-				["buttonKey"] = "AutoBarButtonFoodCombo",
-				["defaultButtonIndex"] = 17,
-			},
 			["AutoBarButtonCooldownPotionMana"] = {
 				["enabled"] = false,
 				["buttonClass"] = "AutoBarButtonCooldownPotionMana",
 				["shuffle"] = true,
 				["buttonKey"] = "AutoBarButtonCooldownPotionMana",
 				["defaultButtonIndex"] = 7,
+			},
+			["AutoBarButtonFoodCombo"] = {
+				["enabled"] = true,
+				["buttonClass"] = "AutoBarButtonFoodCombo",
+				["buttonKey"] = "AutoBarButtonFoodCombo",
+				["defaultButtonIndex"] = 17,
+			},
+			["AutoBarCustomButton自定义3"] = {
+				"Misc.Hearth", -- [1]
+				["hasCustomCategories"] = true,
+				["buttonClass"] = "AutoBarButtonCustom",
+				["name"] = "自定义3",
+				["buttonKey"] = "AutoBarCustomButton自定义3",
+				["enabled"] = true,
 			},
 			["AutoBarButtonMiscFun"] = {
 				["barKey"] = "AutoBarClassBarExtras",

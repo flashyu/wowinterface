@@ -21,6 +21,9 @@ function SlashCmdList.AUX(command)
     elseif arguments[1] == 'ignore' and arguments[2] == 'owner' then
 	    aux.account_data.ignore_owner = not aux.account_data.ignore_owner
         aux.print('ignore owner ' .. status(aux.account_data.ignore_owner))
+    elseif arguments[1] == 'action' and arguments[2] == 'shortcuts' then
+        aux.account_data.action_shortcuts = not aux.account_data.action_shortcuts
+        aux.print('action shortcuts ' .. status(aux.account_data.action_shortcuts))
     elseif arguments[1] == 'post' and arguments[2] == 'bid' then
         aux.account_data.post_bid = not aux.account_data.post_bid
 	    aux.print('post bid ' .. status(aux.account_data.post_bid))
@@ -61,7 +64,8 @@ function SlashCmdList.AUX(command)
 		aux.print('用法:')
         aux.print('- scale [' .. aux.color.blue(aux.account_data.scale) .. '] - UI大小')
         aux.print('- ignore owner [' .. status(aux.account_data.ignore_owner) .. '] - 忽略卖家')
-        aux.print('- post bid [' .. status(aux.account_data.post_bid) .. '] - 发布拍卖')
+        aux.print('- action shortcuts [' .. status(aux.account_data.action_shortcuts) .. '] - 快捷ALT')
+        aux.print('- post bid [' .. status(aux.account_data.post_bid) .. '] - 发布竞拍')
         aux.print('- post duration [' .. aux.color.blue(info.duration_hours(aux.account_data.post_duration) .. 'h') .. '] - 持续时间')
         aux.print('- crafting cost [' .. status(aux.account_data.crafting_cost) .. '] - 制作物成本')
         aux.print('- tooltip value [' .. status(tooltip_settings.value) .. '] - 鼠标提示价格')

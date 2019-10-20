@@ -57,3 +57,6 @@ SpeedyAutoLoot: enabled
 ElvUI: enabled
 ElvUI_OptionsUI: enabled
 Questie: enabled
+BigWigs_Plugins: enabled
+BigWigs_Core: enabled
+BigWigs_Options: enabled

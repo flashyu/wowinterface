@@ -75,17 +75,14 @@ NeatPlatesHubSettings = {
 			["g"] = 0.658822059631348,
 			["b"] = 0.999997794628143,
 		},
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-			["Liberated Karabor Prisoner"] = true,
-		},
+		["HeadlineEnemyColor"] = 4,
 		["StyleEnemyMode"] = 1,
 		["HighlightTargetMode"] = 1,
 		["HeadlineFriendlySubtext"] = "RoleGuildLevel",
 		["ColorEnemyNameMode"] = 1,
 		["WidgetBuffPurgeable"] = false,
 		["WidgetThreatIndicator"] = true,
-		["HeadlineEnemyColor"] = 4,
+		["ThreatSoloEnable"] = false,
 		["TextColorNeutral"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.988233149051666,
@@ -548,7 +545,10 @@ NeatPlatesHubSettings = {
 				["x"] = 0,
 			},
 		},
-		["ThreatSoloEnable"] = false,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
+			["Liberated Karabor Prisoner"] = true,
+		},
 	},
 	["profiles"] = {
 		["默认"] = "FFFFFFFF",
