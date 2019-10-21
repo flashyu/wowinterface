@@ -10,7 +10,7 @@ tD_CharDatas = {
 	["Raid"] = true,
 	["LevelValue"] = 55,
 	["Free4Guild"] = true,
-	["ActualRack"] = 1,
+	["AutoBroadcast"] = false,
 	["SoundCheck"] = true,
 	["broadcastSlice"] = 900,
 	["OSD"] = {
@@ -18,45 +18,45 @@ tD_CharDatas = {
 		["scale"] = 1,
 		["horiz"] = false,
 		["alpha"] = 1,
-		["g"] = 0,
 		["locked"] = false,
-		["b"] = 0,
-		["border"] = true,
 		["isEnabled"] = true,
+		["border"] = true,
+		["b"] = 0,
+		["g"] = 0,
 	},
 	["Rack"] = {
 		{
 			["r"] = 1,
 			["g"] = 1,
-			["b"] = 1,
+			["if"] = 0,
 			["Name"] = "Rack nr 1",
-			["main"] = true,
+			["what"] = ">=",
 			["value"] = 5,
 			["goto"] = 0,
-			["what"] = ">=",
-			["if"] = 0,
+			["main"] = true,
+			["b"] = 1,
 		}, -- [1]
 		{
 			["r"] = 1,
 			["g"] = 1,
-			["b"] = 1,
+			["if"] = 0,
 			["Name"] = "Rack nr 2",
-			["main"] = true,
+			["what"] = ">=",
 			["value"] = 5,
 			["goto"] = 0,
-			["what"] = ">=",
-			["if"] = 0,
+			["main"] = true,
+			["b"] = 1,
 		}, -- [2]
 		{
 			["r"] = 1,
 			["g"] = 1,
-			["b"] = 1,
+			["if"] = 0,
 			["Name"] = "Rack nr 3",
-			["main"] = true,
+			["what"] = ">=",
 			["value"] = 5,
 			["goto"] = 0,
-			["what"] = ">=",
-			["if"] = 0,
+			["main"] = true,
+			["b"] = 1,
 		}, -- [3]
 	},
 	["profile"] = {
@@ -697,7 +697,7 @@ tD_CharDatas = {
 			}, -- [14]
 		}, -- [3]
 	},
-	["RegisterValue"] = 1,
+	["ChannelID"] = 1,
 	["RndText"] = {
 		"自动售货机 开始营业了! 交易我来换取你想要的东西!", -- [1]
 		"编辑一条新的广播.", -- [2]
@@ -708,9 +708,9 @@ tD_CharDatas = {
 		"添加更多广播", -- [7]
 		"添加更多广播", -- [8]
 	},
-	["Random"] = 1,
 	["ActualProfile"] = 1,
+	["Random"] = 1,
 	["BanlistActive"] = false,
-	["ChannelID"] = 1,
-	["AutoBroadcast"] = false,
+	["RegisterValue"] = 1,
+	["ActualRack"] = 1,
 }

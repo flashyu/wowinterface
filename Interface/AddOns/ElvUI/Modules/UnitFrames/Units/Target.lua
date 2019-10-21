@@ -25,7 +25,7 @@ function UF:Construct_TargetFrame(frame)
 	frame.Castbar.LatencyTexture:Hide()
 	frame.RaidTargetIndicator = self:Construct_RaidIcon(frame)
 	frame.PowerPrediction = self:Construct_PowerPrediction(frame)
-	frame.HealthPrediction = self:Construct_HealComm(frame)
+	--frame.HealthPrediction = self:Construct_HealComm(frame)
 	frame.DebuffHighlight = self:Construct_DebuffHighlight(frame)
 	frame.InfoPanel = self:Construct_InfoPanel(frame)
 	frame.MouseGlow = self:Construct_MouseGlow(frame)
@@ -40,11 +40,6 @@ function UF:Construct_TargetFrame(frame)
 	frame.customTexts = {}
 	frame:Point('BOTTOMRIGHT', E.UIParent, 'BOTTOM', 413, 68)
 	E:CreateMover(frame, frame:GetName()..'Mover', L["Target Frame"], nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,target,generalGroup')
-
-	frame.Power.Holder = CreateFrame("Frame", nil, frame.Power)
-	frame.Power.Holder:Size(250, 20)
-	frame.Power.Holder:Point("BOTTOM", frame, "BOTTOM", 0, -20)
-	E:CreateMover(frame.Power.Holder, 'TargetPowerBarMover', L["Target Powerbar"], nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,target,power')
 
 	frame.unitframeType = "target"
 end
@@ -127,7 +122,7 @@ function UF:Update_TargetFrame(frame, db)
 	UF:Configure_DebuffHighlight(frame)
 
 	--OverHealing
-	UF:Configure_HealComm(frame)
+	--UF:Configure_HealComm(frame)
 
 	--Raid Icon
 	UF:Configure_RaidIcon(frame)

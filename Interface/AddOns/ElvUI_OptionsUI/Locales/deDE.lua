@@ -521,6 +521,7 @@ L["Growth Direction"] = "Wachstumsrichtung"
 L["Growth X-Direction"] = "Wachstum X-Richtung"
 L["Growth Y-Direction"] = "Wachstum Y-Richtung"
 L["Guardians"] = "Wächter"
+L["Guide:"] = true --No need to translate
 L["Guild Control Frame"] = "Gildenkontrollfenster"
 L["Guild Ranks"] = "Gildenränge"
 L["Guild Registrar"] = "Gildenregister"
@@ -722,6 +723,8 @@ L["Make the unitframe glow yellow when it is below this percent of health, it wi
 L["Make the world map smaller."] = "Macht die Weltkarte kleiner."
 L["Map Opacity When Moving"] = "Deckkraft der Karte während der Bewegung"
 L["Maps"] = "Karten"
+L["Mark Quest Reward"] = true
+L["Marks the most valuable quest reward with a gold coin."] = true
 L["Masque Support"] = "Masque Unterstützung"
 L["Match Frame Width"] = "Passende Fensterbreite"
 L["Match if Name or NPC ID is NOT in the list."] = "Löst aus, wenn Name oder NPC ID NICHT in der Liste ist."
@@ -1353,20 +1356,20 @@ L["Your Auras First"] = "Deine Auren zuerst"
 L["Zone Ability"] = "Zonen Fähigkeit"
 
 ----------------------------------
-L['blockCastByPlayers'] = "[Blocke] Gezaubert von Spieler"
-L['blockDispellable'] = "[Blocke] Bannbar"
-L['blockNoDuration'] = "[Blocke] Keine Dauer"
-L['blockNonPersonal'] = "[Blocke] Nicht Persönlich"
-L['blockNotDispellable'] = "[Blocke] Nicht Bannbar"
-L['Boss'] = true --No need to translate
-L['CastByNPC'] = "Gezaubert von NPC"
-L['CastByPlayers'] = "Gezaubert von Spieler"
-L['CastByUnit'] = "Gezaubert von Einheit"
-L['Dispellable'] = "Bannbar"
-L['nonPersonal'] = "Nicht Persönlich"
-L['notCastByUnit'] = "Nicht gezaubert von der Einheit"
-L['notDispellable'] = "Nicht Bannbar"
-L['Personal'] = "Persönlich"
+L["blockCastByPlayers"] = "[Blocke] Gezaubert von Spieler"
+L["blockDispellable"] = "[Blocke] Bannbar"
+L["blockNoDuration"] = "[Blocke] Keine Dauer"
+L["blockNonPersonal"] = "[Blocke] Nicht Persönlich"
+L["blockNotDispellable"] = "[Blocke] Nicht Bannbar"
+L["Boss"] = true --No need to translate
+L["CastByNPC"] = "Gezaubert von NPC"
+L["CastByPlayers"] = "Gezaubert von Spieler"
+L["CastByUnit"] = "Gezaubert von Einheit"
+L["Dispellable"] = "Bannbar"
+L["nonPersonal"] = "Nicht Persönlich"
+L["notCastByUnit"] = "Nicht gezaubert von der Einheit"
+L["notDispellable"] = "Nicht Bannbar"
+L["Personal"] = "Persönlich"
 ----------------------------------
 
 L["ACTIONBARS_DESC"] = "Konfiguriere die Einstellungen für die Aktionsleisten."

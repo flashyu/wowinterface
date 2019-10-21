@@ -519,6 +519,7 @@ L["Growth Direction"] = "Direction de la croissance"
 L["Growth X-Direction"] = true
 L["Growth Y-Direction"] = true
 L["Guardians"] = true
+L["Guide:"] = true
 L["Guild Control Frame"] = "Gestion de Guilde"
 L["Guild Ranks"] = "Rangs de la guilde"
 L["Guild Registrar"] = "Bannière de Guilde"
@@ -720,6 +721,8 @@ L["Make the unitframe glow yellow when it is below this percent of health, it wi
 L["Make the world map smaller."] = "Rendre la carte du monde plus petite"
 L["Map Opacity When Moving"] = "Opacité de la carte en mouvement"
 L["Maps"] = "Cartes"
+L["Mark Quest Reward"] = true
+L["Marks the most valuable quest reward with a gold coin."] = true
 L["Masque Support"] = "Support de Maque"
 L["Match Frame Width"] = "Accorder à la largeur du cadre"
 L["Match if Name or NPC ID is NOT in the list."] = true
@@ -1348,20 +1351,20 @@ L["Your Auras First"] = "Vos Auras en premier"
 L["Zone Ability"] = "Zone d'abilité"
 
 ----------------------------------
-L['blockCastByPlayers'] = "[Block] Cast By Players"
-L['blockDispellable'] = "[Block] Dispellable"
-L['blockNoDuration'] = "[Block] No Duration"
-L['blockNonPersonal'] = "[Block] Non Personal"
-L['blockNotDispellable'] = "[Block] Not Dispellable"
-L['Boss'] = true
-L['CastByNPC'] = "Cast By NPC"
-L['CastByPlayers'] = "Cast By Players"
-L['CastByUnit'] = "Cast By Unit"
-L['Dispellable'] = true
-L['nonPersonal'] = "Non Personal"
-L['notCastByUnit'] = "Not Cast By Unit"
-L['notDispellable'] = "Not Dispellable"
-L['Personal'] = true
+L["blockCastByPlayers"] = "[Block] Cast By Players"
+L["blockDispellable"] = "[Block] Dispellable"
+L["blockNoDuration"] = "[Block] No Duration"
+L["blockNonPersonal"] = "[Block] Non Personal"
+L["blockNotDispellable"] = "[Block] Not Dispellable"
+L["Boss"] = true
+L["CastByNPC"] = "Cast By NPC"
+L["CastByPlayers"] = "Cast By Players"
+L["CastByUnit"] = "Cast By Unit"
+L["Dispellable"] = true
+L["nonPersonal"] = "Non Personal"
+L["notCastByUnit"] = "Not Cast By Unit"
+L["notDispellable"] = "Not Dispellable"
+L["Personal"] = true
 ----------------------------------
 
 L["ACTIONBARS_DESC"] = "Modifier les options des barres d'actions."

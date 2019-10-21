@@ -5,14 +5,7 @@ Anchor: TOPLEFT
 X: 235
 Y: 7
 W: 170
-H: 135
-Frame: tradeDispenserOSD
-FrameLevel: 1
-Anchor: BOTTOMRIGHT
-X: -416
-Y: 2
-W: 46
-H: 124
+H: 35
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER

@@ -133,9 +133,25 @@ function UF:Configure_Power(frame)
 			power:Width(frame.POWERBAR_WIDTH - ((frame.BORDER + frame.SPACING)*2))
 			power:Height(frame.POWERBAR_HEIGHT - ((frame.BORDER + frame.SPACING)*2))
 
-			power.Holder:Size(frame.POWERBAR_WIDTH, frame.POWERBAR_HEIGHT)
-			power:Point("BOTTOMLEFT", power.Holder, "BOTTOMLEFT", frame.BORDER+frame.SPACING, frame.BORDER+frame.SPACING)
-			E:EnableMover(power.Holder.mover:GetName())
+			if frame.unitframeType and (frame.unitframeType == "player" or frame.unitframeType == "target") and not power.Holder then
+				power.Holder = CreateFrame("Frame", nil, power)
+				power.Holder:Size(frame.POWERBAR_WIDTH, frame.POWERBAR_HEIGHT)
+				power.Holder:Point("BOTTOM", frame, "BOTTOM", 0, -20)
+				power:ClearAllPoints()
+				power:Point("BOTTOMLEFT", power.Holder, "BOTTOMLEFT", frame.BORDER+frame.SPACING, frame.BORDER+frame.SPACING)
+				--Currently only Player and Target can detach power bars, so doing it this way is okay for now
+				if frame.unitframeType == "player" then
+					E:CreateMover(power.Holder, 'PlayerPowerBarMover', L["Player Powerbar"], nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,player,power')
+				elseif frame.unitframeType == "target" then
+					E:CreateMover(power.Holder, 'TargetPowerBarMover', L["Target Powerbar"], nil, nil, nil, 'ALL,SOLO', nil, 'unitframe,target,power')
+				end
+			end
+
+			if power.Holder then
+				E:EnableMover(power.Holder.mover:GetName())
+				power.Holder:Size(frame.POWERBAR_WIDTH, frame.POWERBAR_HEIGHT)
+				power:Point("BOTTOMLEFT", power.Holder, "BOTTOMLEFT", frame.BORDER+frame.SPACING, frame.BORDER+frame.SPACING)
+			end
 
 			power:SetFrameLevel(50) --RaisedElementParent uses 100, we want lower value to allow certain icons and texts to appear above power
 		elseif frame.USE_POWERBAR_OFFSET then
@@ -149,7 +165,7 @@ function UF:Configure_Power(frame)
 				power:Point("TOPLEFT", frame.Health, "TOPLEFT", -frame.POWERBAR_OFFSET, -frame.POWERBAR_OFFSET)
 				power:Point("BOTTOMRIGHT", frame.Health, "BOTTOMRIGHT", -frame.POWERBAR_OFFSET, -frame.POWERBAR_OFFSET)
 			end
-			power:SetFrameLevel(frame.Health:GetFrameLevel() -5) --Health uses 10
+			power:SetFrameLevel(frame.Health:GetFrameLevel() - 5) --Health uses 10
 		elseif frame.USE_INSET_POWERBAR then
 			power:Height(frame.POWERBAR_HEIGHT  - ((frame.BORDER + frame.SPACING)*2))
 			power:Point("BOTTOMLEFT", frame.Health, "BOTTOMLEFT", frame.BORDER + (frame.BORDER*2), frame.BORDER + (frame.BORDER*2))
@@ -175,7 +191,7 @@ function UF:Configure_Power(frame)
 			power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", frame.BORDER, -frame.SPACING*3)
 			power:Height(frame.POWERBAR_HEIGHT  - ((frame.BORDER + frame.SPACING)*2))
 
-			power:SetFrameLevel(frame.Health:GetFrameLevel() - 5)
+			power:SetFrameLevel(frame.Health:GetFrameLevel() + 5)
 		end
 
 		if not frame.POWERBAR_DETACHED and power.Holder then
@@ -187,10 +203,12 @@ function UF:Configure_Power(frame)
 		else
 			power:SetFrameStrata(frame:GetFrameStrata())
 		end
+
 		if db.power.strataAndLevel and db.power.strataAndLevel.useCustomLevel then
 			power:SetFrameLevel(db.power.strataAndLevel.frameLevel)
-			power.backdrop:SetFrameLevel(power:GetFrameLevel() - 1)
 		end
+
+		power.backdrop:SetFrameLevel(power:GetFrameLevel() - 1)
 
 		if frame.POWERBAR_DETACHED and db.power.parent == "UIPARENT" then
 			E.FrameLocks[power] = true

@@ -518,6 +518,7 @@ L["Growth Direction"] = "Направление роста"
 L["Growth X-Direction"] = "Рост по Х"
 L["Growth Y-Direction"] = "Рост по Y"
 L["Guardians"] = true
+L["Guide:"] = true
 L["Guild Control Frame"] = "Управление гильдией"
 L["Guild Ranks"] = "Ранги гильдии"
 L["Guild Registrar"] = "Регистратор гильдий"
@@ -719,6 +720,8 @@ L["Make the unitframe glow yellow when it is below this percent of health, it wi
 L["Make the world map smaller."] = "Сделать карту мира меньше. Она больше не будет занимать весь экран в увеличенном варианте."
 L["Map Opacity When Moving"] = "Прозрачность карты в движении"
 L["Maps"] = "Карты"
+L["Mark Quest Reward"] = true
+L["Marks the most valuable quest reward with a gold coin."] = true
 L["Masque Support"] = "Поддержка Masque"
 L["Match Frame Width"] = "По ширине рамки"
 L["Match if Name or NPC ID is NOT in the list."] = true
@@ -1348,20 +1351,20 @@ L["Your Auras First"] = "Сначала свои"
 L["Zone Ability"] = "Способность местности"
 
 ----------------------------------
-L['blockCastByPlayers'] = "[Блокировать] Принадлежат игрокам"
-L['blockDispellable'] = "[Блокировать] Развеиваемые"
-L['blockNoDuration'] = "[Блокировать] Без длительности"
-L['blockNonPersonal'] = "[Блокировать] Чужие"
-L['blockNotDispellable'] = "[Блокировать] Не развеиваемые"
-L['Boss'] = "Босс"
-L['CastByNPC'] = "Принадлежит НИП"
-L['CastByPlayers'] = "Принадлежат игрокам"
-L['CastByUnit'] = "Принадлежит юниту"
-L['Dispellable'] = "Развеиваемые"
-L['nonPersonal'] = "Чужие"
-L['notCastByUnit'] = "Не принадлежит юниту"
-L['notDispellable'] = "Не развеиваемые"
-L['Personal'] = "Личные"
+L["blockCastByPlayers"] = "[Блокировать] Принадлежат игрокам"
+L["blockDispellable"] = "[Блокировать] Развеиваемые"
+L["blockNoDuration"] = "[Блокировать] Без длительности"
+L["blockNonPersonal"] = "[Блокировать] Чужие"
+L["blockNotDispellable"] = "[Блокировать] Не развеиваемые"
+L["Boss"] = "Босс"
+L["CastByNPC"] = "Принадлежит НИП"
+L["CastByPlayers"] = "Принадлежат игрокам"
+L["CastByUnit"] = "Принадлежит юниту"
+L["Dispellable"] = "Развеиваемые"
+L["nonPersonal"] = "Чужие"
+L["notCastByUnit"] = "Не принадлежит юниту"
+L["notDispellable"] = "Не развеиваемые"
+L["Personal"] = "Личные"
 ----------------------------------
 
 L["ACTIONBARS_DESC"] = "Modify the actionbar settings."

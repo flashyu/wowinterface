@@ -33,6 +33,7 @@ BigWigsClassicDB = {
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Default",
 	},
+	["discord"] = 4,
 	["profiles"] = {
 		["Default"] = {
 		},

@@ -1,27 +1,27 @@
 
 AtlasLootClassicDB = {
-	["profileKeys"] = {
-		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
-	},
 	["global"] = {
 		["__addonrevision"] = 1030001,
+	},
+	["profileKeys"] = {
+		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["minimap"] = {
-				["minimapPos"] = 191.956880397424,
+				["minimapPos"] = 187.051201357046,
 			},
 			["GUI"] = {
 				["point"] = {
 					nil, -- [1]
 					nil, -- [2]
 					"CENTER", -- [3]
-					5.985345342196520e-05, -- [4]
-					0, -- [5]
+					153.618377685547, -- [4]
+					8.66097354888916, -- [5]
 				},
 				["selected"] = {
 					nil, -- [1]
-					"ScarletMonasteryLibrary", -- [2]
+					"LowerBlackrockSpire", -- [2]
 					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
