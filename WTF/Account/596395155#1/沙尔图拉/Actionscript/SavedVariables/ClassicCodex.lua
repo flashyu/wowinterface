@@ -5,13 +5,13 @@ CodexConfig = {
 	["colorBySpawn"] = true,
 	["autoAccept"] = false,
 	["questMarkerSize"] = 14,
-	["spawnMarkerSize"] = 10,
-	["allQuestGivers"] = true,
 	["trackingMethod"] = 1,
+	["nameplateIcon"] = true,
+	["spawnMarkerSize"] = 10,
 	["currentQuestGivers"] = true,
 	["showFestival"] = true,
 	["autoTurnin"] = false,
-	["nameplateIcon"] = true,
+	["allQuestGivers"] = true,
 	["minimumDropChance"] = 2,
 }
 CodexHiddenQuests = {

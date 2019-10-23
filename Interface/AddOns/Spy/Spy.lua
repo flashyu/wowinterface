@@ -6,7 +6,7 @@ local L = AceLocale:GetLocale("Spy")
 local _
 
 Spy = LibStub("AceAddon-3.0"):NewAddon("Spy", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0", "AceTimer-3.0")
-Spy.Version = "1.0.10"
+Spy.Version = "1.0.11"
 Spy.DatabaseVersion = "1.1"
 Spy.Signature = "[Spy]"
 Spy.ButtonLimit = 15
@@ -1804,14 +1804,23 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 		if bit.band(srcFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == COMBATLOG_OBJECT_REACTION_HOSTILE and srcGUID and srcName and not SpyPerCharDB.IgnoreData[srcName] then
 			local srcType = strsub(srcGUID, 1,6)
 			if srcType == "Player" then
+				local _, class, _, race, _, name = GetPlayerInfoByGUID(srcGUID)
+				if not Spy.ValidClasses[class] then
+					class = nil
+				end	
+				if not Spy.ValidRaces[race] then
+					race = nil
+				end				
 				local learnt = false
 				local detected = true
 				local playerData = SpyPerCharDB.PlayerData[srcName]
 				if not playerData or playerData.isGuess then
-					learnt, playerData = Spy:ParseUnitAbility(true, event, srcName, srcFlags, arg12, arg13)		 -- P8.0 chg			
+--					learnt, playerData = Spy:ParseUnitAbility(true, event, srcName, srcFlags, arg12, arg13)		 -- P8.0 chg			
+					learnt, playerData = Spy:ParseUnitAbility(true, event, srcName, class, race, arg12, arg13)		 -- P8.0 chg	
 				end
 				if not learnt then
-					detected = Spy:UpdatePlayerData(srcName, nil, nil, nil, nil, true, nil)
+--					detected = Spy:UpdatePlayerData(srcName, nil, nil, nil, nil, true, nil)
+					detected = Spy:UpdatePlayerData(srcName, class, nil, race, nil, true, nil)
 				end
 
 				if detected then
@@ -1838,10 +1847,12 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 				local detected = true
 				local playerData = SpyPerCharDB.PlayerData[dstName]
 				if not playerData or playerData.isGuess then
-					learnt, playerData = Spy:ParseUnitAbility(false, event, dstName, dstFlags, arg12, arg13) -- P8.0 chg
+--					learnt, playerData = Spy:ParseUnitAbility(false, event, dstName, dstFlags, arg12, arg13) -- P8.0 chg
+					learnt, playerData = Spy:ParseUnitAbility(false, event, dstName, class, race, arg12, arg13)		 -- P8.0 chg	
 				end
 				if not learnt then
-					detected = Spy:UpdatePlayerData(dstName, nil, nil, nil, nil, true, nil)
+--					detected = Spy:UpdatePlayerData(dstName, nil, nil, nil, nil, true, nil)
+					detected = Spy:UpdatePlayerData(dstName, class, nil, race, nil, true, nil)
 				end
 
 				if detected then

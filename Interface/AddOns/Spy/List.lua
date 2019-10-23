@@ -830,12 +830,13 @@ function Spy:ParseMinimapTooltip(tooltip)
 	return newTooltip
 end
 
-function Spy:ParseUnitAbility(analyseSpell, event, player, flags, spellId, spellName)
+--function Spy:ParseUnitAbility(analyseSpell, event, player, flags, spellId, spellName)
+function Spy:ParseUnitAbility(analyseSpell, event, player, class, race, spellId, spellName)
 	local learnt = false
 	if player then
-		local class = nil
+--		local class = nil
 		local level = nil
-		local race = nil
+--		local race = nil
 		local isEnemy = true
 		local isGuess = true
 
@@ -848,11 +849,14 @@ function Spy:ParseUnitAbility(analyseSpell, event, player, flags, spellId, spell
 			local abilityType = strsub(event, 1, 5)
 			if abilityType == "SWING" or abilityType == "SPELL" or abilityType == "RANGE" then
 				local ability = Spy_AbilityList[spellName]
+--				local ability = Spy_AbilityList[spellId]				
 				if ability then
-					if ability.class and not (playerData and playerData.class) then
-						class = ability.class
-						learnt = true
-					end
+					if class == nil then					
+						if ability.class and not (playerData and playerData.class) then
+							class = ability.class
+							learnt = true
+						end
+					end	
 					if ability.level then
 						local playerLevelNumber = nil
 						if playerData and playerData.level then playerLevelNumber = tonumber(playerData.level) end
@@ -861,10 +865,12 @@ function Spy:ParseUnitAbility(analyseSpell, event, player, flags, spellId, spell
 							learnt = true
 						end
 					end
-					if ability.race and not (playerData and playerData.race) then
-						race = ability.race
-						learnt = true
-					end
+					if race == nil then	
+						if ability.race and not (playerData and playerData.race) then
+							race = ability.race
+							learnt = true
+						end
+					end	
 				else	
 --					print(spellId, " - ", spellName)
 				end
