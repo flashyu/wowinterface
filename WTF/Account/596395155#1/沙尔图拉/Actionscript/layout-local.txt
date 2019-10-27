@@ -20,13 +20,6 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: AtlasFrame
-FrameLevel: 1
-Anchor: TOP
-X: -92
-Y: -75
-W: 1023
-H: 631
 Frame: CodexBrowser
 FrameLevel: 1
 Anchor: CENTER
@@ -41,3 +34,10 @@ X: -16
 Y: 67
 W: 920
 H: 600
+Frame: AtlasFrame
+FrameLevel: 1
+Anchor: TOP
+X: -92
+Y: -75
+W: 1023
+H: 631
