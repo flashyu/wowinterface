@@ -1,6 +1,6 @@
 ﻿## Interface: 11302
 ## Author: Lag
-## Version: v1.3.1
+## Version: v1.3.3
 ## SavedVariables: AtlasLootClassicDB
 ## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1, LibClassicItemSets-1.0
 ## DefaultState: Enabled
@@ -10,8 +10,8 @@
 ## Notes: Shows the possible loot from the bosses
 
 ## Title-deDE: AtlasLootClassic |cFF22B14C[Kern]|r
-## Title-esES: AtlasLoot Classic |cFF22B14C[Core]|r
-## Title-esMX: AtlasLoot Classic |cFF22B14C[Core]|r
+## Title-esES: AtlasLootClassic |cFF22B14C[Núcleo]|r
+## Title-esMX: AtlasLootClassic |cFF22B14C[Núcleo]|r
 ## Title-frFR: AtlasLoot Classic |cFF22B14C[Noyau]|r
 ## Title-itIT: AtlasLoot Classic |cFF22B14C[Core]|r
 ## Title-koKR: AtlasLoot 클래식 |cFF22B14C[코어]|r
@@ -20,8 +20,8 @@
 ## Title-zhCN: AtlasLoot经典版 |cFF22B14C[主程序]|r
 ## Title-zhTW: 副本戰利品查詢經典版 |cFF22B14C[主程式]|r
 ## Notes-deDE: Zeigt die mögliche Boss-Beute.
-## Notes-esES: Shows the possible loot from the bosses
-## Notes-esMX: Shows the possible loot from the bosses
+## Notes-esES: Muestra botines posibles de jefes
+## Notes-esMX: Muestra botines posibles de jefes
 ## Notes-frFR: Affiche les butins possibles des boss
 ## Notes-itIT: Shows the possible loot from the bosses
 ## Notes-koKR: 보스로부터 획득가능한 전리품 표시

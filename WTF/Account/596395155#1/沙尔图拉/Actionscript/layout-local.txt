@@ -41,3 +41,10 @@ X: -9
 Y: 0
 W: 640
 H: 480
+Frame: aux_frame
+FrameLevel: 1
+Anchor: CENTER
+X: 8
+Y: 16
+W: 768
+H: 447

@@ -130,9 +130,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["MAGE"] = true,
 				["scale"] = 1,
-				["alpha"] = 1,
 				["frameStrata"] = "LOW",
-				["PRIEST"] = true,
+				["alpha"] = 1,
+				["buttonWidth"] = 36,
 				["posY"] = 114.69846258976,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -146,7 +146,7 @@ AutoBarDB = {
 					"AutoBarButtonRecovery", -- [9]
 				},
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
+				["PRIEST"] = true,
 				["WARRIOR"] = true,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -160,19 +160,18 @@ AutoBarDB = {
 				["rows"] = 1,
 				["dockShiftY"] = 0,
 				["alignButtons"] = "3",
-				["posX"] = 1331.56754393183,
+				["posX"] = 1331.52450682403,
 				["DRUID"] = true,
 				["SHAMAN"] = true,
 				["hide"] = false,
 				["enabled"] = true,
+				["MAGE"] = true,
+				["posY"] = 162.042101905452,
 				["HUNTER"] = true,
-				["columns"] = 9,
-				["posY"] = 162.499121236833,
 				["WARRIOR"] = true,
-				["scale"] = 1,
-				["alpha"] = 1,
 				["PRIEST"] = true,
-				["PALADIN"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["buttonKeys"] = {
 					"AutoBarButtonRaidTarget", -- [1]
 					"AutoBarButtonSpeed", -- [2]
@@ -185,12 +184,13 @@ AutoBarDB = {
 					"AutoBarButtonBattleStandards", -- [9]
 					"AutoBarButtonMount", -- [10]
 				},
+				["PALADIN"] = true,
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
+				["columns"] = 9,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
-				["MAGE"] = true,
+				["scale"] = 1,
 			},
 		},
 		["ldbIcon"] = {
@@ -466,8 +466,20 @@ AutoBarDB = {
 				["defaultButtonIndex"] = "*",
 			},
 		},
-		["keySeed"] = 6,
+		["keySeed"] = 7,
 		["customCategories"] = {
+			["Custom自定义1"] = {
+				["categoryKey"] = "Custom自定义1",
+				["items"] = {
+					{
+						["itemType"] = "macroCustom",
+						["itemInfo"] = "",
+						["itemId"] = "自定义6",
+					}, -- [1]
+				},
+				["name"] = "自定义1",
+				["desc"] = "自定义1",
+			},
 		},
 		["stupidlog"] = "",
 		["clampedToScreen"] = false,

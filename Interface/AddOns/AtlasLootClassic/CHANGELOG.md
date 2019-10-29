@@ -4,8 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.3.1 (Oct. 15, 2019)
+## v1.3.3 (Oct. 28, 2019)
 
-- Add Legendarys into Collections
-- Add PvP Insignia
-- Move Zul'Farrak / Dustwraith into Phase 1
+- Fix bug with kr translation
+- Droprate for Leaf and Eye should be 50% ( yes @MadSeasonShow )
