@@ -21,7 +21,7 @@ ClassicCastbarsDB = {
 		["showCastInfoOnly"] = false,
 		["width"] = 106,
 		["textPositionY"] = 0,
-		["iconPositionY"] = 0,
+		["showTimer"] = false,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -40,7 +40,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			1, -- [4]
 		},
-		["showTimer"] = false,
+		["iconPositionY"] = 0,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -71,7 +71,7 @@ ClassicCastbarsDB = {
 		["showCastInfoOnly"] = false,
 		["width"] = 120,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border",
-		["iconPositionY"] = 0,
+		["showTimer"] = false,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -90,7 +90,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			1, -- [4]
 		},
-		["showTimer"] = false,
+		["iconPositionY"] = 0,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -119,7 +119,7 @@ ClassicCastbarsDB = {
 		["showCastInfoOnly"] = false,
 		["width"] = 150,
 		["textPositionY"] = 0,
-		["iconPositionY"] = 0,
+		["showTimer"] = false,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -138,7 +138,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			1, -- [4]
 		},
-		["showTimer"] = false,
+		["iconPositionY"] = 0,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -146,6 +146,7 @@ ClassicCastbarsDB = {
 			1, -- [4]
 		},
 	},
+	["locale"] = "zhCN",
 	["player"] = {
 		["castFontSize"] = 12,
 		["autoPosition"] = true,
@@ -167,7 +168,7 @@ ClassicCastbarsDB = {
 		["showCastInfoOnly"] = false,
 		["width"] = 190,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border",
-		["iconPositionY"] = 0,
+		["showTimer"] = false,
 		["statusColorChannel"] = {
 			0, -- [1]
 			1, -- [2]
@@ -186,7 +187,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			1, -- [4]
 		},
-		["showTimer"] = false,
+		["iconPositionY"] = 0,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -194,6 +195,5 @@ ClassicCastbarsDB = {
 			1, -- [4]
 		},
 	},
-	["locale"] = "zhCN",
 	["pushbackDetect"] = true,
 }

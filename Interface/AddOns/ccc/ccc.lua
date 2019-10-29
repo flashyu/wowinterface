@@ -1,5 +1,5 @@
 local addon_name, addon_table = ...
-setfenv(1, setmetatable(addon_table, { __index =_G }))
+setfenv(1, setmetatable(addon_table, { __index = _G }))
 
 do
 	local f = CreateFrame'Frame'
@@ -198,14 +198,13 @@ end
 
 do
 	local factor = { [0] = 1, 1/2, 1/4, 0 }
-	local pvp_limit = { [0] = 15, 10, 5, 0 }
 
 	function DiminishedDuration(unit, effect, full_duration)
 		if IsPlayer(unit) or IsPet(unit) then
 			local class = DR_CLASS[effect]
 			local timer = class and TIMERS[class .. '@' .. unit]
 			local DR = IsPlayer(unit) and timer and timer.DR or 0
-			return PVP_DURATION[effect] and min(pvp_limit[DR], full_duration * factor[DR]) or full_duration * factor[DR]
+			return full_duration * factor[DR]
 		else
 			return full_duration
 		end
@@ -226,7 +225,7 @@ function TargetDebuffs()
 end
 
 function UNIT_SPELLCAST_SENT(_, _, _, spell)
-	if spell == 1833 or spell == 6770 or spell == 2070 or spell == 11297 or spell == 1499 or spell == 14310 or spell == 14311 then -- Cheap Shot, Sap, Freezing Trap
+	if STEALTH[spell] or spell == 1499 or spell == 14310 or spell == 14311 then -- Freezing Trap
 		SetEffectDuration(spell)
 	end
 end
@@ -286,7 +285,7 @@ end
 
 function PLAYER_REGEN_ENABLED(...)
 	for k, timer in pairs(TIMERS) do
-		if not IsPlayer(timer.unit) and not IsPet(timer.unit) then
+		if not IsPlayer(timer.unit) and not IsPet(timer.unit) and not OOC[timer.effect] then
 			StopTimer(k)
 		end
 	end
