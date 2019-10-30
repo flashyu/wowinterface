@@ -28,3 +28,5 @@ bind SHIFT-W NONE
 bind SHIFT-D TOGGLEAUTORUN
 bind SHIFT-BUTTON4 NONE
 bind SHIFT-BUTTON5 NONE
+bind SHIFT-J CLICK ItemRackActionscript沙尔图拉null:LeftButton
+bind CTRL-J CLICK ItemRackActionscript沙尔图拉all:LeftButton

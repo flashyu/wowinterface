@@ -1,2 +1,6 @@
 zTip: disabled
 tradeDispenser: disabled
+TipTop: enabled
+TomTom: disabled
+Guides: disabled
+Guidelime: disabled

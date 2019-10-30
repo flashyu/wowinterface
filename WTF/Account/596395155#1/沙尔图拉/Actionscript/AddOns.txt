@@ -4,7 +4,7 @@ Bagnon: enabled
 Bagnon_GuildBank: enabled
 Bagnon_Config: enabled
 Bagnon_VoidStorage: enabled
-Guides: enabled
+Guides: disabled
 ClassicCodex: enabled
 ConsolePortLoader: disabled
 ConsolePortHelp: disabled
@@ -29,7 +29,7 @@ ClassicCastbars_Options: enabled
 ClassicThreatMeter: enabled
 Decursive: enabled
 DHUD_Options: enabled
-Guidelime: enabled
+Guidelime: disabled
 ItemTooltipProfessionIcons: enabled
 Leatrix_Maps: enabled
 NeatPlates: enabled
@@ -51,7 +51,7 @@ QuestLogEx: enabled
 SortBags: enabled
 Spy: enabled
 TipTop: enabled
-TomTom: enabled
+TomTom: disabled
 zTip: disabled
 SpeedyAutoLoot: enabled
 ElvUI: enabled
