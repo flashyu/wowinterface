@@ -13,9 +13,10 @@ Description: Dynamic 24 button bar automatically adds potions, water, food and o
 -- Maintained by MuffinManKen.  Original author Saien of Hyjal
 -- http://muffinmangames.com
 
--- GLOBALS: GetTime, GetItemInfo, GetSpellLink, SecureCmdOptionParse, GetSpellInfo, InCombatLockdown, UnitFactionGroup, UnitName, GetRealmName
--- GLOBALS: UnitClass, GetAddOnMemoryUsage, UpdateAddOnMemoryUsage, ClearOverrideBindings, C_Timer, GetMaxBattlefieldID, GetBattlefieldStatus
--- GLOBALS: NUM_BAG_SLOTS
+-- GLOBALS: GetTime, GetItemInfo, GetSpellLink, SecureCmdOptionParse, GetSpellInfo, InCombatLockdown, UnitFactionGroup, UnitName, GetRealmName, UnitInVehicle
+-- GLOBALS: UnitClass, GetAddOnMemoryUsage, UpdateAddOnMemoryUsage, ClearOverrideBindings, C_Timer, GetMaxBattlefieldID, GetBattlefieldStatus, PetActionBarFrame
+-- GLOBALS: NUM_BAG_SLOTS, WOW_PROJECT_ID, WOW_PROJECT_MAINLINE
+-- GLOBALS: C_PetBattles
 
 local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
@@ -28,8 +29,6 @@ local AceCfgDlg = LibStub("AceConfigDialog-3.0")
 local _
 
 local print, string, select, pairs, tonumber, type, tostring, next, ipairs, unpack, table, assert = print, string, select, pairs, tonumber, type, tostring, next, ipairs, unpack, table, assert
-
---AutoBar = MMGHACKAceLibrary("AceAddon-2.0"):new("AceDB-2.0");
 
 local AutoBar = AutoBar
 local ABGCS = AutoBarGlobalCodeSpace
@@ -65,10 +64,7 @@ AutoBar.buttonListDisabled = {}
 
 AutoBar.events = {}
 
-AutoBarMountIsQiraji = {[25953] = 1;[26056] = 1;[26054] = 1; [26055] = 1}
-
-
-AutoBar.visibility_driver_string = "[vehicleui] hide; [possessbar] hide; show"
+AutoBar.visibility_driver_string = "[vehicleui] hide; [petbattle] hide; [possessbar] hide; show"
 
 AutoBar.dockingFramesValidateList = {
 	["NONE"] = L["None"],
@@ -227,7 +223,7 @@ end
 
 function AutoBar:IsInLockDown()
 
-	return AutoBar.inCombat or InCombatLockdown() --or UnitInVehicle("player")
+	return AutoBar.inCombat or InCombatLockdown() or (C_PetBattles and C_PetBattles.IsInBattle()) or (UnitInVehicle and UnitInVehicle("player"))
 
 end
 
@@ -268,6 +264,14 @@ function AutoBar:InitializeZero()
 		AutoBar.frame:RegisterEvent("SPELLS_CHANGED")
 	end
 	AutoBar.frame:RegisterEvent("ACTIONBAR_UPDATE_USABLE")
+
+	if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+		AutoBar.frame:RegisterEvent("PET_BATTLE_CLOSE")
+		AutoBar.frame:RegisterEvent("COMPANION_LEARNED")
+		AutoBar.frame:RegisterEvent("QUEST_ACCEPTED")
+		AutoBar.frame:RegisterEvent("QUEST_LOG_UPDATE")
+		AutoBar.frame:RegisterEvent("TOYS_UPDATED")
+	end
 
 
 	-- For item use restrictions
@@ -396,6 +400,95 @@ local function add_item_to_dynamic_category(p_item_link, p_category_name)
 	if(debug_me) then print(item_name, item_id, "Num Items:", #category.items); end;
 end
 
+if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+
+	function AutoBar.events:QUEST_ACCEPTED(p_quest_index)
+		AutoBar:LogEventStart("QUEST_ACCEPTED", p_quest_index)
+
+		local link = GetQuestLogSpecialItemInfo(p_quest_index)
+
+		if(link) then
+			add_item_to_dynamic_category(link, "Dynamic.Quest")
+			ABGCS:ABScheduleUpdate(tick.UpdateItemsID)
+		end
+
+		AutoBar:LogEventEnd("QUEST_ACCEPTED", p_quest_index)
+	end
+
+	function AutoBar.events:QUEST_LOG_UPDATE(p_arg1)
+		AutoBar:LogEventStart("QUEST_LOG_UPDATE", p_arg1)
+
+		--Make sure we're in the world. Should always be the case, but stuff loads in odd orders
+		if(AutoBar.inWorld and AutoBarCategoryList["Dynamic.Quest"]) then
+			AutoBar.frame:UnregisterEvent("QUEST_LOG_UPDATE")
+			local _, num_quests = GetNumQuestLogEntries()
+
+			for i = 1, num_quests do
+				local link = GetQuestLogSpecialItemInfo(i)
+				if(link) then
+					add_item_to_dynamic_category(link, "Dynamic.Quest")
+				end
+			end
+		end
+
+		AutoBar:LogEventEnd("QUEST_LOG_UPDATE", p_arg1)
+
+	end
+
+	function AutoBar.events:COMPANION_LEARNED(...)
+		local companionType = ...;
+		local need_update = false;
+
+		AutoBar:LogEventStart("COMPANION_LEARNED", companionType)
+
+		local button = AutoBar.buttonList["AutoBarButtonMount"]
+		if (button and (companionType == "MOUNT")) then
+			button:Refresh(button.parentBar, button.buttonDB, companionType == "MOUNT")
+		end
+
+		button = AutoBar.buttonList["AutoBarButtonPets"]
+		if (button and (companionType ~= "MOUNT")) then
+			button:Refresh(button.parentBar, button.buttonDB)
+		end
+
+		if(need_update) then
+			ABGCS:ABScheduleUpdate(tick.UpdateCategoriesID);
+		end
+
+
+		AutoBar:LogEventEnd("COMPANION_LEARNED", companionType)
+	end
+
+	function AutoBar.events:PET_BATTLE_CLOSE(arg1)
+		AutoBar:LogEvent("PET_BATTLE_CLOSE", arg1)
+		-- AutoBar.in_pet_battle = false
+
+	end
+
+	function AutoBar.events:TOYS_UPDATED(p_item_id, p_new)
+		AutoBar:LogEventStart("TOYS_UPDATED", p_item_id, p_new)
+
+		if(p_item_id ~= nil or p_new ~= nil) then
+			local need_update = false;
+
+			AutoBarSearch.dirtyBags.toybox = true
+			local button = AutoBar.buttonList["AutoBarButtonToyBox"]
+			if (button) then
+				need_update = button:Refresh(button.parentBar, button.buttonDB, true)
+			end
+
+			if(need_update) then
+				ABGCS:ABScheduleUpdate(tick.UpdateCategoriesID);
+			end
+
+		end
+
+		AutoBar:LogEventEnd("TOYS_UPDATED", p_item_id, p_new)
+
+	end
+
+end
+
 
 function AutoBar.events:PLAYER_ENTERING_WORLD()
 --print("   PLAYER_ENTERING_WORLD")
@@ -411,6 +504,11 @@ function AutoBar.events:PLAYER_ENTERING_WORLD()
 		--AutoBar:DumpWarningLog()
 
 		AB.show_whats_new();
+	end
+
+
+	if(hack_PetActionBarFrame) then
+		PetActionBarFrame:EnableMouse(false);
 	end
 
 	AutoBar.frame:UnregisterEvent("PLAYER_ENTERING_WORLD")

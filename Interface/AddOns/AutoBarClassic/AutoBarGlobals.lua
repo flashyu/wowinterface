@@ -2,11 +2,11 @@
 -- Separate tables for code and data. Splitting the code off from the data makes it easier to inspect data objects.
 -- The names are verbose to reduce likelihood of conflict with another addon
 
--- GLOBALS: GetItemInfo, GetItemInfoInstant, GetSpellInfo
+-- GLOBALS: GetItemInfo, GetItemInfoInstant, GetSpellInfo, PlayerHasToy, C_ToyBox
 
 local _, AB = ... -- Pulls back the Addon-Local Variables and store them locally.
 
-local print, select, ipairs, tostring, table, pairs = print, select, ipairs, tostring, table, pairs
+local print, select, ipairs, tostring, table, pairs, tonumber, string = print, select, ipairs, tostring, table, pairs, tonumber, string
 
 AutoBar = MMGHACKAceLibrary("AceAddon-2.0"):new("AceDB-2.0");
 AutoBar.warning_log = {}
@@ -24,12 +24,17 @@ function AutoBarGlobalCodeSpace:MakeSet(list)
 -- All global data will be a child of this table
 AutoBarGlobalDataObject = {
 	TYPE_MACRO_TEXT = 1,
+	TYPE_TOY = 2,
+	TYPE_BATTLE_PET = 3,
 
 	locale = {},
 
 	timing = {},
 
-	profile = {}
+	profile = {},
+
+	QirajiMounts = {[25953] = 1;[26056] = 1;[26054] = 1; [26055] = 1}
+
 }
 
 
@@ -106,6 +111,20 @@ function AutoBarGlobalCodeSpace:GetWarningLogString()
 
 end
 
+function AutoBarGlobalCodeSpace:ToyGUID(p_toy_id)
+
+	local l = 7 - string.len(p_toy_id);
+	local guid = "toy:" .. string.rep("0", l) .. p_toy_id;
+
+	return guid;
+end
+
+function AutoBarGlobalCodeSpace:BPetGUID(p_bpet_id)
+
+	local guid = "bpet:" .. p_bpet_id;
+
+	return guid;
+end
 
 local macro_text_guid_index = 0;
 function AutoBarGlobalCodeSpace:MacroTextGUID(p_macro_text)
@@ -117,9 +136,18 @@ function AutoBarGlobalCodeSpace:MacroTextGUID(p_macro_text)
 end
 
 
---This should query a global guid registry and then the specific ones if not found.
-function AutoBarGlobalCodeSpace:InfoFromGUID(p_guid)
-	return AutoBarSearch.macro_text[p_guid];
+
+function AutoBarGlobalCodeSpace:GetIconForToyID(p_toy_id)
+	local texture;
+	local item_id = tonumber(p_toy_id)
+
+	_, _, texture =  C_ToyBox.GetToyInfo(item_id)
+
+	if(texture == nil) then
+		texture = AutoBarGlobalCodeSpace:GetIconForItemID(item_id);
+	end
+
+	return texture;
 end
 
 function AutoBarGlobalCodeSpace:GetIconForItemID(p_item_id)
@@ -265,3 +293,38 @@ function AutoBarGlobalCodeSpace:FindNamelessButtons()
 
 	return nameless
 end
+
+
+-------------------------------------------------------------------
+--
+-- WoW Classic
+--
+-------------------------------------------------------------------
+if (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) then
+
+	function AutoBarGlobalCodeSpace:InfoFromGUID(p_guid)
+		return AutoBarSearch.macro_text[p_guid];
+	end
+
+	function AutoBarGlobalCodeSpace:PlayerHasToy(p_item_id)
+		return false;
+	end
+
+else
+-------------------------------------------------------------------
+--
+-- WoW Retail
+--
+-------------------------------------------------------------------
+
+	--This should query a global guid registry and then the specific ones if not found.
+	function AutoBarGlobalCodeSpace:InfoFromGUID(p_guid)
+		return AutoBarSearch.macro_text[p_guid] or AutoBarSearch.toys[p_guid];
+	end
+
+	function AutoBarGlobalCodeSpace:PlayerHasToy(p_item_id)
+		return PlayerHasToy(p_item_id);
+	end
+
+end
+

@@ -240,7 +240,7 @@ assert(buttonDB.buttonKey == buttonKey, "AutoBar.Class.Bar.prototype:UpdateObjec
 				buttonList[buttonKeyIndex] = AutoBar.buttonListDisabled[buttonKey]
 				buttonList[buttonKeyIndex]:Refresh(self, buttonDB)
 			else
-				assert(AutoBar.Class[buttonDB.buttonClass] ~= nil)
+				assert(AutoBar.Class[buttonDB.buttonClass] ~= nil, buttonDB.buttonClass  .. " is nil")
 				buttonList[buttonKeyIndex] = AutoBar.Class[buttonDB.buttonClass]:new(self, buttonDB)
 				AutoBar.buttonListDisabled[buttonKey] = buttonList[buttonKeyIndex]
 			end

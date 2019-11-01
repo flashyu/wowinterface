@@ -51,6 +51,8 @@
 --	Bar & Button visual settings are inherited AutoBar -> Bar -> Button
 --  Plugin Buttons / Bars
 
+-- GLOBALS: WOW_PROJECT_ID, WOW_PROJECT_MAINLINE, WOW_PROJECT_CLASSIC
+
 local tostring, print, assert, math, pairs, strfind, ipairs, tonumber, wipe, table, type = tostring, print, assert, math, pairs, strfind, ipairs, tonumber, wipe, table, type
 
 
@@ -64,9 +66,12 @@ local CLASS_COLUMN_DEFAULT = 10
 
 
 local classBar = {
+	DEATHKNIGHT = "AutoBarClassBarDeathKnight",
+	DEMONHUNTER = "AutoBarClassBarDemonHunter",
 	DRUID = "AutoBarClassBarDruid",
 	HUNTER = "AutoBarClassBarHunter",
 	MAGE = "AutoBarClassBarMage",
+	MONK = "AutoBarClassBarMonk",
 	PALADIN = "AutoBarClassBarPaladin",
 	PRIEST = "AutoBarClassBarPriest",
 	ROGUE = "AutoBarClassBarRogue",
@@ -133,9 +138,12 @@ local function get_bar_default_settings()
 		showOnModifier = nil,
 		posX = 300,
 		posY = 200,
+		DEATHKNIGHT = true,
+		DEMONHUNTER = true,
 		DRUID = true,
 		HUNTER = true,
 		MAGE = true,
+		MONK = true,
 		PALADIN = true,
 		PRIEST = true,
 		ROGUE = true,
@@ -173,6 +181,7 @@ local function get_class_bar_default_settings(p_class_name)
 		showOnModifier = nil,
 		posX = 300,
 		posY = 280,
+		DEMONHUNTER = true,
 		buttonKeys = {},
 	}
 
@@ -197,6 +206,7 @@ function AutoBar:InitializeDefaults()
 			log_throttled_events = false,
 			throttle_event_limit = 0.0,
 			handle_spell_changed = true,
+			hack_PetActionBarFrame = true,
 			selfCastRightClick = true,
 			showEmptyButtons = false,
 			style = "Dreamlayout",
@@ -204,7 +214,10 @@ function AutoBar:InitializeDefaults()
 		}
 	end
 	if(self.defaults.handle_spell_changed == nil) then
-		self.defaults.handle_spell_changed = true
+		handle_spell_changed = true
+	end
+	if(self.defaults.hack_PetActionBarFrame == nil) then
+		hack_PetActionBarFrame = true
 	end
 
 
@@ -240,9 +253,12 @@ function AutoBar:InitializeDefaults()
 	--TODO: This is a duplicate of data at the top of this file?
 	local class_bar_map =
 	{
+		DEMONHUNTER = "AutoBarClassBarDemonHunter",
+		DEATHKNIGHT = "AutoBarClassBarDeathKnight",
 		DRUID = "AutoBarClassBarDruid",
 		HUNTER = "AutoBarClassBarHunter",
 		MAGE = "AutoBarClassBarMage",
+		MONK = "AutoBarClassBarMonk",
 		PALADIN = "AutoBarClassBarPaladin",
 		PRIEST = "AutoBarClassBarPriest",
 		ROGUE = "AutoBarClassBarRogue",
@@ -262,42 +278,55 @@ function AutoBar:InitializeDefaults()
 	{
 		DRUID =
 		{
-			"AutoBarButtonBear",
-			"AutoBarButtonCat",
-			"AutoBarButtonTravel",
-			"AutoBarButtonAquatic",
-			"AutoBarButtonMoonkin",
-			"AutoBarButtonTreeForm",
-			"AutoBarButtonStealth",
-			"AutoBarButtonDebuff",
-			"AutoBarButtonClassBuff",
-			"AutoBarButtonStance",
-			"AutoBarButtonShields",
-			"AutoBarButtonInterrupt",
-			"AutoBarButtonER",
+			{button_name = "AutoBarButtonBear", },
+			{button_name = "AutoBarButtonCat", },
+			{button_name = "AutoBarButtonTravel", },
+			{button_name = "AutoBarButtonAquatic", project_id = WOW_PROJECT_CLASSIC},
+			{button_name = "AutoBarButtonStagForm", project_id = WOW_PROJECT_MAINLINE},
+			{button_name = "AutoBarButtonMoonkin", },
+			{button_name = "AutoBarButtonTreeForm", },
+			{button_name = "AutoBarButtonStealth", },
+			{button_name = "AutoBarButtonDebuff", },
+			{button_name = "AutoBarButtonClassBuff", },
+			{button_name = "AutoBarButtonStance", },
+			{button_name = "AutoBarButtonShields", },
+			{button_name = "AutoBarButtonInterrupt", },
+			{button_name = "AutoBarButtonER", },
 		},
 		MAGE =
 		{
-			"AutoBarButtonShields",
-			"AutoBarButtonStealth",
-			"AutoBarButtonConjure",
-			"AutoBarButtonInterrupt",
-			"AutoBarButtonER",
-			"AutoBarButtonClassBuff",
+			{button_name = "AutoBarButtonShields", },
+			{button_name = "AutoBarButtonStealth", },
+			{button_name = "AutoBarButtonConjure", },
+			{button_name = "AutoBarButtonInterrupt", },
+			{button_name = "AutoBarButtonER", },
+			{button_name = "AutoBarButtonClassBuff", },
+		},
+		WARRIOR =
+		{
+			{button_name = "AutoBarButtonShields", },
+			{button_name = "AutoBarButtonCharge", },
+			{button_name = "AutoBarButtonInterrupt", },
+			{button_name = "AutoBarButtonER", },
+			{button_name = "AutoBarButtonStance", },
+			{button_name = "AutoBarButtonClassBuff", },
 		}
 	}
 
 	local my_class_buttons = class_button_map[AutoBar.CLASS] or {}
 
-	for idx, button_name in ipairs(my_class_buttons) do
-		if (not AutoBar.db.class.buttonList[button_name]) then
-			AutoBar.db.class.buttonList[button_name] = {
-				buttonKey = button_name,
-				buttonClass = button_name,
-				barKey = AutoBar.classBar,
-				defaultButtonIndex = idx,
-				enabled = true,
-			}
+	for idx, button_def in ipairs(my_class_buttons) do
+		if(button_def.project_id == nil) or (button_def.project_id == WOW_PROJECT_ID) then
+			local button_name = button_def.button_name
+			if (not AutoBar.db.class.buttonList[button_name]) then
+				AutoBar.db.class.buttonList[button_name] = {
+					buttonKey = button_name,
+					buttonClass = button_name,
+					barKey = AutoBar.classBar,
+					defaultButtonIndex = idx,
+					enabled = true,
+				}
+			end
 		end
 	end
 
@@ -308,9 +337,9 @@ function AutoBar:InitializeDefaults()
 			barKey = "AutoBarClassBarBasic",
 			defaultButtonIndex = 1,
 			enabled = true,
+			hearth_include_ancient_dalaran = false,
 		}
 	end
-
 	if (not AutoBar.db.account.buttonList["AutoBarButtonBandages"]) then
 		AutoBar.db.account.buttonList["AutoBarButtonBandages"] = {
 			buttonKey = "AutoBarButtonBandages",
@@ -349,6 +378,7 @@ function AutoBar:InitializeDefaults()
 			enabled = false,
 		}
 	end
+
 	if (not AutoBar.db.account.buttonList["AutoBarButtonCooldownPotionRejuvenation"]) then
 		AutoBar.db.account.buttonList["AutoBarButtonCooldownPotionRejuvenation"] = {
 			buttonKey = "AutoBarButtonCooldownPotionRejuvenation",
@@ -534,7 +564,6 @@ function AutoBar:InitializeDefaults()
 			enabled = true,
 		}
 	end
-
 	if (not AutoBar.db.account.buttonList["AutoBarButtonBattleStandards"]) then
 		AutoBar.db.account.buttonList["AutoBarButtonBattleStandards"] = {
 			buttonKey = "AutoBarButtonBattleStandards",
@@ -565,6 +594,122 @@ function AutoBar:InitializeDefaults()
 		}
 	end
 
+	if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonArchaeology"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonArchaeology"] = {
+				buttonKey = "AutoBarButtonArchaeology",
+				buttonClass = "AutoBarButtonArchaeology",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = "*",
+				enabled = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonPets"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonPets"] = {
+				buttonKey = "AutoBarButtonPets",
+				buttonClass = "AutoBarButtonPets",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = 5,
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonGuildSpell"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonGuildSpell"] = {
+				buttonKey = "AutoBarButtonGuildSpell",
+				buttonClass = "AutoBarButtonGuildSpell",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = 9,
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonSunsongRanch"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonSunsongRanch"] = {
+				buttonKey = "AutoBarButtonSunsongRanch",
+				buttonClass = "AutoBarButtonSunsongRanch",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = 10,
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonMillHerbs"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonMillHerbs"] = {
+				buttonKey = "AutoBarButtonMillHerbs",
+				buttonClass = "AutoBarButtonMillHerbs",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = 11,
+				enabled = true,
+				arrangeOnUse = true,
+				targeted = "Milling",
+			}
+		end
+
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonGarrison"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonGarrison"] = {
+				buttonKey = "AutoBarButtonGarrison",
+				buttonClass = "AutoBarButtonGarrison",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = 12,
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonOrderHallTroop"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonOrderHallTroop"] = {
+				buttonKey = "AutoBarButtonOrderHallTroop",
+				buttonClass = "AutoBarButtonOrderHallTroop",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = "*",
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonOrderHallResource"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonOrderHallResource"] = {
+				buttonKey = "AutoBarButtonOrderHallResource",
+				buttonClass = "AutoBarButtonOrderHallResource",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = "*",
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonBattlePetItems"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonBattlePetItems"] = {
+				buttonKey = "AutoBarButtonBattlePetItems",
+				buttonClass = "AutoBarButtonBattlePetItems",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = "*",
+				enabled = true,
+				arrangeOnUse = true,
+			}
+		end
+
+		if (not AutoBar.db.account.buttonList["AutoBarButtonToyBox"]) then
+			AutoBar.db.account.buttonList["AutoBarButtonToyBox"] = {
+				buttonKey = "AutoBarButtonToyBox",
+				buttonClass = "AutoBarButtonToyBox",
+				barKey = "AutoBarClassBarExtras",
+				defaultButtonIndex = "*",
+				enabled = false,
+				arrangeOnUse = true,
+				toybox_only_show_favourites = false,
+			}
+		end
+	end
+
 	if (not AutoBar.db.account.buttonList["AutoBarButtonRaidTarget"]) then
 		AutoBar.db.account.buttonList["AutoBarButtonRaidTarget"] = {
 			buttonKey = "AutoBarButtonRaidTarget",
@@ -584,6 +729,12 @@ function AutoBar:InitializeDefaults()
 			defaultButtonIndex = "*",
 			enabled = true,
 			arrangeOnUse = true,
+			mount_show_qiraji = false,
+			mount_show_favourites = true,
+			mount_show_nonfavourites = false,
+			mount_show_class = true,
+			mount_reverse_sort = false,
+			mount_show_rng_fave = false,
 		}
 	end
 
@@ -649,7 +800,7 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	if (AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "ROGUE") then
+	if (AutoBar.CLASS == "DEMONHUNTER" or AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "ROGUE") then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonTrap"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonTrap"] = {
 				buttonKey = "AutoBarButtonTrap",
@@ -675,7 +826,7 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	if (AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "PALADIN" or AutoBar.CLASS == "WARLOCK") then
+	if (AutoBar.CLASS == "DEATHKNIGHT" or AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "PALADIN" or AutoBar.CLASS == "WARLOCK") then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonDebuff"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonDebuff"] = {
 				buttonKey = "AutoBarButtonDebuff",
@@ -699,7 +850,7 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	if (AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "WARLOCK") then
+	if (AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "WARLOCK" or AutoBar.CLASS == "DEATHKNIGHT") then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonClassPets2"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonClassPets2"] = {
 				buttonKey = "AutoBarButtonClassPets2",
@@ -721,7 +872,7 @@ function AutoBar:InitializeDefaults()
 			}
 		end
 	end
-	if (AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "PRIEST" or AutoBar.CLASS == "WARLOCK") then
+	if ( AutoBar.CLASS == "DEATHKNIGHT"  or AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "PRIEST" or AutoBar.CLASS == "WARLOCK") then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonClassPet"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonClassPet"] = {
 				buttonKey = "AutoBarButtonClassPet",
@@ -733,7 +884,7 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	if (ABGCode:ClassInList(AutoBar.CLASS, "PALADIN", "WARLOCK")) then
+	if (ABGCode:ClassInList(AutoBar.CLASS, "DEATHKNIGHT", "PALADIN", "WARLOCK")) then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonClassBuff"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonClassBuff"] = {
 				buttonKey = "AutoBarButtonClassBuff",
@@ -757,18 +908,20 @@ function AutoBar:InitializeDefaults()
 		}
 	end
 
-	if (not AutoBar.db.class.buttonList["AutoBarButtonER"]) then
-		AutoBar.db.class.buttonList["AutoBarButtonER"] = {
-			buttonKey = "AutoBarButtonER",
-			buttonClass = "AutoBarButtonER",
-			barKey = AutoBar.classBar,
-			defaultButtonIndex = "*",
-			enabled = true,
-			noPopup = true,
-		}
+	if (AutoBar.CLASS ~= "MONK") then
+		if (not AutoBar.db.class.buttonList["AutoBarButtonER"]) then
+			AutoBar.db.class.buttonList["AutoBarButtonER"] = {
+				buttonKey = "AutoBarButtonER",
+				buttonClass = "AutoBarButtonER",
+				barKey = AutoBar.classBar,
+				defaultButtonIndex = "*",
+				enabled = true,
+				noPopup = true,
+			}
+		end
 	end
 
-	if (AutoBar.CLASS == "WARRIOR") then
+	if (AutoBar.CLASS == "DEMONHUNTER" or AutoBar.CLASS == "HUNTER" or AutoBar.CLASS == "ROGUE") then
 		if (not AutoBar.db.class.buttonList["AutoBarButtonCharge"]) then
 			AutoBar.db.class.buttonList["AutoBarButtonCharge"] = {
 				buttonKey = "AutoBarButtonCharge",
@@ -915,15 +1068,30 @@ function AutoBar:InitializeDefaults()
 		end
 	end
 
-	local deprecated_buttons =
-	{
-		"AutoBarButtonWarlockStones", "AutoBarButtonSting", "AutoBarButtonAura",
-		"AutoBarButtonRotationDrums", "AutoBarButtonAmmo",
-		"AutoBarButtonSeal", "AutoBarButtonOrderHall", "AutoBarButtonPowerShift",
-		"AutoBarButtonCooldownStoneCombat", "AutoBarButtonBoomkinTree",
-		"AutoBarButtonGuildSpell", "AutoBarButtonStagForm", "AutoBarButtonCooldownStoneHealth",
-		"AutoBarButtonCooldownPotionHealth", "AutoBarButtonMillHerbs", "AutoBarButtonCooldownStoneMana",
-	}
+	--classic-only: "AutoBarButtonTrack",
+	local deprecated_buttons
+
+	if (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) then
+		deprecated_buttons=
+		{
+			"AutoBarButtonWarlockStones", "AutoBarButtonSting", "AutoBarButtonAura",
+			"AutoBarButtonRotationDrums", "AutoBarButtonAmmo",
+			"AutoBarButtonSeal", "AutoBarButtonOrderHall", "AutoBarButtonPowerShift",
+			"AutoBarButtonCooldownStoneCombat", "AutoBarButtonBoomkinTree",
+			"AutoBarButtonGuildSpell", "AutoBarButtonStagForm", "AutoBarButtonCooldownStoneHealth",
+			"AutoBarButtonCooldownPotionHealth", "AutoBarButtonMillHerbs", "AutoBarButtonCooldownStoneMana",
+		}
+	else
+		deprecated_buttons=
+		{
+			"AutoBarButtonWarlockStones", "AutoBarButtonSting", "AutoBarButtonAura",
+			"AutoBarButtonRotationDrums", "AutoBarButtonAmmo",
+			"AutoBarButtonSeal", "AutoBarButtonOrderHall", "AutoBarButtonPowerShift",
+			"AutoBarButtonCooldownStoneCombat", "AutoBarButtonBoomkinTree",
+			"AutoBarButtonTrack", "AutoBarButtonCooldownPotionHealth", "AutoBarButtonCooldownStoneHealth",
+			"AutoBarButtonCooldownStoneMana", "AutoBarButtonAquatic"
+		}
+	end
 
 	for _, dep in ipairs(deprecated_buttons) do
 		if (AutoBar.db.account.buttonList[dep]) then
@@ -946,7 +1114,9 @@ function AutoBar:InitializeDefaults()
 end
 
 local changedCategoryKey = {
-	["Consumable.Buff Type.Both"] = "Consumable.Buff Type.Flask"
+	["Consumable.Buff Type.Both"] = "Consumable.Buff Type.Flask",
+	["Muffin.Reputation"] = "Muffin.Misc.Reputation",
+	["Muffin.Mount"] = "Muffin.Mounts",
 }
 function AutoBar:VerifyDB()
 	-- Temporary, implement buttonKey field

@@ -53,7 +53,7 @@ atl("Muffin.Toys.Pet Battle_ShowOrnamental", "Show Ornamental" );
 atl("ArchBtnShowSpells", "Show Spells")
 
 atl("Muffin.Misc.Quest", "Muffin.Misc.Quest");
-atl("Muffin.Mount", "Muffin.Mount");
+atl("Muffin.Mounts", "Muffin.Mounts");
 
 atl("AutoBarButtonRaidTarget", "Raid Targets")
 

@@ -85,7 +85,7 @@ AutoBarDB = {
 			},
 		},
 	},
-	["whatsnew_version"] = "1.13.2.06",
+	["whatsnew_version"] = "1.13.2.08",
 	["chars"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["buttonDataList"] = {
@@ -111,7 +111,6 @@ AutoBarDB = {
 		},
 	},
 	["account"] = {
-		["customCategoriesVersion"] = 3,
 		["barList"] = {
 			["AutoBarClassBarBasic"] = {
 				["popupDirection"] = "1",
@@ -130,9 +129,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["MAGE"] = true,
 				["scale"] = 1,
-				["frameStrata"] = "LOW",
 				["alpha"] = 1,
-				["buttonWidth"] = 36,
+				["frameStrata"] = "LOW",
+				["PRIEST"] = true,
 				["posY"] = 114.69846258976,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -146,7 +145,7 @@ AutoBarDB = {
 					"AutoBarButtonRecovery", -- [9]
 				},
 				["WARLOCK"] = true,
-				["PRIEST"] = true,
+				["buttonWidth"] = 36,
 				["WARRIOR"] = true,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -169,9 +168,9 @@ AutoBarDB = {
 				["posY"] = 162.042101905452,
 				["HUNTER"] = true,
 				["WARRIOR"] = true,
-				["PRIEST"] = true,
-				["frameStrata"] = "LOW",
 				["buttonWidth"] = 36,
+				["alpha"] = 1,
+				["PRIEST"] = true,
 				["buttonKeys"] = {
 					"AutoBarButtonRaidTarget", -- [1]
 					"AutoBarButtonSpeed", -- [2]
@@ -186,7 +185,7 @@ AutoBarDB = {
 				},
 				["PALADIN"] = true,
 				["WARLOCK"] = true,
-				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["columns"] = 9,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -196,6 +195,7 @@ AutoBarDB = {
 		["ldbIcon"] = {
 			["hide"] = true,
 		},
+		["clampedToScreen"] = false,
 		["dbVersion"] = 1,
 		["buttonList"] = {
 			["AutoBarButtonHeal"] = {
@@ -481,7 +481,7 @@ AutoBarDB = {
 				["desc"] = "自定义1",
 			},
 		},
+		["customCategoriesVersion"] = 3,
 		["stupidlog"] = "",
-		["clampedToScreen"] = false,
 	},
 }

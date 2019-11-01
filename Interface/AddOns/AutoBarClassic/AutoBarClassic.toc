@@ -1,7 +1,7 @@
 ## Interface: 11302
 ## Title: AutoBarClassic
 ## Author: MuffinManKen, Maggz,  Toadkiller (Original code)
-## Version: 1.13.2.06
+## Version: 1.13.2.08
 ## X-Website: http://www.MuffinManGames.com
 ## Notes: Dynamic bars with buttons that automatically add potions, water, food and other items you specify into a button for use. Does not use action slots.
 ## Notes-ruRU: Динамические панели с кнопками, которые автоматически добавляют зелья, воду, пищу и другие предметы для котрых вы определяете кнопки для использования. Не использует слоты на панеле команд.
@@ -22,12 +22,23 @@
 # Libraries
 embeds.xml
 
+classic/MuffinLibPTSets/LibPT-Muffin.Elixirs.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Explosives.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Flasks.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Food.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Gear.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Misc.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Mounts.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Poison.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Potions.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Skill.Fishing.lua
+classic/MuffinLibPTSets/LibPT-Muffin.Stones.lua
 
 AceGUIWidget-DragLink.lua
 
 AutoBarGlobals.lua
 
-CachedSpellData.lua
+classic/CachedSpellData_classic.lua
 
 # Localization
 locale/Locale-enUS.lua
@@ -62,6 +73,7 @@ AutoBarClassPopupButton.lua
 AutoBarButton.lua
 AutoBarCategory.lua
 
-# Not currently used
+classic/ABCategoryData_classic.lua
+
 AutoBarConfig.lua
 

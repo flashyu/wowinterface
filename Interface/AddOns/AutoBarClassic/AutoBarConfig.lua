@@ -92,7 +92,7 @@ local function DrawGroupWarnings(container)
 	container:AddChild(edit_box)
 
 	edit_box:SetText(AutoBarGlobalCodeSpace:GetWarningLogString())
-
+  
 end
 
 -- Callback function for OnGroupSelected
