@@ -72,7 +72,7 @@ local GetGroupInfo = NeatPlatesUtility.GetGroupInfo
 
 
 ---------------------------------------------------------------------
-local font = "FONTS\\arialn.ttf"
+local font = "FONTS\\ARHei.ttf"
 local art = "Interface\\Addons\\NeatPlatesWidgets\\ThreatLine\\ThreatLineUnified"
 local artCoordinates = {
 	--None = 		{.75,1,0,1},

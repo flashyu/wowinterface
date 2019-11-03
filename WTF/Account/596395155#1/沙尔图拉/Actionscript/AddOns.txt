@@ -11,7 +11,7 @@ ConsolePortHelp: disabled
 ConsolePortBar: disabled
 ConsolePort: disabled
 ConsolePortUI_Loot: disabled
-DHUD: enabled
+DHUD: disabled
 ConsolePortUI_Menu: disabled
 AtlasLootClassic_Options: enabled
 AtlasLootClassic_Maps: enabled
@@ -28,7 +28,7 @@ ClassicCastbars: enabled
 ClassicCastbars_Options: enabled
 ClassicThreatMeter: enabled
 Decursive: enabled
-DHUD_Options: enabled
+DHUD_Options: disabled
 Guidelime: disabled
 ItemTooltipProfessionIcons: enabled
 Leatrix_Maps: enabled

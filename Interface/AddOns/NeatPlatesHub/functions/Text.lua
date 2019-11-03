@@ -49,20 +49,6 @@ local function GetLevelDescription(unit)
 end
 
 
-local arenaUnitIDs = {"arena1", "arena2", "arena3", "arena4", "arena5"}
-
-local function GetArenaIndex(unitname)
-	-- Kinda hackish.  would be faster to cache the arena names using event handler.  later!
-	if IsActiveBattlefieldArena() then
-		local unitid, name
-		for i = 1, #arenaUnitIDs do
-			unitid = arenaUnitIDs[i]
-			name = UnitName(unitid)
-			if name and (name == unitname) then return i end
-		end
-	end
-end
-
 
 local function ShortenNumber(number)
 	if not number then return "" end
@@ -119,12 +105,22 @@ end
 local function HealthFunctionNone() return "" end
 
 -- Percent
+local function TextHealthPercent(unit)
+	return ceil(100*(unit.health/unit.healthmax)).."%"
+end
+
 local function TextHealthPercentColored(unit)
 	local color = ColorFunctionByHealth(unit)
 	return ceil(100*(unit.health/unit.healthmax)).."%", color.r, color.g, color.b, .7
 end
 
 local function HealthFunctionPercent(unit)
+	if unit.health < unit.healthmax then
+		return TextHealthPercent(unit)
+	else return "" end
+end
+
+local function HealthFunctionPercentColored(unit)
 	if unit.health < unit.healthmax then
 		return TextHealthPercentColored(unit)
 	else return "" end
@@ -166,6 +162,20 @@ local function HealthFunctionTargetOf(unit)
 	else return "" end
 	--]]
 end
+-- TargetOf(Class Color)
+local function HealthFunctionTargetOfClass(unit)
+	if unit.reaction ~= "FRIENDLY" and unit.isInCombat then
+		local targetof = unit.unitid.."target"
+		local name = UnitName(targetof) or ""
+
+		if UnitIsPlayer(targetof) then
+			local targetclass = select(2, UnitClass(targetof))
+			return ConvertRGBtoColorString(RaidClassColors[targetclass])..name
+		else
+			return name
+		end	
+	end
+end
 -- Level
 local function HealthFunctionLevel(unit)
 	local level = unit.level
@@ -179,97 +189,6 @@ local function HealthFunctionLevelHealth(unit)
 	if unit.isElite then level = level.."E" end
 	return "("..level..") |cffffffff"..HealthFunctionApprox(unit), unit.levelcolorRed, unit.levelcolorGreen, unit.levelcolorBlue, .9
 	--return "|cffffffff"..HealthFunctionApprox(unit).."  |r"..level, unit.levelcolorRed, unit.levelcolorGreen, unit.levelcolorBlue, .9
-end
-
--- Arena ID
-local function HealthFunctionArenaIDOnly(unit)
-	local powercolor = HubData.Colors.White
-	local arenastring = ""
-	local arenaindex = GetArenaIndex(unit.rawName)
-
-	--arenaindex = 2	-- Tester
-	if unit.type == "PLAYER" then
-
-		if arenaindex and arenaindex > 0 then
-			arenastring = "|cffffcc00["..(tostring(arenaindex)).."]  |r"
-		end
-	end
-
---[[
--- Test Strings
-	--arenastring = "|cffffcc00["..(tostring(2)).."]  |r"
-	arenastring = "|cffffcc00#"..(tostring(2)).."  |r"
-	--powercolor = HubData.Colors.White
---]]
-
-	return arenastring, powercolor.r, powercolor.g, powercolor.b, 1
-
-	--[[
-	Arena ID, HealthFraction, ManaPercent
-	#1  65%  75%
-
-	Arena ID, HealthK, ManaFraction
-	#2  300k  75%
-
-	--]]
-end
-
--- Arena Vitals (ID, Mana, Health
-local function HealthFunctionArenaID(unit)
-	local localid
-	local powercolor = HubData.Colors.White
-	local powerstring = ""
-	local arenastring = ""
-	local arenaindex = GetArenaIndex(unit.rawName)
-
-	--arenaindex = 2	-- Tester
-	if unit.type == "PLAYER" then
-
-		if arenaindex and arenaindex > 0 then
-			arenastring = "|cffffcc00["..(tostring(arenaindex)).."]  |r"
-		end
-
-
-		if (unit.isTarget or (LocalVars.FocusAsTarget and unit.isFocus)) then localid = "target"
-		elseif unit.isMouseover then localid = "mouseover"
-		end
-
-
-		if localid then
-			local power = ceil((UnitPower(localid) / UnitPowerMax(localid))*100)
-			local powerindex, powertype = UnitPowerType(localid)
-
-			--local powername = getglobal(powertype)
-
-			if power and power > 0 then
-				powerstring = "  "..power.."%"		--..powername
-				powercolor = PowerBarColor[powerindex] or HubData.Colors.White
-			end
-		end
-	end
-
-	local health = ShortenNumber(GetHealth(unit))
-	local healthstring = "|cffffffff"..health.."|cff0088ff"
-
---[[
--- Test Strings
-	powerstring = "  ".."43".."%"
-	--arenastring = "|cffffcc00["..(tostring(2)).."]  |r"
-	arenastring = "|cffffcc00#"..(tostring(2)).."  |r"
-	powercolor = PowerBarColor[2]
---]]
-
-	--	return '4'.."|r"..(powerstring or "")
-	return arenastring..healthstring..powerstring, powercolor.r, powercolor.g, powercolor.b, 1
-
-	--[[
-	Arena ID, HealthFraction, ManaPercent
-	#1  65%  75%
-
-	Arena ID, HealthK, ManaFraction
-	#2  300k  75%
-
-	--]]
 end
 
 
@@ -350,15 +269,15 @@ NeatPlatesHubDefaults.EnemyStatusTextMode = "HealthFunctionNone"
 
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionNone, L["None"], "HealthFunctionNone")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionPercent, L["Percent Health"], "HealthFunctionPercent")
+AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionPercentColored, L["Percent Health (Colored)"], "HealthFunctionPercentColored")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionExact, L["Exact Health"], "HealthFunctionExact")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionApprox, L["Approximate Health"], "HealthFunctionApprox")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionDeficit, L["Health Deficit"], "HealthFunctionDeficit")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionTotal, L["Health Total & Percent"], "HealthFunctionTotal")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionTargetOf, L["Target Of"], "HealthFunctionTargetOf")
+AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionTargetOfClass, L["Target Of (Class Colored)"], "HealthFunctionTargetOfClass")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionLevel, L["Level"], "HealthFunctionLevel")
 AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionLevelHealth, L["Level and Approx Health"], "HealthFunctionLevelHealth")
-AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionArenaIDOnly, L["Arena ID"], "HealthFunctionArenaIDOnly")
-AddHubFunction(HealthTextModeFunctions, NeatPlatesHubMenus.TextModes, HealthFunctionArenaID, L["Arena ID, Health, and Power"], "HealthFunctionArenaID")
 
 
 local function HealthTextDelegate(unit)
@@ -506,7 +425,8 @@ NeatPlatesHubMenus.EnemyNameSubtextModes = {}
 NeatPlatesHubDefaults.HeadlineEnemySubtext = "RoleGuildLevel"
 NeatPlatesHubDefaults.HeadlineFriendlySubtext = "RoleGuildLevel"
 AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, DummyFunction, L["None"], "None")
-AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextHealthPercentColored, L["Percent Health"], "PercentHealth")
+AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextHealthPercentColored, L["Percent Health (Colored)"], "PercentHealthColored")
+AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextHealthPercent, L["Percent Health"], "PercentHealth")
 AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextRoleGuildLevel, L["NPC Role, Guild, or Level"], "RoleGuildLevel")
 AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextRoleGuildQuest, L["NPC Role, Guild, or Quest"], "RoleGuildQuest")
 AddHubFunction(EnemyNameSubtextFunctions, NeatPlatesHubMenus.EnemyNameSubtextModes, TextRoleGuild, L["NPC Role, Guild"], "RoleGuild")

@@ -37,16 +37,13 @@ function UF:Construct_AuraBars(statusBar)
 
 	UF:Configure_FontString(statusBar.timeText)
 	UF:Configure_FontString(statusBar.nameText)
-	UF:Configure_FontString(statusBar.countText)
 
-	UF:Update_FontString(statusBar.countText)
 	UF:Update_FontString(statusBar.timeText)
 	UF:Update_FontString(statusBar.nameText)
 
 	statusBar.nameText:SetJustifyH('LEFT')
 	statusBar.nameText:SetJustifyV('MIDDLE')
-	statusBar.nameText:SetWidth(140)
-	statusBar.nameText:SetWordWrap(false)
+	statusBar.nameText:SetPoint("RIGHT", statusBar.timeText, "LEFT", -4, 0)
 
 	statusBar.bg = statusBar:CreateTexture(nil, 'BORDER')
 	statusBar.bg:Show()
@@ -59,14 +56,18 @@ function UF:AuraBars_SetPosition(from, to)
 	local height = self.height
 	local spacing = self.spacing
 	local anchor = self.initialAnchor
-	local growth = self.growth == 'DOWN' and -1 or 1
+	local growth = self.growth == 'BELOW' and -1 or 1
 
 	for i = from, to do
 		local button = self[i]
 		if(not button) then break end
 
 		button:ClearAllPoints()
-		button:SetPoint(anchor, self, anchor, -(E.Border), (i > 1 and (((i - 1) * (height + spacing + growth)) + (E.Border * 3)) or E.Border*2))
+		if i == 1 then
+			button:SetPoint(anchor, self, anchor, -E.Border, 0)
+		else
+			button:SetPoint(anchor, self, anchor, -(E.Border), growth * ((i - 1) * (height + spacing)))
+		end
 	end
 end
 
@@ -80,8 +81,6 @@ function UF:Construct_AuraBarHeader(frame)
 	auraBar.CustomFilter = UF.AuraFilter
 	auraBar.SetPosition = UF.AuraBars_SetPosition
 
-	auraBar.gap = (frame.BORDER + frame.SPACING*3)
-	auraBar.spacing = (frame.BORDER + frame.SPACING*3)
 	auraBar.sparkEnabled = true
 	auraBar.initialAnchor = 'BOTTOMRIGHT'
 	auraBar.type = 'aurabar'
@@ -93,11 +92,21 @@ function UF:Configure_AuraBars(frame)
 	if not frame.VARIABLES_SET then return end
 	local auraBars = frame.AuraBars
 	local db = frame.db
-	auraBars.db = db
+	auraBars.db = db.aurabar
 
 	if db.aurabar.enable then
 		if not frame:IsElementEnabled('AuraBars') then
 			frame:EnableElement('AuraBars')
+		end
+
+		local index = 1
+		while auraBars[index] do
+			local button = auraBars[index]
+			if button then
+				button.db = auraBars.db
+			end
+
+			index = index + 1
 		end
 
 		auraBars.friendlyAuraType = db.aurabar.friendlyAuraType
@@ -108,10 +117,10 @@ function UF:Configure_AuraBars(frame)
 		local attachTo = frame
 
 		auraBars.height = db.aurabar.height
-
+		auraBars.growth = db.aurabar.anchorPoint
 		auraBars.maxBars = db.aurabar.maxBars
-		auraBars.spacing = ((-frame.BORDER + frame.SPACING*3) + db.aurabar.spacing)
-		auraBars.width = frame.UNIT_WIDTH - auraBars.height - (frame.BORDER * 3)
+		auraBars.spacing = db.aurabar.spacing
+		auraBars.width = frame.UNIT_WIDTH - auraBars.height - (frame.BORDER * 4)
 
 		if not auraBars.Holder then
 			local holder = CreateFrame('Frame', nil, auraBars)
@@ -156,7 +165,7 @@ function UF:Configure_AuraBars(frame)
 
 		local yOffset
 		local spacing = (((db.aurabar.attachTo == "FRAME" and 3) or (db.aurabar.attachTo == "PLAYER_AURABARS" and 4) or 2) * frame.SPACING)
-		local border = (((db.aurabar.attachTo == "FRAME" or db.aurabar.attachTo == "PLAYER_AURABARS") and 2 or 1) * frame.BORDER)
+		local border = (((db.aurabar.attachTo == "FRAME" or db.aurabar.attachTo == "PLAYER_AURABARS") and 0 or 1) * frame.BORDER)
 
 		if db.aurabar.anchorPoint == 'BELOW' then
 			yOffset = -spacing + border - (not db.aurabar.yOffset and 0 or db.aurabar.yOffset)
@@ -169,10 +178,8 @@ function UF:Configure_AuraBars(frame)
 		local offsetRight = -xOffset - ((db.aurabar.attachTo == "FRAME" and ((anchorTo == "TOP" and frame.ORIENTATION ~= "RIGHT") or (anchorTo == "BOTTOM" and frame.ORIENTATION == "RIGHT"))) and frame.POWERBAR_OFFSET or 0)
 
 		auraBars:ClearAllPoints()
-		auraBars:Point(anchorPoint..'LEFT', attachTo, anchorTo..'LEFT', offsetLeft, yOffset)
-		auraBars:Point(anchorPoint..'RIGHT', attachTo, anchorTo..'RIGHT', offsetRight, yOffset)
-
-		auraBars:ForceUpdate()
+		auraBars:Point(anchorPoint..'LEFT', attachTo, anchorTo..'LEFT', offsetLeft, db.aurabar.attachTo == "DETACHED" and 0 or yOffset)
+		auraBars:Point(anchorPoint..'RIGHT', attachTo, anchorTo..'RIGHT', offsetRight, db.aurabar.attachTo == "DETACHED" and 0 or yOffset)
 	elseif frame:IsElementEnabled('AuraBars') then
 		frame:DisableElement('AuraBars')
 		auraBars:Hide()
@@ -185,6 +192,7 @@ function UF:PostUpdateBar_AuraBars(unit, statusBar, index, position, duration, e
 	local spellID = statusBar.spellID
 	local spellName = statusBar.spell
 
+	statusBar.db = self.db
 	statusBar.icon:SetTexCoord(unpack(E.TexCoords))
 
 	local colors = E.global.unitframe.AuraBarColors[spellID] or E.global.unitframe.AuraBarColors[tostring(spellID)] or E.global.unitframe.AuraBarColors[spellName]

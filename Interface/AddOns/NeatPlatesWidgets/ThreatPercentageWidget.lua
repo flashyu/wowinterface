@@ -2,7 +2,7 @@
 -- Threat Percentage Widget
 ---------------
 
-local font = "FONTS\\arialn.ttf"
+local font = "FONTS\\ARHei.ttf"
 local GetRelativeThreat = NeatPlatesUtility.GetRelativeThreat
 
 local function UpdateThreatPercentageWidget(self, unit, showFriendly)

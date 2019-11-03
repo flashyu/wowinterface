@@ -765,6 +765,7 @@ do
 
 	-- UpdateUnitCondition: High volatility data
 	function UpdateUnitCondition(plate, unitid)
+		local health, healthmax
 		UpdateReferences(plate)
 
 		unit.level = UnitLevel(unitid)
@@ -772,15 +773,18 @@ do
 		local c = GetCreatureDifficultyColor(unit.level)
 		unit.levelcolorRed, unit.levelcolorGreen, unit.levelcolorBlue = c.r, c.g, c.b
 
+		unit.isTrivial = (c.r == 0.5 and c.g == 0.5 and c.b == 0.5)
+
 		unit.red, unit.green, unit.blue = UnitSelectionColor(unitid)
 		unit.reaction = GetReactionByColor(unit.red, unit.green, unit.blue) or "HOSTILE"
 
 		if RealMobHealth and RealMobHealth.GetUnitHealth then 
-			unit.health, unit.healthmax = RealMobHealth.GetUnitHealth(unitid)
-		else
-			unit.health = UnitHealth(unitid) or 0
-			unit.healthmax = UnitHealthMax(unitid) or 1
+			 health, healthmax = RealMobHealth.GetUnitHealth(unitid)
 		end
+
+		-- Ensure we have some unit health data if RealMobHealth doesn't return it
+		unit.health = health or UnitHealth(unitid) or 0
+		unit.healthmax = healthmax or UnitHealthMax(unitid) or 1
 		
 
 		unit.threatValue = UnitThreatSituation("player", unitid) or 0
@@ -1285,9 +1289,9 @@ do
 	end
 
 	local function UpdateCustomTarget()
-		local unitAlive = UnitIsDead("target") == false;
+		local unitAlive = UnitIsDead("target") == false
 		local guid = UnitGUID("target")
-		HasTarget = UnitExists("target") == true;
+		HasTarget = (UnitExists("target") == true and not UnitIsUnit("target", "player"))
 		-- Create a new target frame if needed
 		if not NeatPlatesTarget then
 			NeatPlatesTarget = NeatPlatesUtility:CreateTargetFrame()
@@ -1387,6 +1391,7 @@ do
 		local _,event,_,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,_,_,spellID,spellName,spellSchool = CombatLogGetCurrentEventInfo()
 		--spellID = select(7, GetSpellInfo(spellName)) or ""
 		local plate = nil
+		local ownerGUID
 		local unitType,_,_,_,_,creatureID = ParseGUID(sourceGUID)
 
 		-- Spell Interrupts
@@ -1403,16 +1408,16 @@ do
 
 					-- If a pet interrupted, we need to change the source from the pet to the owner
 					if unitType == "Pet" then
-							sourceGUID, sourceName = GetPetOwner(sourceName)
+							ownerGUID, sourceName = GetPetOwner(sourceName)
 					end
 
 					plate.extended.unit.interruptLogged = true
-					OnInterruptedCast(plate, sourceGUID, sourceName, destGUID)
+					OnInterruptedCast(plate, ownerGUID or sourceGUID, sourceName, destGUID)
 				end
 
 				-- Set spell cast cache to finished
-				if SpellCastCache[sourceGUID] and (event ~= "SPELL_AURA_APPLIED" or spellCCList[spellName]) then
-					SpellCastCache[sourceGUID].finished = true
+				if SpellCastCache[destGUID] and (event ~= "SPELL_AURA_APPLIED" or spellCCList[spellName]) then
+					SpellCastCache[destGUID].finished = true
 				end
 			end
 		end
@@ -1735,9 +1740,12 @@ function NeatPlates:EnableCastBars() ShowCastBars = true end
 function NeatPlates.ColorCastBars(enable) ColorCastBars = enable end
 function NeatPlates:ToggleEmulatedTargetPlate(show) if not show then toggleNeatPlatesTarget(false) end; ShowEmulatedTargetPlate = show end
 
-function NeatPlates:ToggleInterruptedCastbars(showIntCast, showIntWhoCast) ShowIntCast = showIntCast; ShowIntWhoCast = showIntWhoCast end
 function NeatPlates:SetHealthUpdateMethod(useFrequent) FrequentHealthUpdate = useFrequent end
-function NeatPlates:ToggleServerIndicator(showIndicator) ShowServerIndicator = showIndicator end
+function NeatPlates:SetCoreVariables(LocalVars)
+	ShowIntCast = LocalVars.IntCastEnable
+	ShowIntWhoCast = LocalVars.IntCastWhoEnable
+	ShowServerIndicator = LocalVars.TextShowServerIndicator
+end
 
 function NeatPlates:ShowNameplateSize(show, width, height) ForEachPlate(function(plate) UpdateNameplateSize(plate, show, width, height) end) end
 

@@ -1,12 +1,12 @@
-lightweight tag d741f4edfdf7102f00fb3a693b872a7e42174db8 1.13.2.34
+lightweight tag aacce52bdc78c742a698af4fa9e86d839803bb28 1.13.2.40
 Author:	Luxocracy <luxor355@gmail.com>
-Date:	Wed Sep 25 23:14:08 2019 +0200
+Date:	Mon Oct 21 11:41:58 2019 +0200
 
-commit d741f4edfdf7102f00fb3a693b872a7e42174db8
+commit aacce52bdc78c742a698af4fa9e86d839803bb28
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Wed Sep 25 23:14:08 2019 +0200
+Date:   Mon Oct 21 11:41:58 2019 +0200
 
-    Nameplate size bug fix
+    Lib Updates
     
-    - Fixed a bug where nameplate size might be called before the active theme has loaded
+    - Updated Libraries
 

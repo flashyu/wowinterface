@@ -99,6 +99,7 @@ function ItemRackOpt.OnLoad(self)
 		{type="check",optset=ItemRackSettings,variable="Notify",label="就绪时通告",tooltip="Announce when an item you used comes off cooldown."},
 		{type="check",optset=ItemRackSettings,variable="NotifyThirty",label="30秒时通告",tooltip="Announce when an item you used is at 30 seconds cooldown."},
 		{type="check",optset=ItemRackSettings,variable="NotifyChatAlso",label="通告在聊天框",tooltip="Send cooldown notifications to chat also."},
+		{type="check",optset=ItemRackSettings,variable="ShowSetInTooltip",label="鼠标提示里显示套装信息",tooltip="Show which set an item belongs to in the tooltip."},
 		{type="check",optset=ItemRackSettings,variable="ShowTooltips",label="显示鼠标提示",tooltip="Show tooltips like the one you're reading now."},
 		{type="check",optset=ItemRackSettings,variable="TinyTooltips",depend="ShowTooltips",label="迷你鼠标提示",tooltip="Shrink item tooltips to display only name, cooldown and durability."},
 		{type="check",optset=ItemRackSettings,variable="TooltipFollow",depend="ShowTooltips",label="鼠标提示跟随",tooltip="Show tooltips near the mouse."},
@@ -403,6 +404,7 @@ function ItemRackOpt.SaveSet()
 	end
 	-- set.equip[0] = nil
 	-- set.equip[18] = nil
+	ItemRackOpt.ReconcileSetBindings()
 	ItemRackOpt.ValidateSetButtons()
 end
 

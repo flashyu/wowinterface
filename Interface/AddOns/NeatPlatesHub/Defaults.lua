@@ -112,6 +112,7 @@ NeatPlatesHubDefaults = {
 	OpacityFilterInactive = false,
 	OpacityFilterMini = false,
 	OpacityFilterUntitledFriendlyNPC = false,
+	OpacityFilterLowLevelUnits = false,
 
 	OpacityFilterList = "Fanged Pit Viper\nLiberated Karabor Prisoner",
 	OpacityFilterLookup = {},
@@ -132,6 +133,7 @@ NeatPlatesHubDefaults = {
 	-- Text
 	---------------------------------------
 	TextShowLevel = false,
+	TextStatusForceShadow = false,
 	TextUseBlizzardFont = false,
 	TextHealthTextMode = 1,
 	TextShowOnlyOnTargets = false,
@@ -219,6 +221,7 @@ NeatPlatesHubDefaults = {
 	SpellCastEnableFriendly = false,
 	IntCastEnable = true,
 	IntCastWhoEnable = true,
+	SpellIconEnable = true,
 
 	-- Status Text
 	---------------------------------------
@@ -278,15 +281,6 @@ NeatPlatesHubDefaults = {
 	WidgetAllAuras = false,
 	WidgetMyDebuff = true,
 	WidgetMyBuff = false,
-	WidgetPandemic = false,
-	ColorPandemic = {r = 0.9, g = 0.15, b = 0.15, a = 1}, -- Red
-	BorderPandemic = 1,
-	WidgetBuffPurgeable = false,
-	ColorBuffPurgeable = {r = 0, g = 0.4, b = 1, a = 1}, -- Medium Blue
-	BorderBuffPurgeable = 1,
-	WidgetBuffEnrage = false,
-	ColorBuffEnrage = {r = 1, g = 0, b = 0.2, a = 1}, -- Medium Red
-	BorderBuffEnrage = 1,
 	SpacerSlots = 1,
 	AuraScale = 1,
 	WidgetAuraScaleOptions = {x = 1, y = 1, offset = {x = 0, y = 0}},

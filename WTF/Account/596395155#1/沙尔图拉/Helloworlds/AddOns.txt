@@ -4,3 +4,5 @@ TipTop: enabled
 TomTom: disabled
 Guides: disabled
 Guidelime: disabled
+DHUD: disabled
+DHUD_Options: disabled
