@@ -1,3 +1,50 @@
+v1.1.4:
+- Improved handling of cast time increases such as Curse of Tongues.
+- Fix taint when using player castbar.
+- Added more crowd control spells to stop castbar on. (Thanks to millanzarreta)
+- Added Spanish localizations. (Thanks to woopydalan)
+
+
+v1.1.3:
+- Fix player castbar breaking when using "Cast Bar Underneath" option.
+- Replace Samwise Didier icon with engineering icon for non-player castbar aswell.
+
+
+v1.1.2:
+- When targetting yourself the addon will now check for spell rank used to base its cast time.
+- Castbar now has a flash animation on cast successfully completed. (only when using default border textures)
+- Whole castbar will now be red when cast is interrupted instead of just current fill value.
+- Samwise Didier icon replaced with engineering icon.
+
+
+v1.1.1:
+- Add some missing channeled spells for cast tracking.
+- Fix NPC cast times sometimes being incorrect after having been slowed on first cast detected.
+- Minor fixes to test mode unlock.
+
+
+v1.1.0:
+- Added option to hide spell icon.
+- Resetting all settings will now reload your UI if you have the player castbar module enabled.
+- Improved default settings for player castbar. This will affect fresh installs only unless you reset settings.
+- Fix some issues with player castbar test mode.
+
+
+v1.0.9:
+- Added options to modify player's own castbar. Let me know if there's any bugs and I'll fix it asap.
+- All options will now be greyed out if the current parent module is disabled.
+- Extremely short cast times (less than 300ms) are now ignored.
+- Grenade casts should no longer be stopped when caster is moving.
+- Hopefully fix Frostbolt using wrong spell icon for Chinese clients.
+- Fix castbar not showing for default Blizzard target frame if certain custom unit frame addons are loaded, but with their target frame module disabled.
+
+
+v1.0.8:
+- Fix test mode not showing cast fill value properly.
+- Fix incorrect default position for party castbars.
+- Added option for changing castbar background (not fill) color and transparency.
+
+
 v1.0.7:
 - Added option to show castbars for party frames (max 5 units). This feature is still WIP and might not work 100% yet!
 - Added option to change frame level for castbar. You can use this to layer the castbar below or above another frame.

@@ -97,14 +97,18 @@ function TestMode:OnOptionChanged(unitID)
 end
 
 function TestMode:SetCastbarMovable(unitID, parent)
+    local parentFrame = parent or ClassicCastbars.AnchorManager:GetAnchor(unitID)
+    if not parentFrame then
+        if unitID == "target" or unitID == "nameplate-testmode" then
+            print(_G.ERR_GENERIC_NO_TARGET)
+        end
+        return
+    end
+
     local castbar = ClassicCastbars:GetCastbarFrame(unitID)
     castbar:EnableMouse(true)
     castbar:SetMovable(true)
-
-    if unitID ~= "nameplate" then
-        -- restricted frames can't be clamped
-        castbar:SetClampedToScreen(true)
-    end
+    castbar:SetClampedToScreen(true)
 
     castbar.tooltip = castbar.tooltip or castbar:CreateFontString(nil, "ARTWORK", "GameFontNormal")
     castbar.tooltip:SetPoint("TOP", castbar, 0, 15)
@@ -114,9 +118,6 @@ function TestMode:SetCastbarMovable(unitID, parent)
     -- Note: we use OnMouseX instead of OnDragX as it's more accurate
     castbar:SetScript("OnMouseDown", castbar.StartMoving)
     castbar:SetScript("OnMouseUp", OnDragStop)
-
-    local parentFrame = parent or ClassicCastbars.AnchorManager:GetAnchor(unitID)
-    if not parentFrame then return end -- sanity check
 
     castbar._data = dummySpellData -- Set test data for :DisplayCastbar()
     castbar.parent = parentFrame
@@ -133,10 +134,18 @@ function TestMode:SetCastbarMovable(unitID, parent)
         parentFrame:Show()
     end
 
-    castbar:ClearAllPoints() -- needed here to work with restricted frames
     if unitID == "player" then
-        castbar:Show()
+        castbar.Text:SetText(dummySpellData.spellName)
+        castbar.Icon:SetTexture(dummySpellData.icon)
+        castbar.Flash:SetAlpha(0)
+        castbar.casting = nil
+		castbar.channeling = nil
+		castbar.holdTime = 0
+        castbar.fadeOut = nil
+        castbar.flash = nil
+        castbar:SetStatusBarColor(castbar.startCastColor:GetRGB())
         castbar:SetAlpha(1)
+        castbar:Show()
     else
         ClassicCastbars:DisplayCastbar(castbar, unitID)
     end
@@ -145,16 +154,21 @@ end
 function TestMode:SetCastbarImmovable(unitID)
     local castbar = ClassicCastbars:GetCastbarFrame(unitID)
     castbar:Hide()
-    castbar.tooltip:Hide()
+    if castbar.tooltip then
+        castbar.tooltip:Hide()
+    end
 
     castbar.unitID = nil
     castbar.parent = nil
     castbar.isTesting = nil
     castbar:EnableMouse(false)
+    castbar.holdTime = 0
 
     if unitID == "party-testmode" then
         local parentFrame = castbar.parent or ClassicCastbars.AnchorManager:GetAnchor(unitID)
-        parentFrame:Hide()
+        if parentFrame then
+            parentFrame:Hide()
+        end
     end
 end
 

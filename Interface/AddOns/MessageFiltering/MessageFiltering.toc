@@ -1,0 +1,10 @@
+## Interface: 11302
+## Title: MessageFiltering
+## Title-zhCN: [S]消息过滤
+## Notes: |cffbc8f8f过滤聊天窗口的消息.|r
+## Notes-zhCN: |cffbc8f8f过滤聊天窗消息,或仅显示你需要的内容|r
+## Version: 2.5.3
+## SavedVariablesPerCharacter: HuaJieInit
+## Author: XCCBQ...
+
+MessageFiltering.lua

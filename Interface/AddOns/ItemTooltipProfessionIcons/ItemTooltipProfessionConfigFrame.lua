@@ -218,7 +218,7 @@ local classQuestLabel = frame:CreateFontString( "ClassQuestLabel", "OVERLAY", "G
 classQuestLabel:SetFont( "Fonts\\ARHei.TTF", 14, "THINOUTLINE" )
 classQuestLabel:SetPoint( "TOPLEFT", 45, -255 )
 classQuestLabel:SetTextColor( 1, 0.85, 0.15 )
-classQuestLabel:SetText( "Class Quests" )
+classQuestLabel:SetText( "职业任务" )
 
 QUEST_CHECK[ 0x00008 ] = CreateCheckbox( "ItemTooltipIconsConfigCheck1d1", 45, -270, " 德鲁伊", nil )
 QUEST_CHECK[ 0x00010 ] = CreateCheckbox( "ItemTooltipIconsConfigCheck1d2", 45, -290, " 猎人", nil )

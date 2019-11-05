@@ -1,8 +1,8 @@
-#retail ## Interface: 80200
+##retail ## Interface: 80205
 ## Interface: 11302
 ## Title: TomTom
 ## Author: jnwhiteh
-## Version: v11302-1.0.7
+## Version: v11302-1.0.8
 ## License: All Rights Reserved
 ## Notes: Acts as your portable navigation assistant
 ## Notes-frFR: Agit comme un assistant de navigation portable

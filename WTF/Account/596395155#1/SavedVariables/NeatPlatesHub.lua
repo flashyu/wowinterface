@@ -56,7 +56,10 @@ NeatPlatesHubSettings = {
 		["StatusTextRight"] = 7,
 		["StyleFriendlyBarsOnPlayers"] = true,
 		["StyleFriendlyBarsNoTotem"] = false,
-		["HeadlineEnemyColor"] = 4,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
+			["Liberated Karabor Prisoner"] = true,
+		},
 		["FrameVerticalPosition"] = 0.7,
 		["HighlightFocustMode"] = 1,
 		["CustomColorList"] = "",
@@ -90,10 +93,7 @@ NeatPlatesHubSettings = {
 		["UnitSpotlightOpacityEnable"] = true,
 		["WidgetBuffPurgeable"] = false,
 		["WidgetThreatIndicator"] = true,
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-			["Liberated Karabor Prisoner"] = true,
-		},
+		["ThreatSoloEnable"] = false,
 		["WidgetAuraScaleOptions"] = {
 			["y"] = 1,
 			["x"] = 1,
@@ -218,16 +218,28 @@ NeatPlatesHubSettings = {
 		},
 		["StyleForceBarsOnTargets"] = false,
 		["HeadlineEnemySubtext"] = "RoleGuildLevel",
-		["StyleEnemyBarsOnActive"] = true,
-		["WidgetDebuff"] = true,
+		["ClassIconScaleOptions"] = {
+			["y"] = 1,
+			["x"] = 1,
+			["offset"] = {
+				["y"] = 0,
+				["x"] = 0,
+			},
+		},
+		["ColorGuildMember"] = {
+			["a"] = 0.999997794628143,
+			["b"] = 0.999997794628143,
+			["g"] = 0.658822059631348,
+			["r"] = 0.235293596982956,
+		},
 		["ClassColorPartyMembers"] = false,
 		["SpacerSlots"] = 1,
 		["FrameBarWidth"] = 1,
 		["ScaleIgnoreNeutralUnits"] = true,
-		["TextUseBlizzardFont"] = false,
+		["UnitSpotlightScaleEnable"] = true,
 		["ScaleIgnoreInactive"] = false,
 		["OpacitySpotlightMouseover"] = false,
-		["UnitSpotlightScaleEnable"] = true,
+		["TextUseBlizzardFont"] = false,
 		["ThreatWarningMode"] = "Auto",
 		["ColorPartyAggroText"] = false,
 		["ColorSchoolShadow"] = {
@@ -238,7 +250,7 @@ NeatPlatesHubSettings = {
 		},
 		["ScaleFiltered"] = 0.8,
 		["OpacityFilterUntitledFriendlyNPC"] = false,
-		["HighHealthThreshold"] = 0.7,
+		["ScaleIgnoreNonEliteUnits"] = false,
 		["ScaleTargetSpotlight"] = false,
 		["HideCooldownSpiral"] = false,
 		["WidgetAuraAlignment"] = 1,
@@ -320,7 +332,8 @@ NeatPlatesHubSettings = {
 		["StyleHeadlineNeutral"] = false,
 		["HighlightMouseoverMode"] = 1,
 		["WidgetTargetHighlight"] = true,
-		["OpacityFilterNeutralUnits"] = false,
+		["CustomColorLookup"] = {
+		},
 		["ColorLowHealth"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0,
@@ -367,7 +380,7 @@ NeatPlatesHubSettings = {
 		["WidgetDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339\nMy Regrowth\nMy Rejuvenation\nNot Facepalm Bolt",
 		["ClassEnemyIcon"] = false,
 		["HighlightFocusMode"] = 1,
-		["OpacitySpotlight"] = 0.85,
+		["OpacityFiltered"] = 0,
 		["OpacityTarget"] = 1,
 		["ColorSchoolFire"] = {
 			["a"] = 0.999997794628143,
@@ -376,7 +389,7 @@ NeatPlatesHubSettings = {
 			["r"] = 0.999997794628143,
 		},
 		["StatusTextLeft"] = 8,
-		["OpacityFiltered"] = 0,
+		["OpacitySpotlight"] = 0.85,
 		["TextColorHostileNPC"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.125489920377731,
@@ -400,10 +413,9 @@ NeatPlatesHubSettings = {
 			["r"] = 0.999997794628143,
 		},
 		["WidgetComboPointsStyle"] = 2,
-		["TextHealthTextMode"] = 1,
+		["OpacityFilterNeutralUnits"] = false,
 		["StyleEnemyBarsOnPlayers"] = true,
-		["CustomColorLookup"] = {
-		},
+		["TextHealthTextMode"] = 1,
 		["ColorMouseover"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.999997794628143,
@@ -459,7 +471,7 @@ NeatPlatesHubSettings = {
 			["g"] = 0.701959252357483,
 			["r"] = 0.901958823204041,
 		},
-		["ScaleIgnoreNonEliteUnits"] = false,
+		["HighHealthThreshold"] = 0.7,
 		["ColorPartyAggroGlow"] = true,
 		["ColorNeutral"] = {
 			["a"] = 0.999997794628143,
@@ -468,20 +480,8 @@ NeatPlatesHubSettings = {
 			["r"] = 0.999997794628143,
 		},
 		["CustomFocusColor"] = false,
-		["ColorGuildMember"] = {
-			["a"] = 0.999997794628143,
-			["b"] = 0.999997794628143,
-			["g"] = 0.658822059631348,
-			["r"] = 0.235293596982956,
-		},
-		["ClassIconScaleOptions"] = {
-			["y"] = 1,
-			["x"] = 1,
-			["offset"] = {
-				["y"] = 0,
-				["x"] = 0,
-			},
-		},
+		["WidgetDebuff"] = true,
+		["StyleEnemyBarsOnActive"] = true,
 		["ColorNormalSpellCast"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0,
@@ -545,13 +545,13 @@ NeatPlatesHubSettings = {
 		["WidgetRangeStyle"] = 1,
 		["ScaleCastingSpotlight"] = false,
 		["StyleFriendlyBarsOnNPC"] = false,
+		["HeadlineEnemyColor"] = 4,
 		["ColorSchoolPhysical"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0.76470422744751,
 			["g"] = 0.752939522266388,
 			["r"] = 0.513724386692047,
 		},
-		["ThreatSoloEnable"] = false,
 	},
 	["profiles"] = {
 		["默认"] = "FFFFFFFF",

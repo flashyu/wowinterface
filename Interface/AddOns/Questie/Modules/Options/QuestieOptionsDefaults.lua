@@ -1,4 +1,5 @@
-QuestieOptionsDefaults = {...}
+---@class QuestieOptionsDefaults
+local QuestieOptionsDefaults = QuestieLoader:CreateModule("QuestieOptionsDefaults");
 
 function QuestieOptionsDefaults:Load()
     return {
@@ -64,7 +65,7 @@ function QuestieOptionsDefaults:Load()
             trackerColorObjectives = 'white',
             trackerQuestPadding = 2,
             trackerSortObjectives = 'byComplete',
-            trackerbindOpenQuestLog = 'shiftleft',
+            trackerbindOpenQuestLog = 'left',
             trackerbindSetTomTom = 'ctrlleft',
             iconFadeLevel = 0.3,
             trackerLocked = true,
@@ -73,6 +74,7 @@ function QuestieOptionsDefaults:Load()
         char = {
             complete = {},
             hidden = {},
+            enableMinimalisticIcons = false,
             enabled = true,
             lowlevel = false,
             manualMinLevelOffset = false,

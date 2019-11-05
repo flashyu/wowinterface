@@ -12,6 +12,14 @@ CChatNotifier_settings = {
 	["firstStart"] = false,
 }
 CChatNotifier_data = {
+	["stsm血色,斯坦索姆血色,宝珠"] = {
+		["active"] = true,
+		["words"] = {
+			"stsm血色", -- [1]
+			"斯坦索姆血色", -- [2]
+			"宝珠", -- [3]
+		},
+	},
 	["通灵,tl,TL"] = {
 		["words"] = {
 			"通灵", -- [1]
@@ -20,12 +28,12 @@ CChatNotifier_data = {
 		},
 		["active"] = true,
 	},
-	["stsm,STSM,斯坦"] = {
-		["words"] = {
-			"stsm", -- [1]
-			"stsm", -- [2]
-			"斯坦", -- [3]
-		},
+	["黑下,高图斯,宝石"] = {
 		["active"] = true,
+		["words"] = {
+			"黑下", -- [1]
+			"高图斯", -- [2]
+			"宝石", -- [3]
+		},
 	},
 }

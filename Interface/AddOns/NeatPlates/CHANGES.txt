@@ -1,12 +1,12 @@
-lightweight tag aacce52bdc78c742a698af4fa9e86d839803bb28 1.13.2.40
+lightweight tag 32b827e8c44c1b155b559f5133e664cc4e4ea5cd 1.13.2.41
 Author:	Luxocracy <luxor355@gmail.com>
-Date:	Mon Oct 21 11:41:58 2019 +0200
+Date:	Sun Nov 3 12:03:01 2019 +0100
 
-commit aacce52bdc78c742a698af4fa9e86d839803bb28
+commit 32b827e8c44c1b155b559f5133e664cc4e4ea5cd
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Mon Oct 21 11:41:58 2019 +0200
+Date:   Sun Nov 3 12:03:01 2019 +0100
 
-    Lib Updates
+    Updated LibClassicDurations
     
-    - Updated Libraries
+    - Updated LibClassicDurations
 

@@ -24,7 +24,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "厄运之槌",
+			["LastInstanceName"] = "黑石塔",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 235.270568847656,
 		},

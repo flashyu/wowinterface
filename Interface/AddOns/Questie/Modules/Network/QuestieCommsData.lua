@@ -1,12 +1,22 @@
+-------------------------
+--Import modules.
+-------------------------
+---@type QuestieDB
+local QuestieDB = QuestieLoader:ImportModule("QuestieDB");
+---@type QuestieComms
+local QuestieComms = QuestieLoader:ImportModule("QuestieComms");
+---@type QuestieLib
+local QuestieLib = QuestieLoader:ImportModule("QuestieLib");
+
 QuestieComms.data = {}
 
 --[i_1337][playerName][questId] = objective
-commsTooltipLookup = {}
+local commsTooltipLookup = {}
 
 --[playerName] = {
     --[questId] = {["i_1337"]=true,["o_1338"]=true,}
 --}
-playerRegisteredTooltips = {}
+local playerRegisteredTooltips = {}
 
 ---@param tooltipKey string @A key in the form of "i_1337"
 ---@return boolean @true if exist nil if not
@@ -44,7 +54,18 @@ function QuestieComms.data:GetTooltip(tooltipKey)
                     if(item and item.Name) then
                         oName = item.Name;-- this is capital letters for some reason...
                     else
-                        oName = nil;
+                        local itemName = GetItemInfo(objective.id)
+                        if(itemName) then
+                            oName = itemName;
+                        else
+                            oName = "Item missing from DB, fetching from server!";
+                            local item = Item:CreateFromItemID(objective.id)
+                            item:ContinueOnItemLoad(function()
+                                local itemName = item:GetItemName();
+                                oName = itemName;
+                                tooltipData[questId][playerName][objectiveIndex].text = itemName;
+                            end)
+                        end
                     end
                 end
                 tooltipData[questId][playerName][objectiveIndex].text = oName
