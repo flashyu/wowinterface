@@ -7,13 +7,12 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 204.444458007813,
-					["x"] = -755.555828809738,
-					["w"] = 235.270568847656,
-					["h"] = 195.897521972656,
+					["y"] = 392.114135742188,
+					["x"] = -514.573989868164,
+					["w"] = 235,
+					["h"] = 196.000030517578,
 				},
 			},
-			["MainWindowHeight"] = 195.897521972656,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -24,9 +23,10 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "黑石塔",
+			["LastInstanceName"] = "斯坦索姆",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 235.270568847656,
+			["MainWindowHeight"] = 195.897521972656,
 		},
 	},
 }

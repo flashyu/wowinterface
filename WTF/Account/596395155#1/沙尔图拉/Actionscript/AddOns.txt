@@ -32,7 +32,7 @@ DHUD_Options: disabled
 Guidelime: disabled
 ItemTooltipProfessionIcons: enabled
 Leatrix_Maps: enabled
-NeatPlates: enabled
+NeatPlates: disabled
 NeatPlatesHub: enabled
 NeatPlatesWidgets: enabled
 NeatPlates_Alvara: enabled

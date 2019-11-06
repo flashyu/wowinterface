@@ -8,3 +8,4 @@ DHUD: disabled
 DHUD_Options: disabled
 ClassicCastbars: disabled
 ClassicCastbars_Options: disabled
+NeatPlates: disabled
