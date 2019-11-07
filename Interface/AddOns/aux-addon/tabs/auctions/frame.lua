@@ -34,7 +34,7 @@ end)
 do
     local btn = gui.button(frame)
     btn:SetPoint('LEFT', aux.status_bar, 'RIGHT', 5, 0)
-    btn:SetText('取消')
+    btn:SetText('Cancel')
     btn:Disable()
     btn:SetScript('OnClick', cancel_auction)
     cancel_button = btn

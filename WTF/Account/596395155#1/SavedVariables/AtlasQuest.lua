@@ -1,6 +1,6 @@
 
 AtlasQuest_Options = {
-	["Version"] = "4.11.51",
+	["Version"] = "4.11.57",
 	["Actionscript"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,

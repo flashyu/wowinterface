@@ -7,10 +7,10 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 392.114135742188,
-					["x"] = -514.573989868164,
-					["w"] = 235,
-					["h"] = 196.000030517578,
+					["y"] = 220.263610839844,
+					["x"] = -757.713738799095,
+					["w"] = 217,
+					["h"] = 172.999954223633,
 				},
 			},
 			["Colors"] = {
@@ -23,10 +23,10 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "斯坦索姆",
+			["LastInstanceName"] = "通灵学院",
 			["CurDataSet"] = "OverallData",
-			["MainWindowWidth"] = 235.270568847656,
-			["MainWindowHeight"] = 195.897521972656,
+			["MainWindowWidth"] = 216.76628112793,
+			["MainWindowHeight"] = 173.207977294922,
 		},
 	},
 }

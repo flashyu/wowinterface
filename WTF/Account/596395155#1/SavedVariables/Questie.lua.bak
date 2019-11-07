@@ -5077,6 +5077,9 @@ QuestieConfig = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["minimap"] = {
+				["minimapPos"] = 257.162778041622,
+			},
 		},
 	},
 }

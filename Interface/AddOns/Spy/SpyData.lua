@@ -7,7 +7,7 @@ local bor = bit.bor
 local band = bit.band
 local time = time
 
-local db = {
+local Spy_db = {
     session = {
         players = {},
     },
@@ -22,7 +22,7 @@ local db = {
 }
 
 -- session pointers to units
-setmetatable(db.session.players, {
+setmetatable(Spy_db.session.players, {
     __mode = "k",
     __index = function(t, k)
         rawset(t, k, {})
@@ -31,8 +31,8 @@ setmetatable(db.session.players, {
 })
 
 -- pvp timer pointers to units
-setmetatable(db.pvp.incoming, {__mode = "k"})
-setmetatable(db.pvp.outgoing, {__mode = "k"})
+setmetatable(Spy_db.pvp.incoming, {__mode = "k"})
+setmetatable(Spy_db.pvp.outgoing, {__mode = "k"})
 
 local cache = {
     players = {
@@ -70,21 +70,21 @@ end
 local emptyTable = {}
 
 function SpyData:OnInitialize()
-    Spy:SetDataDb(db)  --> Spy.lua
+    Spy:SetDataDb(Spy_db)  --> Spy.lua
 end
 
 function SpyData:OnEnable()
     -- unit testing
-    if SpyUnitTest then SpyUnitTest:LoadData(db, cache) end
+    if SpyUnitTest then SpyUnitTest:LoadData(Spy_db, cache) end
 end
 
 function SpyData:SetSavedVariablesDb(val)
-	db.units = SpyDB.kosData[Spy.RealmName][Spy.FactionName][Spy.CharacterName].unit	
+	Spy_db.units = SpyDB.kosData[Spy.RealmName][Spy.FactionName][Spy.CharacterName].unit	
 end
 
 function SpyData:GetUnitSession(unit) --++
 --    if unit.isEnemy then	
-        return db.session.players[unit]
+        return Spy_db.session.players[unit]
  --   end
 end
 
@@ -120,21 +120,21 @@ end
 function SpyData:LogPvp(unit)
     assert(unit, "Invalid unit (" .. tostring(unit) .. ")")
     assert(unit.type, "Invalid unit type (" .. tostring(unit.type) .. ")")
-    db.session.players[unit].pvp = time()
+    Spy_db.session.players[unit].pvp = time()
 end
 
 -- set attack time - kills within 60 seconds are credited as a win
 function SpyData:LogOutgoingPvp(unit)  --??
     assert(unit, "Invalid unit (" .. tostring(unit) .. ")")
     assert(unit.type, "Invalid unit type (" .. tostring(unit.type) .. ")")
-    db.pvp.outgoing[unit] = time()
+    Spy_db.pvp.outgoing[unit] = time()
 end
 
 -- set hostile attack time - death within 60 seconds are credited as a win
 function SpyData:LogIncomingPvp(unit)  --??
     assert(unit, "Invalid unit (" .. tostring(unit) .. ")")
     assert(unit.type, "Invalid unit type (" .. tostring(unit.type) .. ")")
-    db.pvp.incoming[unit] = time()
+    Spy_db.pvp.incoming[unit] = time()
 end
 
 -- add win to hostile win counter
@@ -148,10 +148,10 @@ function SpyData:LogHostilePvpDeath(unit, session) --??
     session.dead = now
 
     -- add to win count if final attack was within 60 seconds
-    if db.pvp.outgoing[unit] and (db.pvp.outgoing[unit] > (now - 60)) then	
+    if Spy_db.pvp.outgoing[unit] and (Spy_db.pvp.outgoing[unit] > (now - 60)) then	
         unit.wins = (unit.wins and (unit.wins + 1) or 1)
-        db.pvp.outgoing[unit] = nil
-        db.pvp.incoming[unit] = nil
+        Spy_db.pvp.outgoing[unit] = nil
+        Spy_db.pvp.incoming[unit] = nil
     end
 end
 
@@ -160,11 +160,11 @@ function SpyData:LogMyPvpDeath()
     local now = time()
 
     -- all hostiles that attacked within 60 seconds are credited with a win
-    for unit, time in pairs(db.pvp.incoming) do
+    for unit, time in pairs(Spy_db.pvp.incoming) do
         if time > (now - 60) then		
             unit.loses = (unit.loses and (unit.loses + 1) or 1)			
-            db.pvp.outgoing[unit] = nil
-            db.pvp.incoming[unit] = nil
+            Spy_db.pvp.outgoing[unit] = nil
+            Spy_db.pvp.incoming[unit] = nil
         end
     end
 end
@@ -174,15 +174,15 @@ function SpyData:PurgePvpTimers()
     local now = time()
 
     -- clean up other expired timers
-    for unit, time in pairs(db.pvp.incoming) do
+    for unit, time in pairs(Spy_db.pvp.incoming) do
         if time < (now - 60) then		
-            db.pvp.incoming[unit] = nil
+            Spy_db.pvp.incoming[unit] = nil
         end
     end
 
-    for unit, time in pairs(db.pvp.outgoing) do
+    for unit, time in pairs(Spy_db.pvp.outgoing) do
         if time < (now - 60) then
-            db.pvp.outgoing[unit] = nil
+            Spy_db.pvp.outgoing[unit] = nil
         end
     end
 end
@@ -232,7 +232,7 @@ do -- SpyData:GetPlayers() - Iterators
     local function iterator(data, index)
         index = index + 1
         if data[index] then
-            return index, data[index], db.session.players[data[index]]
+            return index, data[index], Spy_db.session.players[data[index]]
         else
             return
         end

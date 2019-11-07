@@ -38,7 +38,7 @@ end)
 do
     local btn = gui.button(frame)
     btn:SetPoint('LEFT', aux.status_bar, 'RIGHT', 5, 0)
-    btn:SetText('竞拍')
+    btn:SetText('Bid')
     btn:Disable()
     btn:SetScript('OnClick', function() place_bid() end)
     bid_button = btn
@@ -46,7 +46,7 @@ end
 do
     local btn = gui.button(frame)
     btn:SetPoint('TOPLEFT', bid_button, 'TOPRIGHT', 5, 0)
-    btn:SetText('一口价')
+    btn:SetText('Buyout')
     btn:Disable()
     btn:SetScript('OnClick', function() place_bid(true) end)
     buyout_button = btn

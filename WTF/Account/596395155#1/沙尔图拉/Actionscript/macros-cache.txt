@@ -1,4 +1,8 @@
+VER 3 0000000001000002 "t" "132092"
+/script GetRaidTarget("target", 6)
+END
 VER 3 0000000001000001 "target" "INV_MISC_QUESTIONMARK"
-/target 杰德
+/target 巨
+/script SetRaidTarget("target",6)
 /console cameraDistanceMaxZoomFactor 3.4
 END

@@ -131,6 +131,8 @@ L["EnableSound"] = "启用声音警告"
 L["EnableSoundDescription"] = "设置当检测到敌对玩家时声音警告。 潜行或者KOS列表中的敌对玩家会有不同的声音提示。"
 L["OnlySoundKoS"] = "仅开启KOS列表中敌对玩家的声音警告"
 L["OnlySoundKoSDescription"] = "设置仅开启KOS列表中敌对玩家的声音警告。"
+L["StopAlertsOnTaxi"] = "在飞行路线上关闭警报"
+L["StopAlertsOnTaxiDescription"] = "在飛行路線上停止所有新的警報和警告."
  
 L["ListOptions"] = "附近列表选项"
 L["ListOptionsDescription"] = [[

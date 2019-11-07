@@ -131,6 +131,8 @@ L["EnableSound"] = "啟用警告音效"
 L["EnableSoundDescription"] = "偵測到敵方玩家時啟用警告音效，隱形和即殺清單中的敵方玩家會發出不同的警告音效。"
 L["OnlySoundKoS"] = "只有即殺清單使用警告音效"
 L["OnlySoundKoSDescription"] = "只有偵測到即殺清單中的敵方玩家時才播放警告音效。"
+L["StopAlertsOnTaxi"] = "在飛行路線上關閉警報"
+L["StopAlertsOnTaxiDescription"] = "在飛行路線上停止所有新的警報和警告."
 
 L["ListOptions"] = "附近清單"
 L["ListOptionsDescription"] = [[

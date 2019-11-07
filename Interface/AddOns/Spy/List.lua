@@ -558,6 +558,26 @@ function Spy:AnnouncePlayer(player, channel)
 	end	
 end
 
+function Spy:SendKoStoGuild(player)
+	local playerData = SpyPerCharDB.PlayerData[player]
+	local class, level, race, zone, subZone, mapX, mapY, guild, mapID = "", "", "", "", "", "", "", "", ""	 			
+	if playerData then
+		if playerData.class then class = playerData.class end
+		if playerData.level and playerData.isGuess == false then level = playerData.level end
+		if playerData.race then race = playerData.race end
+		if playerData.zone then zone = playerData.zone end
+		if playerData.mapID then mapID = playerData.mapID end					
+		if playerData.subZone then subZone = playerData.subZone end
+		if playerData.mapX then mapX = playerData.mapX end
+		if playerData.mapY then mapY = playerData.mapY end
+		if playerData.guild then guild = playerData.guild end
+	end
+	local details = Spy.Version.."|"..player.."|"..class.."|"..level.."|"..race.."|"..zone.."|"..subZone.."|"..mapX.."|"..mapY.."|"..guild.."|"..mapID	
+	if strlen(details) < 240 then
+		if Spy.InInstance == false and GetGuildInfo("player") ~= nil then Spy:SendCommMessage(Spy.Signature, details, "GUILD") end
+	end
+end
+
 function Spy:ToggleIgnorePlayer(ignore, player)
 	if ignore then
 		Spy:AddIgnoreData(player)
@@ -920,20 +940,25 @@ function Spy:ParseUnitDetails(player, class, level, race, zone, subZone, mapX, m
 	end
 	return true, nil
 end
---[[
+
 function Spy:AddDetected(player, timestamp, learnt, source)
-	if Spy.db.profile.ShowOnlyPvPFlagged then
-		if UnitIsPVP("player") then
+	if Spy.db.profile.StopAlertsOnTaxi then
+		if not UnitOnTaxi("player") then 
 			Spy:AddDetectedToLists(player, timestamp, learnt, source)
-		else
+		end
+	else
+		Spy:AddDetectedToLists(player, timestamp, learnt, source)
+	end			
+--[[if Spy.db.profile.ShowOnlyPvPFlagged then
+		if UnitIsPVP("target") then		
+			Spy:AddDetectedToLists(player, timestamp, learnt, source)
 		end	
 	else
 		Spy:AddDetectedToLists(player, timestamp, learnt, source)
-	end	
-end ]]--
+	end ]]--
+end
 
---function Spy:AddDetectedToLists(player, timestamp, learnt, source)
-function Spy:AddDetected(player, timestamp, learnt, source)
+function Spy:AddDetectedToLists(player, timestamp, learnt, source)
 	if not Spy.NearbyList[player] then
 		if Spy.db.profile.ShowOnDetection and not Spy.db.profile.MainWindowVis then
 			Spy:SetCurrentList(1)
@@ -1037,7 +1062,6 @@ Spy.ListTypes = {
 }
 --[[
 Spy_AbilityList = {
-
 --++ Racial Traits ++	
 	[20580]={ race = "Night Elf", level = 1, },
 	[20572]={ race = "Orc", level = 1, },

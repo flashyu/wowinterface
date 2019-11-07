@@ -57,7 +57,7 @@
                 <Offset x="-8" y="0" />
             </Anchor>
         </Anchors>
-        <Size x="34" y="15" />
+        <Size x="40" y="15" />
     </FontString>	
     <FontString name="SpyStatsWinsTemplate" inherits="SpyStatsStringTemplate" justifyH="CENTER" virtual="true">	
         <Anchors>
@@ -212,7 +212,7 @@
                 <Offset x="-8" y="0" />
             </Anchor>
         </Anchors>
-        <Size x="34" y="15"></Size>
+        <Size x="40" y="15"></Size>
     </Button>	
     <Frame name="SpyStatsFrame" parent="UIParent" frameStrata="MEDIUM" movable="true" toplevel="true" enableMouse="true" hidden="true">
         <Size x="1100" y="610" />		

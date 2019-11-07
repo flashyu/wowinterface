@@ -508,7 +508,6 @@ function Spy:CreateMainWindow()
 		local theFrame = Spy.MainWindow
 		theFrame:SetResizable(true)
 		theFrame:SetMinResize(90, 34)
---		theFrame:SetMinResize(170, 34)		
 		theFrame:SetMaxResize(300, 264)
 		theFrame:SetScript("OnSizeChanged",
 		function(self)
@@ -1089,8 +1088,7 @@ function Spy:ShowAlert(type, name, source, location)
 		Spy.AlertType = type
 	elseif type == "prowl" and Spy.AlertType ~= "kos" and Spy.AlertType ~= "kosguild" then
 		Spy.Colors:RegisterBorder("Alert", "Stealth Border", Spy.AlertWindow)
---		Spy.AlertWindow.Icon:SetBackdrop({ bgFile = "Interface\\Icons\\Ability_druid_prowl" })
-		Spy.AlertWindow.Icon:SetBackdrop({ bgFile = "Interface\\Icons\\Ability_Ambush" })		
+		Spy.AlertWindow.Icon:SetBackdrop({ bgFile = "Interface\\Icons\\Ability_Ambush" }) --++		
 		Spy.Colors:RegisterBorder("Alert", "Background", Spy.AlertWindow.Icon)
 		Spy.Colors:RegisterBackground("Alert", "Icon", Spy.AlertWindow.Icon)
 		Spy.Colors:RegisterFont("Alert", "Stealth Text", Spy.AlertWindow.Title)

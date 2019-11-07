@@ -131,6 +131,8 @@ L["EnableSound"] = "Aktiviert akustische Warnungen."
 L["EnableSoundDescription"] = "Wählen Sie diese Einstellung, um akustische Warnungen zu aktivieren, wenn feindliche Spieler erkannt werden. Es erklingen unterschiedliche Warnungen, wenn ein feindlicher Spieler sich tarnt oder wenn ein feindlicher Spieler auf deiner Bei Sichtkontakt zu Töten-Liste ist."
 L["OnlySoundKoS"] = "Es ertönen nur akustische Alarme fuer die Bei Sichtkontakt zu Töten-Liste"
 L["OnlySoundKoSDescription"] = "Wählen Sie diese Einstellung, so dass nur akustische Warnungen ertönen, wenn feindliche Spieler von der Bei Sichtkontakt zu Töten-Liste erkannt werden."
+L["StopAlertsOnTaxi"] = "Deaktivieren Sie Warnungen, während Sie sich auf einer Flugroute befinden"
+L["StopAlertsOnTaxiDescription"] = "Stoppen Sie alle neuen Alarme und Warnungen, während Sie sich auf einer Flugroute befinden."
  
 L["ListOptions"] = "In der Nähe-Liste"
 L["ListOptionsDescription"] = [[

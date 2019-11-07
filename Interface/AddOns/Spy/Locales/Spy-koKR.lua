@@ -131,6 +131,8 @@ L["EnableSound"] = "경고 소리 활성화"
 L["EnableSoundDescription"] = "적 플레이어가 탐지될 때 소리를 활성화하려면 체크하십시오. 은신을 탐지할 때와 살생부 명단을 탐지할 때의 소리는 다릅니다."
 L["OnlySoundKoS"] = "살생부 명단에 한하여 경고 소리 재생"
 L["OnlySoundKoSDescription"] = "살생부 명단에 있는 적 플레이어를 탐지할 때만 소리를 재생시키려면 체크하십시오."
+L["StopAlertsOnTaxi"] = "비행 경로에서 알림 끄기"
+L["StopAlertsOnTaxiDescription"] = "비행 경로에서 모든 새로운 경고 및 경고를 중지."
 
 L["ListOptions"] = "근접한 적 목록"
 L["ListOptionsDescription"] = [[

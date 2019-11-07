@@ -11,7 +11,7 @@ NORMAL_MODE, FRESH_MODE, EXPIRING_MODE = {}, {}, {} -- TODO expiring
 mode = nil
 
 StaticPopupDialogs.AUX_SCAN_ALERT = {
-    text = '其中一个查询已匹配!',
+    text = 'One of your alert queries matched!',
     button1 = 'Ok',
     showAlert = 1,
     timeout = 0,
@@ -25,9 +25,9 @@ end
 function update_mode(mode)
     _M.mode = mode
 	if mode == NORMAL_MODE then
-		mode_button:SetText('普通')
+		mode_button:SetText('Normal')
     else
-        mode_button:SetText('最新')
+        mode_button:SetText('Fresh')
 	end
 end
 

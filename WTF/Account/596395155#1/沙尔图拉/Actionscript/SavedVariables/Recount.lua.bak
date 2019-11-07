@@ -5,146 +5,132 @@ RecountPerCharDB = {
 		["Actionscript"] = {
 			["GUID"] = "Player-4511-00A04559",
 			["LastEventHealth"] = {
-				2430, -- [1]
-				2425, -- [2]
+				2450, -- [1]
+				2442, -- [2]
+				2442, -- [3]
+				2434, -- [4]
+				2434, -- [5]
+				2427, -- [6]
+				2450, -- [7]
+				2442, -- [8]
+				2436, -- [9]
+				2430, -- [10]
+				2423, -- [11]
+				2416, -- [12]
+				2416, -- [13]
+				2450, -- [14]
 			},
-			["LastAttackedBy"] = "被诅咒的黑暗犬",
+			["LastAttackedBy"] = "Environment",
 			["LastEventType"] = {
 				"DAMAGE", -- [1]
 				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
+				"DAMAGE", -- [10]
+				"DAMAGE", -- [11]
+				"DAMAGE", -- [12]
+				"DAMAGE", -- [13]
+				"DAMAGE", -- [14]
 			},
 			["TimeWindows"] = {
-				["Damage"] = {
-					714, -- [1]
+				["ActiveTime"] = {
+					4.5, -- [1]
 				},
 				["TimeDamage"] = {
-					1.5, -- [1]
+					4.5, -- [1]
 				},
 				["DamageTaken"] = {
-					5, -- [1]
+					96, -- [1]
 				},
-				["ActiveTime"] = {
-					1.5, -- [1]
+				["Damage"] = {
+					1237, -- [1]
 				},
 			},
 			["enClass"] = "MAGE",
 			["unit"] = "Actionscript",
 			["level"] = 60,
-			["LastDamageAbility"] = "肉搏",
-			["LastFightIn"] = 0,
+			["LastDamageAbility"] = "Falling",
+			["LastFightIn"] = 2,
+			["LastAbility"] = 174446.606,
 			["type"] = "Self",
-			["FightsSaved"] = 1,
-			["LastEventHealthMax"] = {
-				2430, -- [1]
-				2430, -- [2]
-			},
-			["LastDamageTaken"] = 5,
+			["FightsSaved"] = 2,
+			["LastDamageTaken"] = 39,
+			["UnitLockout"] = 173929.292,
 			["Owner"] = false,
-			["TimeLast"] = {
-				["ActiveTime"] = 84173.302,
-				["TimeDamage"] = 84173.302,
-				["OVERALL"] = 84173.302,
-				["DamageTaken"] = 84163.296,
-				["Damage"] = 84173.302,
-			},
-			["NextEventNum"] = 3,
-			["LastDamageTime"] = 84174.122,
-			["LastEvents"] = {
-				"被诅咒的黑暗犬 肉搏 Actionscript Hit -5 (Physical)", -- [1]
-				"Actionscript 寒冰箭 被诅咒的黑暗犬 Hit -714 (Frost)", -- [2]
-			},
-			["Name"] = "Actionscript",
-			["LastEventIncoming"] = {
-				true, -- [1]
-				false, -- [2]
-			},
-			["LastEventTimes"] = {
-				84163.956, -- [1]
-				84174.122, -- [2]
-			},
 			["Fights"] = {
-				["Fight1"] = {
-					["ElementHitsDone"] = {
-						["Frost"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
+				["Fight2"] = {
 					["DamagedWho"] = {
 						["被诅咒的黑暗犬"] = {
 							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 714,
+								["冰霜新星"] = {
+									["count"] = 89,
+								},
+								["冰锥术"] = {
+									["count"] = 572,
 								},
 							},
-							["amount"] = 714,
+							["amount"] = 661,
 						},
 					},
-					["ElementDone"] = {
-						["Frost"] = 714,
-					},
-					["Attacks"] = {
-						["寒冰箭"] = {
+					["TimeDamage"] = 3,
+					["TimeSpent"] = {
+						["被诅咒的黑暗犬"] = {
 							["Details"] = {
-								["Hit"] = {
-									["max"] = 714,
-									["min"] = 714,
-									["count"] = 1,
-									["amount"] = 714,
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
 								},
 							},
-							["count"] = 1,
-							["amount"] = 714,
+							["amount"] = 3,
+						},
+					},
+					["WhoDamaged"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 23,
+								},
+							},
+							["amount"] = 23,
 						},
 					},
 					["ElementHitsTaken"] = {
 						["Melee"] = {
 							["Details"] = {
 								["Hit"] = {
+									["count"] = 3,
+								},
+								["Dodge"] = {
 									["count"] = 1,
 								},
 							},
-							["amount"] = 1,
+							["amount"] = 4,
 						},
 					},
-					["DamageTaken"] = 5,
-					["TimeSpent"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
-					},
+					["DamageTaken"] = 23,
 					["PartialResist"] = {
 						["肉搏"] = {
 							["Details"] = {
 								["未被抵抗"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 1,
+									["count"] = 4,
 									["amount"] = 0,
 								},
 							},
 							["count"] = 0,
-							["amount"] = 1,
+							["amount"] = 4,
 						},
 					},
-					["TimeDamaging"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
+					["ElementDone"] = {
+						["Frost"] = 661,
 					},
 					["PartialAbsorb"] = {
 						["肉搏"] = {
@@ -152,144 +138,68 @@ RecountPerCharDB = {
 								["未被吸收"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 1,
+									["count"] = 4,
 									["amount"] = 0,
 								},
 							},
-							["count"] = 1,
+							["count"] = 4,
 							["amount"] = 0,
 						},
 					},
-					["ActiveTime"] = 1.5,
-					["WhoDamaged"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["肉搏"] = {
-									["count"] = 5,
-								},
-							},
-							["amount"] = 5,
-						},
-					},
-					["ElementTaken"] = {
-						["Melee"] = 5,
-					},
-					["TimeDamage"] = 1.5,
-					["Damage"] = 714,
-				},
-				["LastFightData"] = {
 					["ElementHitsDone"] = {
 						["Frost"] = {
 							["Details"] = {
 								["Hit"] = {
-									["count"] = 1,
+									["count"] = 2,
 								},
 							},
-							["amount"] = 1,
+							["amount"] = 2,
 						},
 					},
-					["DamagedWho"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 714,
-								},
-							},
-							["amount"] = 714,
-						},
-					},
-					["ElementDone"] = {
-						["Frost"] = 714,
-					},
-					["Attacks"] = {
-						["寒冰箭"] = {
-							["Details"] = {
-								["Hit"] = {
-									["max"] = 714,
-									["min"] = 714,
-									["count"] = 1,
-									["amount"] = 714,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 714,
-						},
-					},
-					["ElementHitsTaken"] = {
-						["Melee"] = {
-							["Details"] = {
-								["Hit"] = {
-									["count"] = 1,
-								},
-							},
-							["amount"] = 1,
-						},
-					},
-					["DamageTaken"] = 5,
-					["TimeSpent"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
-					},
-					["PartialResist"] = {
-						["肉搏"] = {
-							["Details"] = {
-								["未被抵抗"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 0,
-							["amount"] = 1,
-						},
-					},
+					["ActiveTime"] = 3,
 					["TimeDamaging"] = {
 						["被诅咒的黑暗犬"] = {
 							["Details"] = {
-								["寒冰箭"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
 									["count"] = 1.5,
 								},
 							},
-							["amount"] = 1.5,
-						},
-					},
-					["PartialAbsorb"] = {
-						["肉搏"] = {
-							["Details"] = {
-								["未被吸收"] = {
-									["max"] = 0,
-									["min"] = 0,
-									["count"] = 1,
-									["amount"] = 0,
-								},
-							},
-							["count"] = 1,
-							["amount"] = 0,
-						},
-					},
-					["ActiveTime"] = 1.5,
-					["WhoDamaged"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["肉搏"] = {
-									["count"] = 5,
-								},
-							},
-							["amount"] = 5,
+							["amount"] = 3,
 						},
 					},
 					["ElementTaken"] = {
-						["Melee"] = 5,
+						["Melee"] = 23,
 					},
-					["TimeDamage"] = 1.5,
-					["Damage"] = 714,
+					["Attacks"] = {
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 89,
+									["min"] = 89,
+									["count"] = 1,
+									["amount"] = 89,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 89,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 572,
+									["min"] = 572,
+									["count"] = 1,
+									["amount"] = 572,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 572,
+						},
+					},
+					["Damage"] = 661,
 				},
 				["CurrentFightData"] = {
 					["DOTs"] = {
@@ -301,46 +211,72 @@ RecountPerCharDB = {
 					["RageGainedFrom"] = {
 					},
 					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
 					},
 					["DeathCount"] = 0,
 					["HOT_Time"] = 0,
-					["ElementHitsDone"] = {
+					["HOTs"] = {
 					},
-					["ElementTakenAbsorb"] = {
-					},
+					["ManaGain"] = 0,
 					["ElementTaken"] = {
+						["Physical"] = 0,
 					},
 					["DOT_Time"] = 0,
 					["Damage"] = 0,
-					["ElementTakenBlock"] = {
+					["ElementDoneAbsorb"] = {
 					},
 					["TimeHeal"] = 0,
 					["RessedWho"] = {
 					},
 					["Dispels"] = 0,
-					["ElementTakenResist"] = {
-					},
-					["ElementDoneAbsorb"] = {
-					},
-					["FAttacks"] = {
-					},
-					["RunicPowerGainedFrom"] = {
-					},
-					["ElementDone"] = {
-					},
 					["PartialAbsorb"] = {
+						["Falling"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
 					},
-					["DamagedWho"] = {
+					["RageGain"] = 0,
+					["FAttacks"] = {
 					},
 					["PartialBlock"] = {
 					},
+					["ElementDone"] = {
+					},
+					["CCBroken"] = {
+					},
+					["ElementHitsDone"] = {
+					},
+					["Dispelled"] = 0,
 					["WhoDamaged"] = {
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
 					},
 					["EnergyGainedFrom"] = {
 					},
-					["PartialResist"] = {
+					["FDamagedWho"] = {
 					},
-					["CCBroken"] = {
+					["RunicPowerGainedFrom"] = {
 					},
 					["ElementDoneBlock"] = {
 					},
@@ -348,53 +284,129 @@ RecountPerCharDB = {
 					},
 					["OverHeals"] = {
 					},
-					["ManaGainedFrom"] = {
-					},
-					["RunicPowerGained"] = {
-					},
-					["CCBreak"] = 0,
 					["RageGained"] = {
 					},
-					["HealedWho"] = {
-					},
+					["ActiveTime"] = 0,
+					["CCBreak"] = 0,
 					["EnergyGain"] = 0,
+					["WhoHealed"] = {
+					},
+					["PartialResist"] = {
+						["Falling"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
 					["ManaGained"] = {
 					},
-					["FDamage"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
 					["Interrupts"] = 0,
 					["Overhealing"] = 0,
-					["TimeSpent"] = {
-					},
-					["WhoDispelled"] = {
+					["ElementTakenResist"] = {
 					},
 					["InterruptData"] = {
 					},
-					["RunicPowerGain"] = 0,
+					["WhoDispelled"] = {
+					},
+					["TimeSpent"] = {
+					},
 					["Heals"] = {
 					},
-					["WhoHealed"] = {
-					},
+					["FDamage"] = 0,
 					["EnergyGained"] = {
 					},
-					["ActiveTime"] = 0,
-					["Healing"] = 0,
-					["FDamagedWho"] = {
+					["HealedWho"] = {
 					},
-					["Dispelled"] = 0,
+					["Healing"] = 0,
+					["RunicPowerGained"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
 					["Attacks"] = {
 					},
 					["HealingTaken"] = 0,
-					["RageGain"] = 0,
+					["DamagedWho"] = {
+					},
 					["TimeDamage"] = 0,
 					["TimeDamaging"] = {
 					},
-					["ManaGain"] = 0,
-					["HOTs"] = {
+					["RunicPowerGain"] = 0,
+					["ElementTakenBlock"] = {
 					},
 					["DispelledWho"] = {
 					},
 				},
-				["OverallData"] = {
+				["LastFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 34,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 5,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["HOTs"] = {
+					},
+					["ManaGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 34,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 576,
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialAbsorb"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 6,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 6,
+							["amount"] = 0,
+						},
+					},
+					["RageGain"] = 0,
+					["FAttacks"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["ElementDone"] = {
+						["Frost"] = 576,
+					},
+					["CCBroken"] = {
+					},
 					["ElementHitsDone"] = {
 						["Frost"] = {
 							["Details"] = {
@@ -405,35 +417,185 @@ RecountPerCharDB = {
 							["amount"] = 1,
 						},
 					},
-					["DamagedWho"] = {
+					["Dispelled"] = 0,
+					["WhoDamaged"] = {
 						["被诅咒的黑暗犬"] = {
 							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 714,
+								["肉搏"] = {
+									["count"] = 34,
 								},
 							},
-							["amount"] = 714,
+							["amount"] = 34,
 						},
 					},
-					["ElementDone"] = {
-						["Frost"] = 714,
+					["EnergyGainedFrom"] = {
+					},
+					["FDamagedWho"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["RageGained"] = {
+					},
+					["ActiveTime"] = 1.5,
+					["CCBreak"] = 0,
+					["EnergyGain"] = 0,
+					["WhoHealed"] = {
+					},
+					["PartialResist"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 6,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 6,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["InterruptData"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["TimeSpent"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+					},
+					["Heals"] = {
+					},
+					["FDamage"] = 0,
+					["EnergyGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["Healing"] = 0,
+					["RunicPowerGained"] = {
+					},
+					["ManaGainedFrom"] = {
 					},
 					["Attacks"] = {
-						["寒冰箭"] = {
+						["冰锥术"] = {
 							["Details"] = {
 								["Hit"] = {
-									["max"] = 714,
-									["min"] = 714,
+									["max"] = 576,
+									["min"] = 576,
 									["count"] = 1,
-									["amount"] = 714,
+									["amount"] = 576,
 								},
 							},
 							["count"] = 1,
-							["amount"] = 714,
+							["amount"] = 576,
+						},
+					},
+					["HealingTaken"] = 0,
+					["DamagedWho"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 576,
+								},
+							},
+							["amount"] = 576,
+						},
+					},
+					["TimeDamage"] = 1.5,
+					["TimeDamaging"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["DamagedWho"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 89,
+								},
+								["冰锥术"] = {
+									["count"] = 1148,
+								},
+							},
+							["amount"] = 1237,
+						},
+					},
+					["TimeDamage"] = 4.5,
+					["TimeSpent"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 4.5,
+						},
+					},
+					["WhoDamaged"] = {
+						["Environment"] = {
+							["Details"] = {
+								["Falling"] = {
+									["count"] = 39,
+								},
+							},
+							["amount"] = 39,
+						},
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 57,
+								},
+							},
+							["amount"] = 57,
 						},
 					},
 					["ElementHitsTaken"] = {
 						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 8,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 10,
+						},
+						["Physical"] = {
 							["Details"] = {
 								["Hit"] = {
 									["count"] = 1,
@@ -442,19 +604,9 @@ RecountPerCharDB = {
 							["amount"] = 1,
 						},
 					},
-					["DamageTaken"] = 5,
-					["TimeSpent"] = {
-						["被诅咒的黑暗犬"] = {
-							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 1.5,
-								},
-							},
-							["amount"] = 1.5,
-						},
-					},
+					["DamageTaken"] = 96,
 					["PartialResist"] = {
-						["肉搏"] = {
+						["Falling"] = {
 							["Details"] = {
 								["未被抵抗"] = {
 									["max"] = 0,
@@ -466,19 +618,24 @@ RecountPerCharDB = {
 							["count"] = 0,
 							["amount"] = 1,
 						},
-					},
-					["TimeDamaging"] = {
-						["被诅咒的黑暗犬"] = {
+						["肉搏"] = {
 							["Details"] = {
-								["寒冰箭"] = {
-									["count"] = 1.5,
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
 								},
 							},
-							["amount"] = 1.5,
+							["count"] = 0,
+							["amount"] = 10,
 						},
 					},
+					["ElementDone"] = {
+						["Frost"] = 1237,
+					},
 					["PartialAbsorb"] = {
-						["肉搏"] = {
+						["Falling"] = {
 							["Details"] = {
 								["未被吸收"] = {
 									["max"] = 0,
@@ -490,40 +647,364 @@ RecountPerCharDB = {
 							["count"] = 1,
 							["amount"] = 0,
 						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 10,
+							["amount"] = 0,
+						},
 					},
-					["ActiveTime"] = 1.5,
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["ActiveTime"] = 4.5,
+					["TimeDamaging"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 4.5,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 57,
+						["Physical"] = 39,
+					},
+					["Attacks"] = {
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 89,
+									["min"] = 89,
+									["count"] = 1,
+									["amount"] = 89,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 89,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 576,
+									["min"] = 572,
+									["count"] = 2,
+									["amount"] = 1148,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 1148,
+						},
+					},
+					["Damage"] = 1237,
+				},
+				["Fight1"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 34,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 5,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 6,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["HOTs"] = {
+					},
+					["ManaGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 34,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 576,
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialAbsorb"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 6,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 6,
+							["amount"] = 0,
+						},
+					},
+					["RageGain"] = 0,
+					["FAttacks"] = {
+					},
+					["PartialBlock"] = {
+					},
+					["ElementDone"] = {
+						["Frost"] = 576,
+					},
+					["CCBroken"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["Dispelled"] = 0,
 					["WhoDamaged"] = {
 						["被诅咒的黑暗犬"] = {
 							["Details"] = {
 								["肉搏"] = {
-									["count"] = 5,
+									["count"] = 34,
 								},
 							},
-							["amount"] = 5,
+							["amount"] = 34,
 						},
 					},
-					["ElementTaken"] = {
-						["Melee"] = 5,
+					["EnergyGainedFrom"] = {
+					},
+					["FDamagedWho"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["RageGained"] = {
+					},
+					["ActiveTime"] = 1.5,
+					["CCBreak"] = 0,
+					["EnergyGain"] = 0,
+					["WhoHealed"] = {
+					},
+					["PartialResist"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 6,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 6,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["ElementTakenAbsorb"] = {
+					},
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["ElementTakenResist"] = {
+					},
+					["InterruptData"] = {
+					},
+					["WhoDispelled"] = {
+					},
+					["TimeSpent"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+					},
+					["Heals"] = {
+					},
+					["FDamage"] = 0,
+					["EnergyGained"] = {
+					},
+					["HealedWho"] = {
+					},
+					["Healing"] = 0,
+					["RunicPowerGained"] = {
+					},
+					["ManaGainedFrom"] = {
+					},
+					["Attacks"] = {
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 576,
+									["min"] = 576,
+									["count"] = 1,
+									["amount"] = 576,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 576,
+						},
+					},
+					["HealingTaken"] = 0,
+					["DamagedWho"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 576,
+								},
+							},
+							["amount"] = 576,
+						},
 					},
 					["TimeDamage"] = 1.5,
-					["Damage"] = 714,
+					["TimeDamaging"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+					},
+					["RunicPowerGain"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["DispelledWho"] = {
+					},
 				},
 			},
-			["UnitLockout"] = 84163.296,
-			["LastActive"] = 84173.302,
+			["NextEventNum"] = 15,
+			["LastDamageTime"] = 174065.314,
+			["LastEvents"] = {
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -8 (Physical)", -- [1]
+				"被诅咒的黑暗犬 肉搏 Actionscript Dodge (1)", -- [2]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -8 (Physical)", -- [3]
+				"Actionscript 冰霜新星 被诅咒的黑暗犬 Hit -89 (Frost)", -- [4]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -7 (Physical)", -- [5]
+				"Actionscript 冰锥术 被诅咒的黑暗犬 Hit -572 (Frost)", -- [6]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -8 (Physical)", -- [7]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -6 (Physical)", -- [8]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -6 (Physical)", -- [9]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -7 (Physical)", -- [10]
+				"被诅咒的黑暗犬 肉搏 Actionscript Hit -7 (Physical)", -- [11]
+				"被诅咒的黑暗犬 肉搏 Actionscript Dodge (1)", -- [12]
+				"Actionscript 冰锥术 被诅咒的黑暗犬 Hit -576 (Frost)", -- [13]
+				"Environment Falling Actionscript Hit -39 (Physical)", -- [14]
+			},
+			["Name"] = "Actionscript",
+			["LastEventTimes"] = {
+				173929.382, -- [1]
+				173931.387, -- [2]
+				173933.387, -- [3]
+				173934.237, -- [4]
+				173935.387, -- [5]
+				173937.897, -- [6]
+				174054.405, -- [7]
+				174056.405, -- [8]
+				174058.405, -- [9]
+				174060.405, -- [10]
+				174062.439, -- [11]
+				174064.424, -- [12]
+				174065.314, -- [13]
+				175394.333, -- [14]
+			},
+			["LastEventIncoming"] = {
+				true, -- [1]
+				true, -- [2]
+				true, -- [3]
+				false, -- [4]
+				true, -- [5]
+				false, -- [6]
+				true, -- [7]
+				true, -- [8]
+				true, -- [9]
+				true, -- [10]
+				true, -- [11]
+				true, -- [12]
+				false, -- [13]
+				true, -- [14]
+			},
+			["TimeLast"] = {
+				["ActiveTime"] = 174065.294,
+				["TimeDamage"] = 174065.294,
+				["OVERALL"] = 175394.213,
+				["DamageTaken"] = 175394.213,
+				["Damage"] = 174065.294,
+			},
+			["LastEventHealthMax"] = {
+				2450, -- [1]
+				2450, -- [2]
+				2450, -- [3]
+				2450, -- [4]
+				2450, -- [5]
+				2450, -- [6]
+				2450, -- [7]
+				2450, -- [8]
+				2450, -- [9]
+				2450, -- [10]
+				2450, -- [11]
+				2450, -- [12]
+				2450, -- [13]
+				2450, -- [14]
+			},
+			["LastActive"] = 175394.213,
 		},
 	},
-	["FightNum"] = 1,
+	["FightNum"] = 2,
 	["CombatTimes"] = {
 		{
-			84163.296, -- [1]
-			84176.297, -- [2]
-			"00:43:04", -- [3]
-			"00:43:16", -- [4]
+			173929.292, -- [1]
+			173940.29, -- [2]
+			"01:39:05", -- [3]
+			"01:39:16", -- [4]
 			"被诅咒的黑暗犬", -- [5]
 		}, -- [1]
+		{
+			174054.305, -- [1]
+			174067.291, -- [2]
+			"01:41:10", -- [3]
+			"01:41:23", -- [4]
+			"被诅咒的黑暗犬", -- [5]
+		}, -- [2]
 	},
 	["FoughtWho"] = {
-		"被诅咒的黑暗犬 00:43:04-00:43:16", -- [1]
+		"被诅咒的黑暗犬 01:41:10-01:41:23", -- [1]
+		"被诅咒的黑暗犬 01:39:05-01:39:16", -- [2]
 	},
 }

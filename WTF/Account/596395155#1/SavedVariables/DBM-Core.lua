@@ -180,10 +180,10 @@ DBM_AllSavedOptions = {
 		["DontShowBossTimers"] = false,
 		["SpecialWarningFontStyle"] = "THICKOUTLINE",
 		["SpecialWarningFlashRepeat2"] = false,
-		["InfoFrameLines"] = 0,
-		["DontShowBossAnnounces"] = false,
-		["WorldBossNearAlert"] = false,
 		["WarningX"] = 0,
+		["InfoFrameLines"] = 0,
+		["WorldBossNearAlert"] = false,
+		["DontShowBossAnnounces"] = false,
 		["ArrowPosY"] = -150,
 		["SpecialWarningFlashRepeatAmount"] = 2,
 		["AutoAcceptFriendInvite"] = false,
@@ -220,4 +220,5 @@ DBM_AllSavedOptions = {
 	},
 }
 DBM_MinimapIcon = {
+	["minimapPos"] = 228.92186482331,
 }

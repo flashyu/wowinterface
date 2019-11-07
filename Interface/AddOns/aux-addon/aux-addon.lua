@@ -35,7 +35,7 @@ do
 		elseif event == 'PLAYER_LOGIN' then
 			for _, f in ipairs(handlers2) do f(arg1, ...) end
             sort(account_data.auctionable_items, function(a, b) return strlen(a) < strlen(b) or (strlen(a) == strlen(b) and a < b) end)
-            print('已载入 - 输入 /aux')
+            print('loaded - /aux')
 		else
 			_M[event](arg1, ...)
 		end
@@ -172,7 +172,7 @@ function event.PLAYER_LOGIN()
 end
 
 function event.AUCTION_HOUSE_LOADED()
-    _G.AuctionFrame_Show, _M.AuctionFrame_Show  = nil, _G.AuctionFrame_Show
+    _G.AuctionFrame_Show, AuctionFrame_Show = nil, _G.AuctionFrame_Show
     AuctionFrame:SetScript('OnHide', nil)
 end
 

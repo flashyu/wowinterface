@@ -6,7 +6,7 @@ local L = AceLocale:GetLocale("Spy")
 local _
 
 Spy = LibStub("AceAddon-3.0"):NewAddon("Spy", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0", "AceTimer-3.0")
-Spy.Version = "1.0.11"
+Spy.Version = "1.0.13"
 Spy.DatabaseVersion = "1.1"
 Spy.Signature = "[Spy]"
 Spy.ButtonLimit = 15
@@ -514,11 +514,24 @@ Spy.options = {
 						Spy.db.profile.OnlySoundKoS = value
 					end,
 				},
+				StopAlertsOnTaxi = {
+					name = L["StopAlertsOnTaxi"],
+					desc = L["StopAlertsOnTaxiDescription"],
+					type = "toggle",
+					order = 7,
+					width = "full",
+					get = function(info)
+						return Spy.db.profile.StopAlertsOnTaxi
+					end,
+					set = function(info, value)
+						Spy.db.profile.StopAlertsOnTaxi = value
+					end,
+				},
 				WarnOnStealth = {
 					name = L["WarnOnStealth"],
 					desc = L["WarnOnStealthDescription"],
 					type = "toggle",
-					order = 7,
+					order = 8,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnStealth
@@ -531,7 +544,7 @@ Spy.options = {
 					name = L["WarnOnKOS"],
 					desc = L["WarnOnKOSDescription"],
 					type = "toggle",
-					order = 8,
+					order = 0,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnKOS
@@ -544,7 +557,7 @@ Spy.options = {
 					name = L["WarnOnKOSGuild"],
 					desc = L["WarnOnKOSGuildDescription"],
 					type = "toggle",
-					order = 9,
+					order = 10,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnKOSGuild
@@ -557,7 +570,7 @@ Spy.options = {
 					name = L["WarnOnRace"],
 					desc = L["WarnOnRaceDescription"],
 					type = "toggle",
-					order = 10,
+					order = 11,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnRace
@@ -568,7 +581,7 @@ Spy.options = {
 				},
 				SelectWarnRace = {
 					type = "select",
-					order = 11,
+					order = 12,
 					name = L["SelectWarnRace"],
 					desc = L["SelectWarnRaceDescription"],
 					values = { 
@@ -593,7 +606,7 @@ Spy.options = {
 					end,
 				},
 				WarnRaceNote = {
-					order = 12,
+					order = 13,
 					type = "description",
 					name = L["WarnRaceNote"],
 				},
@@ -1225,6 +1238,7 @@ local Default_Profile = {
 		DisplayWarningsInErrorsFrame=false,
 		EnableSound=true,
 		OnlySoundKoS=false, 
+		StopAlertsOnTaxi=true,			
 		RemoveUndetected="OneMinute",
 		ShowNearbyList=true,
 		PrioritiseKoS=true,
@@ -1371,6 +1385,7 @@ function Spy:CheckDatabase()
 	if Spy.db.profile.DisplayWarningsInErrorsFrame == nil then Spy.db.profile.DisplayWarningsInErrorsFrame = Default_Profile.profile.DisplayWarningsInErrorsFrame end
 	if Spy.db.profile.EnableSound == nil then Spy.db.profile.EnableSound = Default_Profile.profile.EnableSound end
 	if Spy.db.profile.OnlySoundKoS == nil then Spy.db.profile.OnlySoundKoS = Default_Profile.profile.OnlySoundKoS end	
+	if Spy.db.profile.StopAlertsOnTaxi == nil then Spy.db.profile.StopAlertsOnTaxi = Default_Profile.profile.StopAlertsOnTaxi end 	
 	if Spy.db.profile.RemoveUndetected == nil then Spy.db.profile.RemoveUndetected = Default_Profile.profile.RemoveUndetected end
 	if Spy.db.profile.ShowNearbyList == nil then Spy.db.profile.ShowNearbyList = Default_Profile.profile.ShowNearbyList end
 	if Spy.db.profile.PrioritiseKoS == nil then Spy.db.profile.PrioritiseKoS = Default_Profile.profile.PrioritiseKoS end
@@ -1397,7 +1412,6 @@ end
 
 function Spy:RegisterModuleOptions(name, optionTbl, displayName)
 	Spy.options.args[name] = (type(optionTbl) == "function") and optionTbl() or optionTbl
---	self.optionsFrames[name] = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("Spy", displayName, "Spy", name)
 	self.optionsFrames[name] = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("Spy", displayName, L["Spy Option"], name)
 end
 
@@ -1408,7 +1422,6 @@ function Spy:SetupOptions()
 	LibStub("AceConfig-3.0"):RegisterOptionsTable("Spy Commands", Spy.optionsSlash, "spy")
 
 	local ACD3 = LibStub("AceConfigDialog-3.0")
---	self.optionsFrames.Spy = ACD3:AddToBlizOptions("Spy", nil, nil, "General")
 	self.optionsFrames.Spy = ACD3:AddToBlizOptions("Spy", L["Spy Option"], nil, "General")
 	self.optionsFrames.DisplayOptions = ACD3:AddToBlizOptions("Spy", L["DisplayOptions"], L["Spy Option"], "DisplayOptions")
 	self.optionsFrames.AlertOptions = ACD3:AddToBlizOptions("Spy", L["AlertOptions"], L["Spy Option"], "AlertOptions")
@@ -1528,8 +1541,8 @@ function Spy:EnableSound(value)
 end
 
 function Spy:OnInitialize()
-	WorldMapFrame:Show()
-	WorldMapFrame:Hide()
+--	WorldMapFrame:Show()
+--	WorldMapFrame:Hide()
 
 	Spy.RealmName = GetRealmName()
     Spy.FactionName = select(1, UnitFactionGroup("player"))
@@ -1843,6 +1856,13 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 		if bit.band(dstFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == COMBATLOG_OBJECT_REACTION_HOSTILE and dstGUID and dstName and not SpyPerCharDB.IgnoreData[dstName] then
 			local dstType = strsub(dstGUID, 1,6)
 			if dstType == "player" then
+				local _, class, _, race, _, name = GetPlayerInfoByGUID(dstGUID)
+				if not Spy.ValidClasses[class] then
+					class = nil
+				end	
+				if not Spy.ValidRaces[race] then
+					race = nil
+				end				
 				local learnt = false
 				local detected = true
 				local playerData = SpyPerCharDB.PlayerData[dstName]
@@ -1875,11 +1895,13 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 		-- updates win stats for pet kills
 		if (combatEvent[event] and srcName == petName) then		
 			if event == "SWING_DAMAGE" then
-				_, overkill = ...
+--				_, overkill = ...
+				if arg13 == nil then overkill = 0 else overkill = arg13 end	 				
 			else
-				_, _, _, _, overkill = ...
+--				_, _, _, _, overkill = ...
+				if arg16 == nil then overkill = 0 else overkill = arg16 end	 				
 			end
-			if arg16 == nil then overkill = 0 else overkill = arg16 end	 -- P8.0 added		
+--			if arg16 == nil then overkill = 0 else overkill = arg16 end			
 			if (overkill > 1 and srcName == petName) and dstName then
 				local playerData = SpyPerCharDB.PlayerData[dstName]
 				if playerData then
@@ -2152,7 +2174,7 @@ function Spy:FormatTime(timestamp)
     return strtrim(text)
 end
 
--- recieves pointer to SpyData db
+-- recieves pointer to SpyData Spy_db
 function Spy:SetDataDb(val)
-    db = val
+    Spy_db = val
 end

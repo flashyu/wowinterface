@@ -131,6 +131,8 @@ L["EnableSound"] = "Ativar alertas sonoros"
 L["EnableSoundDescription"] = "marque isso para ativar alertas sonoros quando um inimigo for detectado. Os sons são diferentes para Lista Negra e inimigos que ficam invisiveis."
 L["OnlySoundKoS"] = "Somente alertas sonoros de áudio para a lista Negra"
 L["OnlySoundKoSDescription"] = "Defina esta opção para reproduzir apenas alertas de áudio quando forem detectados jogadores inimigos na lista Negra."
+L["StopAlertsOnTaxi"] = "Desativar alertas enquanto estiver em uma rota de vôo"
+L["StopAlertsOnTaxiDescription"] = "Interrompa todos os novos alertas e avisos enquanto estiver em uma rota de vôo."
 
 L["ListOptions"] = "Lista de Proximidades"
 L["ListOptionsDescription"] = [[
