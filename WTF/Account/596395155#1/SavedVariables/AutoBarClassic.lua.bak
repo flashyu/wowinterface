@@ -129,9 +129,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["MAGE"] = true,
 				["scale"] = 1,
-				["alpha"] = 1,
 				["frameStrata"] = "LOW",
-				["PRIEST"] = true,
+				["alpha"] = 1,
+				["buttonWidth"] = 36,
 				["posY"] = 114.69846258976,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -145,7 +145,7 @@ AutoBarDB = {
 					"AutoBarButtonRecovery", -- [9]
 				},
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
+				["PRIEST"] = true,
 				["WARRIOR"] = true,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -168,9 +168,9 @@ AutoBarDB = {
 				["posY"] = 162.042101905452,
 				["HUNTER"] = true,
 				["WARRIOR"] = true,
-				["buttonWidth"] = 36,
-				["alpha"] = 1,
 				["PRIEST"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["buttonKeys"] = {
 					"AutoBarButtonRaidTarget", -- [1]
 					"AutoBarButtonSpeed", -- [2]
@@ -185,7 +185,7 @@ AutoBarDB = {
 				},
 				["PALADIN"] = true,
 				["WARLOCK"] = true,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 				["columns"] = 9,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
