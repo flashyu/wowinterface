@@ -4,7 +4,7 @@ local aux = require 'aux'
 local scan_util = require 'aux.util.scan'
 local scan = require 'aux.core.scan'
 
-local tab = aux.tab 'Auctions'
+local tab = aux.tab '拍卖中'
 
 function aux.event.AUX_LOADED()
     aux.event_listener('AUCTION_OWNED_LIST_UPDATE', function()

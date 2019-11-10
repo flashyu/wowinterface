@@ -4,5 +4,5 @@ END
 VER 3 0000000001000001 "target" "INV_MISC_QUESTIONMARK"
 /target 巨
 /script SetRaidTarget("target",6)
-/console cameraDistanceMaxZoomFactor 3.4
+/console cameraDistanceMaxZoomFactor 4
 END

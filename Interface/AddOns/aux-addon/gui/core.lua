@@ -3,11 +3,7 @@ select(2, ...) 'aux.gui'
 local aux = require 'aux'
 local completion = require 'aux.util.completion'
 
-M.font = (function()
-    local font = CreateFrame'Frame':CreateFontString()
-    font:SetFontObject(NumberFont_Normal_Med)
-    return font:GetFont()
-end)()
+M.font = [[Fonts\ARHei.TTF]]
 
 M.font_size = aux.immutable-{
 	small = 13,

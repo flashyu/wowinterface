@@ -1,8 +1,12 @@
-VER 3 0000000001000002 "t" "132092"
-/script GetRaidTarget("target", 6)
+VER 3 0000000001000004 "mouseover" "132248"
+#showtooltip
+/cast [target=mouseover,nomodifier,exists]变形术;变形术
 END
-VER 3 0000000001000001 "target" "INV_MISC_QUESTIONMARK"
-/target 巨
-/script SetRaidTarget("target",6)
-/console cameraDistanceMaxZoomFactor 4
+VER 3 0000000001000003 "stopcasting" "135856"
+/stopcasting
+/cast 法术反制
+END
+VER 3 0000000001000005 "targettarget" "132317"
+#showtooltip targettarget
+/cast [harm][@targettarget,harm] 寒冰箭
 END

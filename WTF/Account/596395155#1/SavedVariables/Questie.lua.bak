@@ -70,8 +70,10 @@ QuestieConfig = {
 				[5264] = true,
 				[1065] = true,
 				[1066] = true,
+				[6805] = true,
 				[4767] = true,
 				[1069] = true,
+				[6821] = true,
 				[6322] = true,
 				[6324] = true,
 				[7861] = true,
@@ -161,25 +163,26 @@ QuestieConfig = {
 				[358] = true,
 				[422] = true,
 				[55296] = true,
-				[844] = true,
 				[8311] = true,
+				[844] = true,
 				[7848] = true,
+				[2770] = true,
 				[1943] = true,
 				[845] = true,
-				[2770] = true,
-				[590] = true,
 				[7463] = true,
+				[590] = true,
+				[478] = true,
 				[2865] = true,
 				[5213] = true,
-				[478] = true,
+				[7044] = true,
 				[1947] = true,
 				[424] = true,
 				[1948] = true,
-				[7044] = true,
+				[359] = true,
 				[1949] = true,
 				[848] = true,
 				[1950] = true,
-				[359] = true,
+				[6504] = true,
 				[1951] = true,
 				[425] = true,
 				[1952] = true,
@@ -199,7 +202,7 @@ QuestieConfig = {
 				[5265] = true,
 				[853] = true,
 				[1960] = true,
-				[6504] = true,
+				[6804] = true,
 				[6503] = true,
 				[1195] = true,
 				[6461] = true,
@@ -5061,6 +5064,89 @@ QuestieConfig = {
 					["SubType"] = "Complete",
 					["Event"] = "Quest",
 				}, -- [400]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "华佗",
+							["Level"] = 60,
+						}, -- [1]
+						{
+							["Class"] = "牧师",
+							["Name"] = "华佗",
+							["Level"] = 60,
+						}, -- [2]
+						{
+							["Class"] = "牧师",
+							["Name"] = "华佗",
+							["Level"] = 60,
+						}, -- [3]
+						{
+							["Class"] = "牧师",
+							["Name"] = "华佗",
+							["Level"] = 60,
+						}, -- [4]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 60,
+					["Quest"] = 5582,
+					["Timestamp"] = 1573233836,
+				}, -- [401]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 60,
+					["Quest"] = 6805,
+					["Timestamp"] = 1573236474,
+				}, -- [402]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 60,
+					["Quest"] = 6804,
+					["Timestamp"] = 1573236478,
+				}, -- [403]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 60,
+					["Quest"] = 6821,
+					["Timestamp"] = 1573236512,
+				}, -- [404]
+				{
+					["Party"] = {
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 60,
+					["Quest"] = 5582,
+					["Timestamp"] = 1573236990,
+				}, -- [405]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1573401538,
+					["Quest"] = 6821,
+					["Level"] = 60,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [406]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1573401540,
+					["Quest"] = 6822,
+					["Level"] = 60,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [407]
 			},
 			["TrackerHiddenObjectives"] = {
 			},

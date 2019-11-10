@@ -57,9 +57,8 @@ local ROW_COLUMN_MAX = 32
 
 local hintString = "|cffffffff%s:|r %s"
 local hintText = {
-	L["AutoBar"],
+	"AutoBar",
 	hintString:format(L["Left-Click"], L["Options GUI"]),
-	--hintString:format(L["Right-Click"], L["Dropdown UI"]),
 	hintString:format(L["Alt-Click"], L["Key Bindings"]),
 	hintString:format(L["Ctrl-Click"], L["Move the Buttons"]),
 	hintString:format(L["Shift-Click"], L["Move the Bars"]),
@@ -100,7 +99,7 @@ function AutoBar:InitializeOptions()
 	self:CreateSmallOptions()
 
 	self.options.args.config = {
-		name = L["AutoBar"],
+		name = "AutoBar",
 		desc = L["Toggle the config panel"],
 		wfHidden = true,
 		type = "execute",
@@ -112,7 +111,7 @@ function AutoBar:InitializeOptions()
 			type = "launcher",
 			icon = "Interface\\Icons\\INV_Ingot_Eternium",
 			tocname = "AutoBar",
-			label = L["AutoBar"],
+			label = "AutoBar",
 			OnClick = LDBOnClick,
 			OnTooltipShow = function(tooltip)
 				if (dewdrop and dewdrop:GetOpenedParent()) then
@@ -135,6 +134,7 @@ function AutoBar:InitializeOptions()
 			self.optionsMain.args.main.args.ldbIcon = {
 				type = "toggle",
 				order = 199,
+				width = 1.2,
 				name = L["Show Minimap Icon"],
 				desc = L["Show Minimap Icon"],
 				get = function() return not AutoBar.db.account.ldbIcon.hide end,
@@ -1217,7 +1217,7 @@ end
 
 
 function AutoBar:CreateOptionsAce3()
-	local name = L["AutoBar"]
+	local name = "AutoBar"
 	if (not AutoBar.optionsMain) then
 		AutoBar.optionsMain = {
 			type = "group",
@@ -1226,18 +1226,19 @@ function AutoBar:CreateOptionsAce3()
 				main = {
 					type = "group",
 					order = 10,
-					name = L["AutoBar"],
+					name = "AutoBar",
 					get = getAutoBarValue,
 					set = setAutoBarValue,
 					args = {
 						header0 = {
 							type = "header",
 							order = 0,
-							name = L["AutoBar"] .. " " .. AutoBar.version,
+							name = "AutoBar" .. " " .. AutoBar.version,
 						},
 						moveBarsMode = {
 							type = "execute",
 							order = 1,
+							width = 1.2,
 							name = L["Move the Bars"],
 							desc = L["Drag a bar to move it, left click to hide (red) or show (green) the bar, right click to configure the bar."],
 							func = AutoBar.MoveBarModeToggle,
@@ -1246,6 +1247,7 @@ function AutoBar:CreateOptionsAce3()
 						moveButtonsMode = {
 							type = "execute",
 							order = 2,
+							width = 1.2,
 							name = L["Move the Buttons"],
 							desc = L["Drag a Button to move it, right click to configure the Button."],
 							func = AutoBar.MoveButtonsModeToggle,
@@ -1254,6 +1256,7 @@ function AutoBar:CreateOptionsAce3()
 						keyBoundMode = {
 							type = "execute",
 							order = 3,
+							width = 1.2,
 							name = L["Key Bindings"],
 							desc = L["Assign Bindings for Buttons on your Bars."],
 							func = LibKeyBound.Toggle,
@@ -1267,6 +1270,7 @@ function AutoBar:CreateOptionsAce3()
 						clampedToScreen = {
 							type = "toggle",
 							order = 161,
+							width = 1.2,
 							name = L["Clamp Bars to screen"],
 							desc = L["Clamped Bars can not be positioned off screen"],
 						},
@@ -1278,6 +1282,7 @@ function AutoBar:CreateOptionsAce3()
 						showEmptyButtons = {
 							type = "toggle",
 							order = 311,
+							width = 1.2,
 							name = L["Show Empty Buttons"],
 							desc = L["Show Empty Buttons for %s"]:format(name),
 							tristate = true,
@@ -1285,6 +1290,7 @@ function AutoBar:CreateOptionsAce3()
 						showCount = {
 							type = "toggle",
 							order = 321,
+							width = 1.2,
 							name = L["Show Count Text"],
 							desc = L["Show Count Text for %s"]:format(name),
 							tristate = true,
@@ -1292,6 +1298,7 @@ function AutoBar:CreateOptionsAce3()
 						showHotkey = {
 							type = "toggle",
 							order = 331,
+							width = 1.2,
 							name = L["Show Hotkey Text"],
 							desc = L["Show Hotkey Text for %s"]:format(name),
 							tristate = true,
@@ -1299,6 +1306,7 @@ function AutoBar:CreateOptionsAce3()
 						showTooltip = {
 							type = "toggle",
 							order = 341,
+							width = 1.2,
 							name = L["Show Tooltips"],
 							desc = L["Show Tooltips for %s"]:format(name),
 							tristate = true,
@@ -1306,6 +1314,7 @@ function AutoBar:CreateOptionsAce3()
 						showTooltipCombat = {
 							type = "toggle",
 							order = 342,
+							width = 1.2,
 							name = L["Show Tooltips in Combat"],
 							tristate = true,
 							disabled = getTooltipDisabled,
@@ -1313,6 +1322,7 @@ function AutoBar:CreateOptionsAce3()
 						selfCastRightClick = {
 							type = "toggle",
 							order = 361,
+							width = 1.2,
 							name = L["RightClick SelfCast"],
 							desc = L["SelfCast using Right click"],
 							tristate = true,
@@ -1413,38 +1423,45 @@ function AutoBar:CreateOptionsAce3()
 						performance = {
 							type = "toggle",
 							order = 501,
+							width = 1.2,
 							name = L["Log Performance"],
 						},
 						logEvents = {
 							type = "toggle",
 							order = 502,
+							width = 1.2,
 							name = L["Log Events"],
 						},
 						logMemory = {
 							type = "toggle",
 							order = 503,
+							width = 1.2,
 							name = L["Log Memory"],
 						},
 						handle_spell_changed = {
 							type = "toggle",
 							order = 504,
+							width = 1.2,
 							name = "Allow SPELLS_CHANGED",
 							desc = "If unchecked some spell-related messages will be ignored. This will improve performance, but may cause side-effects",
 						},
 						hack_PetActionBarFrame = {
 							type = "toggle",
 							order = 505,
+							width = 1.2,
 							name = "Hack PetActionBarFrame",
 							desc = "Blizzard's PetActionBarFrame is larger than it looks and can block access to other things near it. When enabled this will make the frame ignore the Mouse",
 						},
 						log_throttled_events = {
 							type = "toggle",
 							order = 540,
+							width = 1.2,
 							name = "Log Throttled Events"
 						},
 						throttle_event_limit = {
 							type = "range",
 							order = 541,
+							width = 1.2,
 							name = "Throttle Event Limit",
 							desc = "Events happening faster than this limit are ignored (in seconds)",
 							min = 0, max = 10, step = 0.1, bigStep = 0.5,
@@ -1465,11 +1482,12 @@ function AutoBar:CreateOptionsAce3()
 						    func = AutoBar.CategoryNew,
 						},
 						categoryReset = {
-						    type = "execute",
+							type = "execute",
 							order = 2,
-						    name = L["Reset"],
-						    desc = L["ResetCategoryDescription"],
-						    func = CategoryReset,
+							name = L["Reset"],
+							desc = L["ResetCategoryDescription"],
+							func = CategoryReset,
+							disabled = true,
 						},
 					}
 				},
@@ -1520,7 +1538,7 @@ function AutoBar:CreateOptionsAce3()
 				config = {
 					type = "execute",
 					order = 50,
-					name = L["AutoBar"],
+					name = "AutoBar",
 					desc = L["Toggle the config panel"],
 					guiHidden = true,
 					func = AutoBar.OpenOptions,
@@ -2892,7 +2910,7 @@ end
 
 
 function AutoBar:CreateSmallOptions()
-	local name = L["AutoBar"]
+	local name = "AutoBar"
 	if (not AutoBar.options) then
 		AutoBar.options = {
 			type = "group",
@@ -2973,11 +2991,12 @@ function AutoBar:CreateSmallOptions()
 						    func = AutoBar.CategoryNew,
 						},
 						categoryReset = {
-						    type = "execute",
+							type = "execute",
 							order = 2,
-						    name = L["Reset"],
-						    desc = L["ResetCategoryDescription"],
-						    func = CategoryReset,
+							name = L["Reset"],
+							desc = L["ResetCategoryDescription"],
+							func = CategoryReset,
+							disabled = true,
 						},
 					}
 				},

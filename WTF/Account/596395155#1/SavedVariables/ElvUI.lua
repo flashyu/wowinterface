@@ -5,7 +5,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 3168205,
+			["Actionscript"] = 3570208,
 		},
 	},
 	["class"] = {
@@ -39,7 +39,7 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 9,
+			["currentTutorial"] = 12,
 			["general"] = {
 				["backdropfadecolor"] = {
 					["a"] = 0.69,
@@ -62,14 +62,15 @@ ElvDB = {
 				["LootFrameMover"] = "BOTTOM,ElvUIParent,BOTTOM,145,382",
 				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,736",
 				["ElvNP_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,230",
+				["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,120",
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-467,4",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-286,186",
-				["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,120",
 				["ShiftAB"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,883",
 				["ElvUIBagMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,182",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-249,220",
-				["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,207",
 				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,176",
+				["ElvUF_PartyMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,207",
+				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-31",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,270,220",
 				["TaxiButtonMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,269",
 			},
@@ -174,9 +175,9 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-488,330",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,50,995",
+				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
-				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
 				["ElvUF_PartyMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,184,773",
 				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-50",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,230,140",

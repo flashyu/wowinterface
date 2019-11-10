@@ -37,6 +37,7 @@ AutoBarDB = {
 				["AutoBarButtonConjure"] = {
 					["barKey"] = "AutoBarClassBarMage",
 					["buttonClass"] = "AutoBarButtonConjure",
+					["arrangeOnUse"] = true,
 					["enabled"] = true,
 					["buttonKey"] = "AutoBarButtonConjure",
 					["defaultButtonIndex"] = "*",
@@ -65,14 +66,14 @@ AutoBarDB = {
 					["noPopup"] = true,
 				},
 				["AutoBarButtonShields"] = {
-					["enabled"] = true,
-					["max_popup_height"] = 1,
+					["barKey"] = "AutoBarClassBarMage",
+					["drag"] = false,
 					["buttonKey"] = "AutoBarButtonShields",
 					["defaultButtonIndex"] = "*",
 					["arrangeOnUse"] = true,
 					["buttonClass"] = "AutoBarButtonShields",
-					["barKey"] = "AutoBarClassBarMage",
-					["drag"] = false,
+					["enabled"] = true,
+					["max_popup_height"] = 1,
 				},
 				["AutoBarButtonClassBuff"] = {
 					["barKey"] = "AutoBarClassBarMage",
@@ -85,7 +86,7 @@ AutoBarDB = {
 			},
 		},
 	},
-	["whatsnew_version"] = "1.13.2.08",
+	["whatsnew_version"] = "1.13.2.09",
 	["account"] = {
 		["barList"] = {
 			["AutoBarClassBarBasic"] = {
@@ -243,13 +244,14 @@ AutoBarDB = {
 				["defaultButtonIndex"] = 16,
 			},
 			["AutoBarButtonFood"] = {
-				["barKey"] = "AutoBarClassBarBasic",
-				["buttonClass"] = "AutoBarButtonFood",
-				["include_combo_basic"] = true,
 				["disableConjure"] = true,
-				["enabled"] = true,
+				["include_combo_basic"] = true,
 				["buttonKey"] = "AutoBarButtonFood",
 				["defaultButtonIndex"] = 15,
+				["arrangeOnUse"] = true,
+				["buttonClass"] = "AutoBarButtonFood",
+				["enabled"] = true,
+				["barKey"] = "AutoBarClassBarBasic",
 			},
 			["AutoBarButtonSpeed"] = {
 				["barKey"] = "AutoBarClassBarExtras",
@@ -463,11 +465,17 @@ AutoBarDB = {
 	["chars"] = {
 		["Actionscript - 沙尔图拉"] = {
 			["buttonDataList"] = {
+				["AutoBarButtonRaidTarget"] = {
+					["arrangeOnUse"] = "macrotext:8",
+				},
 				["AutoBarButtonBuff"] = {
 					["arrangeOnUse"] = 1180,
 				},
-				["AutoBarButtonRaidTarget"] = {
-					["arrangeOnUse"] = "macrotext:8",
+				["AutoBarButtonConjure"] = {
+					["arrangeOnUse"] = "造水术",
+				},
+				["AutoBarButtonFood"] = {
+					["arrangeOnUse"] = 8076,
 				},
 			},
 			["barList"] = {

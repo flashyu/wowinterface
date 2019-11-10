@@ -12,13 +12,13 @@ CChatNotifier_settings = {
 	["firstStart"] = false,
 }
 CChatNotifier_data = {
-	["stsm血色,斯坦索姆血色,宝珠"] = {
-		["words"] = {
-			"stsm血色", -- [1]
-			"斯坦索姆血色", -- [2]
-			"宝珠", -- [3]
-		},
+	["血色区,宝珠,爱与家庭"] = {
 		["active"] = true,
+		["words"] = {
+			"血色区", -- [1]
+			"宝珠", -- [2]
+			"爱与家庭", -- [3]
+		},
 	},
 	["通灵,tl,TL"] = {
 		["active"] = true,

@@ -51,6 +51,7 @@ ABGCS:CacheSpellData(19883, "Track Humanoids");
 ABGCS:CacheSpellData(19884, "Track Undead");
 ABGCS:CacheSpellData(1494, "Track Beasts");
 ABGCS:CacheSpellData(19885, "Track Hidden");
+ABGCS:CacheSpellData(19878, "Track Demons");
 ABGCS:CacheSpellData(19880, "Track Elementals");
 
 
@@ -61,9 +62,16 @@ ABGCS:CacheSpellData(13795, "Immolation Trap");
 
 --Mage
 ABGCS:CacheSpellData(168, "Frost Armor");
+ABGCS:CacheSpellData(7302, "Ice Armor");
 ABGCS:CacheSpellData(1459, "Arcane Intellect");
 ABGCS:CacheSpellData(5504, "Conjure Water");
 ABGCS:CacheSpellData(587, "Conjure Food");
+
+ABGCS:CacheSpellData(759, "Conjure Mana Agate");
+ABGCS:CacheSpellData(10054, "Conjure Mana Ruby");
+ABGCS:CacheSpellData(3552, "Conjure Mana Jade");
+ABGCS:CacheSpellData(10053, "Conjure Mana Citrine");
+
 
 ABGCS:CacheSpellData(11426, "Ice Barrier");
 ABGCS:CacheSpellData(130, "Slow Fall");
