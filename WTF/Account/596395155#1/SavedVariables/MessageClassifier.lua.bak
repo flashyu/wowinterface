@@ -4,20 +4,20 @@ MessageClassifierConfig = {
 	},
 	["defRulHideFromChatWindow"] = {
 	},
-	["minDupInterval"] = 0,
-	["enabled"] = true,
 	["classificationRules"] = {
 		{
 			["enabled"] = false,
 			["conditions"] = {
 				{
 					["value"] = "xxx",
-					["field"] = "content",
 					["operator"] = "contain",
+					["field"] = "content",
 				}, -- [1]
 			},
 			["tmp"] = true,
 			["class"] = "xxx/{author}",
 		}, -- [1]
 	},
+	["enabled"] = true,
+	["minDupInterval"] = 0,
 }
