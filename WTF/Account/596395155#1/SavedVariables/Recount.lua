@@ -13,6 +13,7 @@ RecountDB = {
 					["h"] = 172.999954223633,
 				},
 			},
+			["MainWindowHeight"] = 173.207977294922,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -23,10 +24,9 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "怒焰裂谷",
+			["LastInstanceName"] = "玛拉顿",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
-			["MainWindowHeight"] = 173.207977294922,
 		},
 	},
 }
