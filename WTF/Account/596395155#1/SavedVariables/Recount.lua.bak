@@ -24,7 +24,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "玛拉顿",
+			["LastInstanceName"] = "沉没的神庙",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
 		},

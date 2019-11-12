@@ -37,7 +37,7 @@ AutoBarDB = {
 				["AutoBarButtonConjure"] = {
 					["barKey"] = "AutoBarClassBarMage",
 					["buttonClass"] = "AutoBarButtonConjure",
-					["arrangeOnUse"] = true,
+					["arrangeOnUse"] = false,
 					["enabled"] = true,
 					["buttonKey"] = "AutoBarButtonConjure",
 					["defaultButtonIndex"] = "*",
@@ -106,9 +106,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["MAGE"] = true,
 				["WARRIOR"] = true,
-				["buttonWidth"] = 36,
-				["alpha"] = 1,
 				["PRIEST"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["posY"] = 114.69846258976,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -122,7 +122,7 @@ AutoBarDB = {
 					"AutoBarButtonRecovery", -- [9]
 				},
 				["WARLOCK"] = true,
-				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 				["scale"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -145,9 +145,9 @@ AutoBarDB = {
 				["posY"] = 162.042101905452,
 				["HUNTER"] = true,
 				["columns"] = 9,
-				["frameStrata"] = "LOW",
 				["alpha"] = 1,
-				["buttonWidth"] = 36,
+				["frameStrata"] = "LOW",
+				["PRIEST"] = true,
 				["buttonKeys"] = {
 					"AutoBarButtonRaidTarget", -- [1]
 					"AutoBarButtonSpeed", -- [2]
@@ -162,7 +162,7 @@ AutoBarDB = {
 				},
 				["PALADIN"] = true,
 				["WARLOCK"] = true,
-				["PRIEST"] = true,
+				["buttonWidth"] = 36,
 				["WARRIOR"] = true,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -472,10 +472,9 @@ AutoBarDB = {
 					["arrangeOnUse"] = 1180,
 				},
 				["AutoBarButtonConjure"] = {
-					["arrangeOnUse"] = "造水术",
 				},
 				["AutoBarButtonFood"] = {
-					["arrangeOnUse"] = 8079,
+					["arrangeOnUse"] = 8076,
 				},
 			},
 			["barList"] = {

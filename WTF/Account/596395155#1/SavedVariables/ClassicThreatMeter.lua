@@ -51,27 +51,27 @@ CTM_Options = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
-		["locked"] = false,
 		["test"] = false,
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
 		["height"] = 161,
-		["color"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.35, -- [4]
-		},
 		["position"] = {
 			"TOPLEFT", -- [1]
 			"UIParent", -- [2]
 			"TOPLEFT", -- [3]
 			6.3817310333252, -- [4]
 			-29.3576393127441, -- [5]
+		},
+		["locked"] = false,
+		["color"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.35, -- [4]
+		},
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
 		},
 		["strata"] = "3-MEDIUM",
 	},
