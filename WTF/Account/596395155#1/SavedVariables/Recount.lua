@@ -7,12 +7,13 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 220.263610839844,
-					["x"] = -757.713738799095,
+					["y"] = 220.263580322266,
+					["x"] = -757.713760375977,
 					["w"] = 217,
-					["h"] = 172.999954223633,
+					["h"] = 173.000061035156,
 				},
 			},
+			["MainWindowHeight"] = 173.207977294922,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -26,7 +27,6 @@ RecountDB = {
 			["LastInstanceName"] = "沉没的神庙",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
-			["MainWindowHeight"] = 173.207977294922,
 		},
 	},
 }
