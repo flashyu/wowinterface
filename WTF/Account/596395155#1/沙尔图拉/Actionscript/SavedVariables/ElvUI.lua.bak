@@ -1,116 +1,28 @@
 
 ElvCharacterDB = {
 	["ChatEditHistory"] = {
-		"/p 直接杀吧", -- [1]
-		"/p 没有", -- [2]
-		"/p 来", -- [3]
-		"/p 。。", -- [4]
-		"/p 包了", -- [5]
-		"/p 睡觉", -- [6]
-		"/p 要是这个爆率 不如玛拉顿", -- [7]
-		"/p boss怎么不出东西 这个要查一下", -- [8]
-		"/p 奶奶的", -- [9]
-		"/p 睡吧", -- [10]
-		"/p 。。。", -- [11]
-		"/p 明天不继续么？", -- [12]
-		"/p 我打字呢", -- [13]
-		"/p 哇塞", -- [14]
-		"/p 下了", -- [15]
-		"/coolline", -- [16]
-		"/ccc unlock", -- [17]
-		"/ccc", -- [18]
-		"/ccc lock", -- [19]
-		"/autobar config", -- [20]
+		"/p 来", -- [1]
+		"/p 。。", -- [2]
+		"/p 包了", -- [3]
+		"/p 睡觉", -- [4]
+		"/p 要是这个爆率 不如玛拉顿", -- [5]
+		"/p boss怎么不出东西 这个要查一下", -- [6]
+		"/p 奶奶的", -- [7]
+		"/p 睡吧", -- [8]
+		"/p 。。。", -- [9]
+		"/p 明天不继续么？", -- [10]
+		"/p 我打字呢", -- [11]
+		"/p 哇塞", -- [12]
+		"/p 下了", -- [13]
+		"/coolline", -- [14]
+		"/ccc unlock", -- [15]
+		"/ccc", -- [16]
+		"/ccc lock", -- [17]
+		"/autobar config", -- [18]
+		"/cw 槐花-沙尔图拉 客气", -- [19]
+		"/cw 绯红男巫-沙尔图拉 求问这个一般多少钱", -- [20]
 	},
 	["ChatHistoryLog"] = {
-		{
-			"。。。。", -- [1]
-			"Actionscript-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Actionscript", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			22888, -- [11]
-			"Player-4511-00A04559", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaActionscript|r",
-			[51] = 1573491274,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [1]
-		{
-			"删大了 哈哈", -- [1]
-			"Actionscript-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Actionscript", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			22906, -- [11]
-			"Player-4511-00A04559", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaActionscript|r",
-			[51] = 1573491282,
-			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [2]
-		{
-			"？？", -- [1]
-			"西加加-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"西加加", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			22927, -- [11]
-			"Player-4511-00AFD4B6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffff西加加|r",
-			[51] = 1573491291,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [3]
-		{
-			"哈哈", -- [1]
-			"西加加-沙尔图拉", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"西加加", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			22947, -- [11]
-			"Player-4511-00AFD4B6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffff西加加|r",
-			[51] = 1573491301,
-			[50] = "CHAT_MSG_PARTY",
-		}, -- [4]
 		{
 			"|cffffffff|Hitem:8529::::::::60:::::::|h[诺格弗格药剂]|h|r", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -132,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491320,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [5]
+		}, -- [1]
 		{
 			"hf", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -154,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491325,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [6]
+		}, -- [2]
 		{
 			"go", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -176,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491353,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [7]
+		}, -- [3]
 		{
 			"杀玩意", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -198,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491363,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [8]
+		}, -- [4]
 		{
 			"这里有个boss", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -220,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491366,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [9]
+		}, -- [5]
 		{
 			"也掉", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -242,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491369,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [10]
+		}, -- [6]
 		{
 			"干 哪里", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -264,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491375,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [11]
+		}, -- [7]
 		{
 			"忘了咋杀了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -286,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491380,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [12]
+		}, -- [8]
 		{
 			"我没看到boss", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -308,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491390,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [13]
+		}, -- [9]
 		{
 			"要开祭坛", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -330,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491394,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [14]
+		}, -- [10]
 		{
 			"。。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -352,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491396,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [15]
+		}, -- [11]
 		{
 			"开", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -374,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491399,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [16]
+		}, -- [12]
 		{
 			"我开 你远一点", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -396,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491405,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [17]
+		}, -- [13]
 		{
 			"开祭坛要宝石的", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -418,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491407,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [18]
+		}, -- [14]
 		{
 			"。。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -440,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491411,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [19]
+		}, -- [15]
 		{
 			"出去 再来一次 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -462,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491419,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [20]
+		}, -- [16]
 		{
 			"不行 睡觉了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -484,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491422,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [21]
+		}, -- [17]
 		{
 			"。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -506,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491428,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [22]
+		}, -- [18]
 		{
 			"走", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -528,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491436,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [23]
+		}, -- [19]
 		{
 			"别人都刷的带劲", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -550,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491439,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [24]
+		}, -- [20]
 		{
 			"1", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -572,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491506,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [25]
+		}, -- [21]
 		{
 			"必须单杀？", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -594,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491516,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [26]
+		}, -- [22]
 		{
 			"要不我单杀 你看着", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -616,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491562,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [27]
+		}, -- [23]
 		{
 			"我觉得你够强啊", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -638,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491576,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [28]
+		}, -- [24]
 		{
 			"这都出东西", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -660,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491597,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [29]
+		}, -- [25]
 		{
 			"。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -682,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491707,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [30]
+		}, -- [26]
 		{
 			"不对 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -704,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491774,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [31]
+		}, -- [27]
 		{
 			"来", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -726,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491775,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [32]
+		}, -- [28]
 		{
 			"一个来回不输出 就跑了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -748,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491780,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [33]
+		}, -- [29]
 		{
 			"你路线不对", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -770,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491787,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [34]
+		}, -- [30]
 		{
 			"你如果走到这里 就脱战了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -792,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491806,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [35]
+		}, -- [31]
 		{
 			"提前下", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -814,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491813,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [36]
+		}, -- [32]
 		{
 			"哦 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -836,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491817,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [37]
+		}, -- [33]
 		{
 			"这样绕", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -858,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491826,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [38]
+		}, -- [34]
 		{
 			"ok", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -880,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491844,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [39]
+		}, -- [35]
 		{
 			"我试试", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -902,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491894,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [40]
+		}, -- [36]
 		{
 			"不行就脱战", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -924,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491913,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [41]
+		}, -- [37]
 		{
 			"!@#$%^俩 靠", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -946,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491957,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [42]
+		}, -- [38]
 		{
 			"没位移 还是恶心点", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -968,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573491963,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [43]
+		}, -- [39]
 		{
 			"上", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -990,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573491968,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [44]
+		}, -- [40]
 		{
 			"哎呦", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1012,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492098,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [45]
+		}, -- [41]
 		{
 			"这特么啥情况", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1034,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492108,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [46]
+		}, -- [42]
 		{
 			"哎呦", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1056,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492119,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [47]
+		}, -- [43]
 		{
 			"哈哈 继续", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1078,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492126,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [48]
+		}, -- [44]
 		{
 			"怎么弄得", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1100,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492129,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [49]
+		}, -- [45]
 		{
 			"&*!@#$都是玄学", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1122,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492142,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [50]
+		}, -- [46]
 		{
 			"保本睡觉", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1144,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492204,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [51]
+		}, -- [47]
 		{
 			"这本刷钱不错啊的", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1166,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492228,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [52]
+		}, -- [48]
 		{
 			"武器4G", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1188,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492238,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [53]
+		}, -- [49]
 		{
 			"刚才发生什么了 出东西了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1210,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492279,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [54]
+		}, -- [50]
 		{
 			"难道是你单刷了一次 我单刷了一次？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1232,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492294,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [55]
+		}, -- [51]
 		{
 			"就是打的慢而已", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1254,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492298,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [56]
+		}, -- [52]
 		{
 			"还是先引着脱战", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1276,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492307,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [57]
+		}, -- [53]
 		{
 			"1", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1298,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492320,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [58]
+		}, -- [54]
 		{
 			"打的太快", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1320,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492383,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [59]
+		}, -- [55]
 		{
 			"不出东西", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1342,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492387,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [60]
+		}, -- [56]
 		{
 			"哦 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1364,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492394,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [61]
+		}, -- [57]
 		{
 			"慢慢打", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1386,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492396,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [62]
+		}, -- [58]
 		{
 			"脱战", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1408,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492452,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [63]
+		}, -- [59]
 		{
 			"怎么慢慢打呢？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1430,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492481,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [64]
+		}, -- [60]
 		{
 			"。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1452,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492651,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [65]
+		}, -- [61]
 		{
 			"。。。。。。。。。。。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1474,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492653,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [66]
+		}, -- [62]
 		{
 			"下次", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1496,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492667,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [67]
+		}, -- [63]
 		{
 			"99", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1518,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492738,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [68]
+		}, -- [64]
 		{
 			"。。。。这么突然么", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1540,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492771,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [69]
+		}, -- [65]
 		{
 			"打字呢", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1562,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492780,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [70]
+		}, -- [66]
 		{
 			"爆本了么", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1584,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492803,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [71]
+		}, -- [67]
 		{
 			"我是老年人%^&作", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1606,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492806,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [72]
+		}, -- [68]
 		{
 			"没 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1628,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492823,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [73]
+		}, -- [69]
 		{
 			"来吧", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1650,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492826,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [74]
+		}, -- [70]
 		{
 			"一个人杀死 是不是没事", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1672,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492840,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [75]
+		}, -- [71]
 		{
 			"俩BOSS都你杀", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1694,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492849,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [76]
+		}, -- [72]
 		{
 			"没明白", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1716,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492851,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [77]
+		}, -- [73]
 		{
 			"啊 还有这个要求？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1738,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492859,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [78]
+		}, -- [74]
 		{
 			"太巧了 每次都是一人一个", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1760,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573492867,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [79]
+		}, -- [75]
 		{
 			"玄学", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1782,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573492879,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [80]
+		}, -- [76]
 		{
 			"是不是都要慢点打", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1804,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493036,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [81]
+		}, -- [77]
 		{
 			"不是", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1826,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493046,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [82]
+		}, -- [78]
 		{
 			"我搜了 好像就是什么都不掉", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1848,7 +1760,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493055,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [83]
+		}, -- [79]
 		{
 			"没水了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1870,7 +1782,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493057,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [84]
+		}, -- [80]
 		{
 			"。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1892,7 +1804,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493062,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [85]
+		}, -- [81]
 		{
 			"什么都不掉几率踢打了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1914,7 +1826,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493150,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [86]
+		}, -- [82]
 		{
 			"*!@#$%了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1936,7 +1848,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493153,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [87]
+		}, -- [83]
 		{
 			"两只 还是", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -1958,7 +1870,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493157,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [88]
+		}, -- [84]
 		{
 			"感觉还是挺奇怪的 还是得查查", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -1980,7 +1892,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493257,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [89]
+		}, -- [85]
 		{
 			"我打死哈", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2002,7 +1914,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493283,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [90]
+		}, -- [86]
 		{
 			"是不是不能死在台阶上", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2024,7 +1936,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493360,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [91]
+		}, -- [87]
 		{
 			"eyah", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2046,7 +1958,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493361,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [92]
+		}, -- [88]
 		{
 			"。。。。。。。。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2068,7 +1980,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493369,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [93]
+		}, -- [89]
 		{
 			"杀吧", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2090,7 +2002,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573493467,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [94]
+		}, -- [90]
 		{
 			"我啦走", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2112,7 +2024,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493468,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [95]
+		}, -- [91]
 		{
 			"1", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2134,7 +2046,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493556,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [96]
+		}, -- [92]
 		{
 			"干", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2156,7 +2068,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493605,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [97]
+		}, -- [93]
 		{
 			"来", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2178,7 +2090,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493672,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [98]
+		}, -- [94]
 		{
 			"直接干", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2200,7 +2112,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493706,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [99]
+		}, -- [95]
 		{
 			"出东西的话 就是玄学 不管了", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2222,7 +2134,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493720,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [100]
+		}, -- [96]
 		{
 			"别死台阶上", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2244,7 +2156,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493732,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [101]
+		}, -- [97]
 		{
 			"先小的", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2266,7 +2178,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493786,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [102]
+		}, -- [98]
 		{
 			"直接杀吧", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2288,7 +2200,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493867,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [103]
+		}, -- [99]
 		{
 			"没有", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2310,7 +2222,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493883,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [104]
+		}, -- [100]
 		{
 			"。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2332,7 +2244,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493884,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [105]
+		}, -- [101]
 		{
 			"来", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2354,7 +2266,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493970,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [106]
+		}, -- [102]
 		{
 			"。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2376,7 +2288,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573493989,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [107]
+		}, -- [103]
 		{
 			"包了 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2398,7 +2310,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494069,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [108]
+		}, -- [104]
 		{
 			"睡觉", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2420,7 +2332,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494072,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [109]
+		}, -- [105]
 		{
 			"太难了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2442,7 +2354,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494073,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [110]
+		}, -- [106]
 		{
 			"要是这个爆率 不如玛拉顿", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2464,7 +2376,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494087,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [111]
+		}, -- [107]
 		{
 			"对啊", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2486,7 +2398,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494095,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [112]
+		}, -- [108]
 		{
 			"boss怎么不出东西 这个要查一下", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2508,7 +2420,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494096,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [113]
+		}, -- [109]
 		{
 			"为啥啊", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2530,7 +2442,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494097,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [114]
+		}, -- [110]
 		{
 			"奶奶的", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2552,7 +2464,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494103,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [115]
+		}, -- [111]
 		{
 			"睡吧", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2574,7 +2486,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494107,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [116]
+		}, -- [112]
 		{
 			"AG", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2596,7 +2508,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494110,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [117]
+		}, -- [113]
 		{
 			"。。。", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2618,7 +2530,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494128,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [118]
+		}, -- [114]
 		{
 			"。。。", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2640,7 +2552,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494128,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [119]
+		}, -- [115]
 		{
 			"明天不继续么？", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2662,7 +2574,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494132,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [120]
+		}, -- [116]
 		{
 			"我打字呢", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2684,7 +2596,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494134,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [121]
+		}, -- [117]
 		{
 			"这个爆率 继续毛线啊", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2706,7 +2618,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494142,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [122]
+		}, -- [118]
 		{
 			"|cff0070dd|Hitem:10504::::::1861:211754752:60:::::::|h[暗影惩戒之绿色透镜]|h|r", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2728,7 +2640,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494222,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [123]
+		}, -- [119]
 		{
 			"哇塞", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2750,7 +2662,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494273,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [124]
+		}, -- [120]
 		{
 			"|cff0070dd|Hitem:10504::::::1861:211754752:60:::::::|h[暗影惩戒之绿色透镜]|h|r", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2772,7 +2684,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494274,
 			[50] = "CHAT_MSG_PARTY",
-		}, -- [125]
+		}, -- [121]
 		{
 			"下了 ", -- [1]
 			"Actionscript-沙尔图拉", -- [2]
@@ -2794,7 +2706,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaActionscript|r",
 			[51] = 1573494278,
 			[50] = "CHAT_MSG_PARTY_LEADER",
-		}, -- [126]
+		}, -- [122]
 		{
 			"下了", -- [1]
 			"西加加-沙尔图拉", -- [2]
@@ -2816,6 +2728,94 @@ ElvCharacterDB = {
 			[52] = "|cffffffff西加加|r",
 			[51] = 1573494285,
 			[50] = "CHAT_MSG_PARTY",
+		}, -- [123]
+		{
+			"法爷给组吃的呗", -- [1]
+			"槐花-沙尔图拉", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"槐花", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			275, -- [11]
+			"Player-4511-0098EB1E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6d槐花|r",
+			[51] = 1573521716,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [124]
+		{
+			"万分感谢", -- [1]
+			"槐花-沙尔图拉", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"槐花", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			329, -- [11]
+			"Player-4511-0098EB1E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6d槐花|r",
+			[51] = 1573521742,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [125]
+		{
+			"客气", -- [1]
+			"槐花-沙尔图拉", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"槐花", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			337, -- [11]
+			"Player-4511-0098EB1E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6d槐花|r",
+			[51] = 1573521745,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
+		}, -- [126]
+		{
+			"求问这个一般多少钱", -- [1]
+			"绯红男巫-沙尔图拉", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"绯红男巫", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			2723, -- [11]
+			"Player-4511-009582CC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6ea绯红男巫|r",
+			[51] = 1573522973,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [127]
 	},
 }

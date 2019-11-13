@@ -6,16 +6,16 @@ TradeLog_TradesHistory = {
 		["id"] = 1,
 		["playerItems"] = {
 			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["name"] = "魔法甜面包",
 				["numItems"] = 20,
-				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
-				["texture"] = 133989,
 			}, -- [1]
 			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["name"] = "魔法甜面包",
 				["numItems"] = 20,
-				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
-				["texture"] = 133989,
 			}, -- [2]
 		},
 		["targetItems"] = {
@@ -28,12 +28,31 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "槐花",
 		["when"] = "2019-11-12 09:22:18",
-		["where"] = "费伍德森林",
 		["result"] = "complete",
+		["where"] = "费伍德森林",
 	}, -- [1]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 2,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "豆豆是大领主",
+		["when"] = "2019-11-13 09:49:00",
+		["where"] = "幽暗城",
+		["result"] = "complete",
+	}, -- [2]
 }
 TRADE_LOG_BUTTON_POS = 190
-TradeLog_Announce_Checked = nil
+TradeLog_Announce_Checked = true
 TradeLog_AnnounceChannel = "WHISPER"
 TBT_CurrentPortal = {
 	"传送门：奥格瑞玛", -- [1]
