@@ -94,6 +94,8 @@ L["SelectFont"] = "폰트 설정"
 L["SelectFontDescription"] = "Spy 창의 폰트를 선택하세요."
 L["RowHeight"] = "열 높이 설정"
 L["RowHeightDescription"] = "Spy 창의 열 높이를 설정하세요."
+L["Texture"] = "질감 배경"
+L["TextureDescription"] = "Spy 창의 질감을 선택하십시오"
 
 L["AlertOptions"] = "경고"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "근접한 적 목록을 표시하지 않을 �
 L["PrioritiseKoS"] = "살생부 명단에 있는 근접한 적을 우선 표시"
 L["PrioritiseKoSDescription"] = "살생부 명단에 있는 적을 근접한 적 목록의 최우선으로 표시하려면 체크하십시오."
 
-L["MinimapOptions"] = "지도"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "지도"
+L["MapOptionsDescription"] = [[
 인간형을 추적할 수 있는 플레이어는 미니맵을 사용해 추가 기능을 사용 할 수 있습니다.
 ]]
 L["MinimapTracking"] = "미니맵 트랙킹 활성화"
@@ -294,7 +296,7 @@ L["Player"] = " (플레이어)"
 L["KOSReason"] = "살생부"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "이유를 입력하세요..."
-L["KOSReasonClear"] = "지우기"
+L["KOSReasonClear"] = "이유 지우기"
 L["StatsWins"] = "|cff40ff00승: "
 L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070dd패: "
@@ -433,20 +435,6 @@ L["GOBLIN"] = "고블린"
 --L["DARK IRON DWARF"] = "검은무쇠 드워프"
 --L["MAG'HAR ORC"] = "마그하르 오크"
 
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "FrizQuadrataCTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
-						
 -- Stealth abilities
 L["Stealth"] = "은신"
 L["Prowl"] = "숨기"

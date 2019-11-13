@@ -94,6 +94,8 @@ L["SelectFont"] = "Wählen Sie eine Schriftart"
 L["SelectFontDescription"] = "Wählen Sie eine Schriftart für das Spy-Fenster."
 L["RowHeight"] = "Wählen Sie die Zeilenhöhe aus"
 L["RowHeightDescription"] = "Wählen Sie die Zeilenhöhe für das Spy-Fenster aus."
+L["Texture"] = "Textur"
+L["TextureDescription"] = "Wählen Sie eine Textur für das SPY-Fenster"
  
 L["AlertOptions"] = "Warnungen"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "Stellen Sie hier die Anzeige der In der Nähe-
 L["PrioritiseKoS"] = "Priorisiere feindliche Spieler auf der In der Nähe-Liste, die sofort getötet werden sollen."
 L["PrioritiseKoSDescription"] = "Stellen Sie hier ein, das feindliche Spieler, die sofort getötet werden sollen, immer zuerst  auf der In der Nähe-Liste erscheinen."
  
-L["MinimapOptions"] = "Karte"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "Karte"
+L["MapOptionsDescription"] = [[
 Spieler, die Humanoide verfolgen können, können die Minikarte für zusätzliche Features nutzen.
 ]]
 L["MinimapTracking"] = "Aktiviere Minimap-Tracking"
@@ -294,7 +296,7 @@ L["Player"] = "(Spieler)"
 L["KOSReason"] = "Sofort zu töten"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "Geben Sie Ihren eigenen Grund ein ..."
-L["KOSReasonClear"] = "Löschen"
+L["KOSReasonClear"] = "Löschen Grund"
 L["StatsWins"] = "|cff40ff00Gewinne:"
 L["StatsSeparator"] = ""
 L["StatsLoses"] = "|cff0070ddNiederlagen:"
@@ -433,21 +435,7 @@ L["TROLL"] = "Troll"
 --L["DARK IRON DWARF"] = "Dunkeleisenzwerg"
 --L["MAG'HAR ORC"] = "Mag'har"
  
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "Friz Quadrata CTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
-
- --Stealth Fähigkeiten
+--Stealth Fähigkeiten
 L["Stealth"] = "tarnen"
 L["Prowl"] = "schleichen"
  

@@ -61,7 +61,7 @@ function Spy:CreateFrame(Name, Title, Height, Width, ShowFunc, HideFunc)
 			Spy:SaveMainWindowPosition()
 		end
 	end)
---	end
+
 	theFrame.ShowFunc = ShowFunc
 	theFrame:SetScript("OnShow",
 	function(self)

@@ -266,7 +266,7 @@ function Spy:UpdatePlayerData(name, class, level, race, guild, isEnemy, isGuess)
 	if not playerData then
 		playerData = Spy:AddPlayerData(name, class, level, race, guild, isEnemy, isGuess)
 	else
-		if name ~= nil then playerData.name = name end  --++ added to merge addons
+		if name ~= nil then playerData.name = name end  
 		if class ~= nil then playerData.class = class end
 		if type(level) == "number" then playerData.level = level end
 		if race ~= nil then playerData.race = race end
@@ -850,7 +850,6 @@ function Spy:ParseMinimapTooltip(tooltip)
 	return newTooltip
 end
 
---function Spy:ParseUnitAbility(analyseSpell, event, player, flags, spellId, spellName)
 function Spy:ParseUnitAbility(analyseSpell, event, player, class, race, spellId, spellName)
 	local learnt = false
 	if player then

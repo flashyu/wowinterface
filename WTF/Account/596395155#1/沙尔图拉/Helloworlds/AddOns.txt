@@ -7,7 +7,7 @@ Guidelime: disabled
 DHUD: disabled
 DHUD_Options: disabled
 ClassicCastbars: disabled
-ClassicCastbars_Options: enabled
+ClassicCastbars_Options: disabled
 NeatPlates: disabled
 MessageFiltering: enabled
 Atlas: enabled
@@ -25,7 +25,7 @@ AtlasQuest: enabled
 AutoBarClassic: enabled
 aux-addon: enabled
 ccc: enabled
-CChatNotifier: disabled
+CChatNotifier: enabled
 ClassicCodex: enabled
 ClassicThreatMeter: enabled
 CoolLine: enabled

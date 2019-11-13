@@ -94,6 +94,8 @@ L["SelectFont"] = "Select a Font"
 L["SelectFontDescription"] = "Select a Font for the Spy Window."
 L["RowHeight"] = "Select the Row Height"
 L["RowHeightDescription"] = "Select the Row Height for the Spy window."
+L["Texture"] = "Texture"
+L["TextureDescription"] = "Select a texture for the Spy Window"
 
 L["AlertOptions"] = "Alerts"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "Set this to display the Nearby list if it is n
 L["PrioritiseKoS"] = "Prioritise Kill On Sight enemy players in the Nearby list"
 L["PrioritiseKoSDescription"] = "Set this to always show Kill On Sight enemy players first in the Nearby list."
 
-L["MinimapOptions"] = "Map"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "Map"
+L["MapOptionsDescription"] = [[
 For players who can track humanoids the minimap can be utilised to provide additional features.
 ]]
 L["MinimapTracking"] = "Enable minimap tracking"
@@ -294,7 +296,7 @@ L["Player"] = " (Player)"
 L["KOSReason"] = "Kill On Sight"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "Enter your own reason..."
-L["KOSReasonClear"] = "Clear"
+L["KOSReasonClear"] = "Clear Reason"
 L["StatsWins"] = "|cff40ff00Wins: "
 L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070ddLoses: "
@@ -433,20 +435,6 @@ L["GOBLIN"] = "Goblin"
 --L["DARK IRON DWARF"] = "Dark Iron Dwarf"
 --L["MAG'HAR ORC"] = "Mag'har Orc"
 
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "Friz Quadrata CTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
-						
 -- Stealth abilities
 L["Stealth"] = "Stealth"
 L["Prowl"] = "Prowl"

@@ -247,13 +247,9 @@ end
 function Spy:UpdateBarTextures()
 	for k, v in pairs(Spy.MainWindow.Rows) do
 		v.StatusBar:SetStatusBarTexture(SM:Fetch(SM.MediaType.STATUSBAR, Spy.db.profile.BarTexture))
---		if IsAddOnLoaded("Tukui") then v.StatusBar:SetStatusBarTexture("Interface\\AddOns\\Tukui\\medias\\textures\\normTex.tga") end
---		if IsAddOnLoaded("ElvUI") then v.StatusBar:SetStatusBarTexture("Interface\\AddOns\\ElvUI\\media\\textures\\normTex.tga") end
 	end
-
 	if Spy.db.profile.Font then
 		Spy:SetFont(Spy.db.profile.Font)
---		if IsAddOnLoaded("Tukui") then Spy:SetFont("Interface\AddOns\Tukui\medias\fonts\normal_font.ttf") end
 	end
 end
 
@@ -262,8 +258,6 @@ function Spy:SetBarTextures(handle)
 	Spy.db.profile.BarTexture=handle
 	for k, v in pairs(Spy.MainWindow.Rows) do
 		v.StatusBar:SetStatusBarTexture(Texture)
---		if IsAddOnLoaded("Tukui") then v.StatusBar:SetStatusBarTexture("Interface\\AddOns\\Tukui\\medias\\textures\\normTex.tga") end
---		if IsAddOnLoaded("ElvUI") then v.StatusBar:SetStatusBarTexture("Interface\\AddOns\\ElvUI\\media\\textures\\normTex.tga") end
 	end
 end
 

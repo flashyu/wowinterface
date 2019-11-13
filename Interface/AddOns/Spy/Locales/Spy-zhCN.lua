@@ -94,6 +94,8 @@ L["SelectFont"] = "选择字体"
 L["SelectFontDescription"] = "为Spy选择字体。"
 L["RowHeight"] = "选择列高"
 L["RowHeightDescription"] = "为Spy设置列高度。"
+L["Texture"] = "质地"
+L["TextureDescription"] = "选择Spy窗口的纹理"
  
 L["AlertOptions"] = "警告设置"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "设置侦测到敌对玩家时显示附近列�
 L["PrioritiseKoS"] = "在附近列表中优先显示KOS列表中的敌对玩家"
 L["PrioritiseKoSDescription"] = "设置总在附近列表中优先显示KOS列表中的敌对玩家。"
  
-L["MinimapOptions"] = "小地图选项"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "小地图选项"
+L["MapOptionsDescription"] = [[
 给能够追踪人型生物的玩家提供额外的功能。
 ]]
 L["MinimapTracking"] = "启用小地图追踪"
@@ -294,7 +296,7 @@ L["Player"] = " （玩家）"
 L["KOSReason"] = "KOS即视击杀"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "自行输入原因..."
-L["KOSReasonClear"] = "清除"
+L["KOSReasonClear"] = "清除入原因"
 L["StatsWins"] = "|cff40ff00获胜："
 L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070dd失败："
@@ -433,20 +435,6 @@ L["GOBLIN"] = "Goblin"
 --L["DARK IRON DWARF"] = "Dark Iron Dwarf"
 --L["MAG'HAR ORC"] = "Mag'har Orc"
 
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "Friz Quadrata CTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
-						
 -- Stealth abilities
 L["Stealth"] = "隱形"
 L["Prowl"] = "潛行"

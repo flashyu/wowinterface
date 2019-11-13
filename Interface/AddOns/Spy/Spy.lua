@@ -3,10 +3,11 @@ local HBD = LibStub("HereBeDragons-2.0")
 local HBDP = LibStub("HereBeDragons-Pins-2.0")
 local AceLocale = LibStub("AceLocale-3.0")
 local L = AceLocale:GetLocale("Spy")
+local fonts = SM:List("font")
 local _
 
 Spy = LibStub("AceAddon-3.0"):NewAddon("Spy", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0", "AceTimer-3.0")
-Spy.Version = "1.0.13"
+Spy.Version = "1.0.14"
 Spy.DatabaseVersion = "1.1"
 Spy.Signature = "[Spy]"
 Spy.ButtonLimit = 15
@@ -230,7 +231,6 @@ Spy.options = {
 					order = 7,					
 					width = .6,					
 					func = function()
---						Spy:ResetPositions()
 						C_UI.Reload()
 					end
 				},				
@@ -297,7 +297,7 @@ Spy.options = {
 					name = L["TooltipDisplayWinLoss"],
 					desc = L["TooltipDisplayWinLossDescription"],
 					type = "toggle",
-					order = 10,
+					order = 12,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.DisplayWinLossStatistics
@@ -310,7 +310,7 @@ Spy.options = {
 					name = L["TooltipDisplayKOSReason"],
 					desc = L["TooltipDisplayKOSReasonDescription"],
 					type = "toggle",
-					order = 11,
+					order = 13,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.DisplayKOSReason
@@ -323,7 +323,7 @@ Spy.options = {
 					name = L["TooltipDisplayLastSeen"],
 					desc = L["TooltipDisplayLastSeenDescription"],
 					type = "toggle",
-					order = 12,
+					order = 14,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.DisplayLastSeen
@@ -334,32 +334,25 @@ Spy.options = {
 				},
 				SelectFont = {
 					type = "select",
-					order = 13,
+					order = 15,
 					name = L["SelectFont"],
 					desc = L["SelectFontDescription"],
-					values = { 
-						["2002"] = L["2002"],
-						["2002 Bold"] = L["2002 BOLD"],
-						["Arial Narrow"] = L["ARIAL NARROW"],
-						["AR ZhongkaiGBK Medium"] = L["AR ZhongkaiGBK Medium"],
-						["Big Noodle Titling"] = L["BIG NOODLE TITLING"], 
-						["Expressway"] = L["EXPRESSWAY"],							
-						["Friz Quadrata TT"] = L["FRIZ QUADRATA TT"],
-						["FrizQuadrataCTT"] = L["FRIZQUADRATACTT"],
-						["MoK"] = L["MOK"],
-						["Morpheus"] = L["MORPHEUS"],
-						["Nimrod MT"] = L["NIMROD MT"],
-						["Skurri"] = L["SKURRI"],
-					},
-					get = function() return Spy.db.profile.Font end,
-					set = function(info, value)
-						Spy.db.profile.Font = value
+					values = fonts,
+					get = function()
+						for info, value in next, fonts do
+							if value == Spy.db.profile.Font then
+								return info
+							end
+						end
+					end,
+					set = function(_, value)
+						Spy.db.profile.Font = fonts[value]
 						if value then Spy:UpdateBarTextures() end
 					end,
 				},
 				RowHeight = {
 					type = "range",
-					order = 14,
+					order = 16,
 					name = L["RowHeight"], 
 					desc = L["RowHeightDescription"], 
 					min = 8, max = 20, step = 1,
@@ -369,6 +362,20 @@ Spy.options = {
 						if value then Spy:BarsChanged() end
 					end,
 				},	
+				BarTexture = {
+					type = "select",				
+					order = 17,
+					name = L["Texture"],	
+					desc = L["TextureDescription"],	
+					dialogControl = "LSM30_Statusbar",					
+					width = "double",
+					values = SM:HashTable("statusbar"),
+					get = function() return Spy.db.profile.BarTexture end,
+					set = function(_, key)
+						Spy.db.profile.BarTexture = key
+						Spy:UpdateBarTextures()
+					end,
+				},				
 			},					
 		},
 		AlertOptions = {
@@ -737,14 +744,14 @@ Spy.options = {
 				},
 			},
 		},
-		MinimapOptions = {
-			name = L["MinimapOptions"],
-			desc = L["MinimapOptions"],
+		MapOptions = {
+			name = L["MapOptions"],
+			desc = L["MapOptions"],
 			type = "group",
 			order = 5,
 			args = {
 				intro = {
-					name = L["MinimapOptionsDescription"],
+					name = L["MapOptionsDescription"],
 					type = "description",
 					order = 1,
 				},
@@ -1200,7 +1207,7 @@ local Default_Profile = {
 		},
 		AlertWindowNameSize=14,
 		AlertWindowLocationSize=10,
-		BarTexture="flat",		
+		BarTexture="Flat",		
 		MainWindowVis=true,
 		CurrentList=1,
 		Locked=false,
@@ -1214,7 +1221,7 @@ local Default_Profile = {
 		MinimapTracking=true,
 		MinimapDetails=true,
 		DisplayOnMap=true,
-		SwitchToZone=true,
+		SwitchToZone=false,
 		MapDisplayLimit="SameZone",
 		DisplayTooltipNearSpyWindow=false,
 		TooltipAnchor="ANCHOR_CURSOR",		
@@ -1253,7 +1260,7 @@ local Default_Profile = {
 	}
 }
 
-SM:Register("statusbar", "flat", [[Interface\Addons\Spy\Textures\bar-flat.tga]])
+SM:Register("statusbar", "Flat", [[Interface\Addons\Spy\Textures\bar-flat.tga]])
 
 function Spy:CheckDatabase()
 	if not SpyPerCharDB or not SpyPerCharDB.PlayerData then
@@ -1426,7 +1433,7 @@ function Spy:SetupOptions()
 	self.optionsFrames.DisplayOptions = ACD3:AddToBlizOptions("Spy", L["DisplayOptions"], L["Spy Option"], "DisplayOptions")
 	self.optionsFrames.AlertOptions = ACD3:AddToBlizOptions("Spy", L["AlertOptions"], L["Spy Option"], "AlertOptions")
 	self.optionsFrames.ListOptions = ACD3:AddToBlizOptions("Spy", L["ListOptions"], L["Spy Option"], "ListOptions")
-	self.optionsFrames.DataOptions = ACD3:AddToBlizOptions("Spy", L["MinimapOptions"], L["Spy Option"], "MinimapOptions")
+	self.optionsFrames.MapOptions = ACD3:AddToBlizOptions("Spy", L["MapOptions"], L["Spy Option"], "MapOptions")
 	self.optionsFrames.DataOptions = ACD3:AddToBlizOptions("Spy", L["DataOptions"], L["Spy Option"], "DataOptions")
 
 	self:RegisterModuleOptions("Profiles", LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db), L["Profiles"])
@@ -1828,11 +1835,9 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 				local detected = true
 				local playerData = SpyPerCharDB.PlayerData[srcName]
 				if not playerData or playerData.isGuess then
---					learnt, playerData = Spy:ParseUnitAbility(true, event, srcName, srcFlags, arg12, arg13)		 -- P8.0 chg			
 					learnt, playerData = Spy:ParseUnitAbility(true, event, srcName, class, race, arg12, arg13)		 -- P8.0 chg	
 				end
 				if not learnt then
---					detected = Spy:UpdatePlayerData(srcName, nil, nil, nil, nil, true, nil)
 					detected = Spy:UpdatePlayerData(srcName, class, nil, race, nil, true, nil)
 				end
 
@@ -1867,11 +1872,9 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 				local detected = true
 				local playerData = SpyPerCharDB.PlayerData[dstName]
 				if not playerData or playerData.isGuess then
---					learnt, playerData = Spy:ParseUnitAbility(false, event, dstName, dstFlags, arg12, arg13) -- P8.0 chg
 					learnt, playerData = Spy:ParseUnitAbility(false, event, dstName, class, race, arg12, arg13)		 -- P8.0 chg	
 				end
 				if not learnt then
---					detected = Spy:UpdatePlayerData(dstName, nil, nil, nil, nil, true, nil)
 					detected = Spy:UpdatePlayerData(dstName, class, nil, race, nil, true, nil)
 				end
 
@@ -1934,7 +1937,7 @@ function Spy:CommReceived(prefix, message, distribution, source)
 	if Spy.EnabledInZone and Spy.db.profile.UseData then
 		if prefix == Spy.Signature and message and source ~= Spy.CharacterName then
 			local version, player, class, level, race, zone, subZone, mapX, mapY, guild, mapID = strsplit("|", message)	 -- P8.0
-			if mapID == nil then -- Required check if other players have not updated to v3.5.7 or higher
+			if mapID == nil then 
 				mapID = ""
 			end	
 			if player ~= nil and (not Spy.InInstance or zone == GetZoneText()) then
@@ -1967,9 +1970,7 @@ function Spy:CommReceived(prefix, message, distribution, source)
 						if not Spy.ValidRaces[race] then
 							return
 						end
---						if (Spy.EnemyFactionName == "Alliance" and race ~= "Draenei" and race ~= "Dwarf" and race ~= "Gnome" and race ~= "Human" and race ~= "Pandaren" and race ~= "Night Elf" and race ~= "Worgen" and race ~= "Void Elf" and race ~= "Lightforged Draenei" and race ~= "Dark Iron Dwarf" and race ~= "Kul Tiran") 
-						if (Spy.EnemyFactionName == "Alliance" and race ~= "Dwarf" and race ~= "Gnome" and race ~= "Human" and race ~=  "Night Elf") 						
---						or (Spy.EnemyFactionName == "Horde" and race ~= "Blood Elf" and race ~= "Goblin" and race ~= "Orc" and race ~= "Pandaren" and race ~= "Tauren" and race ~= "Troll" and race ~= "Undead" and race ~= "Nightborne" and race ~= "Highmountain Tauren" and race ~= "Zandalari Troll" and race ~= "Mag'har Orc") then 
+						if (Spy.EnemyFactionName == "Alliance" and race ~= "Dwarf" and race ~= "Gnome" and race ~= "Human" and race ~=  "Night Elf")
 						or (Spy.EnemyFactionName == "Horde" and race ~= "Orc" and race ~= "Tauren" and race ~= "Troll" and race ~= "Undead") then 						
 							return
 						end
@@ -2015,11 +2016,11 @@ function Spy:CommReceived(prefix, message, distribution, source)
 						guild = nil
 					end
 
-					local learnt, playerData = Spy:ParseUnitDetails(player, class, level, race, zone, subZone, mapX, mapY, guild, mapID)	--++8.0	
+					local learnt, playerData = Spy:ParseUnitDetails(player, class, level, race, zone, subZone, mapX, mapY, guild, mapID)		
 					if playerData and playerData.isEnemy and not SpyPerCharDB.IgnoreData[player] then
 						Spy.PlayerCommList[player] = Spy.CurrentMapNote
 						Spy:AddDetected(player, time(), learnt, source)
-						if Spy.db.profile.DisplayOnMap and mapID > 0 then	--- test for nil or 0 mapID					
+						if Spy.db.profile.DisplayOnMap and mapID > 0 then  -- test for nil or 0 mapID					
 							Spy:ShowMapNote(player)
 						end
 					end

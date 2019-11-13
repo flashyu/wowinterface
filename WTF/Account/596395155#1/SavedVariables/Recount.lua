@@ -13,6 +13,7 @@ RecountDB = {
 					["h"] = 173.000061035156,
 				},
 			},
+			["MainWindowHeight"] = 173.207977294922,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -23,10 +24,9 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "玛拉顿",
+			["LastInstanceName"] = "通灵学院",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
-			["MainWindowHeight"] = 173.207977294922,
 		},
 	},
 }

@@ -94,6 +94,8 @@ L["SelectFont"] = "選擇字體"
 L["SelectFontDescription"] = "選擇 Spy 視窗使用的字體。"
 L["RowHeight"] = "選擇列高"
 L["RowHeightDescription"] = "選擇 Spy 視窗橫列的高度。"
+L["Texture"] = "質地"
+L["TextureDescription"] = "選擇 Spy 窗口的紋理"
 
 L["AlertOptions"] = "警告"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "偵測到敵方玩家時顯示附近清單，�
 L["PrioritiseKoS"] = "附近清單中優先排序即殺的敵方玩家"
 L["PrioritiseKoSDescription"] = "在附近清單中總是將即殺的敵方玩家顯示在最前面。"
 
-L["MinimapOptions"] = "地圖"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "地圖"
+L["MapOptionsDescription"] = [[
 提供額外的功能給能夠從小地圖追蹤人形生物的玩家。
 ]]
 L["MinimapTracking"] = "啟用小地圖追蹤"
@@ -294,7 +296,7 @@ L["Player"] = " (玩家)"
 L["KOSReason"] = "即殺"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "自行輸入原因..."
-L["KOSReasonClear"] = "清空"
+L["KOSReasonClear"] = "明確原因"
 L["StatsWins"] = "|cff40ff00勝："
 L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070dd敗："
@@ -433,20 +435,6 @@ L["TROLL"] = "巨魔"
 --L["DARK IRON DWARF"] = "黑铁矮人"
 --L["MAG'HAR ORC"] = "玛格汉兽人"
 
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "Friz Quadrata CTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
-						
 -- Stealth abilities
 L["Stealth"] = "隱形"
 L["Prowl"] = "潛行"

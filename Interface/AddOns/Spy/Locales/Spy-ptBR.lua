@@ -91,9 +91,11 @@ L["TooltipDisplayKOSReasonDescription"] = "Marque isso para que seja mostrado na
 L["TooltipDisplayLastSeen"] = "Mostrar detalhes da ultima vez visto nas dicas"
 L["TooltipDisplayLastSeenDescription"] = "Marque isso para que seja mostrado nas dicas de jogador o ultimo local e hora em que aquele jogador foi visto."
 L["SelectFont"] = "Selekt e Font"
-L["SelectFontDescription"] = "Selecione um tipo de letra para o Spy mostre ."
+L["SelectFontDescription"] = "Selecione um tipo de letra para a janela Spy."
 L["RowHeight"] = "Selecione a altura da linha"
-L["RowHeightDescription"] = "Selecione a altura da linha para a janela do espião."
+L["RowHeightDescription"] = "Selecione a altura da linha para a janela Spy."
+L["Texture"] = "Textura"
+L["TextureDescription"] = "Selecione a textura da janela Spy"
 
 L["AlertOptions"] = "Alertas"
 L["AlertOptionsDescription"] = [[
@@ -156,8 +158,8 @@ L["ShowNearbyListDescription"] = "Marque isso para que ao detectar jogadores ini
 L["PrioritiseKoS"] = "Piorizar inimigos da Lista Negra na lista de Proximidades"
 L["PrioritiseKoSDescription"] = "Marque isso para sempre motrar primeiro inimigos da Lista Negra na lista de Proximidades."
 
-L["MinimapOptions"] = "Mapa"
-L["MinimapOptionsDescription"] = [[
+L["MapOptions"] = "Mapa"
+L["MapOptionsDescription"] = [[
 Para jogadores que podem rastrear humanóides o minimapa pode ser utilizado para fornecer recursos adicionais.
 ]]
 L["MinimapTracking"] = "Ativar rastreamento no minimapa"
@@ -294,7 +296,7 @@ L["Player"] = " (Jogador)"
 L["KOSReason"] = "Lista Negra"
 L["KOSReasonIndent"] = "    "
 L["KOSReasonOther"] = "Digite seu próprio motivo..."
-L["KOSReasonClear"] = "Limpar"
+L["KOSReasonClear"] = "Limpar motivo"
 L["StatsWins"] = "|cff40ff00Vitórias: "
 L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070ddDerrotas: "
@@ -432,20 +434,6 @@ L["TROLL"] = "Troll"
 --L["KUL TIRAN"] = "Kultireno"
 --L["DARK IRON DWARF"] = "Anão Ferro Negro"
 --L["MAG'HAR ORC"] = "Orc Mag'har"
-
---++ Font descriptions
-L["2002"] = "2002"
-L["2002 BOLD"] = "2002 Bold"
-L["ARIAL NARROW"] = "Arial Narrow" -- default chat font
-L["AR ZhongkaiGBK Medium"] = "AR ZhongkaiGBK Medium"
-L["BIG NOODLE TITLING"] = "Big Noodle Titling"
-L["EXPRESSWAY"] = "Expressway"
-L["FRIZ QUADRATA TT"] = "Friz Quadrata TT" -- default main UI font
-L["FRIZQUADRATACTT"] = "Friz Quadrata CTT"
-L["MOK"] = "MoK"
-L["MORPHEUS"] = "Morpheus" -- default in game mail font
-L["NIMROD MT"] = "Nimrod MT"
-L["SKURRI"] = "Skurri" -- default unit frame combat font
 
 -- Stealth abilities
 L["Stealth"] = "Furtividade"
