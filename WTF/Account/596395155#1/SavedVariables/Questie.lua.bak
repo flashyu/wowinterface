@@ -152,6 +152,7 @@ QuestieConfig = {
 				[964] = true,
 				[355] = true,
 				[105] = true,
+				[4742] = true,
 				[55296] = true,
 				[8311] = true,
 				[838] = true,
@@ -5484,6 +5485,47 @@ QuestieConfig = {
 					["SubType"] = "Accept",
 					["Event"] = "Quest",
 				}, -- [433]
+				{
+					["Party"] = {
+						{
+							["Class"] = "法师",
+							["Name"] = "结晶老者",
+							["Level"] = 60,
+						}, -- [1]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 60,
+					["Quest"] = 5582,
+					["Timestamp"] = 1573666845,
+				}, -- [434]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1573748807,
+					["Quest"] = 4742,
+					["Level"] = 60,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [435]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1573748811,
+					["Quest"] = 4742,
+					["Level"] = 60,
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+				}, -- [436]
+				{
+					["Party"] = {
+					},
+					["Timestamp"] = 1573748824,
+					["Quest"] = 4743,
+					["Level"] = 60,
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+				}, -- [437]
 			},
 			["TrackerHiddenQuests"] = {
 			},

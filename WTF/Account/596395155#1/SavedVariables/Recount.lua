@@ -7,10 +7,10 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 220.263610839844,
-					["x"] = -757.713738799095,
+					["y"] = 219.819213867188,
+					["x"] = -738.602691650391,
 					["w"] = 217,
-					["h"] = 173.000061035156,
+					["h"] = 172.999954223633,
 				},
 			},
 			["MainWindowHeight"] = 173.207977294922,
@@ -24,7 +24,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "通灵学院",
+			["LastInstanceName"] = "黑石塔",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
 		},

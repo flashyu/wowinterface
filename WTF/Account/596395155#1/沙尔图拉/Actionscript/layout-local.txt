@@ -1,6 +1,13 @@
 Version: 1
+Frame: Recount_MainWindow
+FrameLevel: 40
+Anchor: TOPLEFT
+X: 6
+Y: -174
+W: 217
+H: 173
 Frame: CChatNotifierMMIcon
-FrameLevel: 17
+FrameLevel: 25
 Anchor: TOPRIGHT
 X: -112
 Y: 0
@@ -20,3 +27,10 @@ X: 0
 Y: 0
 W: 365
 H: 240
+Frame: CCNUI_MainUI
+FrameLevel: 1
+Anchor: CENTER
+X: 0
+Y: 0
+W: 275
+H: 314

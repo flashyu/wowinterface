@@ -75,6 +75,31 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "通灵学院",
 	}, -- [3]
+	{
+		["targetMoney"] = 700000,
+		["playerMoney"] = 0,
+		["id"] = 4,
+		["playerItems"] = {
+			{
+				["texture"] = 134122,
+				["itemLink"] = "|cff1eff00|Hitem:12811::::::::60:::::::|h[正义宝珠]|h|r",
+				["name"] = "正义宝珠",
+				["numItems"] = 2,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "乐麒",
+		["when"] = "2019-11-15 00:16:52",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [4]
 }
 TRADE_LOG_BUTTON_POS = 138.96568260025
 TradeLog_Announce_Checked = true
