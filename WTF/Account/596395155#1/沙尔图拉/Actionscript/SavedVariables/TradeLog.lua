@@ -6,16 +6,16 @@ TradeLog_TradesHistory = {
 		["id"] = 1,
 		["playerItems"] = {
 			{
-				["numItems"] = 20,
-				["name"] = "魔法甜面包",
-				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
 			}, -- [1]
 			{
-				["numItems"] = 20,
-				["name"] = "魔法甜面包",
-				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
 			}, -- [2]
 		},
 		["targetItems"] = {
@@ -56,10 +56,10 @@ TradeLog_TradesHistory = {
 		["id"] = 3,
 		["playerItems"] = {
 			{
-				["texture"] = 132805,
-				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
-				["name"] = "魔法晶水",
 				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
 			}, -- [1]
 		},
 		["targetItems"] = {
@@ -81,10 +81,10 @@ TradeLog_TradesHistory = {
 		["id"] = 4,
 		["playerItems"] = {
 			{
-				["texture"] = 134122,
-				["itemLink"] = "|cff1eff00|Hitem:12811::::::::60:::::::|h[正义宝珠]|h|r",
-				["name"] = "正义宝珠",
 				["numItems"] = 2,
+				["name"] = "正义宝珠",
+				["itemLink"] = "|cff1eff00|Hitem:12811::::::::60:::::::|h[正义宝珠]|h|r",
+				["texture"] = 134122,
 			}, -- [1]
 		},
 		["targetItems"] = {
