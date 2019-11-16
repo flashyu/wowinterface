@@ -8,4 +8,5 @@ VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000003 "视野宏" "132092"
 /console cameraDistanceMaxZoomFactor 4
+/run SetCVar("cameraDistanceMaxZoomFactor", 4)
 END

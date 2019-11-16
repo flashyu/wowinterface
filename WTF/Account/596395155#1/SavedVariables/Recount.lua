@@ -7,12 +7,13 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 219.819213867188,
-					["x"] = -738.602691650391,
+					["y"] = 219.499877929688,
+					["x"] = -738.833318710327,
 					["w"] = 217,
 					["h"] = 172.999954223633,
 				},
 			},
+			["MainWindowHeight"] = 173.207977294922,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -26,7 +27,6 @@ RecountDB = {
 			["LastInstanceName"] = "通灵学院",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
-			["MainWindowHeight"] = 173.207977294922,
 		},
 	},
 }
