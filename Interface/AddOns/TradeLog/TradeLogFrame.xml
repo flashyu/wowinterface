@@ -686,6 +686,14 @@
 				</Offset>
 			</Anchor>
 		</Anchors>
+		<Scripts>
+            <OnMouseDown>
+                self:StartMoving(self);
+            </OnMouseDown>
+            <OnMouseUp>
+                self:StopMovingOrSizing(self);
+            </OnMouseUp>
+	    </Scripts>
 
 		<Frames>
 			<Button name="TradeListFrameClose" inherits="UIPanelCloseButton">

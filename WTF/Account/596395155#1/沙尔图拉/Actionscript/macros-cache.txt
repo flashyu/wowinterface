@@ -1,12 +1,30 @@
 VER 3 0000000001000004 "mouseover" "132248"
-#showtooltip
-/cast [target=mouseover,nomodifier,exists]变形术;变形术
+#showtooltip 变形术
+/stopcasting
+/站立
+/cast [target=mouseover,nomodifier,harm]变形术;变形术
 END
 VER 3 0000000001000003 "stopcasting" "135856"
 /stopcasting
+/站立
 /cast 法术反制
 END
 VER 3 0000000001000005 "targettarget" "132317"
-#showtooltip targettarget
+#showtooltip 寒冰箭
+/站立
 /cast [harm][@targettarget,harm] 寒冰箭
+END
+VER 3 0000000001000006 "冰环" "135848"
+#showtooltip 冰霜新星
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast 冰霜新星
+END
+VER 3 0000000001000007 "闪现" "135736"
+#showtooltip 闪现术
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast 闪现术
 END

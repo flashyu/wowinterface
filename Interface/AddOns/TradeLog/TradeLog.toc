@@ -16,3 +16,4 @@ localization-zhTW.lua
 
 TheBurningTrade.xml
 TradeLogFrame.xml
+## Q-CAT-Version: 1
