@@ -52,18 +52,18 @@ CTM_Options = {
 		["scale"] = 1,
 		["width"] = 217,
 		["strata"] = "3-MEDIUM",
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
+		},
 		["position"] = {
 			"TOPLEFT", -- [1]
 			"UIParent", -- [2]
 			"TOPLEFT", -- [3]
 			6.3817310333252, -- [4]
 			-29.3576393127441, -- [5]
-		},
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
 		},
 		["test"] = false,
 		["color"] = {
