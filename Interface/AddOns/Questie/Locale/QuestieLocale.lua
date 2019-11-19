@@ -20,9 +20,6 @@ local locale = 'enUS';
 function QuestieLocale:Initialize()
     -- Load item locales
     for id, name in pairs(LangItemLookup[locale] or {}) do
-        if CHANGEME_Questie4_ItemDB[id] and name then
-            CHANGEME_Questie4_ItemDB[id][QuestieDB.tempItemKeys.name] = name
-        end
         if QuestieDB.itemData[id] and name then
             QuestieDB.itemData[id][QuestieDB.itemKeys.name] = name
         end
@@ -56,10 +53,12 @@ function QuestieLocale:Initialize()
     -- Create {['name'] = {ID, },} table for lookup of possible object IDs by name
     for id, data in pairs(QuestieDB.objectData) do
         local name = data[QuestieDB.objectKeys.name]
-        if (not LangObjectNameLookup[name]) then
-            LangObjectNameLookup[name] = {};
+        if name then -- We (meaning me, BreakBB) introduced Fake IDs for objects to show additional locations, so we need to check this
+            if not LangObjectNameLookup[name] then
+                LangObjectNameLookup[name] = {}
+            end
+            table.insert(LangObjectNameLookup[name], id)
         end
-        table.insert(LangObjectNameLookup[name], id);
     end
     -- Load continent and zone locales
     LangContinentLookup = LangContinentLookup[locale] or LangContinentLookup["enUS"] or {}
@@ -121,7 +120,7 @@ end
 function QuestieLocale:_GetUIString(key, ...)
     if key then
         -- convert all args to string
-        local arg = {...};        
+        local arg = {...}
         for i, v in ipairs(arg) do
             arg[i] = tostring(v);
         end

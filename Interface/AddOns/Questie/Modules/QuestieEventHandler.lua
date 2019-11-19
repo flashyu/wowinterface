@@ -23,6 +23,8 @@ local QuestieNameplate = QuestieLoader:ImportModule("QuestieNameplate");
 local QuestieMap = QuestieLoader:ImportModule("QuestieMap");
 ---@type QuestieLib
 local QuestieLib = QuestieLoader:ImportModule("QuestieLib");
+---@type QuestieHash
+local QuestieHash = QuestieLoader:ImportModule("QuestieHash");
 ---@type QuestiePlayer
 local QuestiePlayer = QuestieLoader:ImportModule("QuestiePlayer");
 ---@type QuestieDB
@@ -38,7 +40,7 @@ local runQLU = false
 
 
 local function _Hack_prime_log() -- this seems to make it update the data much quicker
-  for i=1,GetNumQuestLogEntries()+1 do
+  for i=1, GetNumQuestLogEntries()+1 do
     GetQuestLogTitle(i)
     QuestieQuest:GetRawLeaderBoardDetails(i)
   end
@@ -176,7 +178,7 @@ function QuestieEventHandler:QUEST_LOG_UPDATE()
 
     -- QR or UQLC events have set the flag, so we need to update Questie state.
     if runQLU then
-        QuestieQuest:CompareQuestHashes()
+        QuestieHash:CompareQuestHashes()
         runQLU = false
     end
 end
@@ -221,7 +223,12 @@ end
 -- Fired when some chat messages about skills are displayed
 function QuestieEventHandler:CHAT_MSG_SKILL()
     Questie:Debug(DEBUG_DEVELOP, "CHAT_MSG_SKILL")
-    QuestieProfessions:Update()
+    local isProfUpdate = QuestieProfessions:Update()
+    -- This needs to be done to draw new quests that just came available
+    if isProfUpdate then
+        QuestieQuest:CalculateAvailableQuests()
+        QuestieQuest:DrawAllAvailableQuests()
+    end
 end
 
 -- Fired when some chat messages about reputations are displayed

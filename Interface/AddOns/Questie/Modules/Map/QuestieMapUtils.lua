@@ -11,6 +11,7 @@ local HBD = LibStub("HereBeDragonsQuestie-2.0")
 local tinsert = table.insert
 local pairs = pairs
 
+--- Currently not in use.
 function QuestieMap.utils:SetDrawOrder(frame)
     -- This is all fixes to always be on top of HandyNotes notes Let the frame level wars begin.
     -- HandyNotes uses GetFrameLevel + 6, so we use +7
@@ -74,18 +75,18 @@ function QuestieMap.utils:CalcHotzones(points, rangeR, count)
     local hotzones = {};
     local itt = 0;
     while(true) do
-    	local FoundUntouched = nil;
-    	for index, point in pairs(points) do
-    		if(point.touched == nil) then
-    			local notes = {};
-    			FoundUntouched = true;
-    			point.touched = true;
-    			tinsert(notes, point);
+        local FoundUntouched = nil;
+        for index, point in pairs(points) do
+            if(point.touched == nil) then
+                local notes = {};
+                FoundUntouched = true;
+                point.touched = true;
+                tinsert(notes, point);
                 for index2, point2 in pairs(points) do
                     --We only want to cluster icons that are on the same map.
                     if(point.UIMapId == point2.UIMapId) then
                         local times = 1;
-                        
+
                         --We want things further away to be clustered more
                         local movingRange = range;
                         if(point.distance and point.distance > 1000 and count > 100) then

@@ -1,8 +1,8 @@
 ## Interface: 11302
-## Title: |cFFFFFFFFQuestie|r|cFF00FF00 v5.1.0|r
+## Title: |cFFFFFFFFQuestie|r|cFF00FF00 v5.2.2|r
 ## Author: Aero/Logon/Muehe/TheCrux(BreakBB)/Dyaxler/Schaka/Zoey/Everyone else
 ## Notes: A standalone Classic QuestHelper
-## Version: 5.1.0
+## Version: 5.2.2 1 a6c8207
 ## RequiredDeps:
 ## OptionalDeps: Ace3, LibDataBroker-1.1, LibCompress
 ## SavedVariables: QuestieConfig
@@ -26,7 +26,6 @@ Database\questDB.lua
 Database\objectDB.lua
 Database\spawnDB.lua
 Database\zoneDB.lua
-Database\TEMP_questie4items.lua
 Database\specialspawns.lua
 Database\itemDB.lua
 
@@ -43,33 +42,34 @@ Database\Corrections\QuestieEvent.lua
 #Localization
 Locale\QuestieLocale.lua
 Locale\enUS\locale.xml
-Locale\esES\locale.xml
-Locale\esMX\locale.xml
-Locale\deDE\locale.xml
 Locale\zhCN\locale.xml
 Locale\zhTW\locale.xml
-Locale\frFR\locale.xml
-Locale\koKR\locale.xml
-Locale\ptBR\locale.xml
-Locale\ruRU\locale.xml
 
 ##Libs
 Modules\Libs\QuestieLib.lua
 #Modules\Libs\QuestieCompress.lua
 Modules\Libs\QuestiePlayer.lua
 Modules\Libs\QuestieSerializer.lua
+Modules\Libs\QuestieCombatQueue.lua
+Modules\Libs\QuestieHash.lua
 
 ##Modules
 Modules\QuestieAuto.lua
 Modules\QuestieTooltips.lua
 Modules\QuestieEventHandler.lua
-Modules\QuestieFramePool.lua
+
+#FramePool
+Modules\FramePool\QuestieFramePool.lua
+Modules\FramePool\QuestieFrame.lua
 
 #Map
 Modules\Map\QuestieMap.lua
 Modules\Map\QuestieMapUtils.lua
 
-Modules\QuestieQuest.lua
+#Quest
+Modules\Quest\QuestieQuest.lua
+Modules\Quest\QuestieQuestPrivates.lua
+
 Modules\QuestieNameplate.lua
 Modules\QuestieCoordinates.lua
 
@@ -83,7 +83,13 @@ Modules\Journey\QuestieJourneyUtils.lua
 Modules\Journey\QuestieSearch.lua
 Modules\Journey\QuestieSearchResults.lua
 
-Modules\QuestieTracker.lua
+#Tracker
+Modules\Tracker\QuestieTracker.lua
+Modules\Tracker\QuestieTrackerUtils.lua
+Modules\Tracker\QuestieTrackerMenu.lua
+Modules\Tracker\QuestieTrackerPrivates.lua
+Modules\Tracker\QuestieQuestTimers.lua
+
 Modules\QuestieProfessions.lua
 Modules\QuestieReputation.lua
 Modules\QuestieDBMIntegration.lua

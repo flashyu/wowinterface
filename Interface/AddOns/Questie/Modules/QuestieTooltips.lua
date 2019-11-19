@@ -14,6 +14,7 @@ local QuestiePlayer = QuestieLoader:ImportModule("QuestiePlayer");
 ---@type QuestieDB
 local QuestieDB = QuestieLoader:ImportModule("QuestieDB");
 
+local tinsert = table.insert
 local _QuestieTooltips = {};
 QuestieTooltips.lastTooltipTime = GetTime() -- hack for object tooltips
 QuestieTooltips.lastGametooltip = ""
@@ -37,7 +38,7 @@ function QuestieTooltips:RegisterTooltip(questid, key, Objective)
     local tooltip = {};
     tooltip.QuestId = questid;
     tooltip.Objective = Objective
-    --table.insert(QuestieTooltips.tooltipLookup[key], tooltip);
+    --tinsert(QuestieTooltips.tooltipLookup[key], tooltip);
     QuestieTooltips.tooltipLookup[key][tostring(questid) .. " " .. Objective.Index] = tooltip
 end
 
@@ -55,7 +56,10 @@ function QuestieTooltips:GetTooltip(key)
         title = coloredTitle,
         objectivesText = {
             [objectiveIndex] = {
-                [playerName] = text
+                [playerName] = {
+                    [color] = color,
+                    [text] = text
+                }
             }
         }
     }]]--
@@ -87,17 +91,19 @@ function QuestieTooltips:GetTooltip(key)
                 end
 
                 local text = nil;
+                local color = QuestieLib:GetRGBForObjective(tooltip.Objective)
+                
                 if tooltip.Objective.Needed then
-                    text = "   |cFF33FF33" .. tostring(tooltip.Objective.Collected) .. "/" .. tostring(tooltip.Objective.Needed) .. " " .. tostring(tooltip.Objective.Description);
+                    text = "   " .. color .. tostring(tooltip.Objective.Collected) .. "/" .. tostring(tooltip.Objective.Needed) .. " " .. tostring(tooltip.Objective.Description);
                 else
-                    text = "   |cFF33FF33" .. tostring(tooltip.Objective.Description);
+                    text = "   " .. color .. tostring(tooltip.Objective.Description);
                 end
                 
                 --Reduntant if 
                 if tooltip.Objective.Needed then
-                    tooltipData[questId].objectivesText[objectiveIndex][name] = text;
+                    tooltipData[questId].objectivesText[objectiveIndex][name] = {["color"] = color, ["text"] = text};
                 else
-                    tooltipData[questId].objectivesText[objectiveIndex][name] = text;
+                    tooltipData[questId].objectivesText[objectiveIndex][name] = {["color"] = color, ["text"] = text};
                 end
             end
         end
@@ -134,13 +140,15 @@ function QuestieTooltips:GetTooltip(key)
                         end
 
                         local text = nil;
+                        local color = QuestieLib:GetRGBForObjective(objective)
+
                         if objective.required then
-                            text = "   |cFF33FF33" .. tostring(objective.fulfilled) .. "/" .. tostring(objective.required) .. " " .. objective.text;
+                            text = "   " .. color .. tostring(objective.fulfilled) .. "/" .. tostring(objective.required) .. " " .. objective.text;
                         else
-                            text = "   |cFF33FF33" .. objective.text;
+                            text = "   " .. color .. objective.text;
                         end
                         
-                        tooltipData[questId].objectivesText[objectiveIndex][playerName] = text;
+                        tooltipData[questId].objectivesText[objectiveIndex][playerName] = {["color"] = color, ["text"] = text};
                     end
                 end
             end
@@ -151,7 +159,10 @@ function QuestieTooltips:GetTooltip(key)
     title = coloredTitle,
     objectivesText = {
         [objectiveIndex] = {
-            [playerName] = text
+            [playerName] = {
+                [color] = color,
+                [text] = text
+            }
         }
     }
     }]]--
@@ -160,32 +171,32 @@ function QuestieTooltips:GetTooltip(key)
         if(tip == nil) then
             tip = {}
         end
-        table.insert(tip, questData.title);
+        tinsert(tip, questData.title);
         local tempObjectives = {}
         for objectiveIndex, playerList in pairs(questData.objectivesText or {}) do -- Should we do or {} here?
-            for playerName, objectiveText in pairs(playerList) do
+            for playerName, objectiveInfo in pairs(playerList) do
                 local playerInfo = QuestiePlayer:GetPartyMemberByName(playerName);
                 local useName = "";
                 if(playerName == name and anotherPlayer) then
                     local _, classFilename = UnitClass("player");
                     local _, _, _, argbHex = GetClassColor(classFilename)
-                    useName = " (|c"..argbHex..name.."|r|cFF33FF33)|r";
+                    useName = " (|c"..argbHex..name.."|r"..objectiveInfo.color..")|r";
                 elseif(playerInfo and playerName ~= name) then
-                    useName = " (|c"..playerInfo.colorHex..playerName.."|r|cFF33FF33)|r";
+                    useName = " (|c"..playerInfo.colorHex..playerName.."|r"..objectiveInfo.color..")|r";
                 end
                 if(anotherPlayer) then
-                    objectiveText = objectiveText..useName;
+                    objectiveInfo.text = objectiveInfo.text..useName;
                 end
                 -- We want the player to be on top.
                 if(playerName == name) then
-                    table.insert(tempObjectives, 1, objectiveText);
+                    tinsert(tempObjectives, 1, objectiveInfo.text);
                 else
-                    table.insert(tempObjectives, objectiveText);
+                    tinsert(tempObjectives, objectiveInfo.text);
                 end
             end
         end
         for index, text in pairs(tempObjectives) do
-            table.insert(tip, text);
+            tinsert(tip, text);
         end
     end
     return tip

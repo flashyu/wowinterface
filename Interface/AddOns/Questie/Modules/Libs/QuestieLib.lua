@@ -10,11 +10,12 @@ local QuestieDB = QuestieLoader:ImportModule("QuestieDB");
 local QuestiePlayer = QuestieLoader:ImportModule("QuestiePlayer");
 
 --Is set in QuestieLib.lua
-QuestieLib.AddonPath = "Interface\\Addons\\QuestieDev-master\\";
+QuestieLib.AddonPath = "Interface\\Addons\\Questie\\";
 
 local math_abs = math.abs;
 local math_sqrt = math.sqrt;
 local math_max = math.max;
+local tinsert = table.insert
 
 --[[
     Red: 5+ level above player
@@ -65,6 +66,41 @@ function QuestieLib:GetDifficultyColorPercent(level)
     else
         --return "|cFFC0C0C0"..text.."|r"; -- Grey
         return 0.753, 0.753, 0.753
+    end
+end
+
+-- 1.12 color logic
+local function RGBToHex(r, g, b)
+    if r > 255 then r = 255; end
+    if g > 255 then g = 255; end
+    if b > 255 then b = 255; end
+    return string.format("|cFF%02x%02x%02x", r, g, b);
+end
+
+local function FloatRGBToHex(r, g, b)
+    return RGBToHex(r*254, g*254, b*254);
+end
+
+function QuestieLib:GetRGBForObjective(Objective)
+    if Objective.fulfilled ~= nil and Objective.Collected == nil then
+        Objective.Collected = Objective.fulfilled
+        Objective.Needed = Objective.required
+    end
+
+    if not Objective.Collected or type(Objective.Collected) ~= "number" then return QuestieLib:FloatRGBToHex(0.8, 0.8, 0.8); end
+    local float = Objective.Collected / Objective.Needed
+    local trackerColor = Questie.db.global.trackerColorObjectives
+    
+    if not trackerColor or trackerColor == "white" then
+        return "|cFFEEEEEE";
+    elseif trackerColor == "whiteAndGreen" then
+        return Objective.Collected == Objective.Needed and RGBToHex(76, 255, 76) or QuestieLib:FloatRGBToHex(0.8, 0.8, 0.8)
+    elseif trackerColor == "whiteToGreen" then
+        return QuestieLib:FloatRGBToHex(0.8 - float / 2, 0.8 + float / 3, 0.8 - float / 2);
+    else
+        if float < .49 then return QuestieLib:FloatRGBToHex(1, 0 + float / .5, 0); end
+        if float == .50 then return QuestieLib:FloatRGBToHex(1, 1, 0); end
+        if float > .50 then return QuestieLib:FloatRGBToHex(1 - float / 2, 1, 0); end
     end
 end
 
@@ -134,11 +170,19 @@ function QuestieLib:GetColoredQuestName(id, name, level, showLevel, isComplete, 
             if(not blizzLike) then
                 char = string.sub(questTag, 1, 1);
             end
+
+            local langCode = QuestieLocale:GetUILocale() -- the string.sub above doesn't work for multi byte characters in Chinese
             if questType == 1 then
                 name = "[" .. level .. "+" .. "] " .. name -- Elite quest
             elseif questType == 81 then
+                if langCode == "zhCN" or langCode == "zhTW" or langCode == "koKR" or langCode == "ruRU" then
+                    char = "D"
+                end
                 name = "[" .. level .. char .. "] " .. name -- Dungeon quest
             elseif questType == 62 then
+                if langCode == "zhCN" or langCode == "zhTW" or langCode == "koKR" or langCode == "ruRU" then
+                    char = "R"
+                end
                 name = "[" .. level .. char .. "] " .. name -- Raid quest
             elseif questType == 41 then
                 name = "[" .. level .. "] " .. name -- Which one? This is just default.
@@ -211,9 +255,9 @@ end
 function QuestieLib:ProfileFunction(functionReference, includeSubroutine)
     --Optional var
     if(not includeSubroutine) then includeSubroutine = true; end
-    local time, count = GetFunctionCPUUsage(functionReference, includeSubroutine);
+    local now, count = GetFunctionCPUUsage(functionReference, includeSubroutine);
     --Questie:Print("[QuestieLib]", "Profiling Avg:", round(time/count, 6));
-    return time, count;
+    return now, count;
 end
 
 --To try and create a fix for errors regarding items that do not exist in our DB,
@@ -239,14 +283,14 @@ function QuestieLib:CacheItemNames(questId)
     if(quest and quest.ObjectiveData) then
         for objectiveIndexDB, objectiveDB in pairs(quest.ObjectiveData) do
             if objectiveDB.Type == "item" then
-                if not CHANGEME_Questie4_ItemDB[objectiveDB.Id] then
+                if not QuestieDB.itemData[objectiveDB.Id] then
                     Questie:Debug(DEBUG_DEVELOP, "Requesting item information for missing itemId:", objectiveDB.Id)
                     local item = Item:CreateFromItemID(objectiveDB.Id)
                     item:ContinueOnItemLoad(function()
                         local itemName = item:GetItemName();
                         --local itemName = GetItemInfo(objectiveDB.Id)
                         --Create an empty item with the name itself but no drops.
-                        CHANGEME_Questie4_ItemDB[objectiveDB.Id] = {itemName,{questId},{},{}};
+                        QuestieDB.itemData[objectiveDB.Id] = {itemName,{questId},{},{}};
                         Questie:Debug(DEBUG_DEVELOP, "Created item information for item:", itemName, ":", objectiveDB.Id);
                     end)
                 end
@@ -273,7 +317,7 @@ local cachedTitle = nil;
 --Move to Questie.lua after QuestieOptions move.
 function QuestieLib:GetAddonVersionInfo()  -- todo: better place
     if(not cachedTitle) then
-        local name, title, _, _, reason = GetAddOnInfo("QuestieDev-master");
+        local name, title, _, _, reason = GetAddOnInfo("Questie");
         if(reason == "MISSING") then
             _, title = GetAddOnInfo("Questie");
         end
@@ -338,7 +382,7 @@ function QuestieLib:SortQuestsByLevel(quests)
     end
 
     for _, q in pairs(quests) do
-        table.insert(sortedQuestsByLevel, {q.questLevel, q})
+        tinsert(sortedQuestsByLevel, {q.questLevel, q})
     end
     table.sort(sortedQuestsByLevel, compareTablesByIndex)
 
@@ -382,4 +426,42 @@ function QuestieLib:Levenshtein(str1, str2)
     end
     -- return the last value - this is the Levenshtein distance
     return matrix[len1][len2]
+end
+
+-- 1.12 color logic
+local function RGBToHex(r, g, b)
+    if r > 255 then r = 255; end
+    if g > 255 then g = 255; end
+    if b > 255 then b = 255; end
+    return string.format("|cFF%02x%02x%02x", r, g, b);
+end
+
+function QuestieLib:FloatRGBToHex(r, g, b)
+    return RGBToHex(r*254, g*254, b*254);
+end
+
+local randomSeed = 0;
+function QuestieLib:MathRandomSeed(seed)
+    randomSeed = seed
+end
+
+function QuestieLib:MathRandom(low_or_high_arg, high_arg)
+    local low = nil
+    local high = nil
+    if low_or_high_arg ~= nil then
+        if high_arg ~= nil then
+            low = low_or_high_arg
+            high = high_arg
+        else
+            low = 1
+            high = low_or_high_arg
+        end
+    end
+
+    randomSeed = (randomSeed * 214013 + 2531011) % 2^32;
+    local rand = (math.floor(randomSeed / 2^16) % 2^15) / 0x7fff;
+    if high == nil then
+        return rand
+    end
+    return low + math.floor(rand * high)
 end

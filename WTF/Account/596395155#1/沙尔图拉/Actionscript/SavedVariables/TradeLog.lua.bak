@@ -844,6 +844,37 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "通灵学院",
 	}, -- [29]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 30,
+		["playerItems"] = {
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "内谁",
+		["when"] = "2019-11-19 22:06:49",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [30]
 }
 TRADE_LOG_BUTTON_POS = 138.96568260025
 TradeLog_Announce_Checked = true

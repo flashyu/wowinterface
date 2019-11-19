@@ -21,7 +21,7 @@ CChatNotifier_data = {
 		},
 	},
 	["通灵,tl,TL"] = {
-		["active"] = true,
+		["active"] = false,
 		["words"] = {
 			"通灵", -- [1]
 			"tl", -- [2]

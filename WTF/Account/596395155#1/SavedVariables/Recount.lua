@@ -23,7 +23,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "通灵学院",
+			["LastInstanceName"] = "斯坦索姆",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 216.76628112793,
 			["MainWindowHeight"] = 173.207977294922,

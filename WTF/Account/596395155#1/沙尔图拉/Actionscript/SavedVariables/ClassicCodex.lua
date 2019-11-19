@@ -1,17 +1,23 @@
 
 CodexConfig = {
-	["showLowLevel"] = false,
 	["showHighLevel"] = true,
+	["bossMarkerSize"] = 25,
 	["colorBySpawn"] = true,
 	["autoAccept"] = false,
+	["showFestival"] = true,
+	["trackingMethod"] = 1,
 	["minimumDropChance"] = 2,
+	["showLowLevel"] = false,
+	["minimapButton"] = true,
+	["autoTurnin"] = false,
+	["zoneMapIcon"] = true,
+	["alwaysShowId"] = false,
 	["nameplateIcon"] = true,
 	["allQuestGivers"] = true,
-	["autoTurnin"] = false,
-	["showFestival"] = true,
-	["currentQuestGivers"] = true,
 	["spawnMarkerSize"] = 10,
-	["trackingMethod"] = 1,
+	["miniMapIcon"] = true,
+	["currentQuestGivers"] = true,
+	["continentIcon"] = false,
 	["questMarkerSize"] = 14,
 }
 CodexHiddenQuests = {
