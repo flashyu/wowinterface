@@ -7,7 +7,7 @@ local fonts = SM:List("font")
 local _
 
 Spy = LibStub("AceAddon-3.0"):NewAddon("Spy", "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0", "AceTimer-3.0")
-Spy.Version = "1.0.14"
+Spy.Version = "1.0.15"
 Spy.DatabaseVersion = "1.1"
 Spy.Signature = "[Spy]"
 Spy.ButtonLimit = 15
@@ -54,6 +54,7 @@ Spy.options = {
 					name = L["SpyDescription1"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
 				},
 				Enabled = {
 					name = L["EnableSpy"],
@@ -128,6 +129,7 @@ Spy.options = {
 					name = L["SpyDescription2"],
 					type = "description",
 					order = 6,
+					fontSize = "medium",					
 				},
 			},
 		},
@@ -141,6 +143,7 @@ Spy.options = {
 					name = L["DisplayOptionsDescription"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
 				},
 				ShowOnDetection = {
 					name = L["ShowOnDetection"],
@@ -388,11 +391,66 @@ Spy.options = {
 					name = L["AlertOptionsDescription"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
+				},
+				EnableSound = {
+					name = L["EnableSound"],
+					desc = L["EnableSoundDescription"],
+					type = "toggle",
+					order = 2,
+					width = "full",
+					get = function(info)
+						return Spy.db.profile.EnableSound
+					end,
+					set = function(info, value)
+						Spy.db.profile.EnableSound = value
+					end,
+				},	
+				SoundChannel = {
+					name = L["SoundChannel"],
+					type = 'select',
+					order = 3,
+					values = {
+						["Master"] = L["Master"],
+						["SFX"] = L["SFX"],
+						["Music"] = L["Music"],
+						["Ambience"] = L["Ambience"],					
+					},					
+					get = function() return Spy.db.profile.SoundChannel end,
+					set = function(info, value)
+						Spy.db.profile.SoundChannel = value 
+					end,
+				},
+				OnlySoundKoS = {
+					name = L["OnlySoundKoS"],
+					desc = L["OnlySoundKoSDescription"],
+					type = "toggle",
+					order = 4,
+					width = "full",
+					get = function(info)
+						return Spy.db.profile.OnlySoundKoS
+					end,
+					set = function(info, value)
+						Spy.db.profile.OnlySoundKoS = value
+					end,
+				},		
+				StopAlertsOnTaxi = {
+					name = L["StopAlertsOnTaxi"],
+					desc = L["StopAlertsOnTaxiDescription"],
+					type = "toggle",
+					order = 5,
+					width = "full",
+					get = function(info)
+						return Spy.db.profile.StopAlertsOnTaxi
+					end,
+					set = function(info, value)
+						Spy.db.profile.StopAlertsOnTaxi = value
+					end,
 				},
 				Announce = {
 					name = L["Announce"],
 					type = "group",
-					order = 2,
+					order = 6,
 					inline = true,
 					args = {
 						None = {
@@ -473,7 +531,7 @@ Spy.options = {
 					name = L["OnlyAnnounceKoS"],
 					desc = L["OnlyAnnounceKoSDescription"],
 					type = "toggle",
-					order = 3,
+					order = 7,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.OnlyAnnounceKoS
@@ -486,7 +544,7 @@ Spy.options = {
 					name = L["DisplayWarningsInErrorsFrame"],
 					desc = L["DisplayWarningsInErrorsFrameDescription"],
 					type = "toggle",
-					order = 4,
+					order = 8,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.DisplayWarningsInErrorsFrame
@@ -495,50 +553,11 @@ Spy.options = {
 						Spy.db.profile.DisplayWarningsInErrorsFrame = value
 					end,
 				},
-				EnableSound = {
-					name = L["EnableSound"],
-					desc = L["EnableSoundDescription"],
-					type = "toggle",
-					order = 5,
-					width = "full",
-					get = function(info)
-						return Spy.db.profile.EnableSound
-					end,
-					set = function(info, value)
-						Spy.db.profile.EnableSound = value
-					end,
-				},
-				OnlySoundKoS = {
-					name = L["OnlySoundKoS"],
-					desc = L["OnlySoundKoSDescription"],
-					type = "toggle",
-					order = 6,
-					width = "full",
-					get = function(info)
-						return Spy.db.profile.OnlySoundKoS
-					end,
-					set = function(info, value)
-						Spy.db.profile.OnlySoundKoS = value
-					end,
-				},
-				StopAlertsOnTaxi = {
-					name = L["StopAlertsOnTaxi"],
-					desc = L["StopAlertsOnTaxiDescription"],
-					type = "toggle",
-					order = 7,
-					width = "full",
-					get = function(info)
-						return Spy.db.profile.StopAlertsOnTaxi
-					end,
-					set = function(info, value)
-						Spy.db.profile.StopAlertsOnTaxi = value
-					end,
-				},
 				WarnOnStealth = {
 					name = L["WarnOnStealth"],
 					desc = L["WarnOnStealthDescription"],
 					type = "toggle",
-					order = 8,
+					order = 9,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnStealth
@@ -551,7 +570,7 @@ Spy.options = {
 					name = L["WarnOnKOS"],
 					desc = L["WarnOnKOSDescription"],
 					type = "toggle",
-					order = 0,
+					order = 10,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnKOS
@@ -564,7 +583,7 @@ Spy.options = {
 					name = L["WarnOnKOSGuild"],
 					desc = L["WarnOnKOSGuildDescription"],
 					type = "toggle",
-					order = 10,
+					order = 11,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnKOSGuild
@@ -577,7 +596,7 @@ Spy.options = {
 					name = L["WarnOnRace"],
 					desc = L["WarnOnRaceDescription"],
 					type = "toggle",
-					order = 11,
+					order = 12,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.WarnOnRace
@@ -588,7 +607,7 @@ Spy.options = {
 				},
 				SelectWarnRace = {
 					type = "select",
-					order = 12,
+					order = 13,
 					name = L["SelectWarnRace"],
 					desc = L["SelectWarnRaceDescription"],
 					values = { 
@@ -613,7 +632,7 @@ Spy.options = {
 					end,
 				},
 				WarnRaceNote = {
-					order = 13,
+					order = 14,
 					type = "description",
 					name = L["WarnRaceNote"],
 				},
@@ -629,6 +648,7 @@ Spy.options = {
 					name = L["ListOptionsDescription"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
 				},
 				RemoveUndetected = {
 					name = L["RemoveUndetected"],
@@ -754,25 +774,31 @@ Spy.options = {
 					name = L["MapOptionsDescription"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
 				},
-				MinimapTracking = {
-					name = L["MinimapTracking"],
-					desc = L["MinimapTrackingDescription"],
+				MinimapDetection = {
+					name = L["MinimapDetection"],
+					desc = L["MinimapDetectionDescription"],
 					type = "toggle",
 					order = 2,
 					width = "full",
 					get = function(info)
-						return Spy.db.profile.MinimapTracking
+						return Spy.db.profile.MinimapDetection
 					end,
 					set = function(info, value)
-						Spy.db.profile.MinimapTracking = value
+						Spy.db.profile.MinimapDetection = value
 					end,
 				},
+				MinimapNote = {
+					order = 3,
+					type = "description",
+					name = L["MinimapNote"],
+				},				
 				MinimapDetails = {
 					name = L["MinimapDetails"],
 					desc = L["MinimapDetailsDescription"],
 					type = "toggle",
-					order = 3,
+					order = 4,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.MinimapDetails
@@ -785,7 +811,7 @@ Spy.options = {
 					name = L["DisplayOnMap"],
 					desc = L["DisplayOnMapDescription"],
 					type = "toggle",
-					order = 4,
+					order = 5,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.DisplayOnMap
@@ -798,7 +824,7 @@ Spy.options = {
 					name = L["SwitchToZone"],
 					desc = L["SwitchToZoneDescription"],
 					type = "toggle",
-					order = 5,
+					order = 6,
 					width = "full",
 					get = function(info)
 						return Spy.db.profile.SwitchToZone
@@ -810,27 +836,14 @@ Spy.options = {
 				MapDisplayLimit = {
 					name = L["MapDisplayLimit"],
 					type = "group",
-					order = 6,
+					order = 7,
 					inline = true,
 					args = {
-						None = {
-							name = L["LimitNone"],
-							desc = L["LimitNoneDescription"],
-							type = "toggle",
-							order = 1,
-							width = "full",
-							get = function(info)
-								return Spy.db.profile.MapDisplayLimit == "None"
-							end,
-							set = function(info, value)
-								Spy.db.profile.MapDisplayLimit = "None"
-							end,
-						},
 						SameZone = {
 							name = L["LimitSameZone"],
 							desc = L["LimitSameZoneDescription"],
 							type = "toggle",
-							order = 2,
+							order = 1,
 							width = "full",
 							get = function(info)
 								return Spy.db.profile.MapDisplayLimit == "SameZone"
@@ -843,13 +856,26 @@ Spy.options = {
 							name = L["LimitSameContinent"],
 							desc = L["LimitSameContinentDescription"],
 							type = "toggle",
-							order = 3,
+							order = 2,
 							width = "full",
 							get = function(info)
 								return Spy.db.profile.MapDisplayLimit == "SameContinent"
 							end,
 							set = function(info, value)
 								Spy.db.profile.MapDisplayLimit = "SameContinent"
+							end,
+						},
+						None = {
+							name = L["LimitNone"],
+							desc = L["LimitNoneDescription"],
+							type = "toggle",
+							order = 3,
+							width = "full",
+							get = function(info)
+								return Spy.db.profile.MapDisplayLimit == "None"
+							end,
+							set = function(info, value)
+								Spy.db.profile.MapDisplayLimit = "None"
 							end,
 						},
 					},
@@ -866,6 +892,7 @@ Spy.options = {
 					name = L["DataOptionsDescription"],
 					type = "description",
 					order = 1,
+					fontSize = "medium",					
 				},
 				PurgeData = {
 					name = L["PurgeData"],
@@ -1218,7 +1245,7 @@ local Default_Profile = {
 		EnabledInArenas=true,
 		EnabledInWintergrasp=true,
 		DisableWhenPVPUnflagged=false,
-		MinimapTracking=true,
+		MinimapDetection=false,
 		MinimapDetails=true,
 		DisplayOnMap=true,
 		SwitchToZone=false,
@@ -1234,7 +1261,8 @@ local Default_Profile = {
 		ShowKoSButton=false,		
 		InvertSpy=false,
 		ResizeSpy=true,
-		ResizeSpyLimit=15,	
+		ResizeSpyLimit=15,
+		SoundChannel="SFX",		
 		Announce="None",
 		OnlyAnnounceKoS=false,
 		WarnOnStealth=true,
@@ -1910,7 +1938,7 @@ timestamp, event, hideCaster, srcGUID, srcName, srcFlags, sourceRaidFlags, dstGU
 				if playerData then
 					if not playerData.wins then playerData.wins = 0 end
 					playerData.wins = playerData.wins + 1
---					PlaySoundFile("Interface\\AddOns\\Spy\\Sounds\\neck-snap.mp3")
+--					PlaySoundFile("Interface\\AddOns\\Spy\\Sounds\\neck-snap.mp3, Spy.db.profile.SoundChannel")
 --					DEFAULT_CHAT_FRAME:AddMessage("Your pet ".. petName .. " killed " .. dstName);
 				end
 			end

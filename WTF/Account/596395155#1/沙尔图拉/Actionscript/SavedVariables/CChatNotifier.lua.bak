@@ -12,20 +12,29 @@ CChatNotifier_settings = {
 	["firstStart"] = false,
 }
 CChatNotifier_data = {
-	["血色区,宝珠,爱与家庭"] = {
+	["黑下,高图斯,宝石"] = {
+		["words"] = {
+			"黑下", -- [1]
+			"高图斯", -- [2]
+			"宝石", -- [3]
+		},
+		["active"] = true,
+	},
+	["血色区,宝珠,爱与家庭,拿画"] = {
 		["active"] = true,
 		["words"] = {
 			"血色区", -- [1]
 			"宝珠", -- [2]
 			"爱与家庭", -- [3]
+			"拿画", -- [4]
 		},
 	},
 	["通灵,tl,TL"] = {
-		["active"] = false,
 		["words"] = {
 			"通灵", -- [1]
 			"tl", -- [2]
 			"tl", -- [3]
 		},
+		["active"] = false,
 	},
 }

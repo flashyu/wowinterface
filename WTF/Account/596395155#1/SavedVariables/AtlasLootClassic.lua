@@ -1,10 +1,10 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 1030004,
-	},
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
+	},
+	["global"] = {
+		["__addonrevision"] = 1030004,
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
@@ -21,8 +21,8 @@ AtlasLootClassicDB = {
 				},
 				["selected"] = {
 					nil, -- [1]
-					"Scholomance", -- [2]
-					8, -- [3]
+					"LowerBlackrockSpire", -- [2]
+					16, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},

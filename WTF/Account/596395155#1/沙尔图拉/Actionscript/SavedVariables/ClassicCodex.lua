@@ -9,14 +9,14 @@ CodexConfig = {
 	["minimumDropChance"] = 2,
 	["showLowLevel"] = false,
 	["minimapButton"] = true,
-	["autoTurnin"] = false,
 	["zoneMapIcon"] = true,
+	["currentQuestGivers"] = true,
 	["alwaysShowId"] = false,
 	["nameplateIcon"] = true,
 	["allQuestGivers"] = true,
 	["spawnMarkerSize"] = 10,
 	["miniMapIcon"] = true,
-	["currentQuestGivers"] = true,
+	["autoTurnin"] = false,
 	["continentIcon"] = false,
 	["questMarkerSize"] = 14,
 }
@@ -25,11 +25,11 @@ CodexHiddenQuests = {
 CodexBrowserFavorites = {
 	["items"] = {
 	},
-	["units"] = {
+	["objets"] = {
 	},
 	["quests"] = {
 	},
-	["objets"] = {
+	["units"] = {
 	},
 }
 CodexColors = {
