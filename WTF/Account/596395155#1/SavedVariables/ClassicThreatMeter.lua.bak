@@ -51,15 +51,15 @@ CTM_Options = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
+		["height"] = 161,
 		["locked"] = false,
-		["test"] = false,
 		["headerColor"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.8, -- [4]
 		},
-		["height"] = 161,
+		["test"] = false,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]

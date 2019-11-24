@@ -102,10 +102,9 @@ ItemRackUser = {
 		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "A",
+	["CurrentSet"] = "Q",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
-		["2820"] = 30,
 	},
 	["Events"] = {
 		["Enabled"] = {

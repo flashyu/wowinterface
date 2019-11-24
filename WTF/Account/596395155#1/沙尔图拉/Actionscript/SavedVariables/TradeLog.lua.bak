@@ -1,5 +1,209 @@
 
 TradeLog_TradesHistory = {
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 1,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "冰心玥",
+		["when"] = "2019-11-22 00:54:20",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [1]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 2,
+		["playerItems"] = {
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "噢耶好棒",
+		["when"] = "2019-11-24 14:30:20",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [2]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 3,
+		["playerItems"] = {
+			{
+				["numItems"] = 18,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "不语尘世离愁",
+		["when"] = "2019-11-24 14:30:58",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [3]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 4,
+		["playerItems"] = {
+			{
+				["numItems"] = 17,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "雷人王",
+		["when"] = "2019-11-24 15:26:40",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [4]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 5,
+		["playerItems"] = {
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "小小牛嘚",
+		["when"] = "2019-11-24 15:47:42",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [5]
+	{
+		["targetMoney"] = 1540000,
+		["playerMoney"] = 0,
+		["id"] = 6,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_CLOSED", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+			"TRADE_CLOSED", -- [4]
+			"TRADE_SHOW", -- [5]
+			"TRADE_CLOSED", -- [6]
+			"TRADE_CLOSED", -- [7]
+		},
+		["who"] = "大鲁鲁",
+		["when"] = "2019-11-24 16:17:23",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [6]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 200000,
+		["id"] = 7,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "发糕灬抗饿",
+		["when"] = "2019-11-24 17:15:51",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [7]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 200000,
+		["id"] = 8,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "掉线艺人",
+		["when"] = "2019-11-24 17:16:09",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [8]
 }
 TRADE_LOG_BUTTON_POS = 138.96568260025
 TradeLog_Announce_Checked = true
