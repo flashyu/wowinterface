@@ -5,7 +5,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 50555386,
+			["Actionscript"] = 51822591,
 		},
 	},
 	["class"] = {
@@ -39,7 +39,7 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 10,
+			["currentTutorial"] = 5,
 			["general"] = {
 				["backdropfadecolor"] = {
 					["a"] = 0.69,
@@ -182,9 +182,9 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-488,330",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,50,995",
-				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
 				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
+				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
 				["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-50",
 				["ReputationBarMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-50,-228",

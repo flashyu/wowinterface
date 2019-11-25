@@ -204,6 +204,162 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "斯坦索姆",
 	}, -- [8]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 9,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "云逝",
+		["when"] = "2019-11-24 22:54:10",
+		["result"] = "complete",
+		["where"] = "东瘟疫之地",
+	}, -- [9]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 10,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "理发王师傅",
+		["when"] = "2019-11-24 22:56:07",
+		["result"] = "complete",
+		["where"] = "东瘟疫之地",
+	}, -- [10]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 11,
+		["playerItems"] = {
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 15,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "大酋长之怒",
+		["when"] = "2019-11-24 23:00:20",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [11]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 12,
+		["playerItems"] = {
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 14,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "大酋长之怒",
+		["when"] = "2019-11-24 23:16:15",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [12]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 200000,
+		["id"] = 13,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "记得奶我",
+		["when"] = "2019-11-24 23:37:08",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [13]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 14,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "二壮壮",
+		["when"] = "2019-11-25 00:22:17",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [14]
 }
 TRADE_LOG_BUTTON_POS = 138.96568260025
 TradeLog_Announce_Checked = true

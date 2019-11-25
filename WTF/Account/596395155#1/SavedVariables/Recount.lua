@@ -7,13 +7,13 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 400.5,
-					["x"] = -738.166694641113,
-					["w"] = 217,
-					["h"] = 173.000015258789,
+					["y"] = 395.388854980469,
+					["x"] = -687.833343505859,
+					["w"] = 317.000061035156,
+					["h"] = 183.222244262695,
 				},
 			},
-			["MainWindowHeight"] = 173.207977294922,
+			["MainWindowHeight"] = 183.222244262695,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -26,7 +26,7 @@ RecountDB = {
 			},
 			["LastInstanceName"] = "斯坦索姆",
 			["CurDataSet"] = "OverallData",
-			["MainWindowWidth"] = 216.76628112793,
+			["MainWindowWidth"] = 317.000061035156,
 		},
 	},
 }

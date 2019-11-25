@@ -210,14 +210,14 @@ TradeLog_TradesHistory = {
 		["id"] = 9,
 		["playerItems"] = {
 			{
-				["name"] = "魔法晶水",
 				["numItems"] = 20,
+				["name"] = "魔法晶水",
 				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
 				["texture"] = 132805,
 			}, -- [1]
 			{
-				["name"] = "魔法晶水",
 				["numItems"] = 20,
+				["name"] = "魔法晶水",
 				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
 				["texture"] = 132805,
 			}, -- [2]
@@ -232,8 +232,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "云逝",
 		["when"] = "2019-11-24 22:54:10",
-		["where"] = "东瘟疫之地",
 		["result"] = "complete",
+		["where"] = "东瘟疫之地",
 	}, -- [9]
 	{
 		["targetMoney"] = 0,
@@ -241,14 +241,14 @@ TradeLog_TradesHistory = {
 		["id"] = 10,
 		["playerItems"] = {
 			{
-				["name"] = "魔法晶水",
 				["numItems"] = 20,
+				["name"] = "魔法晶水",
 				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
 				["texture"] = 132805,
 			}, -- [1]
 			{
-				["name"] = "魔法晶水",
 				["numItems"] = 20,
+				["name"] = "魔法晶水",
 				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
 				["texture"] = 132805,
 			}, -- [2]
@@ -263,8 +263,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "理发王师傅",
 		["when"] = "2019-11-24 22:56:07",
-		["where"] = "东瘟疫之地",
 		["result"] = "complete",
+		["where"] = "东瘟疫之地",
 	}, -- [10]
 	{
 		["targetMoney"] = 0,
@@ -272,8 +272,8 @@ TradeLog_TradesHistory = {
 		["id"] = 11,
 		["playerItems"] = {
 			{
-				["name"] = "魔法甜面包",
 				["numItems"] = 15,
+				["name"] = "魔法甜面包",
 				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
 			}, -- [1]
@@ -288,8 +288,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "大酋长之怒",
 		["when"] = "2019-11-24 23:00:20",
-		["where"] = "斯坦索姆",
 		["result"] = "complete",
+		["where"] = "斯坦索姆",
 	}, -- [11]
 	{
 		["targetMoney"] = 0,
@@ -297,14 +297,14 @@ TradeLog_TradesHistory = {
 		["id"] = 12,
 		["playerItems"] = {
 			{
-				["name"] = "魔法甜面包",
 				["numItems"] = 20,
+				["name"] = "魔法甜面包",
 				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
 			}, -- [1]
 			{
-				["name"] = "魔法甜面包",
 				["numItems"] = 14,
+				["name"] = "魔法甜面包",
 				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
 			}, -- [2]
@@ -319,8 +319,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "大酋长之怒",
 		["when"] = "2019-11-24 23:16:15",
-		["where"] = "斯坦索姆",
 		["result"] = "complete",
+		["where"] = "斯坦索姆",
 	}, -- [12]
 	{
 		["targetMoney"] = 0,
@@ -338,8 +338,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "记得奶我",
 		["when"] = "2019-11-24 23:37:08",
-		["where"] = "斯坦索姆",
 		["result"] = "complete",
+		["where"] = "斯坦索姆",
 	}, -- [13]
 	{
 		["targetMoney"] = 10000,
@@ -357,9 +357,135 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "二壮壮",
 		["when"] = "2019-11-25 00:22:17",
-		["where"] = "幽暗城",
 		["result"] = "complete",
+		["where"] = "幽暗城",
 	}, -- [14]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 15,
+		["playerItems"] = {
+		},
+		["reason"] = "selfrunaway",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["who"] = "萨丿蛮",
+		["when"] = "2019-11-25 23:13:45",
+		["where"] = "斯坦索姆",
+		["result"] = "cancelled",
+	}, -- [15]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 16,
+		["playerItems"] = {
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "萨丿蛮",
+		["when"] = "2019-11-25 23:15:47",
+		["where"] = "斯坦索姆",
+		["result"] = "complete",
+	}, -- [16]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 17,
+		["playerItems"] = {
+			{
+				["name"] = "信仰奖章",
+				["numItems"] = 1,
+				["itemLink"] = "|cffffffff|Hitem:12845::::::::60:::::::|h[信仰奖章]|h|r",
+				["texture"] = 133295,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "其实我是圣骑",
+		["when"] = "2019-11-25 23:51:31",
+		["where"] = "斯坦索姆",
+		["result"] = "complete",
+	}, -- [17]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 18,
+		["playerItems"] = {
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 18,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_CLOSED", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+			"TRADE_CLOSED", -- [4]
+			"TRADE_CLOSED", -- [5]
+			"TRADE_SHOW", -- [6]
+			"TRADE_CLOSED", -- [7]
+			"TRADE_CLOSED", -- [8]
+		},
+		["who"] = "蛮鬃血蹄",
+		["when"] = "2019-11-26 00:12:47",
+		["where"] = "斯坦索姆",
+		["result"] = "complete",
+	}, -- [18]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 19,
+		["playerItems"] = {
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "其实我是圣骑",
+		["when"] = "2019-11-26 00:13:30",
+		["where"] = "斯坦索姆",
+		["result"] = "complete",
+	}, -- [19]
 }
 TRADE_LOG_BUTTON_POS = 138.96568260025
 TradeLog_Announce_Checked = true
