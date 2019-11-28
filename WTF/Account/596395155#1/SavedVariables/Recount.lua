@@ -13,7 +13,6 @@ RecountDB = {
 					["h"] = 183.222244262695,
 				},
 			},
-			["MainWindowHeight"] = 183.222244262695,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -27,6 +26,7 @@ RecountDB = {
 			["LastInstanceName"] = "斯坦索姆",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
+			["MainWindowHeight"] = 183.222244262695,
 		},
 	},
 }

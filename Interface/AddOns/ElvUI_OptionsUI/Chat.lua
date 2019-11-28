@@ -13,7 +13,6 @@ E.Options.args.chat = {
 	type = "group",
 	name = L["Chat"],
 	childGroups = "tab",
-	order = 2,
 	get = function(info) return E.db.chat[info[#info]] end,
 	set = function(info, value) E.db.chat[info[#info]] = value end,
 	args = {

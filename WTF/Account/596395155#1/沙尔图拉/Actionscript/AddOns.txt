@@ -93,3 +93,4 @@ DBM-Party-Classic: enabled
 DBM-BWL: enabled
 DBM-DefaultSkin: enabled
 MessageClassifier: disabled
+WeakAurasCompanion: enabled

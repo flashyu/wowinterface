@@ -35,7 +35,6 @@ function UF:Construct_AssistFrames()
 		self.AuraWatch = UF:Construct_AuraWatch(self)
 		self.RaidDebuffs = UF:Construct_RaidDebuffs(self)
 		self.DebuffHighlight = UF:Construct_DebuffHighlight(self)
-		self.HealthPrediction = UF:Construct_HealComm(self)
 
 		self.unitframeType = "assist"
 	else
@@ -153,7 +152,6 @@ function UF:Update_AssistFrames(frame, db)
 		UF:Configure_AuraWatch(frame)
 		UF:Configure_DebuffHighlight(frame)
 		UF:Configure_RaidDebuffs(frame)
-		UF:Configure_HealComm(frame)
 	end
 
 	frame:UpdateAllElements("ElvUI_UpdateAllElements")

@@ -462,7 +462,7 @@ local function CreateUnitframesConfig()
 end
 
 E.Options.args.modulecontrol= {
-	order = 3,
+	order = -2,
 	type = "group",
 	name = L["Module Control"],
 	childGroups = "tab",

@@ -60,6 +60,7 @@ The following options are listed by priority. The first check that returns true 
     Background:SetColorTexture(1, 1, 1, .5)
 
     -- Options
+    Health.frequentUpdates = true
     Health.colorTapping = true
     Health.colorDisconnected = true
     Health.colorClass = true

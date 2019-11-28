@@ -32,7 +32,7 @@ end
 
 local function Click()
 	if InCombatLockdown() then _G.UIErrorsFrame:AddMessage(E.InfoColor.._G.ERR_NOT_IN_COMBAT) return end
-	_G.ToggleWorldMap()
+	_G.ToggleFrame(_G.WorldMapFrame)
 end
 
 local function ValueColorUpdate(hex)

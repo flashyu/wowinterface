@@ -2,10 +2,4365 @@
 RecountPerCharDB = {
 	["version"] = "1.3",
 	["combatants"] = {
+		["Actionscript"] = {
+			["GUID"] = "Player-4511-00A04559",
+			["LastEventHealth"] = {
+				1579, -- [1]
+				1579, -- [2]
+				1579, -- [3]
+				1579, -- [4]
+				1579, -- [5]
+				1579, -- [6]
+				1579, -- [7]
+				1495, -- [8]
+				1495, -- [9]
+				1401, -- [10]
+				1401, -- [11]
+				1401, -- [12]
+				1302, -- [13]
+				1302, -- [14]
+				1302, -- [15]
+				1302, -- [16]
+				1253, -- [17]
+				1253, -- [18]
+				1203, -- [19]
+				1203, -- [20]
+				1203, -- [21]
+				1203, -- [22]
+				1152, -- [23]
+				1152, -- [24]
+				2460, -- [25]
+				2460, -- [26]
+				2460, -- [27]
+				2460, -- [28]
+				2460, -- [29]
+				2460, -- [30]
+				2460, -- [31]
+				2460, -- [32]
+				2418, -- [33]
+				2418, -- [34]
+				2418, -- [35]
+				2460, -- [36]
+				2460, -- [37]
+				2460, -- [38]
+				2460, -- [39]
+				2415, -- [40]
+				2415, -- [41]
+				2415, -- [42]
+				2371, -- [43]
+				2371, -- [44]
+				1579, -- [45]
+				1579, -- [46]
+				1530, -- [47]
+				1475, -- [48]
+				1430, -- [49]
+				1579, -- [50]
+			},
+			["LastAttackedBy"] = "暗炉隧道工",
+			["LastEventType"] = {
+				"DAMAGE", -- [1]
+				"DAMAGE", -- [2]
+				"DAMAGE", -- [3]
+				"DAMAGE", -- [4]
+				"DAMAGE", -- [5]
+				"DAMAGE", -- [6]
+				"DAMAGE", -- [7]
+				"DAMAGE", -- [8]
+				"DAMAGE", -- [9]
+				"DAMAGE", -- [10]
+				"DAMAGE", -- [11]
+				"DAMAGE", -- [12]
+				"DAMAGE", -- [13]
+				"DAMAGE", -- [14]
+				"DAMAGE", -- [15]
+				"DAMAGE", -- [16]
+				"DAMAGE", -- [17]
+				"DAMAGE", -- [18]
+				"DAMAGE", -- [19]
+				"DAMAGE", -- [20]
+				"DAMAGE", -- [21]
+				"DAMAGE", -- [22]
+				"DAMAGE", -- [23]
+				"DAMAGE", -- [24]
+				"DAMAGE", -- [25]
+				"DAMAGE", -- [26]
+				"DAMAGE", -- [27]
+				"DAMAGE", -- [28]
+				"DAMAGE", -- [29]
+				"DAMAGE", -- [30]
+				"DAMAGE", -- [31]
+				"DAMAGE", -- [32]
+				"DAMAGE", -- [33]
+				"DAMAGE", -- [34]
+				"DAMAGE", -- [35]
+				"DAMAGE", -- [36]
+				"DAMAGE", -- [37]
+				"DAMAGE", -- [38]
+				"DAMAGE", -- [39]
+				"DAMAGE", -- [40]
+				"DAMAGE", -- [41]
+				"DAMAGE", -- [42]
+				"DAMAGE", -- [43]
+				"DAMAGE", -- [44]
+				"DAMAGE", -- [45]
+				"DAMAGE", -- [46]
+				"DAMAGE", -- [47]
+				"DAMAGE", -- [48]
+				"DAMAGE", -- [49]
+				"DAMAGE", -- [50]
+			},
+			["TimeWindows"] = {
+				["Absorbs"] = {
+					138, -- [1]
+				},
+				["TimeHeal"] = {
+					4.5, -- [1]
+				},
+				["HealingTaken"] = {
+					138, -- [1]
+				},
+				["ActiveTime"] = {
+					170.43, -- [1]
+				},
+				["DamageTaken"] = {
+					3062, -- [1]
+				},
+				["TimeDamage"] = {
+					165.93, -- [1]
+				},
+				["DOT_Time"] = {
+					45, -- [1]
+				},
+				["Damage"] = {
+					57866, -- [1]
+				},
+			},
+			["enClass"] = "MAGE",
+			["unit"] = "Actionscript",
+			["LastActive"] = 860019.036,
+			["level"] = 60,
+			["LastDamageAbility"] = "肉搏",
+			["LastFightIn"] = 22,
+			["LastEventHealthMax"] = {
+				2460, -- [1]
+				2460, -- [2]
+				2460, -- [3]
+				2460, -- [4]
+				2460, -- [5]
+				2460, -- [6]
+				2460, -- [7]
+				2460, -- [8]
+				2460, -- [9]
+				2460, -- [10]
+				2460, -- [11]
+				2460, -- [12]
+				2460, -- [13]
+				2460, -- [14]
+				2460, -- [15]
+				2460, -- [16]
+				2460, -- [17]
+				2460, -- [18]
+				2460, -- [19]
+				2460, -- [20]
+				2460, -- [21]
+				2460, -- [22]
+				2460, -- [23]
+				2460, -- [24]
+				2460, -- [25]
+				2460, -- [26]
+				2460, -- [27]
+				2460, -- [28]
+				2460, -- [29]
+				2460, -- [30]
+				2460, -- [31]
+				2460, -- [32]
+				2460, -- [33]
+				2460, -- [34]
+				2460, -- [35]
+				2460, -- [36]
+				2460, -- [37]
+				2460, -- [38]
+				2460, -- [39]
+				2460, -- [40]
+				2460, -- [41]
+				2460, -- [42]
+				2460, -- [43]
+				2460, -- [44]
+				2460, -- [45]
+				2460, -- [46]
+				2460, -- [47]
+				2460, -- [48]
+				2460, -- [49]
+				2460, -- [50]
+			},
+			["type"] = "Self",
+			["FightsSaved"] = 5,
+			["TimeLast"] = {
+				["TimeHeal"] = 858069.641,
+				["OVERALL"] = 860019.036,
+				["DamageTaken"] = 860016.036,
+				["Absorbs"] = 858069.641,
+				["HealingTaken"] = 858069.641,
+				["TimeDamage"] = 860019.036,
+				["ActiveTime"] = 860019.036,
+				["DOT_Time"] = 857591.641,
+				["Damage"] = 860019.036,
+			},
+			["LastDamageTaken"] = 44,
+			["Owner"] = false,
+			["Name"] = "Actionscript",
+			["NextEventNum"] = 45,
+			["LastDamageTime"] = 860019.216,
+			["LastEvents"] = {
+				"Actionscript 冰霜新星 暗炉隧道工 Hit -92 (Frost)", -- [1]
+				"Actionscript 射击 暗炉隧道工 Hit -135 (Arcane)", -- [2]
+				"Actionscript 射击 暗炉隧道工 Hit -112 (Arcane)", -- [3]
+				"Actionscript 射击 暗炉隧道工 Hit -84 (Arcane)", -- [4]
+				"暗炉隧道工 肉搏 Actionscript Hit -46 (Physical)", -- [5]
+				"暗炉隧道工 破甲攻击 Actionscript Miss (Physical)", -- [6]
+				"暗炉隧道工 肉搏 Actionscript Hit -38 (Physical)", -- [7]
+				"暗炉隧道工 肉搏 Actionscript Hit -42 (Physical)", -- [8]
+				"暗炉隧道工 肉搏 Actionscript Hit -52 (Physical)", -- [9]
+				"Actionscript 冰锥术 暗炉隧道工 Hit -500 (Frost)", -- [10]
+				"暗炉隧道工 肉搏 Actionscript Hit -50 (Physical)", -- [11]
+				"暗炉隧道工 肉搏 Actionscript Hit -49 (Physical)", -- [12]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -261 (Arcane)", -- [13]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -260 (Arcane)", -- [14]
+				"暗炉隧道工 肉搏 Actionscript Hit -49 (Physical)", -- [15]
+				"暗炉隧道工 肉搏 Actionscript Hit -50 (Physical)", -- [16]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -259 (Arcane)", -- [17]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -260 (Arcane)", -- [18]
+				"暗炉隧道工 肉搏 Actionscript Hit -51 (Physical)", -- [19]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -268 (Arcane)", -- [20]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -272 (Arcane)", -- [21]
+				"暗炉隧道工 肉搏 Actionscript Miss (1)", -- [22]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -263 (Arcane)", -- [23]
+				"Actionscript 魔爆术 暗炉隧道工 Hit -260 (Arcane)", -- [24]
+				"Actionscript 冰霜新星 暗炉隧道工 Hit -90 (Frost)", -- [25]
+				"Actionscript 射击 暗炉隧道工 Hit -92 (Arcane)", -- [26]
+				"Actionscript 射击 暗炉隧道工 Hit -115 (Arcane)", -- [27]
+				"Actionscript 射击 暗炉隧道工 Hit -87 (Arcane)", -- [28]
+				"Actionscript 射击 暗炉隧道工 Hit -78 (Arcane)", -- [29]
+				"暗炉隧道工 肉搏 Actionscript Miss (1)", -- [30]
+				"Actionscript 射击 暗炉隧道工 Hit -89 (Arcane)", -- [31]
+				"暗炉隧道工 肉搏 Actionscript Hit -42 (Physical)", -- [32]
+				"Actionscript 火焰冲击 暗炉隧道工 Hit -517 (Fire)", -- [33]
+				"暗炉隧道工 肉搏 Actionscript Dodge (1)", -- [34]
+				"Actionscript 冰锥术 暗炉隧道工 Hit -503 (Frost)", -- [35]
+				"Actionscript 冰霜新星 暗炉隧道工 Hit -92 (Frost)", -- [36]
+				"Actionscript 射击 暗炉隧道工 Hit -135 (Arcane)", -- [37]
+				"Actionscript 射击 暗炉隧道工 Hit -106 (Arcane)", -- [38]
+				"暗炉隧道工 肉搏 Actionscript Hit -45 (Physical)", -- [39]
+				"暗炉隧道工 肉搏 Actionscript Miss (1)", -- [40]
+				"Actionscript 冰锥术 暗炉隧道工 Hit -495 (Frost)", -- [41]
+				"暗炉隧道工 肉搏 Actionscript Hit -44 (Physical)", -- [42]
+				"暗炉隧道工 肉搏 Actionscript Miss (1)", -- [43]
+				"Actionscript 火焰冲击 暗炉隧道工 Crit -760 (Fire)", -- [44]
+				"Actionscript 射击 暗炉隧道工 Hit -112 (Arcane)", -- [45]
+				"暗炉隧道工 肉搏 Actionscript Hit -49 (Physical)", -- [46]
+				"暗炉隧道工 肉搏 Actionscript Hit -55 (Physical)", -- [47]
+				"暗炉隧道工 肉搏 Actionscript Hit -45 (Physical)", -- [48]
+				"Actionscript 火焰冲击 暗炉隧道工 Hit -500 (Fire)", -- [49]
+				"Actionscript 冰霜新星 暗炉隧道工 Hit -87 (Frost)", -- [50]
+			},
+			["LastEventIncoming"] = {
+				false, -- [1]
+				false, -- [2]
+				false, -- [3]
+				false, -- [4]
+				true, -- [5]
+				true, -- [6]
+				true, -- [7]
+				true, -- [8]
+				true, -- [9]
+				false, -- [10]
+				true, -- [11]
+				true, -- [12]
+				false, -- [13]
+				false, -- [14]
+				true, -- [15]
+				true, -- [16]
+				false, -- [17]
+				false, -- [18]
+				true, -- [19]
+				false, -- [20]
+				false, -- [21]
+				true, -- [22]
+				false, -- [23]
+				false, -- [24]
+				false, -- [25]
+				false, -- [26]
+				false, -- [27]
+				false, -- [28]
+				false, -- [29]
+				true, -- [30]
+				false, -- [31]
+				true, -- [32]
+				false, -- [33]
+				true, -- [34]
+				false, -- [35]
+				false, -- [36]
+				false, -- [37]
+				false, -- [38]
+				true, -- [39]
+				true, -- [40]
+				false, -- [41]
+				true, -- [42]
+				true, -- [43]
+				false, -- [44]
+				false, -- [45]
+				true, -- [46]
+				true, -- [47]
+				true, -- [48]
+				false, -- [49]
+				false, -- [50]
+			},
+			["LastEventTimes"] = {
+				859933.513, -- [1]
+				859938.668, -- [2]
+				859940.568, -- [3]
+				859942.478, -- [4]
+				859942.478, -- [5]
+				859943.228, -- [6]
+				859943.228, -- [7]
+				859944.448, -- [8]
+				859945.238, -- [9]
+				859946.078, -- [10]
+				859946.488, -- [11]
+				859947.238, -- [12]
+				859947.698, -- [13]
+				859947.698, -- [14]
+				859948.508, -- [15]
+				859949.248, -- [16]
+				859949.248, -- [17]
+				859949.248, -- [18]
+				859950.508, -- [19]
+				859950.928, -- [20]
+				859950.928, -- [21]
+				859951.258, -- [22]
+				859952.108, -- [23]
+				859952.108, -- [24]
+				859976.035, -- [25]
+				859979.119, -- [26]
+				859981.029, -- [27]
+				859982.899, -- [28]
+				859984.839, -- [29]
+				859985.669, -- [30]
+				859986.359, -- [31]
+				859987.739, -- [32]
+				859988.149, -- [33]
+				859989.753, -- [34]
+				859989.753, -- [35]
+				860006.773, -- [36]
+				860009.536, -- [37]
+				860011.266, -- [38]
+				860012.136, -- [39]
+				860014.136, -- [40]
+				860015.656, -- [41]
+				860016.056, -- [42]
+				860018.086, -- [43]
+				860019.216, -- [44]
+				859910.283, -- [45]
+				859911.253, -- [46]
+				859913.263, -- [47]
+				859915.273, -- [48]
+				859915.693, -- [49]
+				859933.513, -- [50]
+			},
+			["Fights"] = {
+				["Fight3"] = {
+					["ElementHitsTaken"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 0,
+								},
+								["Absorb"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 9,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 10,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DOTs"] = {
+					},
+					["HOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 427,
+					["ElementDoneAbsorb"] = {
+					},
+					["Absorbs"] = 0,
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["RunicPowerGain"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementTaken"] = {
+						["Melee"] = 427,
+					},
+					["DOT_Time"] = 0,
+					["Damage"] = 3113,
+					["PartialBlock"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["FDamagedWho"] = {
+					},
+					["HealingTaken"] = 0,
+					["FAttacks"] = {
+					},
+					["DamagedWho"] = {
+						["暗炉巫师"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 500,
+								},
+								["冰霜新星"] = {
+									["count"] = 179,
+								},
+								["魔爆术"] = {
+									["count"] = 2103,
+								},
+								["射击"] = {
+									["count"] = 331,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 3113,
+						},
+					},
+					["ElementDone"] = {
+						["Frost"] = 679,
+						["Fire"] = 0,
+						["Arcane"] = 2434,
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 11,
+								},
+							},
+							["amount"] = 11,
+						},
+					},
+					["Dispelled"] = 0,
+					["WhoDamaged"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 427,
+								},
+							},
+							["amount"] = 427,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGain"] = 0,
+					["CCBreak"] = 0,
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["PartialResist"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 10,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["ElementTakenAbsorb"] = {
+						["Melee"] = 0,
+					},
+					["ActiveTime"] = 13.18,
+					["Overhealing"] = 0,
+					["WhoDispelled"] = {
+					},
+					["TimeSpent"] = {
+						["暗炉巫师"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["魔爆术"] = {
+									["count"] = 5.68,
+								},
+								["射击"] = {
+									["count"] = 4.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 13.18,
+						},
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+						["寒冰护体"] = {
+							["Details"] = {
+								["Absorb"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["PartialAbsorb"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 10,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 10,
+							["amount"] = 0,
+						},
+					},
+					["EnergyGained"] = {
+					},
+					["HealedWho"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["Healing"] = 0,
+					["RageGained"] = {
+					},
+					["Absorbed"] = {
+						["寒冰护体"] = {
+							["Details"] = {
+								["Actionscript"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["Attacks"] = {
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 500,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 500,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 500,
+						},
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 92,
+									["min"] = 87,
+									["count"] = 2,
+									["amount"] = 179,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 179,
+						},
+						["魔爆术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 272,
+									["min"] = 259,
+									["count"] = 8,
+									["amount"] = 2103,
+								},
+							},
+							["count"] = 8,
+							["amount"] = 2103,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 135,
+									["min"] = 84,
+									["count"] = 3,
+									["amount"] = 331,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 331,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["RageGain"] = 0,
+					["ManaGainedFrom"] = {
+					},
+					["TimeDamage"] = 13.18,
+					["TimeDamaging"] = {
+						["暗炉巫师"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["魔爆术"] = {
+									["count"] = 5.68,
+								},
+								["射击"] = {
+									["count"] = 4.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 13.18,
+						},
+					},
+					["ManaGain"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight5"] = {
+					["Attacks"] = {
+						["冰霜新星"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 181,
+									["min"] = 181,
+									["count"] = 1,
+									["amount"] = 181,
+								},
+								["Hit"] = {
+									["max"] = 90,
+									["min"] = 90,
+									["count"] = 1,
+									["amount"] = 90,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 271,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 771,
+									["min"] = 771,
+									["count"] = 1,
+									["amount"] = 771,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 771,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 135,
+									["min"] = 97,
+									["count"] = 5,
+									["amount"] = 607,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 607,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 756,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 756,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 756,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 489,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 489,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 489,
+						},
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 4,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["ElementDone"] = {
+						["Frost"] = 1516,
+						["Fire"] = 771,
+						["Arcane"] = 607,
+					},
+					["WhoDamaged"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 38,
+								},
+							},
+							["amount"] = 38,
+						},
+					},
+					["TimeSpent"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 7.5,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.12,
+								},
+								["射击"] = {
+									["count"] = 1.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 5.62,
+						},
+					},
+					["DamageTaken"] = 38,
+					["TimeDamage"] = 13.12,
+					["PartialResist"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 7,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 7,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 2,
+						},
+					},
+					["PartialAbsorb"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 7,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 7,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+					},
+					["DamagedWho"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 181,
+								},
+								["射击"] = {
+									["count"] = 510,
+								},
+								["寒冰箭"] = {
+									["count"] = 756,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1447,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 90,
+								},
+								["火焰冲击"] = {
+									["count"] = 771,
+								},
+								["射击"] = {
+									["count"] = 97,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 489,
+								},
+							},
+							["amount"] = 1447,
+						},
+					},
+					["ActiveTime"] = 13.12,
+					["TimeDamaging"] = {
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 7.5,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.12,
+								},
+								["射击"] = {
+									["count"] = 1.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 5.62,
+						},
+					},
+					["ElementTaken"] = {
+						["Melee"] = 38,
+					},
+					["ElementHitsTaken"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 7,
+								},
+							},
+							["amount"] = 7,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["Damage"] = 2894,
+				},
+				["CurrentFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 0,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["Damage"] = 0,
+					["RunicPowerGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialBlock"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Frost"] = 0,
+						["Fire"] = 0,
+						["Arcane"] = 0,
+					},
+					["DamagedWho"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["WhoDamaged"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["HealedWho"] = {
+					},
+					["CCBreak"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
+					["PartialAbsorb"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+					},
+					["ActiveTime"] = 0,
+					["EnergyGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["Healing"] = 0,
+					["Dispelled"] = 0,
+					["RageGained"] = {
+					},
+					["Attacks"] = {
+						["魔爆术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+					},
+					["RageGain"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 0,
+					["TimeDamaging"] = {
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight2"] = {
+					["DOTs"] = {
+						["暴风雪 (伤害/跳)"] = {
+							["Details"] = {
+								["暗炉吟唱者"] = {
+									["count"] = 0,
+								},
+								["暗炉战士"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 42,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["Damage"] = 1571,
+					["RunicPowerGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 42,
+						["Physical"] = 0,
+					},
+					["DOT_Time"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialBlock"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Tick"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 5,
+								},
+							},
+							["amount"] = 5,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Frost"] = 593,
+						["Fire"] = 517,
+						["Arcane"] = 461,
+					},
+					["DamagedWho"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 90,
+								},
+								["冰锥术"] = {
+									["count"] = 503,
+								},
+								["射击"] = {
+									["count"] = 461,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 517,
+								},
+							},
+							["amount"] = 1571,
+						},
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["WhoDamaged"] = {
+						["暗炉战士"] = {
+							["Details"] = {
+								["旋风斩效果"] = {
+									["count"] = 0,
+								},
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 42,
+								},
+							},
+							["amount"] = 42,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["HealedWho"] = {
+					},
+					["CCBreak"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
+					["PartialAbsorb"] = {
+						["旋风斩效果"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["旋风斩效果"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 7.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 12,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+					},
+					["ActiveTime"] = 12,
+					["EnergyGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["Healing"] = 0,
+					["Dispelled"] = 0,
+					["RageGained"] = {
+					},
+					["Attacks"] = {
+						["暴风雪 (伤害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 503,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 503,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 503,
+						},
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 90,
+									["min"] = 90,
+									["count"] = 1,
+									["amount"] = 90,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 90,
+						},
+						["魔爆术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 115,
+									["min"] = 78,
+									["count"] = 5,
+									["amount"] = 461,
+								},
+							},
+							["count"] = 5,
+							["amount"] = 461,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 517,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 517,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 517,
+						},
+					},
+					["RageGain"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 12,
+					["TimeDamaging"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 7.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 12,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight4"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 1030,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 22,
+								},
+								["Dodge"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 27,
+						},
+						["Physical"] = {
+							["Details"] = {
+								["Dodge"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 1,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["Damage"] = 3297,
+					["RunicPowerGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 1030,
+					},
+					["DOT_Time"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialBlock"] = {
+					},
+					["ElementHitsDone"] = {
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Frost"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+								},
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 4,
+								},
+							},
+							["amount"] = 5,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 0,
+								},
+								["Hit"] = {
+									["count"] = 8,
+								},
+							},
+							["amount"] = 8,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Fire"] = 1078,
+						["Frost"] = 1332,
+						["Arcane"] = 887,
+					},
+					["DamagedWho"] = {
+						["暗炉战士"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["冰霜新星"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["冰霜新星"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 1078,
+								},
+								["冰霜新星"] = {
+									["count"] = 327,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["射击"] = {
+									["count"] = 887,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1005,
+								},
+							},
+							["amount"] = 3297,
+						},
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["WhoDamaged"] = {
+						["暗炉战士"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 1030,
+								},
+							},
+							["amount"] = 1030,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["HealedWho"] = {
+					},
+					["CCBreak"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
+					["PartialAbsorb"] = {
+						["催眠术"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 27,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 27,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["催眠术"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 27,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 27,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["暗炉战士"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["冰霜新星"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 3,
+								},
+								["冰霜新星"] = {
+									["count"] = 4.5,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["射击"] = {
+									["count"] = 12,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 21,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+					},
+					["ActiveTime"] = 21,
+					["EnergyGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["Healing"] = 0,
+					["Dispelled"] = 0,
+					["RageGained"] = {
+					},
+					["Attacks"] = {
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 578,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1078,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 1078,
+						},
+						["冰霜新星"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 164,
+									["min"] = 164,
+									["count"] = 1,
+									["amount"] = 164,
+								},
+								["Hit"] = {
+									["max"] = 83,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 163,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 327,
+						},
+						["魔爆术"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 131,
+									["min"] = 80,
+									["count"] = 8,
+									["amount"] = 887,
+								},
+							},
+							["count"] = 8,
+							["amount"] = 887,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+								["Hit"] = {
+									["max"] = 506,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 1005,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 1005,
+						},
+					},
+					["RageGain"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 21,
+					["TimeDamaging"] = {
+						["暗炉战士"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["冰霜新星"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["火焰冲击"] = {
+									["count"] = 3,
+								},
+								["冰霜新星"] = {
+									["count"] = 4.5,
+								},
+								["魔爆术"] = {
+									["count"] = 0,
+								},
+								["射击"] = {
+									["count"] = 12,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 21,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["LastFightData"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 89,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+								["Miss"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 4,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["Damage"] = 1588,
+					["RunicPowerGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 89,
+					},
+					["DOT_Time"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialBlock"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Frost"] = 587,
+						["Fire"] = 760,
+						["Arcane"] = 241,
+					},
+					["DamagedWho"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 92,
+								},
+								["火焰冲击"] = {
+									["count"] = 760,
+								},
+								["射击"] = {
+									["count"] = 241,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 495,
+								},
+							},
+							["amount"] = 1588,
+						},
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["WhoDamaged"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 89,
+								},
+							},
+							["amount"] = 89,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["HealedWho"] = {
+					},
+					["CCBreak"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
+					["PartialAbsorb"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 4,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 7.5,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+					},
+					["ActiveTime"] = 7.5,
+					["EnergyGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["Healing"] = 0,
+					["Dispelled"] = 0,
+					["RageGained"] = {
+					},
+					["Attacks"] = {
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 92,
+									["min"] = 92,
+									["count"] = 1,
+									["amount"] = 92,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 92,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 495,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 495,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 495,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 135,
+									["min"] = 106,
+									["count"] = 2,
+									["amount"] = 241,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 241,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 760,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 760,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 760,
+						},
+					},
+					["RageGain"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 7.5,
+					["TimeDamaging"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 7.5,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["Fight1"] = {
+					["DOTs"] = {
+					},
+					["ElementDoneResist"] = {
+					},
+					["Ressed"] = 0,
+					["DamageTaken"] = 89,
+					["RageGainedFrom"] = {
+					},
+					["ElementHitsTaken"] = {
+						["Melee"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+								["Miss"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 4,
+						},
+					},
+					["DeathCount"] = 0,
+					["HOT_Time"] = 0,
+					["Damage"] = 1588,
+					["RunicPowerGain"] = 0,
+					["ElementTaken"] = {
+						["Melee"] = 89,
+					},
+					["DOT_Time"] = 0,
+					["ElementTakenBlock"] = {
+					},
+					["ElementDoneAbsorb"] = {
+					},
+					["TimeHeal"] = 0,
+					["RessedWho"] = {
+					},
+					["Dispels"] = 0,
+					["PartialBlock"] = {
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 1,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 2,
+								},
+							},
+							["amount"] = 2,
+						},
+					},
+					["FAttacks"] = {
+					},
+					["HealingTaken"] = 0,
+					["ElementDone"] = {
+						["Frost"] = 587,
+						["Fire"] = 760,
+						["Arcane"] = 241,
+					},
+					["DamagedWho"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 92,
+								},
+								["火焰冲击"] = {
+									["count"] = 760,
+								},
+								["射击"] = {
+									["count"] = 241,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 495,
+								},
+							},
+							["amount"] = 1588,
+						},
+					},
+					["ManaGainedFrom"] = {
+					},
+					["RunicPowerGained"] = {
+					},
+					["WhoDamaged"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 89,
+								},
+							},
+							["amount"] = 89,
+						},
+					},
+					["EnergyGainedFrom"] = {
+					},
+					["CCBroken"] = {
+					},
+					["RunicPowerGainedFrom"] = {
+					},
+					["ElementDoneBlock"] = {
+					},
+					["TimeHealing"] = {
+					},
+					["OverHeals"] = {
+					},
+					["WhoHealed"] = {
+					},
+					["HealedWho"] = {
+					},
+					["CCBreak"] = 0,
+					["ElementTakenAbsorb"] = {
+					},
+					["PartialAbsorb"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 4,
+							["amount"] = 0,
+						},
+					},
+					["PartialResist"] = {
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 4,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 4,
+						},
+					},
+					["ManaGained"] = {
+					},
+					["FDamage"] = 0,
+					["Interrupts"] = 0,
+					["Overhealing"] = 0,
+					["TimeSpent"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 7.5,
+						},
+					},
+					["WhoDispelled"] = {
+					},
+					["InterruptData"] = {
+					},
+					["ElementTakenResist"] = {
+					},
+					["Heals"] = {
+					},
+					["ActiveTime"] = 7.5,
+					["EnergyGained"] = {
+					},
+					["EnergyGain"] = 0,
+					["Healing"] = 0,
+					["Dispelled"] = 0,
+					["RageGained"] = {
+					},
+					["Attacks"] = {
+						["冰霜新星"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 92,
+									["min"] = 92,
+									["count"] = 1,
+									["amount"] = 92,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 92,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 495,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 495,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 495,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 135,
+									["min"] = 106,
+									["count"] = 2,
+									["amount"] = 241,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 241,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 0,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 760,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 760,
+								},
+								["Hit"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 0,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 760,
+						},
+					},
+					["RageGain"] = 0,
+					["FDamagedWho"] = {
+					},
+					["TimeDamage"] = 7.5,
+					["TimeDamaging"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 0,
+								},
+								["火焰冲击"] = {
+									["count"] = 0,
+								},
+							},
+							["amount"] = 0,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+								["射击"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 0,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 7.5,
+						},
+					},
+					["ManaGain"] = 0,
+					["HOTs"] = {
+					},
+					["DispelledWho"] = {
+					},
+				},
+				["OverallData"] = {
+					["TimeHealing"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 4.5,
+								},
+							},
+							["amount"] = 4.5,
+						},
+					},
+					["DOTs"] = {
+						["暴风雪 (伤害/跳)"] = {
+							["Details"] = {
+								["暗炉吟唱者"] = {
+									["count"] = 18,
+								},
+								["暗炉战士"] = {
+									["count"] = 27,
+								},
+							},
+							["amount"] = 45,
+						},
+					},
+					["TimeSpent"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 3,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 17.31,
+								},
+								["冰霜新星"] = {
+									["count"] = 10.5,
+								},
+								["魔爆术"] = {
+									["count"] = 13.18,
+								},
+								["射击"] = {
+									["count"] = 28.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 18,
+								},
+								["火焰冲击"] = {
+									["count"] = 22.12,
+								},
+							},
+							["amount"] = 109.61,
+						},
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 4.5,
+						},
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 4.66,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 6.16,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 2.16,
+								},
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["魔爆术"] = {
+									["count"] = 1.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 4.5,
+								},
+							},
+							["amount"] = 17.16,
+						},
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 4.5,
+								},
+							},
+							["amount"] = 4.5,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 13.5,
+								},
+								["射击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 24,
+						},
+					},
+					["DamageTaken"] = 3062,
+					["PartialResist"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 3,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 16,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 16,
+						},
+						["催眠术"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 2,
+						},
+						["旋风斩效果"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 1,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["未被抵抗"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 84,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 0,
+							["amount"] = 84,
+						},
+					},
+					["PartialAbsorb"] = {
+						["火焰增效"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 3,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 0,
+						},
+						["暗影箭"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 16,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 16,
+							["amount"] = 0,
+						},
+						["催眠术"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["破甲攻击"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 2,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 2,
+							["amount"] = 0,
+						},
+						["旋风斩效果"] = {
+							["Details"] = {
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 1,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 1,
+							["amount"] = 0,
+						},
+						["肉搏"] = {
+							["Details"] = {
+								["被吸收"] = {
+									["max"] = 48,
+									["min"] = 43,
+									["count"] = 3,
+									["amount"] = 138,
+								},
+								["未被吸收"] = {
+									["max"] = 0,
+									["min"] = 0,
+									["count"] = 81,
+									["amount"] = 0,
+								},
+							},
+							["count"] = 84,
+							["amount"] = 138,
+						},
+					},
+					["ActiveTime"] = 170.43,
+					["ElementTaken"] = {
+						["Melee"] = 2946,
+						["Physical"] = 116,
+					},
+					["DOT_Time"] = 45,
+					["Damage"] = 57866,
+					["WhoHealed"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 138,
+								},
+							},
+							["amount"] = 138,
+						},
+					},
+					["TimeHeal"] = 4.5,
+					["HealedWho"] = {
+						["Actionscript"] = {
+							["Details"] = {
+								["寒冰护体"] = {
+									["count"] = 138,
+								},
+							},
+							["amount"] = 138,
+						},
+					},
+					["Heals"] = {
+						["寒冰护体"] = {
+							["Details"] = {
+								["Absorb"] = {
+									["max"] = 48,
+									["min"] = 43,
+									["count"] = 3,
+									["amount"] = 138,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 138,
+						},
+					},
+					["TimeDamaging"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 3,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 17.31,
+								},
+								["冰霜新星"] = {
+									["count"] = 10.5,
+								},
+								["魔爆术"] = {
+									["count"] = 13.18,
+								},
+								["射击"] = {
+									["count"] = 28.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 18,
+								},
+								["火焰冲击"] = {
+									["count"] = 22.12,
+								},
+							},
+							["amount"] = 109.61,
+						},
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 4.5,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 2.16,
+								},
+								["冰霜新星"] = {
+									["count"] = 1.5,
+								},
+								["魔爆术"] = {
+									["count"] = 1.5,
+								},
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+								["火焰冲击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 4.5,
+								},
+							},
+							["amount"] = 17.16,
+						},
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 1.5,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 4.66,
+								},
+								["火焰冲击"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 6.16,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["魔爆术"] = {
+									["count"] = 3,
+								},
+								["寒冰箭"] = {
+									["count"] = 13.5,
+								},
+								["射击"] = {
+									["count"] = 6,
+								},
+								["冰锥术"] = {
+									["count"] = 1.5,
+								},
+							},
+							["amount"] = 24,
+						},
+					},
+					["ElementTakenAbsorb"] = {
+						["Melee"] = 138,
+					},
+					["ElementHitsDone"] = {
+						["Frost"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 52,
+								},
+								["Crit"] = {
+									["count"] = 6,
+								},
+								["Tick"] = {
+									["count"] = 15,
+								},
+							},
+							["amount"] = 74,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 7,
+								},
+								["Hit"] = {
+									["count"] = 15,
+								},
+							},
+							["amount"] = 22,
+						},
+						["Arcane"] = {
+							["Details"] = {
+								["Crit"] = {
+									["count"] = 1,
+								},
+								["Hit"] = {
+									["count"] = 40,
+								},
+							},
+							["amount"] = 41,
+						},
+					},
+					["Attacks"] = {
+						["暴风雪 (伤害/跳)"] = {
+							["Details"] = {
+								["Tick"] = {
+									["max"] = 172,
+									["min"] = 171,
+									["count"] = 15,
+									["amount"] = 2568,
+								},
+							},
+							["count"] = 15,
+							["amount"] = 2568,
+						},
+						["火焰冲击"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 936,
+									["min"] = 760,
+									["count"] = 7,
+									["amount"] = 5917,
+								},
+								["Hit"] = {
+									["max"] = 619,
+									["min"] = 500,
+									["count"] = 15,
+									["amount"] = 8385,
+								},
+							},
+							["count"] = 22,
+							["amount"] = 14302,
+						},
+						["冰霜新星"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 181,
+									["min"] = 164,
+									["count"] = 2,
+									["amount"] = 345,
+								},
+								["Hit"] = {
+									["max"] = 96,
+									["min"] = 80,
+									["count"] = 9,
+									["amount"] = 797,
+								},
+							},
+							["count"] = 11,
+							["amount"] = 1142,
+						},
+						["魔爆术"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 449,
+									["min"] = 449,
+									["count"] = 1,
+									["amount"] = 449,
+								},
+								["Hit"] = {
+									["max"] = 305,
+									["min"] = 259,
+									["count"] = 17,
+									["amount"] = 4666,
+								},
+							},
+							["count"] = 18,
+							["amount"] = 5115,
+						},
+						["射击"] = {
+							["Details"] = {
+								["Hit"] = {
+									["max"] = 135,
+									["min"] = 78,
+									["count"] = 23,
+									["amount"] = 2527,
+								},
+							},
+							["count"] = 23,
+							["amount"] = 2527,
+						},
+						["寒冰箭"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 1,
+									["amount"] = 0,
+								},
+								["Crit"] = {
+									["max"] = 1495,
+									["min"] = 1463,
+									["count"] = 2,
+									["amount"] = 2958,
+								},
+								["Hit"] = {
+									["max"] = 759,
+									["min"] = 658,
+									["count"] = 21,
+									["amount"] = 15508,
+								},
+							},
+							["count"] = 24,
+							["amount"] = 18466,
+						},
+						["冰锥术"] = {
+							["Details"] = {
+								["Crit"] = {
+									["max"] = 1154,
+									["min"] = 1098,
+									["count"] = 2,
+									["amount"] = 2252,
+								},
+								["Hit"] = {
+									["max"] = 573,
+									["min"] = 484,
+									["count"] = 22,
+									["amount"] = 11494,
+								},
+							},
+							["count"] = 24,
+							["amount"] = 13746,
+						},
+					},
+					["ElementDone"] = {
+						["Frost"] = 35922,
+						["Fire"] = 14302,
+						["Arcane"] = 7642,
+					},
+					["HealingTaken"] = 138,
+					["DamagedWho"] = {
+						["峭壁山狗"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 1154,
+								},
+								["火焰冲击"] = {
+									["count"] = 855,
+								},
+							},
+							["amount"] = 2009,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["冰锥术"] = {
+									["count"] = 7585,
+								},
+								["冰霜新星"] = {
+									["count"] = 778,
+								},
+								["魔爆术"] = {
+									["count"] = 3941,
+								},
+								["射击"] = {
+									["count"] = 2017,
+								},
+								["寒冰箭"] = {
+									["count"] = 9508,
+								},
+								["火焰冲击"] = {
+									["count"] = 9285,
+								},
+							},
+							["amount"] = 33114,
+						},
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 754,
+								},
+								["冰锥术"] = {
+									["count"] = 547,
+								},
+								["火焰冲击"] = {
+									["count"] = 617,
+								},
+							},
+							["amount"] = 1918,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 1541,
+								},
+								["冰霜新星"] = {
+									["count"] = 96,
+								},
+								["魔爆术"] = {
+									["count"] = 591,
+								},
+								["寒冰箭"] = {
+									["count"] = 746,
+								},
+								["火焰冲击"] = {
+									["count"] = 2681,
+								},
+								["冰锥术"] = {
+									["count"] = 2229,
+								},
+							},
+							["amount"] = 7884,
+						},
+						["被诅咒的黑暗犬"] = {
+							["Details"] = {
+								["寒冰箭"] = {
+									["count"] = 738,
+								},
+							},
+							["amount"] = 738,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["暴风雪 (伤害/跳)"] = {
+									["count"] = 1027,
+								},
+								["火焰冲击"] = {
+									["count"] = 864,
+								},
+								["冰锥术"] = {
+									["count"] = 1671,
+								},
+								["冰霜新星"] = {
+									["count"] = 87,
+								},
+							},
+							["amount"] = 3649,
+						},
+						["暗炉巫师"] = {
+							["Details"] = {
+								["冰霜新星"] = {
+									["count"] = 181,
+								},
+								["魔爆术"] = {
+									["count"] = 583,
+								},
+								["寒冰箭"] = {
+									["count"] = 6720,
+								},
+								["射击"] = {
+									["count"] = 510,
+								},
+								["冰锥术"] = {
+									["count"] = 560,
+								},
+							},
+							["amount"] = 8554,
+						},
+					},
+					["TimeDamage"] = 165.93,
+					["WhoDamaged"] = {
+						["饥饿的秃鹫"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 125,
+								},
+							},
+							["amount"] = 125,
+						},
+						["暗炉战士"] = {
+							["Details"] = {
+								["旋风斩效果"] = {
+									["count"] = 116,
+								},
+								["肉搏"] = {
+									["count"] = 309,
+								},
+							},
+							["amount"] = 425,
+						},
+						["暗炉隧道工"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 2472,
+								},
+							},
+							["amount"] = 2472,
+						},
+						["暗炉吟唱者"] = {
+							["Details"] = {
+								["肉搏"] = {
+									["count"] = 40,
+								},
+							},
+							["amount"] = 40,
+						},
+					},
+					["Absorbs"] = 138,
+					["ElementHitsTaken"] = {
+						["Physical"] = {
+							["Details"] = {
+								["Hit"] = {
+									["count"] = 1,
+								},
+								["Dodge"] = {
+									["count"] = 1,
+								},
+								["Miss"] = {
+									["count"] = 1,
+								},
+							},
+							["amount"] = 3,
+						},
+						["Shadow"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 17,
+								},
+							},
+							["amount"] = 17,
+						},
+						["Melee"] = {
+							["Details"] = {
+								["Miss"] = {
+									["count"] = 14,
+								},
+								["Absorb"] = {
+									["count"] = 3,
+								},
+								["Hit"] = {
+									["count"] = 61,
+								},
+								["Dodge"] = {
+									["count"] = 6,
+								},
+							},
+							["amount"] = 84,
+						},
+						["Fire"] = {
+							["Details"] = {
+								["Resist"] = {
+									["count"] = 3,
+								},
+							},
+							["amount"] = 3,
+						},
+					},
+					["Absorbed"] = {
+						["寒冰护体"] = {
+							["Details"] = {
+								["Actionscript"] = {
+									["max"] = 48,
+									["min"] = 43,
+									["count"] = 3,
+									["amount"] = 138,
+								},
+							},
+							["count"] = 3,
+							["amount"] = 138,
+						},
+					},
+				},
+			},
+			["LastHealTime"] = 858069.761,
+			["UnitLockout"] = 855789.04,
+			["LastAbility"] = 860186.72,
+		},
 	},
-	["FightNum"] = 0,
+	["FightNum"] = 23,
 	["CombatTimes"] = {
+		{
+			855998.333, -- [1]
+			856007.329, -- [2]
+			"00:13:17", -- [3]
+			"00:13:25", -- [4]
+			"暗炉巫师", -- [5]
+		}, -- [1]
+		{
+			856383.333, -- [1]
+			856444.33, -- [2]
+			"00:19:42", -- [3]
+			"00:20:42", -- [4]
+			"暗炉战士", -- [5]
+		}, -- [2]
+		{
+			856498.328, -- [1]
+			856626.326, -- [2]
+			"00:21:37", -- [3]
+			"00:23:44", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [3]
+		{
+			856716.335, -- [1]
+			856719.336, -- [2]
+			"00:25:14", -- [3]
+			"00:25:17", -- [4]
+			"峭壁山狗", -- [5]
+		}, -- [4]
+		{
+			857207.33, -- [1]
+			857218.333, -- [2]
+			"00:33:26", -- [3]
+			"00:33:36", -- [4]
+			"饥饿的秃鹫", -- [5]
+		}, -- [5]
+		{
+			857419.328, -- [1]
+			857439.336, -- [2]
+			"00:36:58", -- [3]
+			"00:37:17", -- [4]
+			"暗炉巫师", -- [5]
+		}, -- [6]
+		{
+			857552.641, -- [1]
+			857558.641, -- [2]
+			"00:39:11", -- [3]
+			"00:39:17", -- [4]
+			"暗炉巫师", -- [5]
+		}, -- [7]
+		{
+			857561.643, -- [1]
+			857569.641, -- [2]
+			"00:39:20", -- [3]
+			"00:39:28", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [8]
+		{
+			857574.643, -- [1]
+			857579.636, -- [2]
+			"00:39:33", -- [3]
+			"00:39:38", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [9]
+		{
+			857587.635, -- [1]
+			857601.636, -- [2]
+			"00:39:46", -- [3]
+			"00:40:00", -- [4]
+			"暗炉吟唱者", -- [5]
+		}, -- [10]
+		{
+			857609.64, -- [1]
+			857618.644, -- [2]
+			"00:40:08", -- [3]
+			"00:40:17", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [11]
+		{
+			857867.636, -- [1]
+			857876.636, -- [2]
+			"00:44:26", -- [3]
+			"00:44:35", -- [4]
+			"暗炉巫师", -- [5]
+		}, -- [12]
+		{
+			857943.636, -- [1]
+			857946.638, -- [2]
+			"00:45:42", -- [3]
+			"00:45:45", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [13]
+		{
+			857952.642, -- [1]
+			857980.638, -- [2]
+			"00:45:51", -- [3]
+			"00:46:19", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [14]
+		{
+			858057.644, -- [1]
+			858073.638, -- [2]
+			"00:47:36", -- [3]
+			"00:47:52", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [15]
+		{
+			858118.638, -- [1]
+			858127.643, -- [2]
+			"00:48:38", -- [3]
+			"00:48:46", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [16]
+		{
+			858189.636, -- [1]
+			858196.638, -- [2]
+			"00:49:48", -- [3]
+			"00:49:55", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [17]
+		{
+			858280.643, -- [1]
+			858289.638, -- [2]
+			"00:51:19", -- [3]
+			"00:51:28", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [18]
+		{
+			859626.216, -- [1]
+			859661.218, -- [2]
+			"01:13:45", -- [3]
+			"01:14:19", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [19]
+		{
+			859845.041, -- [1]
+			859917.043, -- [2]
+			"01:17:23", -- [3]
+			"01:18:35", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [20]
+		{
+			859933.043, -- [1]
+			859954.039, -- [2]
+			"01:18:52", -- [3]
+			"01:19:12", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [21]
+		{
+			859975.035, -- [1]
+			859991.043, -- [2]
+			"01:19:34", -- [3]
+			"01:19:49", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [22]
+		{
+			860006.043, -- [1]
+			860021.037, -- [2]
+			"01:20:05", -- [3]
+			"01:20:19", -- [4]
+			"暗炉隧道工", -- [5]
+		}, -- [23]
 	},
 	["FoughtWho"] = {
+		"暗炉隧道工 01:20:05-01:20:19", -- [1]
+		"暗炉隧道工 01:19:34-01:19:49", -- [2]
+		"暗炉隧道工 01:18:52-01:19:12", -- [3]
+		"暗炉隧道工 01:17:23-01:18:35", -- [4]
+		"暗炉隧道工 01:13:45-01:14:19", -- [5]
 	},
 }
