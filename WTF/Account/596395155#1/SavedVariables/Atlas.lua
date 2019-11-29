@@ -14,7 +14,7 @@ AtlasDB = {
 				},
 			},
 			["minimap"] = {
-				["minimapPos"] = 165.754954451854,
+				["minimapPos"] = 170.570014903524,
 			},
 		},
 	},

@@ -487,7 +487,7 @@ TradeLog_TradesHistory = {
 		["where"] = "斯坦索姆",
 	}, -- [19]
 }
-TRADE_LOG_BUTTON_POS = 138.96568260025
+TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true
 TradeLog_AnnounceChannel = "WHISPER"
 TBT_CurrentPortal = {

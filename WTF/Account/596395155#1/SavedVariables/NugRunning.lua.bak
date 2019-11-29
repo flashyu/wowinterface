@@ -27,6 +27,14 @@ NugRunningConfigCustom = {
 				["name"] = "闪现术",
 				["fixedlen"] = false,
 			},
+			[122] = {
+				["color"] = {
+					0, -- [1]
+					0.435294117647059, -- [2]
+					0.8, -- [3]
+				},
+				["name"] = "Frost Nova",
+			},
 		},
 	},
 }
