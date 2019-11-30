@@ -486,8 +486,83 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "斯坦索姆",
 	}, -- [19]
+	{
+		["targetMoney"] = 1000000,
+		["playerMoney"] = 0,
+		["id"] = 20,
+		["playerItems"] = {
+			{
+				["numItems"] = 1,
+				["name"] = "夜色虫",
+				["itemLink"] = "|cffffffff|Hitem:6530::::::::60:::::::|h[夜色虫]|h|r",
+				["texture"] = 134324,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "陌上粑粑",
+		["when"] = "2019-11-30 13:30:09",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [20]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 21,
+		["playerItems"] = {
+			{
+				["numItems"] = 19,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-11-30 13:46:23",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [21]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 22,
+		["playerItems"] = {
+			{
+				["texture"] = 135236,
+				["itemLink"] = "|cffffffff|Hitem:7912::::::::60:::::::|h[坚固的石头]|h|r",
+				["name"] = "坚固的石头",
+				["numItems"] = 4,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-11-30 14:32:33",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [22]
 }
-TRADE_LOG_BUTTON_POS = 138.96568260025
+TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true
 TradeLog_AnnounceChannel = "WHISPER"
 TBT_CurrentPortal = {

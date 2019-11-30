@@ -486,6 +486,138 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "斯坦索姆",
 	}, -- [19]
+	{
+		["targetMoney"] = 1000000,
+		["playerMoney"] = 0,
+		["id"] = 20,
+		["playerItems"] = {
+			{
+				["texture"] = 134324,
+				["itemLink"] = "|cffffffff|Hitem:6530::::::::60:::::::|h[夜色虫]|h|r",
+				["name"] = "夜色虫",
+				["numItems"] = 1,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "陌上粑粑",
+		["when"] = "2019-11-30 13:30:09",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [20]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 21,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 19,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-11-30 13:46:23",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [21]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 22,
+		["playerItems"] = {
+			{
+				["numItems"] = 4,
+				["name"] = "坚固的石头",
+				["itemLink"] = "|cffffffff|Hitem:7912::::::::60:::::::|h[坚固的石头]|h|r",
+				["texture"] = 135236,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-11-30 14:32:33",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [22]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 23,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["who"] = "你是大佬",
+		["when"] = "2019-11-30 15:02:13",
+		["where"] = "奥格瑞玛",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [23]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 24,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["who"] = "你是大佬",
+		["when"] = "2019-11-30 15:02:20",
+		["where"] = "奥格瑞玛",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [24]
+	{
+		["targetMoney"] = 10000000,
+		["playerMoney"] = 0,
+		["id"] = 25,
+		["playerItems"] = {
+			{
+				["name"] = "石中盐",
+				["numItems"] = 2,
+				["itemLink"] = "|cffffffff|Hitem:8150::::::::60:::::::|h[石中盐]|h|r",
+				["texture"] = 133849,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "你是大佬",
+		["when"] = "2019-11-30 15:02:32",
+		["where"] = "奥格瑞玛",
+		["result"] = "complete",
+	}, -- [25]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

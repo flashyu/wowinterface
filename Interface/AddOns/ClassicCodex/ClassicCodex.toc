@@ -4,9 +4,10 @@
 ## Title: ClassicCodex
 ## Notes: ClassicCodex
 ## Author: Pgarneau, Shagu, SwimmingTiger
-## Version: v1.3.3
+## Version: v1.3.4
 ## SavedVariablesPerCharacter: CodexConfig, CodexHiddenQuests, CodexBrowserFavorites, CodexColors
 ## X-Curse-Project-ID: 351302
+## X-WoWI-ID: 25442
 
 # database index
 db\init.lua
@@ -43,6 +44,7 @@ db\zhTW\objects.lua
 db\zhTW\quests.lua
 db\zhTW\zones.lua
 db\zhTW\professions.lua
+
 
 # libs
 lib\LibStub\LibStub.lua
