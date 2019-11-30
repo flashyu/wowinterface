@@ -23,7 +23,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "血色修道院",
+			["LastInstanceName"] = "斯坦索姆",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 			["MainWindowHeight"] = 183.222244262695,

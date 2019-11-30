@@ -571,9 +571,9 @@ TradeLog_TradesHistory = {
 		["targetItems"] = {
 		},
 		["player"] = "Actionscript",
+		["where"] = "奥格瑞玛",
 		["who"] = "你是大佬",
 		["when"] = "2019-11-30 15:02:13",
-		["where"] = "奥格瑞玛",
 		["result"] = "cancelled",
 		["toofar"] = "no",
 	}, -- [23]
@@ -587,9 +587,9 @@ TradeLog_TradesHistory = {
 		["targetItems"] = {
 		},
 		["player"] = "Actionscript",
+		["where"] = "奥格瑞玛",
 		["who"] = "你是大佬",
 		["when"] = "2019-11-30 15:02:20",
-		["where"] = "奥格瑞玛",
 		["result"] = "cancelled",
 		["toofar"] = "no",
 	}, -- [24]
@@ -599,8 +599,8 @@ TradeLog_TradesHistory = {
 		["id"] = 25,
 		["playerItems"] = {
 			{
-				["name"] = "石中盐",
 				["numItems"] = 2,
+				["name"] = "石中盐",
 				["itemLink"] = "|cffffffff|Hitem:8150::::::::60:::::::|h[石中盐]|h|r",
 				["texture"] = 133849,
 			}, -- [1]
@@ -615,9 +615,175 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "你是大佬",
 		["when"] = "2019-11-30 15:02:32",
-		["where"] = "奥格瑞玛",
 		["result"] = "complete",
+		["where"] = "奥格瑞玛",
 	}, -- [25]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 26,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [2]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [3]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-11-30 23:50:35",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [26]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 27,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [2]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [3]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_CLOSED", -- [1]
+			"TRADE_SHOW", -- [2]
+			"TRADE_CLOSED", -- [3]
+			"TRADE_CLOSED", -- [4]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-11-30 23:50:50",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [27]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 28,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "智力之议员腕轮",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:10096::::::213:460412928:60:::1::::|h[智力之议员腕轮]|h|r",
+				["texture"] = 132611,
+			}, -- [1]
+			{
+				["name"] = "火焰惩戒之奥秘斗篷",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:10174::::::1887:1242841472:60:::1::::|h[火焰惩戒之奥秘斗篷]|h|r",
+				["texture"] = 133754,
+			}, -- [2]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 00:10:04",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [28]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 29,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 16,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "东西南北",
+		["when"] = "2019-12-01 00:50:53",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [29]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 30,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "恶魔臂铠",
+				["numItems"] = 1,
+				["isUsable"] = false,
+				["itemLink"] = "|cff1eff00|Hitem:10375::::::::60:::1::::|h[恶魔臂铠]|h|r",
+				["texture"] = 132606,
+			}, -- [1]
+			{
+				["name"] = "正义宝珠",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:12811::::::::60:::::::|h[正义宝珠]|h|r",
+				["texture"] = 134122,
+			}, -- [2]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 00:53:58",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [30]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

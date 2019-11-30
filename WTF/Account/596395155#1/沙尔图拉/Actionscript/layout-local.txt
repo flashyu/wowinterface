@@ -7,9 +7,9 @@ Y: 7
 W: 317
 H: 183
 Frame: CChatNotifierMMIcon
-FrameLevel: 179
+FrameLevel: 183
 Anchor: TOPRIGHT
-X: -127
+X: -131
 Y: 0
 W: 31
 H: 31

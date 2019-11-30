@@ -27,7 +27,6 @@ SpyDB = {
 					["x"] = 495.213745117188,
 				},
 			},
-			["MainWindowVis"] = false,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
