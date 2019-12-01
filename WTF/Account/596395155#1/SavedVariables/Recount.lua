@@ -23,7 +23,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "斯坦索姆",
+			["LastInstanceName"] = "玛拉顿",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 			["MainWindowHeight"] = 183.222244262695,

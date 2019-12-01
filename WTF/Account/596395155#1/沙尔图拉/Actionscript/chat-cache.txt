@@ -3,7 +3,6 @@ VERSION 6
 ADDEDVERSION 21
 
 CHANNELS
-大脚世界频道 1 1 0
 综合 0 2 0
 交易 0 3 0
 本地防务 0 4 0
@@ -154,7 +153,6 @@ CHANNELS
 大脚世界频道1
 china
 世界防务
-大脚世界频道
 END
 
 ZONECHANNELS 2097155

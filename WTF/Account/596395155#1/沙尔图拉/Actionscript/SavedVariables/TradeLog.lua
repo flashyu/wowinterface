@@ -784,9 +784,278 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "斯坦索姆",
 	}, -- [30]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 31,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 22:45:29",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [31]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 32,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "雄鹰之血纹短裤",
+				["numItems"] = 1,
+				["itemLink"] = "|cff1eff00|Hitem:14264::::::875:1377667712:60:::1::::|h[雄鹰之血纹短裤]|h|r",
+				["isUsable"] = true,
+				["texture"] = 134592,
+			}, -- [1]
+			{
+				["name"] = "灵猴之公正手套",
+				["numItems"] = 1,
+				["itemLink"] = "|cff1eff00|Hitem:10072::::::611:408446848:60:::1::::|h[灵猴之公正手套]|h|r",
+				["isUsable"] = false,
+				["texture"] = 132946,
+			}, -- [2]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 23:04:54",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [32]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 33,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "防御之暴徒斗篷",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:10185::::::1607:637245440:60:::1::::|h[防御之暴徒斗篷]|h|r",
+				["texture"] = 133770,
+			}, -- [1]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 23:18:28",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [33]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 34,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "野熊之圣殿骑士束带",
+				["numItems"] = 1,
+				["itemLink"] = "|cff1eff00|Hitem:10166::::::1209:693952512:60:::1::::|h[野熊之圣殿骑士束带]|h|r",
+				["isUsable"] = false,
+				["texture"] = 132521,
+			}, -- [1]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 23:39:44",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [34]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 35,
+		["playerItems"] = {
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [2]
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 10,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [3]
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 15,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [4]
+			{
+				["name"] = "魔法晶水",
+				["numItems"] = 16,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [5]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-01 23:53:22",
+		["where"] = "荒芜之地",
+		["result"] = "complete",
+	}, -- [35]
+	{
+		["targetMoney"] = 5000000,
+		["playerMoney"] = 0,
+		["id"] = 36,
+		["playerItems"] = {
+			{
+				["name"] = "跌打草",
+				["numItems"] = 1,
+				["itemLink"] = "|cffffffff|Hitem:2453::::::::60:::::::|h[跌打草]|h|r",
+				["texture"] = 134181,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "车间主任",
+		["when"] = "2019-12-01 23:57:09",
+		["where"] = "奥格瑞玛",
+		["result"] = "complete",
+	}, -- [36]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 37,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "小天才大魔王",
+		["when"] = "2019-12-02 00:09:08",
+		["where"] = "奥格瑞玛",
+		["result"] = "complete",
+	}, -- [37]
+	{
+		["targetMoney"] = 1000000,
+		["playerMoney"] = 0,
+		["id"] = 38,
+		["playerItems"] = {
+			{
+				["name"] = "红色焰火",
+				["numItems"] = 1,
+				["itemLink"] = "|cffffffff|Hitem:9318::::::::60:::::::|h[红色焰火]|h|r",
+				["texture"] = 135808,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "芬必达",
+		["when"] = "2019-12-02 00:19:02",
+		["where"] = "奥格瑞玛",
+		["result"] = "complete",
+	}, -- [38]
+	{
+		["targetMoney"] = 1000000,
+		["playerMoney"] = 0,
+		["id"] = 39,
+		["playerItems"] = {
+		},
+		["where"] = "奥格瑞玛",
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["who"] = "芬必达",
+		["when"] = "2019-12-02 00:24:52",
+		["toofar"] = "no",
+		["result"] = "cancelled",
+	}, -- [39]
+	{
+		["targetMoney"] = 3000000,
+		["playerMoney"] = 0,
+		["id"] = 40,
+		["playerItems"] = {
+			{
+				["name"] = "魔法甜面包",
+				["numItems"] = 7,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "芬必达",
+		["when"] = "2019-12-02 00:25:09",
+		["where"] = "奥格瑞玛",
+		["result"] = "complete",
+	}, -- [40]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
-TradeLog_Announce_Checked = true
+TradeLog_Announce_Checked = false
 TradeLog_AnnounceChannel = "WHISPER"
 TBT_CurrentPortal = {
 	"传送门：奥格瑞玛", -- [1]

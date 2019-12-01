@@ -19,13 +19,13 @@ NugRunningConfigCustom = {
 	["MAGE"] = {
 		["cooldowns"] = {
 			[29211] = {
-				["name"] = "闪现术",
 				["color"] = {
 					1, -- [1]
 					0.4, -- [2]
 					0.4, -- [3]
 				},
 				["group"] = "procs",
+				["name"] = "闪现术",
 				["fixedlen"] = false,
 			},
 			[122] = {
