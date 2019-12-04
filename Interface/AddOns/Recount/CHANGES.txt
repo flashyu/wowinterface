@@ -1,8 +1,9 @@
 ------------------------------------------------------------------------
-r1516 | Resike | 2019-10-29 21:26:41 +0000 (Tue, 29 Oct 2019) | 1 line
+r1520 | Resike | 2019-12-02 22:41:14 +0000 (Mon, 02 Dec 2019) | 1 line
 Changed paths:
-   M /trunk/deletion.lua
+   M /trunk/GUI_Main.lua
+   M /trunk/Recount.toc
 
-- Minor party deletion fix.
+- Anchor fixes.
 ------------------------------------------------------------------------
 

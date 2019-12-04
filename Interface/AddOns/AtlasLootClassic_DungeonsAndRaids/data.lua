@@ -2377,6 +2377,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 			npcID = 8443,
 			DisplayIDs = {{8053}},
 			AtlasMapBossID = 3,
+			Level = 48,
 			[NORMAL_DIFF] = {
 				{ 1,  12462 }, -- Embrace of the Wind Serpent
 				{ 3,  10843 }, -- Featherskin Cape
@@ -2883,6 +2884,7 @@ data["BlackrockDepths"] = {
 			SubAreaID = 26764,
 			DisplayIDs = {{8270}},
 			AtlasMapBossID = 17,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  22245 }, -- Soot Encrusted Footwear
 				{ 2,  11787 }, -- Shalehusk Boots
@@ -4923,6 +4925,13 @@ data["WorldBosses"] = {
 				{ 9,  18202 }, -- Eskhandar's Left Claw
 				{ 10, 18542 }, -- Typhoon
 				{ 16, 18704 }, -- Mature Blue Dragon Sinew
+				{ 18, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- KKazzak
@@ -4945,6 +4954,13 @@ data["WorldBosses"] = {
 				{ 9,  17112 }, -- Empyrean Demolisher
 				{ 10, 17113 }, -- Amberseal Keeper
 				{ 16, 18665 }, -- The Eye of Shadow
+				{ 18, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- DLethon
@@ -4972,7 +4988,14 @@ data["WorldBosses"] = {
 				{ 17, 20600 }, -- Malfurion's Signet Ring
 				{ 24, 20580 }, -- Hammer of Bestial Fury
 				{ 25, 20581 }, -- Staff of Rampant Growth
-				{ 30, 20381 }, -- Dreamscale
+				{ 29, 20381 }, -- Dreamscale
+				{ 30, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- DEmeriss
@@ -4999,7 +5022,13 @@ data["WorldBosses"] = {
 				{ 17, 20600 }, -- Malfurion's Signet Ring
 				{ 24, 20580 }, -- Hammer of Bestial Fury
 				{ 25, 20581 }, -- Staff of Rampant Growth
-				{ 30, 20381 }, -- Dreamscale
+				{ 30, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- DTaerar
@@ -5026,7 +5055,13 @@ data["WorldBosses"] = {
 				{ 17, 20600 }, -- Malfurion's Signet Ring
 				{ 24, 20580 }, -- Hammer of Bestial Fury
 				{ 25, 20581 }, -- Staff of Rampant Growth
-				{ 30, 20381 }, -- Dreamscale
+				{ 30, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- DYsondre
@@ -5054,7 +5089,13 @@ data["WorldBosses"] = {
 				{ 17, 20600 }, -- Malfurion's Signet Ring
 				{ 24, 20580 }, -- Hammer of Bestial Fury
 				{ 25, 20581 }, -- Staff of Rampant Growth
-				{ 30, 20381 }, -- Dreamscale
+				{ 30, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 	}
@@ -5434,7 +5475,13 @@ data["Onyxia"] = {
 				{ 23, 17068 }, -- Deathbringer
 				{ 24, 17075 }, -- Vis'kag the Bloodletter
 				{ 26, 17966 }, -- Onyxia Hide Backpack
-				{ 27, 17962 }, -- Blue Sack of Gems
+				{ 27, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 	},
@@ -6063,7 +6110,13 @@ data["BlackwingLair"] = {
 				{ 26, 19376 }, -- Archimtiros' Ring of Reckoning
 				{ 27, 19382 }, -- Pure Elementium Band
 				{ 28, 19379 }, -- Neltharion's Tear
-				{ 30, 17962 }, -- Blue Sack of Gems
+				{ 30, 11938 }, -- Sack of Gems
+				-- Hidden items
+				{ 0, 17962 }, -- Blue Sack of Gems
+				{ 0, 17963 }, -- Green Sack of Gems
+				{ 0, 17964 }, -- Gray Sack of Gems
+				{ 0, 17965 }, -- Yellow Sack of Gems
+				{ 0, 17969 }, -- Red Sack of Gems
 			},
 		},
 		{ -- BWLTrashMobs
