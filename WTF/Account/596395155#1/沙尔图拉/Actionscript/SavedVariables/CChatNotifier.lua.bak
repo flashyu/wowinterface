@@ -13,7 +13,7 @@ CChatNotifier_settings = {
 }
 CChatNotifier_data = {
 	["黑龙"] = {
-		["active"] = false,
+		["active"] = true,
 		["words"] = {
 			"黑龙", -- [1]
 		},
@@ -25,7 +25,7 @@ CChatNotifier_data = {
 			"爱与家庭", -- [3]
 			"拿画", -- [4]
 		},
-		["active"] = true,
+		["active"] = false,
 	},
 	["通灵,tl,TL"] = {
 		["active"] = false,
@@ -43,7 +43,7 @@ CChatNotifier_data = {
 		},
 	},
 	["黑下,高图斯,宝石"] = {
-		["active"] = true,
+		["active"] = false,
 		["words"] = {
 			"黑下", -- [1]
 			"高图斯", -- [2]

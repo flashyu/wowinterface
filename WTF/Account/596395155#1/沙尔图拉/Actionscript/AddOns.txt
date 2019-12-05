@@ -24,8 +24,8 @@ AtlasLootClassic: enabled
 AutoBarClassic: enabled
 aux-addon: enabled
 BagBrother: enabled
-ClassicCastbars: disabled
-ClassicCastbars_Options: disabled
+ClassicCastbars: enabled
+ClassicCastbars_Options: enabled
 ClassicThreatMeter: enabled
 Decursive: enabled
 DHUD_Options: disabled

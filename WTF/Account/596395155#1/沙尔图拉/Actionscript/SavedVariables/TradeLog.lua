@@ -567,12 +567,218 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "微笑棺木",
 		["when"] = "2019-12-04 08:57:16",
-		["where"] = "奥格瑞玛",
 		["result"] = "complete",
+		["where"] = "奥格瑞玛",
 	}, -- [20]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 57,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "安宁河",
+		["when"] = "2019-12-04 22:54:20",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [21]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 2600000,
+		["id"] = 58,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "兔撕鸡",
+		["when"] = "2019-12-04 23:20:18",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [22]
+	{
+		["targetMoney"] = 680000,
+		["playerMoney"] = 0,
+		["id"] = 59,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "家驹",
+		["when"] = "2019-12-04 23:22:56",
+		["result"] = "complete",
+		["where"] = "奥妮克希亚的巢穴",
+	}, -- [23]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 40000000,
+		["id"] = 60,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-04 23:27:59",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [24]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 61,
+		["playerItems"] = {
+			{
+				["numItems"] = 20,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-04 23:28:33",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [25]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 62,
+		["playerItems"] = {
+			{
+				["numItems"] = 20,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [1]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [2]
+			{
+				["numItems"] = 20,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [3]
+			{
+				["numItems"] = 10,
+				["name"] = "魔法甜面包",
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [4]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-04 23:28:41",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [26]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 63,
+		["playerItems"] = {
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 16,
+			}, -- [1]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
+			}, -- [2]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
+			}, -- [3]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Unkillable",
+		["when"] = "2019-12-05 08:55:59",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [27]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 64,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "好不要脸",
+		["when"] = "2019-12-05 23:13:18",
+		["where"] = "荒芜之地",
+		["result"] = "complete",
+	}, -- [28]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
-TradeLog_Announce_Checked = false
+TradeLog_Announce_Checked = true
 TradeLog_AnnounceChannel = "WHISPER"
 TBT_CurrentPortal = {
 	"传送门：奥格瑞玛", -- [1]

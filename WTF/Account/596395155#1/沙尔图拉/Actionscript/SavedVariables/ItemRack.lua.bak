@@ -115,7 +115,7 @@ ItemRackUser = {
 		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "N",
+	["CurrentSet"] = "Q",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
 	},

@@ -23,7 +23,7 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "厄运之槌",
+			["LastInstanceName"] = "奥妮克希亚的巢穴",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 			["MainWindowHeight"] = 183.222244262695,

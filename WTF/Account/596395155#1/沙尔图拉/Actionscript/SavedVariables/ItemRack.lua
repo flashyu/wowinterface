@@ -67,7 +67,7 @@ ItemRackUser = {
 			["equip"] = {
 				[13] = "11122::::::::60:::11::::",
 			},
-			["oldset"] = "N",
+			["oldset"] = "Q",
 			["icon"] = 132172,
 			["old"] = {
 				[13] = "13968::::::::60:::11::::",
@@ -135,5 +135,5 @@ ItemRackUser = {
 	["Queues"] = {
 	},
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "N",
+	["CurrentSet"] = "Q",
 }

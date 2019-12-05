@@ -16,10 +16,10 @@ CChatNotifier_data = {
 		["words"] = {
 			"黑龙", -- [1]
 		},
-		["active"] = false,
+		["active"] = true,
 	},
 	["血色区,宝珠,爱与家庭,拿画"] = {
-		["active"] = true,
+		["active"] = false,
 		["words"] = {
 			"血色区", -- [1]
 			"宝珠", -- [2]
@@ -48,6 +48,6 @@ CChatNotifier_data = {
 			"高图斯", -- [2]
 			"宝石", -- [3]
 		},
-		["active"] = true,
+		["active"] = false,
 	},
 }
