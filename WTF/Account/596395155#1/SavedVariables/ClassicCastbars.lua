@@ -24,7 +24,7 @@ ClassicCastbarsDB = {
 		["frameLevel"] = 10,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border-Small",
 		["castFont"] = "Fonts\\ARKai_T.ttf",
-		["showIcon"] = true,
+		["showTimer"] = false,
 		["showCastInfoOnly"] = false,
 		["width"] = 106,
 		["textPositionY"] = 0,
@@ -47,7 +47,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			0.535, -- [4]
 		},
-		["showTimer"] = false,
+		["showIcon"] = true,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -81,7 +81,7 @@ ClassicCastbarsDB = {
 		["frameLevel"] = 10,
 		["textPositionY"] = 0,
 		["castFont"] = "Fonts\\ARKai_T.ttf",
-		["showIcon"] = true,
+		["showTimer"] = false,
 		["showCastInfoOnly"] = false,
 		["width"] = 190,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border",
@@ -104,7 +104,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			0.535, -- [4]
 		},
-		["showTimer"] = false,
+		["showIcon"] = true,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -128,11 +128,11 @@ ClassicCastbarsDB = {
 		},
 		["iconSize"] = 16,
 		["enabled"] = false,
-		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border-Small",
-		["frameLevel"] = 10,
 		["textPositionY"] = 0,
+		["frameLevel"] = 10,
+		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border-Small",
 		["castFont"] = "Fonts\\ARKai_T.ttf",
-		["castStatusBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+		["iconPositionX"] = -5,
 		["showCastInfoOnly"] = false,
 		["width"] = 150,
 		["autoPosition"] = true,
@@ -160,7 +160,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			0.535, -- [4]
 		},
-		["iconPositionX"] = -5,
+		["castStatusBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -192,7 +192,7 @@ ClassicCastbarsDB = {
 		["frameLevel"] = 10,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border-Small",
 		["castFont"] = "Fonts\\ARKai_T.ttf",
-		["showIcon"] = true,
+		["showTimer"] = false,
 		["showCastInfoOnly"] = false,
 		["width"] = 150,
 		["textPositionY"] = 0,
@@ -215,7 +215,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			0.535, -- [4]
 		},
-		["showTimer"] = false,
+		["showIcon"] = true,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
@@ -247,7 +247,7 @@ ClassicCastbarsDB = {
 		["frameLevel"] = 10,
 		["textPositionY"] = 0,
 		["castFont"] = "Fonts\\ARKai_T.ttf",
-		["showIcon"] = true,
+		["showTimer"] = false,
 		["showCastInfoOnly"] = false,
 		["width"] = 120,
 		["castBorder"] = "Interface\\CastingBar\\UI-CastingBar-Border",
@@ -270,7 +270,7 @@ ClassicCastbarsDB = {
 			0, -- [3]
 			0.535, -- [4]
 		},
-		["showTimer"] = false,
+		["showIcon"] = true,
 		["textColor"] = {
 			1, -- [1]
 			1, -- [2]
