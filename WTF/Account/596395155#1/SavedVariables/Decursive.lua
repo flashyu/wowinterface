@@ -3,9 +3,9 @@ DecursiveDB = {
 	["global"] = {
 		["NonRelease"] = "2.7.6.4-beta_3",
 		["LastExpirationAlert"] = 1571535156,
-		["LastVersionAnnounce"] = 1575596321,
+		["LastVersionAnnounce"] = 1575823467,
 		["NewerVersionName"] = "2.7.6.6",
-		["NewerVersionAlert"] = 1575305061,
+		["NewerVersionAlert"] = 1575704082,
 		["NewerVersionDetected"] = 1574060406,
 	},
 	["class"] = {

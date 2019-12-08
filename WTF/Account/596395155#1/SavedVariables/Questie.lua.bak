@@ -6098,6 +6098,34 @@ QuestieConfig = {
 					["Quest"] = 7484,
 					["Timestamp"] = 1575251025,
 				}, -- [480]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "西加加",
+							["Level"] = 60,
+						}, -- [1]
+					},
+					["Level"] = 60,
+					["Quest"] = 7484,
+					["Timestamp"] = 1575644161,
+					["SubType"] = "Accept",
+					["Event"] = "Quest",
+				}, -- [481]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "西加加",
+							["Level"] = 60,
+						}, -- [1]
+					},
+					["Level"] = 60,
+					["Quest"] = 7484,
+					["Timestamp"] = 1575644165,
+					["SubType"] = "Complete",
+					["Event"] = "Quest",
+				}, -- [482]
 			},
 			["TrackerHiddenQuests"] = {
 			},

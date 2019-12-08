@@ -776,6 +776,338 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "荒芜之地",
 	}, -- [28]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 65,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-06 23:16:35",
+		["result"] = "complete",
+		["where"] = "黑石塔",
+	}, -- [29]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 66,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 18,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 7,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-12-06 23:21:21",
+		["result"] = "complete",
+		["where"] = "黑石塔",
+	}, -- [30]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 67,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-07 23:04:54",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [31]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 68,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_CLOSED", -- [1]
+			"TRADE_SHOW", -- [2]
+			"TRADE_CLOSED", -- [3]
+			"TRADE_CLOSED", -- [4]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-12-07 23:05:04",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [32]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 69,
+		["playerItems"] = {
+		},
+		["reason"] = "selfrunaway",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["where"] = "斯坦索姆",
+		["who"] = "西加加",
+		["when"] = "2019-12-07 23:20:15",
+		["result"] = "cancelled",
+	}, -- [33]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 70,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-07 23:20:46",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [34]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 71,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-12-07 23:33:16",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [35]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 72,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-07 23:34:11",
+		["result"] = "complete",
+		["where"] = "斯坦索姆",
+	}, -- [36]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 73,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "巨猿之黑曜石指环",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:12004::::::948:2044351232:60:::1::::|h[巨猿之黑曜石指环]|h|r",
+				["texture"] = 133343,
+			}, -- [1]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-08 00:41:35",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [37]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 74,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 18,
+			}, -- [2]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 7,
+			}, -- [3]
+			{
+				["texture"] = 135236,
+				["itemLink"] = "|cffffffff|Hitem:7912::::::::60:::::::|h[坚固的石头]|h|r",
+				["name"] = "坚固的石头",
+				["numItems"] = 4,
+			}, -- [4]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-08 01:33:30",
+		["result"] = "complete",
+		["where"] = "荒芜之地",
+	}, -- [38]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 75,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "凤舞天涯",
+		["when"] = "2019-12-08 17:30:30",
+		["result"] = "complete",
+		["where"] = "厄运之槌",
+	}, -- [39]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 76,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["where"] = "厄运之槌",
+		["who"] = "找女德鲁依玩",
+		["when"] = "2019-12-08 17:40:43",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [40]
+	{
+		["targetMoney"] = 200000,
+		["playerMoney"] = 0,
+		["id"] = 77,
+		["playerItems"] = {
+			{
+				["texture"] = 132398,
+				["itemLink"] = "|cffa335ee|Hitem:811::::::::60:::1::::|h[密林战斧]|h|r",
+				["name"] = "密林战斧",
+				["numItems"] = 1,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "琼恩雪诺",
+		["when"] = "2019-12-08 23:39:15",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [41]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

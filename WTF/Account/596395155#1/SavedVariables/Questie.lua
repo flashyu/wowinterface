@@ -6094,6 +6094,34 @@ QuestieConfig = {
 					["Event"] = "Quest",
 					["SubType"] = "Abandon",
 				}, -- [480]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "西加加",
+							["Level"] = 60,
+						}, -- [1]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Accept",
+					["Level"] = 60,
+					["Quest"] = 7484,
+					["Timestamp"] = 1575644161,
+				}, -- [481]
+				{
+					["Party"] = {
+						{
+							["Class"] = "牧师",
+							["Name"] = "西加加",
+							["Level"] = 60,
+						}, -- [1]
+					},
+					["Event"] = "Quest",
+					["SubType"] = "Complete",
+					["Level"] = 60,
+					["Quest"] = 7484,
+					["Timestamp"] = 1575644165,
+				}, -- [482]
 			},
 			["TrackerHiddenObjectives"] = {
 			},

@@ -24,6 +24,7 @@ RecountDB = {
 					},
 				},
 			},
+			["MainWindowVis"] = false,
 			["LastInstanceName"] = "厄运之槌",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
