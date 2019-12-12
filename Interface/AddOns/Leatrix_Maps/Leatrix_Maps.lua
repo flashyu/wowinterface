@@ -1,6 +1,6 @@
 
 	----------------------------------------------------------------------
-	-- 	Leatrix Maps 1.13.37 (20th November 2019)
+	-- 	Leatrix Maps 1.13.39 (11th December 2019)
 	----------------------------------------------------------------------
 
 	-- 10:Func, 20:Comm, 30:Evnt, 40:Panl
@@ -12,7 +12,7 @@
 	local LeaMapsLC, LeaMapsCB, LeaConfigList = {}, {}, {}
 
 	-- Version
-	LeaMapsLC["AddonVer"] = "1.13.37"
+	LeaMapsLC["AddonVer"] = "1.13.39"
 	LeaMapsLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -2012,12 +2012,12 @@
 		-- Set maximum label width
 		if parent == LeaMapsLC["PageF"] then
 			-- Main panel checkbox labels
-			if Cbox.f:GetWidth() > 172 then
-				Cbox.f:SetWidth(172)
+			if Cbox.f:GetWidth() > 156 then
+				Cbox.f:SetWidth(156)
 			end
 			-- Set checkbox click width
-			if Cbox.f:GetStringWidth() > 172 then
-				Cbox:SetHitRectInsets(0, -162, 0, 0)
+			if Cbox.f:GetStringWidth() > 156 then
+				Cbox:SetHitRectInsets(0, -146, 0, 0)
 			else
 				Cbox:SetHitRectInsets(0, -Cbox.f:GetStringWidth() + 4, 0, 0)
 			end

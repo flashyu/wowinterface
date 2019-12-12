@@ -109,10 +109,6 @@ ItemRackEvents = {
 		["Type"] = "Stance",
 		["Stance"] = "Tree of Life",
 	},
-	["防御姿态"] = {
-		["Type"] = "Stance",
-		["Stance"] = 2,
-	},
 	["PVP"] = {
 		["Unequip"] = 1,
 		["Type"] = "Zone",
@@ -125,6 +121,10 @@ ItemRackEvents = {
 			["刀锋竞技场"] = 1,
 			["洛丹伦废墟"] = 1,
 		},
+	},
+	["防御姿态"] = {
+		["Type"] = "Stance",
+		["Stance"] = 2,
 	},
 	["骑术装"] = {
 		["Unequip"] = 1,

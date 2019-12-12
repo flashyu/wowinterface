@@ -30,7 +30,6 @@ END
 VER 3 0000000001000005 "寒冰箭宏" "132317"
 #showtooltip 寒冰箭
 /cancelAura 寒冰屏障
-/stopcasting
 /站立
 /cast [harm][@targettarget,harm] 寒冰箭
 END
@@ -42,7 +41,6 @@ VER 3 000000000100000B "火冲宏" "135807"
 END
 VER 3 000000000100000C "火球宏" "135812"
 /cancelAura 寒冰屏障
-/stopcasting
 /站立
 /cast [modifier]火球术(等级 1);火球术
 END

@@ -96,12 +96,11 @@ ItemRackUser = {
 		},
 		["~Unequip"] = {
 			["equip"] = {
-				[13] = "13968::::::::60:::11::::",
 			},
 		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "A",
+	["CurrentSet"] = "Q",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
 	},

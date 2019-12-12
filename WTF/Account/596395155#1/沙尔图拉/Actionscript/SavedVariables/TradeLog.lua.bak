@@ -1554,6 +1554,248 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "厄运之槌",
 	}, -- [58]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 95,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 19,
+			}, -- [2]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
+			}, -- [3]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 16,
+			}, -- [4]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "无力问苍天",
+		["when"] = "2019-12-12 09:05:20",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [59]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 96,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "我是你娜娜哥",
+		["when"] = "2019-12-12 09:06:53",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [60]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 97,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "丁元英",
+		["when"] = "2019-12-12 09:08:21",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [61]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 98,
+		["playerItems"] = {
+			{
+				["texture"] = 136022,
+				["itemLink"] = "|cff1eff00|Hitem:7082::::::::60:::::::|h[空气精华]|h|r",
+				["name"] = "空气精华",
+				["numItems"] = 4,
+			}, -- [1]
+			{
+				["texture"] = 136007,
+				["itemLink"] = "|cff1eff00|Hitem:7080::::::::60:::::::|h[水之精华]|h|r",
+				["name"] = "水之精华",
+				["numItems"] = 4,
+			}, -- [2]
+			{
+				["texture"] = 135830,
+				["itemLink"] = "|cff1eff00|Hitem:7078::::::::60:::::::|h[火焰精华]|h|r",
+				["name"] = "火焰精华",
+				["numItems"] = 4,
+			}, -- [3]
+			{
+				["texture"] = 134123,
+				["itemLink"] = "|cff1eff00|Hitem:13926::::::::60:::::::|h[金珍珠]|h|r",
+				["name"] = "金珍珠",
+				["numItems"] = 2,
+			}, -- [4]
+			{
+				["texture"] = 132873,
+				["itemLink"] = "|cff0070dd|Hitem:14344::::::::60:::::::|h[大块魔光碎片]|h|r",
+				["name"] = "大块魔光碎片",
+				["numItems"] = 4,
+			}, -- [5]
+			{
+				["texture"] = 132864,
+				["itemLink"] = "|cff1eff00|Hitem:16203::::::::60:::::::|h[强效不灭精华]|h|r",
+				["name"] = "强效不灭精华",
+				["numItems"] = 10,
+			}, -- [6]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Sweethope",
+		["when"] = "2019-12-12 21:55:33",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [62]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 99,
+		["playerItems"] = {
+			{
+				["texture"] = 132864,
+				["itemLink"] = "|cff1eff00|Hitem:16203::::::::60:::::::|h[强效不灭精华]|h|r",
+				["name"] = "强效不灭精华",
+				["numItems"] = 2,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Sweethope",
+		["when"] = "2019-12-12 21:55:38",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [63]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 100,
+		["playerItems"] = {
+			[7] = {
+				["name"] = "碧空之歌",
+				["numItems"] = 1,
+				["enchantment"] = "附魔武器 - 法术能量",
+				["itemLink"] = "|cffa335ee|Hitem:17103::::::::60:::::::|h[碧空之歌]|h|r",
+				["texture"] = 135349,
+			},
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Sweethope",
+		["when"] = "2019-12-12 21:55:51",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [64]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 101,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["where"] = "奥格瑞玛",
+		["who"] = "故事配酒",
+		["when"] = "2019-12-12 22:04:27",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [65]
+	{
+		["targetMoney"] = 7002200,
+		["playerMoney"] = 0,
+		["id"] = 102,
+		["playerItems"] = {
+			{
+				["texture"] = 135236,
+				["itemLink"] = "|cff9d9d9d|Hitem:4784::::::::60:::::::|h[冰冷的石头]|h|r",
+				["name"] = "冰冷的石头",
+				["numItems"] = 1,
+			}, -- [1]
+		},
+		["targetItems"] = {
+			{
+				["name"] = "厚皮",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cffffffff|Hitem:4304::::::::60:::::::|h[厚皮]|h|r",
+				["texture"] = 134257,
+			}, -- [1]
+			{
+				["name"] = "魔法甜面包",
+				["numItems"] = 14,
+				["isUsable"] = true,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["texture"] = 133989,
+			}, -- [2]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "故事配酒",
+		["when"] = "2019-12-12 22:04:55",
+		["result"] = "complete",
+		["where"] = "奥格瑞玛",
+	}, -- [66]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true
