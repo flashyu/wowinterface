@@ -65,15 +65,15 @@ CTM_Options = {
 			0, -- [3]
 			0.8, -- [4]
 		},
-		["locked"] = false,
+		["height"] = 143,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.35, -- [4]
 		},
-		["height"] = 143,
 		["test"] = false,
+		["locked"] = false,
 	},
 	["backdrop"] = {
 		["bgColor"] = {

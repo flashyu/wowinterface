@@ -4,27 +4,57 @@ VER 3 0000000001000004 "mouseover" "132248"
 /站立
 /cast [target=mouseover,nomodifier,harm]变形术;变形术
 END
-VER 3 0000000001000003 "stopcasting" "135856"
-/stopcasting
-/站立
-/cast 法术反制
-END
-VER 3 0000000001000005 "targettarget" "132317"
-#showtooltip 寒冰箭
-/站立
-/cast [harm][@targettarget,harm] 寒冰箭
-END
-VER 3 0000000001000006 "冰环" "135848"
-#showtooltip 冰霜新星
+VER 3 0000000001000006 "冰环宏" "135840"
 /cancelAura 寒冰屏障
 /stopcasting
 /站立
 /cast 冰霜新星
 END
-VER 3 0000000001000007 "闪现" "135736"
-#showtooltip 闪现术
+VER 3 0000000001000009 "冰箱宏" "135841"
+/stopcasting
+/站立
+/cast 寒冰屏障
+END
+VER 3 0000000001000003 "反制宏" "135856"
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast 法术反制
+END
+VER 3 0000000001000008 "吹风宏" "135852"
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast [modifier]冰锥术(等级 1);冰锥术
+END
+VER 3 0000000001000005 "寒冰箭宏" "132317"
+#showtooltip 寒冰箭
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast [harm][@targettarget,harm] 寒冰箭
+END
+VER 3 000000000100000B "火冲宏" "135807"
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast [modifier]火焰冲击(等级 1);火焰冲击
+END
+VER 3 000000000100000C "火球宏" "135812"
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast [modifier]火球术(等级 1);火球术
+END
+VER 3 0000000001000007 "闪现宏" "135736"
 /cancelAura 寒冰屏障
 /stopcasting
 /站立
 /cast 闪现术
+END
+VER 3 000000000100000A "魔爆宏" "136116"
+/cancelAura 寒冰屏障
+/stopcasting
+/站立
+/cast [modifier]魔爆术(等级 1);魔爆术
 END

@@ -1317,9 +1317,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "玛勒基的裹足",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cff0070dd|Hitem:18735::::::::60:::1::::|h[玛勒基的裹足]|h|r",
 				["enchantment"] = "附魔靴子 - 初级速度",
+				["isUsable"] = true,
 				["texture"] = 132537,
 			},
 		},
@@ -1344,9 +1344,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078::::::::60:::::::|h[萨菲隆斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 超级防御",
+				["isUsable"] = true,
 				["texture"] = 133768,
 			},
 		},
@@ -1361,6 +1361,199 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "奥格瑞玛",
 	}, -- [51]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 88,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "公式：附魔披风 - 强效抗性",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:16216::::::::60:::1::::|h[公式：附魔披风 - 强效抗性]|h|r",
+				["texture"] = 134327,
+			}, -- [1]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-10 23:30:54",
+		["result"] = "complete",
+		["where"] = "阿塔哈卡神庙",
+	}, -- [52]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 89,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+			[7] = {
+				["name"] = "龙血斗篷",
+				["numItems"] = 1,
+				["isUsable"] = true,
+				["itemLink"] = "|cffa335ee|Hitem:17107::::::::60:::::::|h[龙血斗篷]|h|r",
+				["texture"] = 133760,
+			},
+		},
+		["player"] = "Actionscript",
+		["where"] = "辛特兰",
+		["who"] = "Javascript",
+		["when"] = "2019-12-10 23:40:05",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [53]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 90,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "火焰之心",
+				["numItems"] = 6,
+				["isUsable"] = true,
+				["itemLink"] = "|cffffffff|Hitem:7077::::::::60:::::::|h[火焰之心]|h|r",
+				["texture"] = 135819,
+			}, -- [1]
+			{
+				["name"] = "大地之核",
+				["numItems"] = 8,
+				["isUsable"] = true,
+				["itemLink"] = "|cffffffff|Hitem:7075::::::::60:::::::|h[大地之核]|h|r",
+				["texture"] = 135231,
+			}, -- [2]
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-11 00:22:54",
+		["result"] = "complete",
+		["where"] = "雷霆崖",
+	}, -- [54]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 91,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			{
+				["name"] = "次级不灭精华",
+				["numItems"] = 2,
+				["isUsable"] = true,
+				["itemLink"] = "|cff1eff00|Hitem:16202::::::::60:::::::|h[次级不灭精华]|h|r",
+				["texture"] = 132865,
+			}, -- [1]
+			[7] = {
+				["name"] = "龙血斗篷",
+				["numItems"] = 1,
+				["itemLink"] = "|cffa335ee|Hitem:17107::::::::60:::::::|h[龙血斗篷]|h|r",
+				["enchantment"] = "附魔披风 - 强效抗性",
+				["isUsable"] = true,
+				["texture"] = 133760,
+			},
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-12-11 00:37:37",
+		["result"] = "complete",
+		["where"] = "厄运之槌",
+	}, -- [55]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 92,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			[7] = {
+				["name"] = "萨菲隆斗篷",
+				["numItems"] = 1,
+				["itemLink"] = "|cffa335ee|Hitem:17078:1889:::::::60:::::::|h[萨菲隆斗篷]|h|r",
+				["enchantment"] = "附魔披风 - 强效抗性",
+				["isUsable"] = true,
+				["texture"] = 133768,
+			},
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-11 00:38:03",
+		["result"] = "complete",
+		["where"] = "厄运之槌",
+	}, -- [56]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 93,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-11 00:41:13",
+		["result"] = "complete",
+		["where"] = "厄运之槌",
+	}, -- [57]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 94,
+		["playerItems"] = {
+			{
+				["texture"] = 132805,
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["name"] = "魔法晶水",
+				["numItems"] = 20,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Javascript",
+		["when"] = "2019-12-11 00:41:30",
+		["result"] = "complete",
+		["where"] = "厄运之槌",
+	}, -- [58]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

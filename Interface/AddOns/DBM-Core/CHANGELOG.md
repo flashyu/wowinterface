@@ -1,10 +1,11 @@
 # Deadly Boss Mods Core
 
-## [1.13.23](https://github.com/DeadlyBossMods/DBM-Classic/tree/1.13.23) (2019-12-05)
-[Full Changelog](https://github.com/DeadlyBossMods/DBM-Classic/compare/1.13.22...1.13.23)
+## [1.13.24](https://github.com/DeadlyBossMods/DBM-Classic/tree/1.13.24) (2019-12-10)
+[Full Changelog](https://github.com/DeadlyBossMods/DBM-Classic/compare/1.13.23...1.13.24)
 
-- Added syncing to Ignite Mana on Geddon so it's no longer limitted by combat log range nerf  
-    Added syncing to curse and rain off ire on Gehennas so they no longer limitted by combat log range nerf  
-    Added syncing to Doom and Curse on lucifron so they are no longer limitted by combat log range nerf  
-    Added syncing to Enrage and Panic on Magmadar sothey are no longer limitted by combat log range nerf  
-- Fix lua error on Shazrah, closes #27  
+- Bump Classic TOC/Version  
+- Fix lua error with Adds type warnings in classic  
+- BWL Update  
+     - Added syncing to Broodlord, Chromaggus, Nefarian, Razorgore, and Vaelastrasz to improve mod functionality for a well spread out raid that's limitted by crappy combat log range.  
+     - Fixed a bug on Nefarian where Veil Shadow curse was using wrong spellId/name, ensuring this warning will function properly going forward.  
+     - Pruned some target timers from BWL that weren't really that important to begin that would require syncing to maintain their functionality (not worth it for unimportant timers, thus the prune)  

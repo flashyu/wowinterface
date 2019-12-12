@@ -5,7 +5,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 93704612,
+			["Actionscript"] = 3844003,
 		},
 	},
 	["class"] = {
@@ -29,6 +29,10 @@ ElvDB = {
 			},
 		},
 		["general"] = {
+			["AceGUI"] = {
+				["height"] = 594.67,
+				["width"] = 930.22,
+			},
 			["UIScale"] = 0.8,
 		},
 	},
@@ -39,7 +43,7 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 13,
+			["currentTutorial"] = 4,
 			["general"] = {
 				["backdropfadecolor"] = {
 					["a"] = 0.69,
@@ -91,6 +95,11 @@ ElvDB = {
 					["tank"] = {
 						["enable"] = false,
 					},
+					["player"] = {
+						["aurabar"] = {
+							["priority"] = "",
+						},
+					},
 					["raid40"] = {
 						["power"] = {
 							["enable"] = true,
@@ -98,6 +107,16 @@ ElvDB = {
 					},
 					["assist"] = {
 						["enable"] = false,
+					},
+					["target"] = {
+						["debuffs"] = {
+							["priority"] = "",
+							["maxDuration"] = 0,
+						},
+						["buffs"] = {
+							["priority"] = "",
+							["maxDuration"] = 0,
+						},
 					},
 				},
 				["colors"] = {
@@ -188,9 +207,9 @@ ElvDB = {
 				["ElvAB_6"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-488,330",
 				["TooltipMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-50,50",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,50,995",
+				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["TotemBarMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,50",
 				["ElvUF_PetMover"] = "BOTTOM,ElvUIParent,BOTTOM,0,200",
-				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-230,140",
 				["ElvUF_PartyMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,184,773",
 				["AlertFrameMover"] = "TOP,ElvUIParent,TOP,0,-50",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,230,140",

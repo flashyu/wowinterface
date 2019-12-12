@@ -40,7 +40,6 @@ ItemRackUser = {
 		},
 		["~CombatQueue"] = {
 			["equip"] = {
-				[13] = "13968::::::::60:::11::::",
 			},
 		},
 		["~Unequip"] = {
@@ -120,5 +119,5 @@ ItemRackUser = {
 	["Queues"] = {
 	},
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "Q",
+	["CurrentSet"] = "A",
 }

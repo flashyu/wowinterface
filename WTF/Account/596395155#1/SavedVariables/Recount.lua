@@ -7,10 +7,10 @@ RecountDB = {
 		["Actionscript - 沙尔图拉"] = {
 			["MainWindow"] = {
 				["Position"] = {
-					["y"] = 395.388854980469,
+					["y"] = 395.499938964844,
 					["x"] = -687.833343505859,
 					["w"] = 317.000061035156,
-					["h"] = 183.222244262695,
+					["h"] = 183.000030517578,
 				},
 			},
 			["Colors"] = {
@@ -23,8 +23,7 @@ RecountDB = {
 					},
 				},
 			},
-			["MainWindowVis"] = false,
-			["LastInstanceName"] = "厄运之槌",
+			["LastInstanceName"] = "怒焰裂谷",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 			["MainWindowHeight"] = 183.222244262695,

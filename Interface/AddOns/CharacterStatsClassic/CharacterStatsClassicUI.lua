@@ -6,6 +6,7 @@ core.UIConfig = {};
 -- Defaults
 local UISettingsGlobal = {
     shouldAddWeaponSkillToHit = false;
+    useBlizzardBlockValue = false;
 }
 
 local UISettingsCharacter = {
@@ -187,16 +188,25 @@ function UIConfig:SetupConfigInterface()
     CSC_ConfigFrame.titleString = CSC_ConfigFrame.title:CreateFontString(nil, "OVERLAY", "GameFontNormal");
     CSC_ConfigFrame.titleString:SetPoint("TOPLEFT", CSC_ConfigFrame, "TOPLEFT", 10, -10);
     CSC_ConfigFrame.titleString:SetText('|cff00c0ffCharacterStatsClassic|r');
-    CSC_ConfigFrame.titleString:SetFont("Fonts\\ARHei.tff", 20, "OUTLINE");
+    CSC_ConfigFrame.titleString:SetFont("Fonts\\FRIZQT__.tff", 20, "OUTLINE");
 
     -- Checkboxes
     CSC_ConfigFrame.chkBtnAddWeaponSkillToHit = CreateFrame("CheckButton", "default", CSC_ConfigFrame, "UICheckButtonTemplate");
     CSC_ConfigFrame.chkBtnAddWeaponSkillToHit:SetPoint("TOPLEFT", 20, -30);
-    CSC_ConfigFrame.chkBtnAddWeaponSkillToHit.text:SetText("从武器技能中获得的命中率 (只对60级近战职业有效)");
+    CSC_ConfigFrame.chkBtnAddWeaponSkillToHit.text:SetText("Count Hit from Weapon Skill in Hit Chance. (Works only for melee weapons and level 60 players)");
     CSC_ConfigFrame.chkBtnAddWeaponSkillToHit:SetChecked(UISettingsGlobal.shouldAddWeaponSkillToHit);
     CSC_ConfigFrame.chkBtnAddWeaponSkillToHit:SetScript("OnClick", 
     function()
         UISettingsGlobal.shouldAddWeaponSkillToHit = not UISettingsGlobal.shouldAddWeaponSkillToHit;
+    end);
+
+    CSC_ConfigFrame.chkBtnUseBlizzardBlockValue = CreateFrame("CheckButton", "default", CSC_ConfigFrame, "UICheckButtonTemplate");
+    CSC_ConfigFrame.chkBtnUseBlizzardBlockValue:SetPoint("TOPLEFT", 20, -55);
+    CSC_ConfigFrame.chkBtnUseBlizzardBlockValue.text:SetText("Use alternative Block Value calculation (Blizzard function)");
+    CSC_ConfigFrame.chkBtnUseBlizzardBlockValue:SetChecked(UISettingsGlobal.useBlizzardBlockValue);
+    CSC_ConfigFrame.chkBtnUseBlizzardBlockValue:SetScript("OnClick", 
+    function()
+        UISettingsGlobal.useBlizzardBlockValue = not UISettingsGlobal.useBlizzardBlockValue;
     end);
 end
 
