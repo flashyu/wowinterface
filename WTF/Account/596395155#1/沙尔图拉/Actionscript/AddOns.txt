@@ -94,3 +94,10 @@ DBM-BWL: enabled
 DBM-DefaultSkin: enabled
 MessageClassifier: disabled
 WeakAurasCompanion: enabled
+ElvUI_VisualAuraTimers: disabled
+ElvUI_ExtraActionBars: disabled
+ElvUI_CastBarOverlay: disabled
+ElvUI_EverySecondCounts: disabled
+ElvUI_AuraBarsMovers: disabled
+ConsolePortAdvanced: disabled
+ConsolePortKeyboard: disabled

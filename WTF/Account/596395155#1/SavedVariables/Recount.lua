@@ -2,6 +2,7 @@
 RecountDB = {
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
+		["Helloworlds - 沙尔图拉"] = "Helloworlds - 沙尔图拉",
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
@@ -23,11 +24,29 @@ RecountDB = {
 					},
 				},
 			},
-			["MainWindowVis"] = false,
-			["LastInstanceName"] = "厄运之槌",
+			["LastInstanceName"] = "奥特兰克山谷",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 			["MainWindowHeight"] = 183.222244262695,
+		},
+		["Helloworlds - 沙尔图拉"] = {
+			["MainWindowVis"] = false,
+			["MainWindow"] = {
+				["Position"] = {
+					["w"] = 140.000015258789,
+				},
+			},
+			["Colors"] = {
+				["Bar"] = {
+					["Bar Text"] = {
+						["a"] = 1,
+					},
+					["Total Bar"] = {
+						["a"] = 1,
+					},
+				},
+			},
+			["CurDataSet"] = "OverallData",
 		},
 	},
 }

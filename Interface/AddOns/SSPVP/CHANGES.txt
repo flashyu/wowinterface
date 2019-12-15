@@ -1,12 +1,12 @@
-tag 439476ae1d964a359cd0df7e05d3ac0482d655b3 v1.0.3
+tag d40c758c5b24200ba27ac91ac14ce17c2aff9da9 v1.0.7
 Author:	Shadowed <shadowed.wow@gmail.com>
-Date:	Wed Dec 11 19:33:59 2019 -0800
+Date:	Fri Dec 13 08:02:47 2019 -0800
 
-Tagging as release v1.0.3
+Tagging as release v1.0.7
 
-commit 304544a3ac1e4e4332f2f5e74f2e8afa4c76c36c
+commit af528b081b3eeb0d42b3966d65b39932b306c545
 Author: Shadowed <shadowed.wow@gmail.com>
-Date:   Wed Dec 11 19:05:40 2019 -0800
+Date:   Fri Dec 13 08:01:57 2019 -0800
 
-    Filter out rolls and armor scraps from AV
+    Typo fix
 

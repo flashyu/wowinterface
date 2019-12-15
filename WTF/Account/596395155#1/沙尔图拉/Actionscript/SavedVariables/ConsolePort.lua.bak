@@ -20,10 +20,10 @@ ConsolePortMouse = {
 		["GOSSIP_CLOSED"] = true,
 		["QUEST_COMPLETE"] = true,
 		["MERCHANT_SHOW"] = true,
-		["QUEST_PROGRESS"] = true,
-		["SHIPMENT_CRAFTER_OPENED"] = true,
-		["SHIPMENT_CRAFTER_CLOSED"] = true,
 		["LOOT_OPENED"] = true,
+		["SHIPMENT_CRAFTER_CLOSED"] = true,
+		["SHIPMENT_CRAFTER_OPENED"] = true,
+		["QUEST_PROGRESS"] = true,
 		["UNIT_SPELLCAST_FAILED"] = true,
 	},
 	["Cursor"] = {

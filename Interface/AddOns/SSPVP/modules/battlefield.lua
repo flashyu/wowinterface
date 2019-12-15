@@ -31,7 +31,7 @@ function BF:OnInitialize()
 	table.insert(filterItems, (GetItemInfo(20558))) -- WSG
 
 	-- Various AV items
-	for _, id in pairs({17422, 17423, 17502, 17503, 17306, 17504, 17326, 17328, 17327, 18145}) do
+	for _, id in pairs({18230, 17422, 17423, 17502, 17503, 17306, 17504, 17326, 17328, 17327, 18145}) do
 		table.insert(filterItems, (GetItemInfo(id)))
 	end
 end
@@ -47,9 +47,8 @@ function BF:EnableModule(abbrev)
 
 	-- Blizzards code is fucked up, so we do this ourselves
 	if( GetCVar("showBattlefieldMinimap") == "1" ) then
-		BattlefieldMinimap_LoadUI()
-		BattlefieldMinimap:Show()
-		WorldMapZoneMinimapDropDown_Update()
+		LoadAddOn("Blizzard_BattlefieldMap")
+		BattlefieldMapFrame:Show()
 	end
 end
 
@@ -63,9 +62,8 @@ function BF:DisableModule()
 	self.activeBF = nil
 	
 	-- Blizzards code doesn't seem to hide it correctly, so will do it ourselves
-	if( GetCVar("showBattlefieldMinimap") == "1" and BattlefieldMinimap ) then
-		BattlefieldMinimap:Hide()
-		WorldMapZoneMinimapDropDown_Update()
+	if( GetCVar("showBattlefieldMinimap") == "1" and BattlefieldMapFrame ) then
+		BattlefieldMapFrame:Hide()
 	end
 end
 
@@ -76,19 +74,21 @@ end
 
 -- Filter spam
 function BF.FilterLootMessages(self, event, msg, ...)
-	if( not string.match(msg, L["^You "]) ) then
-		for _, itemScan in pairs(filterItems) do
-			if( string.match(msg, itemScan) ) then
-				return true, msg, ...
+	if( msg ) then
+		if( not string.match(msg, L["^You "]) ) then
+			for _, itemScan in pairs(filterItems) do
+				if( string.match(msg, itemScan) ) then
+					return true, msg, ...
+				end
 			end
 		end
-	end
-	
-	if( string.match(msg, L["has selected .+ for:"]) ) then
-		return true, msg, ...
-	elseif( string.match(msg, L[".+ Roll -"]) ) then
-		if( not string.match(msg, L["by"] .. " " .. playerName) ) then
+		
+		if( string.match(msg, L["has selected .+ for:"]) or string.match(msg, L["has passed on:"]) ) then
 			return true, msg, ...
+		elseif( string.match(msg, L[".+ Roll -"]) ) then
+			if( not string.match(msg, L["by"] .. " " .. playerName) ) then
+				return true, msg, ...
+			end
 		end
 	end
 
@@ -96,7 +96,7 @@ function BF.FilterLootMessages(self, event, msg, ...)
 end
 
 function BF.FilterSystemMessages(self, event, msg, ...)
-	if( string.match(msg, L["the instance group.$"]) ) then
+	if( msg and string.match(msg, L["the instance group.$"]) ) then
 		return true
 	end
 	

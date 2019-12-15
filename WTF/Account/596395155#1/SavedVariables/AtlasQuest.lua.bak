@@ -1,9 +1,13 @@
 
 AtlasQuest_Options = {
-	["Version"] = "4.11.57",
+	["Helloworlds"] = {
+		["ShownSide"] = "Left",
+		["AtlasAutoShow"] = 1,
+	},
 	["Actionscript"] = {
 		["ShownSide"] = "Left",
 		["AtlasAutoShow"] = 1,
 		["NoQuerySpam"] = "yes",
 	},
+	["Version"] = "4.11.57",
 }

@@ -2,8 +2,36 @@
 ConsolePortBindingSet = {
 	{
 	}, -- [1]
+	[8] = {
+		["CP_L_DOWN"] = {
+			[""] = "MOVEBACKWARD",
+		},
+		["CP_L_UP"] = {
+			[""] = "MOVEFORWARD",
+		},
+		["CP_L_RIGHT"] = {
+			[""] = "STRAFERIGHT",
+		},
+		["CP_L_LEFT"] = {
+			[""] = "STRAFELEFT",
+		},
+	},
 }
 ConsolePortMouse = {
+	["Camera"] = {
+		["lookAround"] = false,
+		["test_cameraDynamicPitch"] = 0,
+		["test_cameraTargetFocusEnemyEnable"] = 0,
+		["test_cameraTargetFocusInteractEnable"] = 0,
+		["calculateYaw"] = false,
+		["cameraZoomSpeed"] = 20,
+	},
+	["Cursor"] = {
+		["Scroll"] = "CP_M1",
+		["Right"] = "CP_R_RIGHT",
+		["Left"] = "CP_R_DOWN",
+		["Special"] = "CP_R_UP",
+	},
 	["Events"] = {
 		["QUEST_AUTOCOMPLETE"] = true,
 		["QUEST_FINISHED"] = true,
@@ -20,17 +48,11 @@ ConsolePortMouse = {
 		["GOSSIP_CLOSED"] = true,
 		["QUEST_COMPLETE"] = true,
 		["MERCHANT_SHOW"] = true,
-		["LOOT_OPENED"] = true,
-		["SHIPMENT_CRAFTER_CLOSED"] = true,
-		["SHIPMENT_CRAFTER_OPENED"] = true,
 		["QUEST_PROGRESS"] = true,
+		["SHIPMENT_CRAFTER_OPENED"] = true,
+		["SHIPMENT_CRAFTER_CLOSED"] = true,
+		["LOOT_OPENED"] = true,
 		["UNIT_SPELLCAST_FAILED"] = true,
-	},
-	["Cursor"] = {
-		["Scroll"] = "CP_M1",
-		["Right"] = "CP_R_RIGHT",
-		["Left"] = "CP_R_DOWN",
-		["Special"] = "CP_R_UP",
 	},
 }
 ConsolePortUtility = {

@@ -1,48 +1,192 @@
 
 ConsolePortSettings = {
-	["disableSmartMouse"] = false,
 	["bindView"] = 2,
-	["CP_M2"] = "CP_TL2",
-	["CP_M1"] = "CP_TL1",
+	["actionBarStyle"] = 4,
+	["autoLootDefault"] = true,
 	["turnCharacter"] = false,
 	["lootWith"] = "CP_R_DOWN",
+	["skipCalibration"] = false,
 	["CP_T2"] = "CP_TR2",
-	["interactCache"] = true,
+	["disableSmartBind"] = false,
 	["nameplateNameOnly"] = true,
-	["stickRadialLocal"] = true,
+	["stickRadialLocal"] = false,
 	["preventMouseDrift"] = false,
-	["type"] = "XBOX",
+	["skipGuideBtn"] = false,
+	["nameplateShowAll"] = true,
+	["interactScrape"] = true,
+	["mouseOnCenter"] = true,
+	["disableKeyboard"] = false,
+	["doubleModTap"] = true,
+	["UIdropDownFix"] = true,
+	["unitHotkeyPool"] = "player$;party%d$;raid%d+$",
+	["CP_M1"] = "CP_TL1",
+	["TargetNearestUseNew"] = false,
+	["disableUI"] = false,
+	["autoExtra"] = true,
+	["stickRadialType"] = 0,
+	["nameplateShowFriendlyNPCs"] = true,
+	["nameplateShowFriends"] = true,
+	["interactNPC"] = false,
+	["interactWith"] = false,
+	["mouseInvertPitch"] = false,
+	["CP_M2"] = "CP_TL2",
+	["mouseInvertYaw"] = false,
 	["id"] = "132119966022137425",
 	["calibration"] = {
-		["CP_L_UP"] = "F1",
 		["CP_L_RIGHT"] = "F2",
+		["CP_L_UP"] = "F1",
 		["CP_R_LEFT"] = "F12",
 		["CP_X_CENTER"] = "NUMPADMULTIPLY",
 		["CP_R_PULL"] = "",
-		["TOGGLERUN"] = "NUMPADDIVIDE",
+		["CP_X_RIGHT"] = "F6",
+		["CP_X_LEFT"] = "F5",
+		["CP_L_DOWN"] = "F3",
+		["CP_L_LEFT"] = "F4",
+		["CP_T1"] = "F7",
+		["CP_L_PULL"] = "",
 		["CP_T2"] = "F8",
 		["CP_R_UP"] = "F9",
 		["CP_R_RIGHT"] = "F10",
-		["CP_L_PULL"] = "",
-		["CP_T1"] = "F7",
-		["CP_L_LEFT"] = "F4",
-		["CP_L_DOWN"] = "F3",
-		["CP_X_LEFT"] = "F5",
-		["CP_X_RIGHT"] = "F6",
+		["TOGGLERUN"] = "NUMPADDIVIDE",
 		["CP_R_DOWN"] = "F11",
 	},
-	["stickRadialType"] = 2,
-	["mouseOnJump"] = false,
+	["disableSmartMouse"] = false,
+	["disableHints"] = false,
 	["autoInteract"] = false,
-	["autoExtra"] = true,
+	["UIdisableHoldRepeat"] = false,
 	["CP_T1"] = "CP_TR1",
-	["interactScrape"] = true,
+	["raidCursorDirect"] = false,
 	["autoSellJunk"] = true,
-	["actionBarStyle"] = 4,
-	["unitHotkeyPool"] = "player$;party%d$;raid%d+$",
-	["UIdropDownFix"] = true,
+	["interactCache"] = true,
+	["mouseOnJump"] = false,
+	["type"] = "XBOX",
 }
-ConsolePortCharacterSettings = nil
+ConsolePortCharacterSettings = {
+	["Actionscript (法师) 沙尔图拉"] = {
+		["Type"] = "XBOX",
+		["Bar"] = {
+			["showbuttons"] = false,
+			["flashart"] = true,
+			["showline"] = true,
+			["lock"] = true,
+			["scale"] = 0.9,
+			["layout"] = {
+				["CP_L_RIGHT"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						306, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "right",
+				},
+				["CP_R_LEFT"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-306, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "left",
+				},
+				["CP_T4"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-396, -- [2]
+						16, -- [3]
+					},
+					["dir"] = "down",
+				},
+				["CP_L_UP"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						240, -- [2]
+						100, -- [3]
+					},
+					["dir"] = "up",
+				},
+				["CP_L_LEFT"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						176, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "left",
+				},
+				["CP_L_DOWN"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						240, -- [2]
+						16, -- [3]
+					},
+					["dir"] = "down",
+				},
+				["CP_T1"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						456, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "right",
+				},
+				["CP_T3"] = {
+					["size"] = 64,
+					["point"] = {
+						"LEFT", -- [1]
+						396, -- [2]
+						16, -- [3]
+					},
+					["dir"] = "down",
+				},
+				["CP_R_UP"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-240, -- [2]
+						100, -- [3]
+					},
+					["dir"] = "up",
+				},
+				["CP_R_RIGHT"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-176, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "right",
+				},
+				["CP_T2"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-456, -- [2]
+						56, -- [3]
+					},
+					["dir"] = "left",
+				},
+				["CP_R_DOWN"] = {
+					["size"] = 64,
+					["point"] = {
+						"RIGHT", -- [1]
+						-240, -- [2]
+						16, -- [3]
+					},
+					["dir"] = "down",
+				},
+			},
+			["watchbars"] = true,
+			["width"] = 1100,
+		},
+		["Class"] = "MAGE",
+		["Spec"] = 8,
+	},
+}
 ConsolePortUIFrames = {
 	["Blizzard_GarrisonUI"] = {
 		"GarrisonBuildingFrame", -- [1]
@@ -70,8 +214,65 @@ ConsolePortUIFrames = {
 	["Blizzard_ItemAlterationUI"] = {
 		"TransmogrifyFrame", -- [1]
 	},
-	["Blizzard_LookingForGuildUI"] = {
-		"LookingForGuildFrame", -- [1]
+	["Blizzard_Collections"] = {
+		"CollectionsJournal", -- [1]
+		"WardrobeFrame", -- [2]
+	},
+	["Blizzard_AlliedRacesUI"] = {
+		"AlliedRacesFrame", -- [1]
+	},
+	["Blizzard_ChallengesUI"] = {
+		"ChallengesKeystoneFrame", -- [1]
+	},
+	["Blizzard_AzeriteUI"] = {
+		"AzeriteEmpoweredItemUI", -- [1]
+	},
+	["Blizzard_QuestChoice"] = {
+		"QuestChoiceFrame", -- [1]
+	},
+	["Blizzard_Calendar"] = {
+		"CalendarFrame", -- [1]
+	},
+	["Blizzard_EncounterJournal"] = {
+		"EncounterJournal", -- [1]
+	},
+	["Blizzard_AchievementUI"] = {
+		"AchievementFrame", -- [1]
+	},
+	["Blizzard_ArtifactUI"] = {
+		"ArtifactFrame", -- [1]
+		"ArtifactRelicForgeFrame", -- [2]
+	},
+	["Blizzard_InspectUI"] = {
+		"InspectFrame", -- [1]
+	},
+	["Blizzard_VoidStorageUI"] = {
+		"VoidStorageFrame", -- [1]
+	},
+	["Blizzard_AuctionUI"] = {
+		"AuctionFrame", -- [1]
+	},
+	["Blizzard_TrainerUI"] = {
+		"ClassTrainerFrame", -- [1]
+	},
+	["Blizzard_ObliterumUI"] = {
+		"ObliterumForgeFrame", -- [1]
+	},
+	["Blizzard_WarboardUI"] = {
+		"WarboardQuestChoiceFrame", -- [1]
+	},
+	["Blizzard_DeathRecap"] = {
+		"DeathRecapFrame", -- [1]
+	},
+	["Blizzard_GuildUI"] = {
+		"GuildFrame", -- [1]
+	},
+	["Blizzard_TradeSkillUI"] = {
+		"TradeSkillFrame", -- [1]
+	},
+	["Blizzard_TalentUI"] = {
+		nil, -- [1]
+		"TalentFrame", -- [2]
 	},
 	["ConsolePort"] = {
 		"AddonList", -- [1]
@@ -138,65 +339,8 @@ ConsolePortUIFrames = {
 		"GroupLootFrame3", -- [62]
 		"GroupLootFrame4", -- [63]
 	},
-	["Blizzard_TalentUI"] = {
-		nil, -- [1]
-		"TalentFrame", -- [2]
-	},
-	["Blizzard_AzeriteUI"] = {
-		"AzeriteEmpoweredItemUI", -- [1]
-	},
-	["Blizzard_QuestChoice"] = {
-		"QuestChoiceFrame", -- [1]
-	},
-	["Blizzard_Calendar"] = {
-		"CalendarFrame", -- [1]
-	},
-	["Blizzard_TrainerUI"] = {
-		"ClassTrainerFrame", -- [1]
-	},
-	["Blizzard_GuildUI"] = {
-		"GuildFrame", -- [1]
-	},
-	["Blizzard_ArtifactUI"] = {
-		"ArtifactFrame", -- [1]
-		"ArtifactRelicForgeFrame", -- [2]
-	},
-	["Blizzard_InspectUI"] = {
-		"InspectFrame", -- [1]
-	},
-	["Blizzard_VoidStorageUI"] = {
-		"VoidStorageFrame", -- [1]
-	},
-	["Blizzard_AuctionUI"] = {
-		"AuctionFrame", -- [1]
-	},
-	["Blizzard_EncounterJournal"] = {
-		"EncounterJournal", -- [1]
-	},
-	["Blizzard_ObliterumUI"] = {
-		"ObliterumForgeFrame", -- [1]
-	},
-	["Blizzard_WarboardUI"] = {
-		"WarboardQuestChoiceFrame", -- [1]
-	},
-	["Blizzard_DeathRecap"] = {
-		"DeathRecapFrame", -- [1]
-	},
-	["Blizzard_AchievementUI"] = {
-		"AchievementFrame", -- [1]
-	},
-	["Blizzard_TradeSkillUI"] = {
-		"TradeSkillFrame", -- [1]
-	},
-	["Blizzard_ChallengesUI"] = {
-		"ChallengesKeystoneFrame", -- [1]
-	},
-	["Blizzard_AlliedRacesUI"] = {
-		"AlliedRacesFrame", -- [1]
-	},
-	["Blizzard_Collections"] = {
-		"CollectionsJournal", -- [1]
-		"WardrobeFrame", -- [2]
+	["Blizzard_LookingForGuildUI"] = {
+		"LookingForGuildFrame", -- [1]
 	},
 }
 ConsolePortUIConfig = {

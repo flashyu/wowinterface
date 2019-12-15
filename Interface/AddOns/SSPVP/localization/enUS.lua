@@ -281,6 +281,7 @@ L["Grow display up"] = "Grow display up"
 --[[ L["Grow up"] = ""--]] 
 L["has assaulted the ([^!]+)"] = "has assaulted the ([^!]+)"
 L["has defended the ([^!]+)"] = "has defended the ([^!]+)"
+L["has passed on:"] = "has passed on:"
 L["has selected .+ for:"] = "has selected .+ for:"
 L["has taken the ([^!]+)"] = "has taken the ([^!]+)"
 L["Held Time: %s"] = "Held Time: %s"

@@ -1,10 +1,11 @@
 
 AtlasLootClassicDB = {
-	["global"] = {
-		["__addonrevision"] = 1040002,
-	},
 	["profileKeys"] = {
 		["Actionscript - 沙尔图拉"] = "Actionscript - 沙尔图拉",
+		["Helloworlds - 沙尔图拉"] = "Helloworlds - 沙尔图拉",
+	},
+	["global"] = {
+		["__addonrevision"] = 1040002,
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
@@ -22,11 +23,13 @@ AtlasLootClassicDB = {
 				["selected"] = {
 					nil, -- [1]
 					"TheTempleOfAtal'Hakkar", -- [2]
-					11, -- [3]
+					nil, -- [3]
 					1, -- [4]
 					0, -- [5]
 				},
 			},
+		},
+		["Helloworlds - 沙尔图拉"] = {
 		},
 	},
 }
