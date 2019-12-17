@@ -65,7 +65,6 @@ bind \ TOGGLEAUTORUN
 bind ] SETVIEW1
 bind [ SETVIEW2
 bind NUMPADMULTIPLY CP_X_CENTER
-bind  CP_L_PULL
 bind F6 CP_X_RIGHT
 bind F7 CP_T1
 modifiedclick NONE SELFCAST

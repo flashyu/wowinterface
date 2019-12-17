@@ -5,7 +5,7 @@ if not L then return end
 -- Addon information
 L["Spy"] = "Spy"
 L["Version"] = "Versão"
---L["LoadDescription"] = "|cff9933ffSpy foi carregado. Digite |cffffffff/spy|cff9933ff para opções."
+L["VersionCheck"] = "|cffc41e3aAtenção! A versão errada do Spy está instalada. Remova esta versão e instale o Spy Classic."
 L["SpyEnabled"] = "|cff9933ffSpy addon ativado."
 L["SpyDisabled"] = "|cff9933ffSpy addon desativado. Digite |cffffffff/spy enable|cff9933ff para ativar."
 L["UpgradeAvailable"] = "|cff9933ffA nova versão do Spy está disponivel. Baixe-o em:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
@@ -64,6 +64,8 @@ L["ShowKoSButton"] = "Mostrar o botão da lista negra no quadro alvo inimigo"
 L["ShowKoSButtonDescription"] = "Defina isso para mostrar o botão da lista negra no quadro alvo do jogador inimigo."
 L["LockSpy"] = "Travar a janela do Spy"
 L["LockSpyDescription"] = "Trava a janela para que ela não possa ser movida."
+L["ClampToScreen"] = "Limitar na Tela"
+L["ClampToScreenDescription"] = "Controla quando a janela do Spy pode ser arrastada para fora da tela."
 L["InvertSpy"] = "Inverter a janela de Spy"
 L["InvertSpyDescription"] = "Inverte a janela de Spy de cabeça para baixo."
 L["Reload"] = "Recarregar UI"
@@ -302,6 +304,7 @@ L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070ddDerrotas: "
 L["Located"] = "localizado:"
 L["Yards"] = "jardas"
+L["LocalDefenseChannelName"] = "DefesaLocal"
 
 Spy_KOSReasonListLength = 6
 Spy_KOSReasonList = {
@@ -438,9 +441,6 @@ L["TROLL"] = "Troll"
 -- Stealth abilities
 L["Stealth"] = "Furtividade"
 L["Prowl"] = "Espreitar"
-
--- Channel names
-L["LocalDefenseChannelName"] = "DefesaLocal"
 
 --++ Minimap color codes
 --L["MinimapClassTextDEATHKNIGHT"] = "|cffc41e3a"

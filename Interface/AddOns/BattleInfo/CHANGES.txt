@@ -1,0 +1,58 @@
+lightweight tag 2ca94014da0561fa6c53a08e9467836ef848c457 v2.2.3
+Author:	Boshi Lian <farmer1992@gmail.com>
+Date:	Mon Dec 16 23:42:50 2019 -0800
+
+commit 2ca94014da0561fa6c53a08e9467836ef848c457
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 23:42:50 2019 -0800
+
+    fix zero tower cannot show
+
+commit c00741f8f2f5870ada6e0c57e17d80473ef5bf00
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 23:38:15 2019 -0800
+
+    movable
+
+commit c6c35f606b34c07de11b16bb34eb82014d4cb0c9
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 23:08:18 2019 -0800
+
+    ensure av bar to be created
+
+commit add0f9e9f225fd8858ce94908364aeb4ed75bae2
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 22:31:19 2019 -0800
+
+    clean up when load
+
+commit 457dd27c509a40c88e037e295e92dd27bd44254b
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 18:25:57 2019 -0800
+
+    show number even if no class info
+
+commit d584e72a516101624343bd8b4f354ef9a323b813
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 13:12:56 2019 -0800
+
+    remove magic number
+
+commit 9ff7a4e3f421503d53f82b92590dd14f40ffe91c
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 13:00:00 2019 -0800
+
+    ignore more files for pkg
+
+commit e84a58e91194a02982b7d78314750c7835bab49d
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 12:45:52 2019 -0800
+
+    Create FUNDING.yml
+
+commit 7a562c635f7150fb47a63a4bcc4452999f3d76cc
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Dec 16 12:44:15 2019 -0800
+
+    fi lint
+

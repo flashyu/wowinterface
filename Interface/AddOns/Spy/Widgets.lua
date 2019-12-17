@@ -6,7 +6,8 @@ function Spy:CreateFrame(Name, Title, Height, Width, ShowFunc, HideFunc)
 	local theFrame = CreateFrame("Frame", Name, UIParent)
 
 	theFrame:ClearAllPoints()
-	theFrame:SetPoint("TOPLEFT", UIParent)  
+--	theFrame:SetPoint("TOPLEFT", UIParent)
+	theFrame:SetPoint("CENTER", UIParent)
 	theFrame:SetHeight(Height)
 	theFrame:SetWidth(Width)
 	if not Spy.db.profile.InvertSpy then
@@ -45,16 +46,14 @@ function Spy:CreateFrame(Name, Title, Height, Width, ShowFunc, HideFunc)
 	theFrame:EnableMouse(true)
 	theFrame:SetMovable(true)
 
-	theFrame:SetScript("OnMouseDown",
-	function(self, event) 
+	theFrame:SetScript("OnMouseDown", function(self, event) 
 		if (((not self.isLocked) or (self.isLocked == 0)) and (event == "LeftButton")) then
 			Spy:SetWindowTop(self)
 			self:StartMoving();
 			self.isMoving = true;
 		end
 	end)
-	theFrame:SetScript("OnMouseUp",
-	function(self) 
+	theFrame:SetScript("OnMouseUp", function(self) 
 		if (self.isMoving) then
 			self:StopMovingOrSizing();
 			self.isMoving = false;
@@ -63,16 +62,14 @@ function Spy:CreateFrame(Name, Title, Height, Width, ShowFunc, HideFunc)
 	end)
 
 	theFrame.ShowFunc = ShowFunc
-	theFrame:SetScript("OnShow",
-	function(self)
+	theFrame:SetScript("OnShow", function(self)
 		Spy:SetWindowTop(self)
 		if (self.ShowFunc) then
 			self:ShowFunc()
 		end
 	end)
 	theFrame.HideFunc = HideFunc
-	theFrame:SetScript("OnHide",
-	function(self) 
+	theFrame:SetScript("OnHide", function(self) 
 		if (self.isMoving) then
 			self:StopMovingOrSizing();
 			self.isMoving = false;
@@ -113,13 +110,17 @@ function Spy:CreateFrame(Name, Title, Height, Width, ShowFunc, HideFunc)
 		theFrame.CloseButton:SetPoint("BOTTOMRIGHT", theFrame, "BOTTOMRIGHT", -4, -18)
 	end		
 	theFrame.CloseButton:SetScript("OnEnter", function(self)
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-	GameTooltip:AddLine(L["Close"], 1, 0.82, 0, 1)
-	GameTooltip:AddLine(L["CloseDescription"],0,0,0,1)
-	GameTooltip:Show()
+		GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+		GameTooltip:AddLine(L["Close"], 1, 0.82, 0, 1)
+		GameTooltip:AddLine(L["CloseDescription"],0,0,0,1)
+		GameTooltip:Show()
 	end)
-	theFrame.CloseButton:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
-	theFrame.CloseButton:SetScript("OnClick", function(self) self:GetParent():Hide() end)
+	theFrame.CloseButton:SetScript("OnLeave", function(self)
+		GameTooltip:Hide() 
+	end)
+	theFrame.CloseButton:SetScript("OnClick", function(self)
+		self:GetParent():Hide()
+	end)
 
 	return theFrame
 end

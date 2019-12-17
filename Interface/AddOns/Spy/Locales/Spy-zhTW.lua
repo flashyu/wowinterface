@@ -5,7 +5,7 @@ if not L then return end
 -- Addon information
 L["Spy"] = "偵測敵方玩家 Spy"
 L["Version"] = "版本"
---L["LoadDescription"] = "|cff9933ff偵測敵方玩家插件已載入，輸入 |cffffffff/spy|cff9933ff 查看更多指令選項。"
+L["VersionCheck"] = "|cffc41e3a警告！ 安裝了錯誤的Spy版本。 刪除此版本並安裝Spy Classic。"
 L["SpyEnabled"] = "|cff9933ff偵測敵方玩家插件已啟用。"
 L["SpyDisabled"] = "|cff9933ff偵測敵方玩家插件已停用，輸入 |cffffffff/spy enable|cff9933ff 來啟用。"
 L["UpgradeAvailable"] = "|cff9933ff偵測敵方玩家插件已有新版本，可以到這裡下載：\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
@@ -64,6 +64,8 @@ L["ShowKoSButton"] = "在敌方目标框架上显示杀戮按钮"
 L["ShowKoSButtonDescription"] = "设置此项以在敌方玩家的目标框架上显示终止按钮."
 L["LockSpy"] = "鎖定視窗"
 L["LockSpyDescription"] = "鎖定 Spy 視窗讓它不能被移動。"
+L["ClampToScreen"] = "螢幕鎖定"
+L["ClampToScreenDescription"] = "控制是否可以将SPY窗口拖出屏幕。"
 L["InvertSpy"] = "翻轉視窗"
 L["InvertSpyDescription"] = "上下翻轉 Spy 視窗。"
 L["Reload"] = "重新加载UI"
@@ -302,6 +304,7 @@ L["StatsSeparator"] = "  "
 L["StatsLoses"] = "|cff0070dd敗："
 L["Located"] = "位置:"
 L["Yards"] = "碼"
+L["LocalDefenseChannelName"] = "本地防務"
 
 Spy_KOSReasonListLength = 6
 Spy_KOSReasonList = {
@@ -436,11 +439,8 @@ L["TROLL"] = "巨魔"
 --L["MAG'HAR ORC"] = "玛格汉兽人"
 
 -- Stealth abilities
-L["Stealth"] = "隱形"
+L["Stealth"] = "潜行"
 L["Prowl"] = "潛行"
-
--- Channel names
-L["LocalDefenseChannelName"] = "本地防務"
 
 --++ Minimap color codes
 --L["MinimapClassTextDEATHKNIGHT"] = "|cffc41e3a"

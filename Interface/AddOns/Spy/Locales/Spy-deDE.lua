@@ -5,7 +5,7 @@ if not L then return end
 --Addon-Informationen
 L["Spy"] = "Spy"
 L["Version"] = "Version"
---L["LoadDescription"] = "|cff9933ffSpy-Addon geladen. Tippen Sie |cffffffff/spy|cff9933ff für Optionen."
+L["VersionCheck"] = "|cffc41e3aWarnung! Die falsche Version von Spy ist installiert. Entfernen Sie diese Version und installieren Sie Spy Classic."
 L["SpyEnabled"] = "|cff9933ffSpy-Addon aktiviert."
 L["SpyDisabled"] = "|cff9933ffSpy-Addon deaktiviert. Tippen Sie |cffffffff/Spy enable|cff9933ff um es zu aktivieren."
 L["UpgradeAvailable"] = "|cff9933ffEine neue Version von Spy ist verfügbar. Es kann von: \n| cffffffffhttps://www.curseforge.com/wow/addons/spy-classic heruntergeladen werden."
@@ -64,6 +64,8 @@ L["ShowKoSButton"] = "Zeigen Sie die Schaltfläche bei Sichtkontakt töten auf d
 L["ShowKoSButtonDescription"] = "Stellen Sie dies ein, um die Schaltfläche bei Sichtkontakt töten im Zielrahman des Feindes anzuzeigen."
 L["LockSpy"] = "Sperrt das Spy-Fenster"
 L["LockSpyDescription"] = "Fixiert das Spy-Fenster an einem Ort, so dass es sich nicht bewegt."
+L["ClampToScreen"] = "Auf dem Bildschirm halten"
+L["ClampToScreenDescription"] = "Kontrolliert, ob das Spy-Fenster über die Bildschirmkanten hinaus verschoben werden kann."
 L["InvertSpy"] = "Dreht das Spy-Fenster um"
 L["InvertSpyDescription"] = "Kippt das Spy-Fenster verkehrt herum."
 L["Reload"] = "Neu laden UI"
@@ -302,6 +304,7 @@ L["StatsSeparator"] = ""
 L["StatsLoses"] = "|cff0070ddNiederlagen:"
 L["Located"] = "lokalisiert:"
 L["Yards"] = "Yards"
+L["LocalDefenseChannelName"] = "LokaleVerteidigung"
  
 Spy_KOSReasonListLength = 6
 Spy_KOSReasonList = {
@@ -436,11 +439,8 @@ L["TROLL"] = "Troll"
 --L["MAG'HAR ORC"] = "Mag'har"
  
 --Stealth Fähigkeiten
-L["Stealth"] = "tarnen"
-L["Prowl"] = "schleichen"
- 
---Kanalnamen
-L["LocalDefenseChannelName"] = "LokaleVerteidigung"
+L["Stealth"] = "Verstohlenheit"
+L["Prowl"] = "Schleichen"
  
 --++ Minimap-Farbcodes
 --L["MinimapClassTextDEATHKNIGHT"] = "|cffc41e3a"
