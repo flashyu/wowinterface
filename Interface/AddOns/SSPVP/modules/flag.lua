@@ -57,17 +57,18 @@ function Flag:EnableModule(abbrev)
 	
 	self:CreateButton(1)
 	self:CreateButton(2)
+	self:PositionButtons()
 
 	-- Start health scans
 	self.frame:Show()
 	
 	-- For now, it's consistant. Alliance is always up #1, Horde is always up #2
 	-- If the WoTLK battlegrounds change this, then this will have to get updated
-	buttons[1].type = "Alliance"
-	self.Alliance = buttons[1]
-	
-	buttons[2].type = "Horde"
-	self.Horde = buttons[2]
+	buttons[1].type = "Horde"
+	self.Horde = buttons[1]
+
+	buttons[2].type = "Alliance"
+	self.Alliance = buttons[2]
 	
 	self:RegisterEvent("CHAT_MSG_BG_SYSTEM_HORDE", "ParseMessage")
 	self:RegisterEvent("CHAT_MSG_BG_SYSTEM_ALLIANCE", "ParseMessage")
@@ -79,7 +80,6 @@ function Flag:EnableModule(abbrev)
 	if( self.db.profile[abbrev].health ) then
 		self:RegisterEvent("UNIT_HEALTH")
 		self:RegisterEvent("PLAYER_TARGET_CHANGED")
-		self:RegisterEvent("PLAYER_FOCUS_CHANGED")
 		self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 	end
 end
@@ -128,6 +128,8 @@ end
 
 -- We split these into two different functions, so we can do color/text/health updates while in combat, but update targeting when out of it
 function Flag:UpdateCarrierAttributes(faction)
+	self:PositionButtons()
+
 	-- Carrier changed but we can't update it yet
 	local carrier = carriers[faction].name
 	local button = self[faction]
@@ -145,7 +147,7 @@ function Flag:UpdateCarrierAttributes(faction)
 
 	button.carrier = carrier
 	button:SetAttribute("type", "macro")
-	button:SetAttribute("macrotext", string.gsub(self.db.profile[self.activeBF].macro, "*name", carrier or ""))
+	button:SetAttribute("macrotext", string.gsub(self.db.profile[self.activeBF].macro, "*name", carriers[faction].fullName or ""))
 end
 
 function Flag:UpdateCarrier(faction)
@@ -242,14 +244,15 @@ function Flag:Captured(faction)
 		Overlay:RegisterTimer("respawn", "timer", L["Flag Respawn: %s"], respawnTimes[self.activeBF], SSPVP:GetFactionColor(faction))
 	end
 	
-	Overlay:RemoveRow(faction .. "time")
+	--Overlay:RemoveRow(faction .. "time")
 	if( carriers[faction].time ) then
-		Overlay:RegisterText(faction .. "capture", "timer", string.format(L["Capture Time: %s"], SecondsToTime(GetTime() - carriers[faction].time)), SSPVP:GetFactionColor(faction))
+		--Overlay:RegisterText(faction .. "capture", "timer", string.format(L["Capture Time: %s"], SecondsToTime(GetTime() - carriers[faction].time)), SSPVP:GetFactionColor(faction))
 	end
 
 	-- Clear out
 	carriers[faction].time = nil
 	carriers[faction].name = nil
+	carriers[faction].fullName = nil
 	carriers[faction].health = nil
 	
 	self:Hide(faction)
@@ -257,6 +260,7 @@ end
 
 function Flag:Dropped(faction)
 	carriers[faction].name = nil
+	carriers[faction].fullName = nil
 	carriers[faction].health = nil
 	Overlay:RemoveRow(faction .. "time")
 
@@ -267,12 +271,15 @@ end
 function Flag:Returned(faction)
 	carriers[faction].time = nil
 	carriers[faction].name = nil
+	carriers[faction].fullName = nil
 	carriers[faction].health = nil
 	
 	Overlay:RemoveRow(faction .. "time")
 end
 
-function Flag:PickUp(faction, name)
+function Flag:PickUp(faction, fullName)
+	local name, server = string.split("-", fullName, 2)
+	carriers[faction].fullName = fullName
 	carriers[faction].name = name
 
 	-- If the flags dropped then picked up, we don't want to reset time
@@ -280,7 +287,7 @@ function Flag:PickUp(faction, name)
 		carriers[faction].time = GetTime()
 	end
 	
-	Overlay:RegisterElapsed(faction .. "time", "timer", L["Held Time: %s"], GetTime() - carriers[faction].time, SSPVP:GetFactionColor(faction))
+	--Overlay:RegisterElapsed(faction .. "time", "timer", L["Held Time: %s"], GetTime() - carriers[faction].time, SSPVP:GetFactionColor(faction))
 	self:Show(faction)
 end
 
@@ -364,28 +371,18 @@ function Flag:PositionButtons()
 		return
 	end
 
-	for i=1, NUM_ALWAYS_UP_UI_FRAMES do
-		local dynamicIcon = _G[string.format("AlwaysUpFrame%dDynamicIconButtonIcon", i)]
+	for i, child in pairs({UIWidgetTopCenterContainerFrame:GetChildren()}) do
+		local dynamicIcon = child.DynamicIconButton
 		if( dynamicIcon and buttons[i] ) then
-			if( dynamicIcon:GetTexture() ) then
+			--if( dynamicIcon:GetTexture() ) then
 				buttons[i]:ClearAllPoints()
 				buttons[i]:SetPoint("LEFT", UIParent, "BOTTOMLEFT", dynamicIcon:GetRight() + 6, dynamicIcon:GetTop() - 13)
-			else
-				local text = _G[string.format("AlwaysUpFrame%dText", i)]
-				buttons[i]:ClearAllPoints()
-				buttons[i]:SetPoint("LEFT", UIParent, "BOTTOMLEFT", text:GetRight() + 8, text:GetTop() - 5)
-			end
+			--else
+			--	local text = _G[string.format("AlwaysUpFrame%dText", i)]
+			--	buttons[i]:ClearAllPoints()
+			--	buttons[i]:SetPoint("LEFT", UIParent, "BOTTOMLEFT", text:GetRight() + 8, text:GetTop() - 5)
+			--end
 		end
-	end
-end
-
--- Ensure that the buttons will always be positioned on the always up frame
-local Orig_WorldStateAlwaysUpFrame_Update = WorldStateAlwaysUpFrame_Update
-function WorldStateAlwaysUpFrame_Update(...)
-	Orig_WorldStateAlwaysUpFrame_Update(...)
-	
-	if( Flag.activeBF ) then
-		Flag:PositionButtons()
 	end
 end
 
@@ -422,7 +419,6 @@ function Flag:UPDATE_BINDINGS()
 	end
 end
 
-
 -- HEALTH UPDATES
 local HEALTH_TIMEOUT = 10
 local partyScan = 0
@@ -434,10 +430,6 @@ end
 
 function Flag:UPDATE_MOUSEOVER_UNIT()
 	self:UpdateHealth("mouseover")
-end
-
-function Flag:PLAYER_FOCUS_CHANGED()
-	self:UpdateHealth("focus")
 end
 
 function Flag:PLAYER_TARGET_CHANGED()
@@ -460,6 +452,7 @@ function Flag:UpdateHealth(unit)
 
 	local name = UnitName(unit)
 	local faction = UnitFactionGroup(unit)
+
 	if( carriers[faction].name == name ) then
 		carriers[faction].health = floor((UnitHealth(unit) / UnitHealthMax(unit) * 100) + 0.5)
 		
@@ -476,7 +469,7 @@ end
 -- Check if we can still get health updates from them
 function Flag:IsTargeted(name)
 	-- Check if it's our target or mouseover
-	if( UnitName("target") == name or UnitName("mouseover") == name or UnitName("focus") == name ) then
+	if( UnitName("target") == name or UnitName("mouseover") == name ) then
 		return true
 	end
 	
@@ -488,7 +481,7 @@ function Flag:IsTargeted(name)
 	end
 	
 	-- Scan party member targets, and party member targets of target
-	for i=1, GetNumSubgroupMEmbers() do
+	for i=1, GetNumSubgroupMembers() do
 		if( ( UnitExists(partyUnits[i]) and UnitName(partyUnits[i]) == name ) or ( UnitExists(partyTargetUnits[i]) and UnitName(partyTargetUnits[i]) == name ) ) then
 			return true
 		end

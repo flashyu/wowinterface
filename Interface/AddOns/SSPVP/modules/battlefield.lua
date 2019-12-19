@@ -83,7 +83,7 @@ function BF.FilterLootMessages(self, event, msg, ...)
 			end
 		end
 		
-		if( string.match(msg, L["has selected .+ for:"]) or string.match(msg, L["has passed on:"]) ) then
+		if( string.match(msg, L["has selected .+ for:"]) or string.match(msg, L["passed on:"]) ) then
 			return true, msg, ...
 		elseif( string.match(msg, L[".+ Roll -"]) ) then
 			if( not string.match(msg, L["by"] .. " " .. playerName) ) then

@@ -1,6 +1,6 @@
 
 	----------------------------------------------------------------------
-	-- 	Leatrix Maps 1.13.39 (11th December 2019)
+	-- 	Leatrix Maps 1.13.40 (19th December 2019)
 	----------------------------------------------------------------------
 
 	-- 10:Func, 20:Comm, 30:Evnt, 40:Panl
@@ -12,7 +12,7 @@
 	local LeaMapsLC, LeaMapsCB, LeaConfigList = {}, {}, {}
 
 	-- Version
-	LeaMapsLC["AddonVer"] = "1.13.39"
+	LeaMapsLC["AddonVer"] = "1.13.40"
 	LeaMapsLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -107,6 +107,7 @@
 			local function SetIconSize()
 				LeaMapsCB["ClassIconSize"].f:SetText(LeaMapsLC["ClassIconSize"] .. " (" .. string.format("%.0f%%", LeaMapsLC["ClassIconSize"] / 20 * 100) .. ")")
 				WorldMapUnitPinSizes.party = LeaMapsLC["ClassIconSize"]
+				WorldMapUnitPinSizes.raid = LeaMapsLC["ClassIconSize"]
 				WorldMapUnitPin:SynchronizePinSizes()
 				prevIcon:SetSize(LeaMapsLC["ClassIconSize"], LeaMapsLC["ClassIconSize"])
 			end

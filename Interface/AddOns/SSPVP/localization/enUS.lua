@@ -371,6 +371,7 @@ L["One minute"] = "One minute"
 L["Only show the battle start timer when the match starts within the set amount of minutes."] = "Only show the battle start timer when the match starts within the set amount of minutes."
 L["Overlay"] = "Overlay"
 L["Party"] = "Party"
+L["passed on:"] = "passed on:"
 --[[Translation missing --]]
 --[[ L["Play"] = ""--]] 
 L["Play sound"] = "Play sound"

@@ -182,7 +182,8 @@ local function sortOverlay(a, b)
 		return a.sortID < b.sortID
 	end
 
-	return a.addOrder < b.addOrder
+	return a.seconds < b.seconds
+	--return a.addOrder < b.addOrder
 end
 
 function Overlay:FormatTime(seconds, skipSeconds)

@@ -131,14 +131,14 @@ function AV:CHAT_MSG_MONSTER_YELL(event, msg, npc)
 		timers[L["Ivus the Forest Lord"]] = GetTime() + 600
 		
 		Overlay:RegisterTimer(npc, "timer", L["Ivus Moving: %s"], 600, SSPVP:GetFactionColor("Horde"))
-		Overlay:RegisterOnClick(name, self, "PrintTimer", string.format("%s:%s:%s", L["Ivus the Forest Lord"], timers[L["Ivus the Forest Lord"]], L["Horde"]))
+		Overlay:RegisterOnClick(npc, self, "PrintTimer", string.format("%s:%s:%s", L["Ivus the Forest Lord"], timers[L["Ivus the Forest Lord"]], L["Horde"]))
 	
 	-- Lokholar the Ice Lord was summoned successfully
 	elseif( self.db.profile.timer and npc == L["Lokholar the Ice Lord"] and string.match(msg, L["WHO DARES SUMMON LOKHOLA"]) ) then
 		timers[L["Lokholar the Ice Lord"]] = GetTime() + 600
 
 		Overlay:RegisterTimer(npc, "timer", L["Lokholar Moving: %s"], 600, SSPVP:GetFactionColor("Alliance"))
-		Overlay:RegisterOnClick(name, self, "PrintTimer", string.format("%s:%s:%s", L["Lokholar the Ice Lord"], timers[L["Lokholar the Ice Lord"]], L["Alliance"]))
+		Overlay:RegisterOnClick(npc, self, "PrintTimer", string.format("%s:%s:%s", L["Lokholar the Ice Lord"], timers[L["Lokholar the Ice Lord"]], L["Alliance"]))
 	end
 end
 

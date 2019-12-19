@@ -7,17 +7,15 @@ RecountPerCharDB = {
 			["LastEventHealth"] = {
 				2400, -- [1]
 				2330, -- [2]
-				2330, -- [3]
 			},
 			["LastAttackedBy"] = "Environment",
 			["LastEventType"] = {
 				"DAMAGE", -- [1]
 				"DAMAGE", -- [2]
-				"DAMAGE", -- [3]
 			},
 			["TimeWindows"] = {
 				["DamageTaken"] = {
-					392, -- [1]
+					247, -- [1]
 				},
 			},
 			["enClass"] = "MAGE",
@@ -26,33 +24,29 @@ RecountPerCharDB = {
 			["LastDamageAbility"] = "Falling",
 			["LastFightIn"] = 0,
 			["type"] = "Self",
-			["LastActive"] = 254789.292,
+			["LastActive"] = 342084.696,
 			["LastEventHealthMax"] = {
 				2400, -- [1]
 				2330, -- [2]
-				2330, -- [3]
 			},
 			["Owner"] = false,
 			["TimeLast"] = {
-				["DamageTaken"] = 254789.292,
-				["OVERALL"] = 254789.292,
+				["DamageTaken"] = 342084.696,
+				["OVERALL"] = 342084.696,
 			},
-			["NextEventNum"] = 4,
+			["NextEventNum"] = 3,
 			["Name"] = "Actionscript",
 			["LastEvents"] = {
-				"Environment Falling Actionscript Hit -69 (Physical)", -- [1]
-				"Environment Falling Actionscript Hit -96 (Physical)", -- [2]
-				"Environment Falling Actionscript Hit -227 (Physical)", -- [3]
+				"Environment Falling Actionscript Hit -132 (Physical)", -- [1]
+				"Environment Falling Actionscript Hit -115 (Physical)", -- [2]
 			},
 			["LastEventIncoming"] = {
 				true, -- [1]
 				true, -- [2]
-				true, -- [3]
 			},
 			["LastEventTimes"] = {
-				225210.711, -- [1]
-				253404.444, -- [2]
-				254789.572, -- [3]
+				311693.125, -- [1]
+				342084.976, -- [2]
 			},
 			["Fights"] = {
 				["CurrentFightData"] = {
@@ -116,12 +110,12 @@ RecountPerCharDB = {
 								["未被抵抗"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 3,
+									["count"] = 2,
 									["amount"] = 0,
 								},
 							},
 							["count"] = 0,
-							["amount"] = 3,
+							["amount"] = 2,
 						},
 					},
 					["PartialAbsorb"] = {
@@ -130,11 +124,11 @@ RecountPerCharDB = {
 								["未被吸收"] = {
 									["max"] = 0,
 									["min"] = 0,
-									["count"] = 3,
+									["count"] = 2,
 									["amount"] = 0,
 								},
 							},
-							["count"] = 3,
+							["count"] = 2,
 							["amount"] = 0,
 						},
 					},
@@ -142,31 +136,31 @@ RecountPerCharDB = {
 						["Environment"] = {
 							["Details"] = {
 								["Falling"] = {
-									["count"] = 392,
+									["count"] = 247,
 								},
 							},
-							["amount"] = 392,
+							["amount"] = 247,
 						},
 					},
 					["ElementTaken"] = {
-						["Physical"] = 392,
+						["Physical"] = 247,
 					},
-					["DamageTaken"] = 392,
+					["DamageTaken"] = 247,
 					["ElementHitsTaken"] = {
 						["Physical"] = {
 							["Details"] = {
 								["Hit"] = {
-									["count"] = 3,
+									["count"] = 2,
 								},
 							},
-							["amount"] = 3,
+							["amount"] = 2,
 						},
 					},
 				},
 			},
-			["LastDamageTaken"] = 227,
-			["UnitLockout"] = 225209.881,
-			["LastAbility"] = 256434.377,
+			["LastDamageTaken"] = 115,
+			["UnitLockout"] = 311693.105,
+			["LastAbility"] = 475169.052,
 		},
 	},
 	["FightNum"] = 0,

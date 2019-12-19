@@ -1,58 +1,46 @@
-lightweight tag 2ca94014da0561fa6c53a08e9467836ef848c457 v2.2.3
+lightweight tag 0d97f2d85c68a4eb8bae8ba7e1b2e50c6d62a520 v2.2.4
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Mon Dec 16 23:42:50 2019 -0800
+Date:	Wed Dec 18 17:54:31 2019 -0800
 
-commit 2ca94014da0561fa6c53a08e9467836ef848c457
+commit 0d97f2d85c68a4eb8bae8ba7e1b2e50c6d62a520
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 23:42:50 2019 -0800
+Date:   Wed Dec 18 17:54:31 2019 -0800
 
-    fix zero tower cannot show
+    add ttl
 
-commit c00741f8f2f5870ada6e0c57e17d80473ef5bf00
+commit f048f05ed0a0c1fbc7dd069b900ee1d6303657d1
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 23:38:15 2019 -0800
+Date:   Wed Dec 18 17:43:34 2019 -0800
 
-    movable
+    introduce instance time
 
-commit c6c35f606b34c07de11b16bb34eb82014d4cb0c9
+commit 121f0cdbf175c036ff6a25265e1322b8d915a3e9
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 23:08:18 2019 -0800
+Date:   Wed Dec 18 15:38:03 2019 -0800
 
-    ensure av bar to be created
+    introduce zone help
 
-commit add0f9e9f225fd8858ce94908364aeb4ed75bae2
+commit 4f70eef7e1a65fa6c21227f7a72237005df839cd
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 22:31:19 2019 -0800
+Date:   Wed Dec 18 08:07:18 2019 -0800
 
-    clean up when load
+    add total bg num
 
-commit 457dd27c509a40c88e037e295e92dd27bd44254b
+commit c23867d0d636328ad6e4c8858258e809ab34eedc
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 18:25:57 2019 -0800
+Date:   Wed Dec 18 07:55:24 2019 -0800
 
-    show number even if no class info
+    better memory usage
 
-commit d584e72a516101624343bd8b4f354ef9a323b813
+commit 220991520e29e52deeb54744b4176582850c3907
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 13:12:56 2019 -0800
+Date:   Wed Dec 18 07:44:55 2019 -0800
 
-    remove magic number
+    optimize code
 
-commit 9ff7a4e3f421503d53f82b92590dd14f40ffe91c
+commit 99dd8e34af91640d677d628ce5e43939ec2f3a24
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 13:00:00 2019 -0800
+Date:   Tue Dec 17 21:10:14 2019 -0800
 
-    ignore more files for pkg
-
-commit e84a58e91194a02982b7d78314750c7835bab49d
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 12:45:52 2019 -0800
-
-    Create FUNDING.yml
-
-commit 7a562c635f7150fb47a63a4bcc4452999f3d76cc
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Dec 16 12:44:15 2019 -0800
-
-    fi lint
+    better label pos
 

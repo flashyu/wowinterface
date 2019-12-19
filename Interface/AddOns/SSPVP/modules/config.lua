@@ -148,13 +148,13 @@ local function createFlagOptions(bg, order)
 				width = "full",
 				arg = bg,
 			},
-			capture = {
-				order = order + 3,
-				type = "toggle",
-				name = L["Show flag capture times on overlay"],
-				width = "full",
-				arg = bg,
-			},
+			--capture = {
+			--	order = order + 3,
+			--	type = "toggle",
+			--	name = L["Show flag capture times on overlay"],
+			--	width = "full",
+			--	arg = bg,
+			--},
 			color = {
 				order = order + 4,
 				type = "toggle",

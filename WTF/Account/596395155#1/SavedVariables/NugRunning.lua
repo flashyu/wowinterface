@@ -38,15 +38,6 @@ NugRunningConfigCustom = {
 			[2136] = {
 				["group"] = "procs",
 			},
-			[120] = {
-				["color"] = {
-					1, -- [1]
-					0.4, -- [2]
-					0.4, -- [3]
-				},
-				["name"] = "Cone of Cold",
-				["group"] = "procs",
-			},
 			[11426] = {
 				["color"] = {
 					1, -- [1]
@@ -54,6 +45,15 @@ NugRunningConfigCustom = {
 					0.4, -- [3]
 				},
 				["name"] = "Ice Barrier",
+				["group"] = "procs",
+			},
+			[120] = {
+				["color"] = {
+					1, -- [1]
+					0.4, -- [2]
+					0.4, -- [3]
+				},
+				["name"] = "Cone of Cold",
 				["group"] = "procs",
 			},
 		},
