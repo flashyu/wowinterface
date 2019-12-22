@@ -15,11 +15,11 @@ SSPVPDB = {
 		},
 		["flags"] = {
 		},
-		["av"] = {
+		["move"] = {
 		},
 		["battlefield"] = {
 		},
-		["move"] = {
+		["av"] = {
 		},
 		["match"] = {
 		},
