@@ -1317,9 +1317,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "玛勒基的裹足",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cff0070dd|Hitem:18735::::::::60:::1::::|h[玛勒基的裹足]|h|r",
 				["enchantment"] = "附魔靴子 - 初级速度",
+				["isUsable"] = true,
 				["texture"] = 132537,
 			},
 		},
@@ -1344,9 +1344,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078::::::::60:::::::|h[萨菲隆斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 超级防御",
+				["isUsable"] = true,
 				["texture"] = 133768,
 			},
 		},
@@ -1460,9 +1460,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "龙血斗篷",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17107::::::::60:::::::|h[龙血斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 强效抗性",
+				["isUsable"] = true,
 				["texture"] = 133760,
 			},
 		},
@@ -1487,9 +1487,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
-				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078:1889:::::::60:::::::|h[萨菲隆斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 强效抗性",
+				["isUsable"] = true,
 				["texture"] = 133768,
 			},
 		},

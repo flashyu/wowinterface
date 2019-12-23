@@ -1317,9 +1317,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "玛勒基的裹足",
 				["numItems"] = 1,
-				["enchantment"] = "附魔靴子 - 初级速度",
 				["isUsable"] = true,
 				["itemLink"] = "|cff0070dd|Hitem:18735::::::::60:::1::::|h[玛勒基的裹足]|h|r",
+				["enchantment"] = "附魔靴子 - 初级速度",
 				["texture"] = 132537,
 			},
 		},
@@ -1344,9 +1344,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
-				["enchantment"] = "附魔披风 - 超级防御",
 				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078::::::::60:::::::|h[萨菲隆斗篷]|h|r",
+				["enchantment"] = "附魔披风 - 超级防御",
 				["texture"] = 133768,
 			},
 		},
@@ -1460,9 +1460,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "龙血斗篷",
 				["numItems"] = 1,
-				["enchantment"] = "附魔披风 - 强效抗性",
 				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17107::::::::60:::::::|h[龙血斗篷]|h|r",
+				["enchantment"] = "附魔披风 - 强效抗性",
 				["texture"] = 133760,
 			},
 		},
@@ -1487,9 +1487,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
-				["enchantment"] = "附魔披风 - 强效抗性",
 				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078:1889:::::::60:::::::|h[萨菲隆斗篷]|h|r",
+				["enchantment"] = "附魔披风 - 强效抗性",
 				["texture"] = 133768,
 			},
 		},
@@ -2971,9 +2971,9 @@ TradeLog_TradesHistory = {
 		["targetItems"] = {
 		},
 		["player"] = "Actionscript",
+		["where"] = "奥特兰克山谷",
 		["who"] = "Biuuboom-霜语",
 		["when"] = "2019-12-22 12:47:39",
-		["where"] = "奥特兰克山谷",
 		["result"] = "cancelled",
 		["toofar"] = "no",
 	}, -- [113]
@@ -2983,8 +2983,8 @@ TradeLog_TradesHistory = {
 		["id"] = 150,
 		["playerItems"] = {
 			{
-				["name"] = "魔法甜面包",
 				["numItems"] = 18,
+				["name"] = "魔法甜面包",
 				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
 			}, -- [1]
@@ -2999,8 +2999,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "Biuuboom-霜语",
 		["when"] = "2019-12-22 12:48:26",
-		["where"] = "奥特兰克山谷",
 		["result"] = "complete",
+		["where"] = "奥特兰克山谷",
 	}, -- [114]
 	{
 		["targetMoney"] = 0,
@@ -3012,9 +3012,9 @@ TradeLog_TradesHistory = {
 		["targetItems"] = {
 		},
 		["player"] = "Actionscript",
+		["where"] = "奥特兰克山谷",
 		["who"] = "清乄风-霜语",
 		["when"] = "2019-12-22 13:54:21",
-		["where"] = "奥特兰克山谷",
 		["result"] = "cancelled",
 	}, -- [115]
 	{
@@ -3023,14 +3023,14 @@ TradeLog_TradesHistory = {
 		["id"] = 152,
 		["playerItems"] = {
 			{
-				["name"] = "魔法晶水",
 				["numItems"] = 16,
+				["name"] = "魔法晶水",
 				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
 				["texture"] = 132805,
 			}, -- [1]
 			{
-				["name"] = "魔法甜面包",
 				["numItems"] = 18,
+				["name"] = "魔法甜面包",
 				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
 				["texture"] = 133989,
 			}, -- [2]
@@ -3045,8 +3045,8 @@ TradeLog_TradesHistory = {
 		},
 		["who"] = "大猴子爸爸-末日之刃",
 		["when"] = "2019-12-22 19:45:06",
-		["where"] = "奥特兰克山谷",
 		["result"] = "complete",
+		["where"] = "奥特兰克山谷",
 	}, -- [116]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
