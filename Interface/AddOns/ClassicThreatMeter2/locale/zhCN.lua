@@ -38,6 +38,7 @@ L.visibility			= "可见性"
 L.visibility_hideOOC	= "当脱战时隐藏框架"
 L.visibility_hideSolo	= "当不在队伍中隐藏框架"
 L.visibility_hideInPvP	= "在战场中隐藏框架"
+L.visibility_hideAlways	= "总是隐藏框架 /ctm2 toggle"
 
 L.nameplates			= "姓名版"
 L.nameplates_enable		= "启用仇恨着色 (仅暴雪默认姓名版)."

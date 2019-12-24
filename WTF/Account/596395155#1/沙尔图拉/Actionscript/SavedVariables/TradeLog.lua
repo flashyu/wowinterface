@@ -1317,9 +1317,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "玛勒基的裹足",
 				["numItems"] = 1,
+				["isUsable"] = true,
 				["itemLink"] = "|cff0070dd|Hitem:18735::::::::60:::1::::|h[玛勒基的裹足]|h|r",
 				["enchantment"] = "附魔靴子 - 初级速度",
-				["isUsable"] = true,
 				["texture"] = 132537,
 			},
 		},
@@ -1344,9 +1344,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
+				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078::::::::60:::::::|h[萨菲隆斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 超级防御",
-				["isUsable"] = true,
 				["texture"] = 133768,
 			},
 		},
@@ -1460,9 +1460,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "龙血斗篷",
 				["numItems"] = 1,
+				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17107::::::::60:::::::|h[龙血斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 强效抗性",
-				["isUsable"] = true,
 				["texture"] = 133760,
 			},
 		},
@@ -1487,9 +1487,9 @@ TradeLog_TradesHistory = {
 			[7] = {
 				["name"] = "萨菲隆斗篷",
 				["numItems"] = 1,
+				["isUsable"] = true,
 				["itemLink"] = "|cffa335ee|Hitem:17078:1889:::::::60:::::::|h[萨菲隆斗篷]|h|r",
 				["enchantment"] = "附魔披风 - 强效抗性",
-				["isUsable"] = true,
 				["texture"] = 133768,
 			},
 		},
@@ -3048,6 +3048,211 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "奥特兰克山谷",
 	}, -- [116]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 153,
+		["playerItems"] = {
+		},
+		["reason"] = "selfrunaway",
+		["targetItems"] = {
+			[7] = {
+				["name"] = "魔暴龙皮手套",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:15063::::::::60:::::::|h[魔暴龙皮手套]|h|r",
+				["isUsable"] = false,
+				["texture"] = 132960,
+			},
+		},
+		["player"] = "Actionscript",
+		["where"] = "幽暗城",
+		["who"] = "Typescript",
+		["when"] = "2019-12-24 23:07:32",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [117]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 154,
+		["playerItems"] = {
+		},
+		["reason"] = "selfrunaway",
+		["targetItems"] = {
+			[7] = {
+				["name"] = "魔暴龙皮手套",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:15063::::::::60:::::::|h[魔暴龙皮手套]|h|r",
+				["isUsable"] = false,
+				["texture"] = 132960,
+			},
+		},
+		["player"] = "Actionscript",
+		["where"] = "幽暗城",
+		["who"] = "Typescript",
+		["when"] = "2019-12-24 23:07:51",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [118]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 155,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			[7] = {
+				["name"] = "魔暴龙皮手套",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:15063::::::::60:::::::|h[魔暴龙皮手套]|h|r",
+				["enchantment"] = "附魔手套 - 力量",
+				["isUsable"] = false,
+				["texture"] = 132960,
+			},
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-24 23:08:12",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [119]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 156,
+		["playerItems"] = {
+		},
+		["reason"] = "self",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["where"] = "幽暗城",
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:09:18",
+		["result"] = "cancelled",
+	}, -- [120]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 157,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			[7] = {
+				["name"] = "冬夜法袍",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:14136::::::::60:::::::|h[冬夜法袍]|h|r",
+				["enchantment"] = "附魔胸甲 - 极效法力",
+				["isUsable"] = true,
+				["texture"] = 132690,
+			},
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:09:47",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [121]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 158,
+		["playerItems"] = {
+		},
+		["reason"] = "self",
+		["targetItems"] = {
+			[7] = {
+				["name"] = "庄严护腕",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:18497:66:::::::60:::1::::|h[庄严护腕]|h|r",
+				["isUsable"] = true,
+				["texture"] = 132612,
+			},
+		},
+		["player"] = "Actionscript",
+		["where"] = "幽暗城",
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:10:04",
+		["result"] = "cancelled",
+	}, -- [122]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 159,
+		["playerItems"] = {
+		},
+		["reason"] = "other",
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["where"] = "幽暗城",
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:10:25",
+		["result"] = "cancelled",
+		["toofar"] = "no",
+	}, -- [123]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 160,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+			[7] = {
+				["name"] = "庄严护腕",
+				["numItems"] = 1,
+				["itemLink"] = "|cff0070dd|Hitem:18497:66:::::::60:::1::::|h[庄严护腕]|h|r",
+				["enchantment"] = "附魔护腕 - 强效智力",
+				["isUsable"] = true,
+				["texture"] = 132612,
+			},
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:10:41",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [124]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 161,
+		["playerItems"] = {
+			{
+				["numItems"] = 9,
+				["name"] = "魔法晶水",
+				["itemLink"] = "|cffffffff|Hitem:8079::::::::60:::::::|h[魔法晶水]|h|r",
+				["texture"] = 132805,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "西加加",
+		["when"] = "2019-12-24 23:49:21",
+		["result"] = "complete",
+		["where"] = "玛拉顿",
+	}, -- [125]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

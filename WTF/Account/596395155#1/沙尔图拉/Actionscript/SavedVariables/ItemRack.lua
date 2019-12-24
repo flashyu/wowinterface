@@ -30,8 +30,11 @@ ItemRackUser = {
 				"19310::::::::60:::14::::", -- [17]
 				"13938::::::::60:::1::::", -- [18]
 			},
+			["oldset"] = "A",
 			["icon"] = 134413,
 			["old"] = {
+				[16] = "19022::::::::60:::11::::",
+				[17] = 0,
 			},
 		},
 		["~CombatQueue"] = {
@@ -80,7 +83,7 @@ ItemRackUser = {
 		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "A",
+	["CurrentSet"] = "Q",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
 	},

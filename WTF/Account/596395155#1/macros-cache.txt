@@ -3,7 +3,7 @@ VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
 /cast [@mouseover,nomod,exists] 解除次级诅咒;  [@mouseover,exists,mod:ctrl] 变形术; [@mouseover,exists,mod:shift] 解除次级诅咒
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
-/target 血色巫术师
+/target 雷加斯潜行者
 /script SetRaidTarget("target",6)
 END
 VER 3 0000000000000004 "开蚌壳" "136058"

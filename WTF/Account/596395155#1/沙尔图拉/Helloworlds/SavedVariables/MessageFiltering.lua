@@ -7,8 +7,8 @@ HuaJieInit = {
 	["g"] = 0.74901962280273,
 	["sayck"] = false,
 	["djck"] = true,
-	["r"] = 1,
+	["mode"] = false,
 	["wsck"] = false,
 	["key"] = true,
-	["mode"] = false,
+	["r"] = 1,
 }

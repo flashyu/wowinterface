@@ -30,6 +30,7 @@ SpyDB = {
 					["x"] = 1493.66674804688,
 				},
 			},
+			["MainWindowVis"] = false,
 			["Colors"] = {
 				["Alert"] = {
 					["Stealth Text"] = {
