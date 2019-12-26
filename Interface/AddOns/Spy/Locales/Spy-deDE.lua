@@ -2,26 +2,18 @@
 if not L then return end
 -- TOC Note: Detektiert und warnt Sie vor, in der Nähe befindlichen, Gegnern.
 
---Addon-Informationen
+-- Configuration
 L["Spy"] = "Spy"
 L["Version"] = "Version"
-L["VersionCheck"] = "|cffc41e3aWarnung! Die falsche Version von Spy ist installiert. Entfernen Sie diese Version und installieren Sie Spy Classic."
-L["SpyEnabled"] = "|cff9933ffSpy-Addon aktiviert."
-L["SpyDisabled"] = "|cff9933ffSpy-Addon deaktiviert. Tippen Sie |cffffffff/Spy enable|cff9933ff um es zu aktivieren."
-L["UpgradeAvailable"] = "|cff9933ffEine neue Version von Spy ist verfügbar. Es kann von: \n| cffffffffhttps://www.curseforge.com/wow/addons/spy-classic heruntergeladen werden."
-
--- Configuration frame name
 L["Spy Option"] = "Spy"
-
---Konfiguration Zeichenfolgen
 L["Profiles"] = "Profile"
 
-L["GeneralSettings"] = "Allgemeine Einstellungen"
+-- About
+L["About"] = "Info"
 L["SpyDescription1"] = [[
-Spy ist ein Addon, das Sie über das Vorhandensein von, in der Nähe befindlichen, feindlichen Spielern benachrichtigt.
+Spy ist ein Addon, das Sie über das Vorhandensein von, in der Nähe befindlichen, feindlichen Spielern benachrichtigt. Dies sind einige der Hauptmerkmale
 ]]
 L["SpyDescription2"] = [[
-
 |cffffd000In der Nähe-Liste|cffffffff
 Die "In der Nähe"-Liste zeigt alle feindlichen Spieler, die in der Nähe entdeckt wurden.  Spieler, die für eine gewisse Zeit nicht erkannt wurden, werden aus der Liste entfernt.
 
@@ -36,9 +28,20 @@ Wird ein Spieler der "Bei Sichtkontakt zu Töten"-Liste erkannt, erklingt ein Al
 
 Ausserdem können Sie mithilfe des Dropdown-Menüs die Gründe hinterlegen, warum Sie jemanden zu der "Bei Sichtkontakt zu Töten"-Liste hinzugefügt haben. Möchten Sie einen nicht in der Liste hinterlegten Grund eingeben, verwenden Sie "Geben Sie Ihren eigenen Grund..." in der anderen Liste.
 
-|cffffd000Autor: Slipjack |cffffffff
+|cffffd000Statistics Window|cffffffff
+The Statistics Window contains a list of all enemy encounters which can be sorted by name, level, guild, wins, losses and the last time an enemy was detected. It also provides the ability to search for a specific enemy by name or guild and has filters to show only enemies that are marked as Kill on Sight, with a Win/Loss or entered Reasons.
+
+|cffffd000Kill On Sight Button|cffffffff
+If enabled, this button will be located on the enemy players target frame. Clicking on this button will add/remove the enemy target to/from the Kill On Sight list. Right clicking on the button will allow you to enter Kill on Sight reasons.
+
+|cffffd000Autor: Slipjack|cffffffff
 ]]
 
+-- General Settings
+L["GeneralSettings"] = "Allgemeine Einstellungen"
+L["GeneralSettingsDescription"] = [[
+Optionen für die Aktivierung oder Deaktivierung von Spy.
+]] 
 L["EnableSpy"] = "Aktiviert Spy"
 L["EnableSpyDescription"] = "Aktiviert oder deaktiviert Spy."
 L["EnabledInBattlegrounds"] = "Aktiviert Spy in Schlachtfeldern"
@@ -49,7 +52,20 @@ L["EnabledInWintergrasp"] = "Aktiviert Spy in Kampfgebieten der Welt"
 L["EnabledInWintergraspDescription"] = "Aktiviert oder deaktiviert Spy, wenn Sie in Kampfgebieten der Welt, wie z.B. Wintergrasp in Northrend, sind."
 L["DisableWhenPVPUnflagged"] = "Deaktiviert Spy, wenn PVP nicht eingeschaltet ist"
 L["DisableWhenPVPUnflaggedDescription"] = "Aktiviert oder deaktiviert Spy, abhängig von Ihrem PVP-Status."
- 
+L["DisabledInZones"] = "Disable Spy while in these locations"
+L["DisabledInZonesDescription"]	= "Selecet locations where Spy will be disabled"
+L["Booty Bay"] = "Beutebucht"
+L["Everlook"] = "Ewige Warte"						
+L["Gadgetzan"] = "Gadgetzan"
+L["Ratchet"] = "Ratschet"
+L["The Salty Sailor Tavern"] = "Taverne \"Zum Salzigen Seemann\""
+L["Shattrath City"] = "Shattrath"
+L["Area 52"] = "Area 52"
+L["Dalaran"] = "Dalaran"
+L["Bogpaddle"] = "Kraulsumpf"
+L["The Vindicaar"] = "Die Vindikaar" 
+
+-- Display
 L["DisplayOptions"] = "Anzeigen"
 L["DisplayOptionsDescription"] = [[
 Optionen für das Spy-Fenster und QuickInfos.
@@ -96,6 +112,7 @@ L["RowHeightDescription"] = "Wählen Sie die Zeilenhöhe für das Spy-Fenster au
 L["Texture"] = "Textur"
 L["TextureDescription"] = "Wählen Sie eine Textur für das SPY-Fenster"
  
+-- Alerts
 L["AlertOptions"] = "Warnungen"
 L["AlertOptionsDescription"] = [[
 Optionen für Warnungen, Ankündigungen und Warnungen, wenn feindliche Spieler erkannt werden.
@@ -140,6 +157,7 @@ L["OnlySoundKoSDescription"] = "Wählen Sie diese Einstellung, so dass nur akust
 L["StopAlertsOnTaxi"] = "Deaktivieren Sie Warnungen, während Sie sich auf einer Flugroute befinden"
 L["StopAlertsOnTaxiDescription"] = "Stoppen Sie alle neuen Alarme und Warnungen, während Sie sich auf einer Flugroute befinden."
  
+-- Nearby List
 L["ListOptions"] = "In der Nähe-Liste"
 L["ListOptionsDescription"] = [[
 Optionen, wie feindliche Spieler hinzugefügt und entfernt werden.
@@ -162,6 +180,7 @@ L["ShowNearbyListDescription"] = "Stellen Sie hier die Anzeige der In der Nähe-
 L["PrioritiseKoS"] = "Priorisiere feindliche Spieler auf der In der Nähe-Liste, die sofort getötet werden sollen."
 L["PrioritiseKoSDescription"] = "Stellen Sie hier ein, das feindliche Spieler, die sofort getötet werden sollen, immer zuerst  auf der In der Nähe-Liste erscheinen."
  
+-- Map
 L["MapOptions"] = "Karte"
 L["MapOptionsDescription"] = [[
 Optionen für Weltkarte und Minikarte, einschließlich Symbole und QuickInfos.
@@ -182,7 +201,8 @@ L["LimitSameZone"] = "Gleiche Zone"
 L["LimitSameZoneDescription"] = "Zeigt nur die entdeckten Feinde auf der Karte an, die sich in der gleichen Zone befinden."
 L["LimitSameContinent"] = "Gleicher Kontinent"
 L["LimitSameContinentDescription"] = "Zeigt nur die entdeckten Feinde auf der Karte an, die sich auf dem gleichen Kontinent befinden."
- 
+
+-- Data Management
 L["DataOptions"] = "Datenmanagement"
 L["DataOptionsDescription"] = [[
 Optionen, wie Spy Daten verwaltet und sammelt.
@@ -210,13 +230,16 @@ L["UseData"] = "Verwende Daten anderer Spy-Benutzer."
 L["UseDataDescription"] = "Stelle dies ein, um gesammelte Daten anderer Spy-Benutzer Ihrer Gruppe und Gilde zu verwenden."
 L["ShareKOSBetweenCharacters"] = "Teile Sofort zu tötende Spieler mit Ihren anderen Charakteren."
 L["ShareKOSBetweenCharactersDescription"] = "Wählen Sie diese Einstellung, um die Sofort zu tötende Spieler mit Ihren anderen Charakteren auf dem gleichen Server und Lager zu teilen."
- 
+
+-- Commands
 L["SlashCommand"] = "Slash Befehl"
 L["SpySlashDescription"] = "Diese Schaltflächen führen die gleichen Funktionen aus, wie die in den Slash Befehl /spy"
 L["Enable"] = "Aktivieren"
 L["EnableDescription"] = "Aktiviert Spy und zeigt das Hauptfenster."
 L["Show"] = "Zeigen"
 L["ShowDescription"] = "Zeigt das Hauptfenster."
+L["Hide"] = "Ausblenden"
+L["HideDescription"] = "Blendet das Hauptfenster aus."
 L["Reset"] = "Zurücksetzen"
 L["ResetDescription"] = "Setzt die Position und die Darstellung des Hauptfensters zurück."
 L["ClearSlash"] = "Löschen"
@@ -247,6 +270,10 @@ L["HonorKills"] = "Ehrenvolle Siege"
 L["PvPDeatchs"] = "PvP Tode"
 
 --Ausgabemeldungen
+L["VersionCheck"] = "|cffc41e3aWarnung! Die falsche Version von Spy ist installiert. Entfernen Sie diese Version und installieren Sie Spy Classic."
+L["SpyEnabled"] = "|cff9933ffSpy-Addon aktiviert."
+L["SpyDisabled"] = "|cff9933ffSpy-Addon deaktiviert. Tippen Sie |cffffffff/spy show|cff9933ff um es zu aktivieren."
+L["UpgradeAvailable"] = "|cff9933ffEine neue Version von Spy ist verfügbar. Es kann von: \n| cffffffffhttps://www.curseforge.com/wow/addons/spy-classic heruntergeladen werden."
 L["AlertStealthTitle"] = "Getarnte Spieler erkannt!"
 L["AlertKOSTitle"] = "Sofort zu tötenden Spieler erkannt!"
 L["AlertKOSGuildTitle"] = "Gilde eines Sofort zu tötenden Spielers erkannt!"

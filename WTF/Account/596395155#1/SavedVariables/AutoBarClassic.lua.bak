@@ -15,7 +15,7 @@ AutoBarDB = {
 					["enabled"] = true,
 					["columns"] = 10,
 					["WARRIOR"] = true,
-					["frameStrata"] = "LOW",
+					["alpha"] = 1,
 					["buttonWidth"] = 36,
 					["buttonKeys"] = {
 						"AutoBarButtonShields", -- [1]
@@ -31,7 +31,7 @@ AutoBarDB = {
 					["popupDirection"] = "1",
 					["padding"] = 0,
 					["dockShiftX"] = 0,
-					["alpha"] = 1,
+					["frameStrata"] = "LOW",
 				},
 			},
 			["buttonList"] = {
@@ -184,9 +184,9 @@ AutoBarDB = {
 				["columns"] = 7,
 				["SHAMAN"] = true,
 				["WARRIOR"] = true,
-				["frameStrata"] = "LOW",
 				["alpha"] = 1,
-				["PRIEST"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["posY"] = 132.905690457012,
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
@@ -200,7 +200,7 @@ AutoBarDB = {
 					"AutoBarButtonRecovery", -- [9]
 				},
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
+				["PRIEST"] = true,
 				["scale"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
@@ -235,13 +235,13 @@ AutoBarDB = {
 				["fadeOut"] = false,
 				["columns"] = 9,
 				["buttonHeight"] = 36,
-				["alpha"] = 1,
-				["PRIEST"] = true,
+				["frameStrata"] = "LOW",
+				["buttonWidth"] = 36,
 				["scale"] = 1,
 				["alignButtons"] = "3",
 				["WARLOCK"] = true,
-				["buttonWidth"] = 36,
-				["frameStrata"] = "LOW",
+				["PRIEST"] = true,
+				["alpha"] = 1,
 				["padding"] = 0,
 				["dockShiftX"] = 0,
 				["PALADIN"] = true,

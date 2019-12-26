@@ -2,26 +2,18 @@ local L = LibStub("AceLocale-3.0"):NewLocale("Spy", "frFR")
 if not L then return end
 -- TOC Note: "Détecte et vous avertit de la présence de joueurs ennemis à proximité."
 
--- Addon information
+-- Configuration
 L["Spy"] = "Spy"
 L["Version"] = "Version"
-L["VersionCheck"] = "|cffc41e3aAttention! La mauvaise version de Spy est installée. Supprimez cette version et installez Spy Classic."
-L["SpyEnabled"] = "|cff9933ffAddon SPY activé"
-L["SpyDisabled"] = "|cff9933ffAddon SPY désactivé. Taper |cffffffff/spy enable|cff9933ff pour l'activer"
-L["UpgradeAvailable"] = "|cff9933ffUne nouvelle version de Spy est disponible. Elle peut être téléchargée à partir de:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
-
--- Configuration frame name
 L["Spy Option"] = "Spy"
-
--- Configuration strings
 L["Profiles"] = "Profils"
 
-L["GeneralSettings"] = "Configuration générale"
+-- About
+L["About"] = "Info"
 L["SpyDescription1"] = [[
-SPY est un addon qui vous avertit de la présence de joueurs ennemis à proximité.
+SPY est un addon qui vous avertit de la présence de joueurs ennemis à proximité. Ce sont quelques-unes des principales caractéristiques.
 ]]
 L["SpyDescription2"] = [[
-
 |cffffd000Liste des ennemis à proximité|cffffffff
 Affiche les joueurs ennemis qui ont été détectés à proximité. Les joueurs sont retirés de la liste s'ils n'ont pas été détectés après un certain temps.
 
@@ -36,9 +28,20 @@ Les joueurs de votre liste \"Tuer à vue\" déclenchent une alarme lorsqu'ils so
 
 Le menu déroulant peut également être utilisé pour définir les raisons pour lesquelles vous avez ajouté quelqu'un à la liste "Tuer à vue". Si vous voulez entrer un raison spécifique qui n'est pas dans la liste, utilisez le bouton "Entrez votre propre raison ..." dans la liste "Autre".
 
+|cffffd000Statistics Window|cffffffff
+The Statistics Window contains a list of all enemy encounters which can be sorted by name, level, guild, wins, losses and the last time an enemy was detected. It also provides the ability to search for a specific enemy by name or guild and has filters to show only enemies that are marked as Kill on Sight, with a Win/Loss or entered Reasons. 
+
+|cffffd000Kill On Sight Button|cffffffff
+If enabled, this button will be located on the enemy players target frame. Clicking on this button will add/remove the enemy target to/from the Kill On Sight list. Right clicking on the button will allow you to enter Kill on Sight reasons.
+
 |cffffd000Auteur: Slipjack|cffffffff
 ]]
 
+-- General Settings
+L["GeneralSettings"] = "Configuration générale"
+L["GeneralSettingsDescription"] = [[
+Options lorsque Spy est activé ou désactivé.
+]] 
 L["EnableSpy"] = "Activer Spy"
 L["EnableSpyDescription"] = "Active ou désactive Spy."
 L["EnabledInBattlegrounds"] = "Activer Spy en champs de bataille"
@@ -49,7 +52,20 @@ L["EnabledInWintergrasp"] = "Activer Spy en zone de combat mondiale"
 L["EnabledInWintergraspDescription"] = "Active ou désactive Spy lorsque vous êtes dans des zones de combat mondial comme le Joug-d’Hiver en Northrend."
 L["DisableWhenPVPUnflagged"] = "Désactiver Spy lorsque le mode JcJ est désactiver"
 L["DisableWhenPVPUnflaggedDescription"] = "Active ou désactive Spy en fonction de votre statut JcJ."
+L["DisabledInZones"] = "Désactivez Spy lorsque vous vous trouvez dans ces emplacements"
+L["DisabledInZonesDescription"]	= "Sélectionnez les emplacements où Spy sera désactivé"
+L["Booty Bay"] = "Baie-du-Butin"
+L["Everlook"] = "Long-Guet"						
+L["Gadgetzan"] = "Gadgetzan"
+L["Ratchet"] = "Cabestan"
+L["The Salty Sailor Tavern"] = "La taverne du Loup de mer"
+L["Shattrath City"] = "Shattrath"
+L["Area 52"] = "Zone 52"
+L["Dalaran"] = "Dalaran"
+L["Bogpaddle"] = "Brasse-Tourbe"
+L["The Vindicaar"] = "Le Vindicaar"
 
+-- Display
 L["DisplayOptions"] = "Affichage"
 L["DisplayOptionsDescription"] = [[
 Options pour la fenêtre Spy et les infobulles.
@@ -95,7 +111,8 @@ L["RowHeight"] = "Sélectionner la hauteur de ligne"
 L["RowHeightDescription"] = "Sélectionnez la hauteur de ligne pour la fenêtre Spy."
 L["Texture"] = "Texture"
 L["TextureDescription"] = "Sélectionner une texture pour la fenêtre d'espionnage"
-					
+
+-- Alerts
 L["AlertOptions"] = "Alertes"
 L["AlertOptionsDescription"] = [[
 Options d'alertes, d'annonces et d'avertissements lorsque des joueurs ennemis sont détectés.
@@ -140,6 +157,7 @@ L["OnlySoundKoSDescription"] = "Choisissez cette option pour entendre les alerte
 L["StopAlertsOnTaxi"] = "Désactiver les alertes lors de l'utilisation d'une trajectoire de vol"
 L["StopAlertsOnTaxiDescription"] = "Arrêtez tous les nouveaux avertissements et avertissements lorsque vous utilisez une trajectoire de vol."
 
+-- Nearby List
 L["ListOptions"] = "Liste à proximité"
 L["ListOptionsDescription"] = [[
 Options sur la façon dont les joueurs ennemis sont ajoutés et supprimés.
@@ -162,6 +180,7 @@ L["ShowNearbyListDescription"] = "Choisir cette option pour afficher la liste Pr
 L["PrioritiseKoS"] = "Prioriser les joueurs ennemis Tuer à vue dans la liste des joueurs à proximité"
 L["PrioritiseKoSDescription"] = "Choisissez cette option pour toujours afficher les joueurs ennemis Tuer à vue en premier dans la liste des ennemis proches."
 
+-- Map
 L["MapOptions"] = "Carte"
 L["MapOptionsDescription"] = [[
 Options pour la carte du monde et la mini-carte, y compris les icônes et les info-bulles.
@@ -183,6 +202,7 @@ L["LimitSameZoneDescription"] = "N'affiche que les ennemis détectés dans la ca
 L["LimitSameContinent"] = "Même continent"
 L["LimitSameContinentDescription"] = "N'affiche que les ennemis détectés dans la carte si vous êtes sur le même continent."
 
+-- Data Management
 L["DataOptions"] = "Gestion des données"
 L["DataOptionsDescription"] = [[
 Options sur la façon dont Spy maintient et recueille les données.
@@ -211,12 +231,15 @@ L["UseDataDescription"] = "Choisir cette option pour utiliser les données colle
 L["ShareKOSBetweenCharacters"] = "Partagez des joueurs Tuer à vue entre vos personnages"
 L["ShareKOSBetweenCharactersDescription"] = "Choisir cette option pour partager les joueurs présent dans votre liste des Tuer à vue avec les autres personnages que vous jouez sur le même serveur et la même faction."
 
+-- Commands
 L["SlashCommand"] = "Commande Slash"
 L["SpySlashDescription"] = "Ces boutons exécutent les mêmes fonctions que celles de la commande /spy"
 L["Enable"] = "Activer"
 L["EnableDescription"] = "Active Spy et affiche la fenêtre principale."
 L["Show"] = "Afficher"
 L["ShowDescription"] = "SAffichez la fenêtre Spy."
+L["Hide"] = "Cacher"
+L["HideDescription"] = "Masque la fenêtre principale."
 L["Reset"] = "Réinitialiser"
 L["ResetDescription"] = "Réinitialise la position et l'apparence de la fenêtre principale."
 L["ClearSlash"] = "Effacer"
@@ -246,7 +269,11 @@ L["Reason"] = "Raison"
 L["HonorKills"] = "l'honneur tue"
 L["PvPDeaths"] = "Décès JcJ"
 
--- Output messages
+-- Output Messages
+L["VersionCheck"] = "|cffc41e3aAttention! La mauvaise version de Spy est installée. Supprimez cette version et installez Spy Classic."
+L["SpyEnabled"] = "|cff9933ffAddon SPY activé"
+L["SpyDisabled"] = "|cff9933ffAddon SPY désactivé. Taper |cffffffff/spy show|cff9933ff pour l'activer"
+L["UpgradeAvailable"] = "|cff9933ffUne nouvelle version de Spy est disponible. Elle peut être téléchargée à partir de:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
 L["AlertStealthTitle"] = "Joueur furtif détecté!"
 L["AlertKOSTitle"] = "Joueur Tuer à vue détecté!"
 L["AlertKOSGuildTitle"] = "Guilde Tuer à vue détecté!"

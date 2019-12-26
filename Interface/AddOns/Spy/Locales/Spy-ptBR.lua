@@ -1,27 +1,19 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("Spy", "ptBR")
 if not L then return end
+-- TOC Note: Detecta e alerta você da presença de jogadores inimigos.
 
-
--- Addon information
+-- Configuration
 L["Spy"] = "Spy"
 L["Version"] = "Versão"
-L["VersionCheck"] = "|cffc41e3aAtenção! A versão errada do Spy está instalada. Remova esta versão e instale o Spy Classic."
-L["SpyEnabled"] = "|cff9933ffSpy addon ativado."
-L["SpyDisabled"] = "|cff9933ffSpy addon desativado. Digite |cffffffff/spy enable|cff9933ff para ativar."
-L["UpgradeAvailable"] = "|cff9933ffA nova versão do Spy está disponivel. Baixe-o em:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
-
--- Configuration frame name
 L["Spy Option"] = "Spy"
-
--- Configuration strings
 L["Profiles"] = "Perfis"
 
-L["GeneralSettings"] = "Configurações Gerais"
+-- About
+L["About"] = "Info"
 L["SpyDescription1"] = [[
-Spy é um addon que vai alerta-lo da presença de jogadores inimigos nas proximidades.
+Spy é um addon que vai alerta-lo da presença de jogadores inimigos nas proximidades. Estas são algumas das principais características.
 ]]
 L["SpyDescription2"] = [[
-
 |cffffd000Lista de Proximidades|cffffffff
 A lista de Proximidades mostra qualquer inimigo detectado nas proximidades. Jogadores são removidos da lista se não forem mais detectados após um certo período de tempo.
 
@@ -34,11 +26,22 @@ Jogadores que são adicionados à lista de Ignorados não serão reportados pelo
 |cffffd000Lista Negra|cffffffff
 Jogadores que são adicionados à Lista Negra são reportados pelo Spy através de um alarme sonoro.  Você pode adicionar ou remover jogadores dessa lista usando o menu de contexto ou segurando Shift enquanto clica no botão.
 
-O menu de contexto também permite que você justifique as razões que o levou a colocar determinada pessoa na Lista Negra. Se quiser colocar uma motivo especifico que não tenha na lista, em seguida, use "Digite seu próprio motivo..." em Outra lista..
+O menu de contexto também permite que você justifique as razões que o levou a colocar determinada pessoa na Lista Negra. Se quiser colocar uma motivo especifico que não tenha na lista, em seguida, use "Digite seu próprio motivo..." em Outra lista.
 
-|cffffd000Autor: Slipjack |cffffffff
+|cffffd000Statistics Window|cffffffff
+The Statistics Window contains a list of all enemy encounters which can be sorted by name, level, guild, wins, losses and the last time an enemy was detected. It also provides the ability to search for a specific enemy by name or guild and has filters to show only enemies that are marked as Kill on Sight, with a Win/Loss or entered Reasons. 
+
+|cffffd000Kill On Sight Button|cffffffff
+If enabled, this button will be located on the enemy players target frame. Clicking on this button will add/remove the enemy target to/from the Kill On Sight list. Right clicking on the button will allow you to enter Kill on Sight reasons.
+
+|cffffd000Autor: Slipjack|cffffffff
 ]]
 
+-- General Settings
+L["GeneralSettings"] = "Configurações Gerais"
+L["GeneralSettingsDescription"] = [[
+Opções para quando o Spy está ativado ou desativado.
+]]
 L["EnableSpy"] = "Ativar Spy"
 L["EnableSpyDescription"] = "Ativa ou desativa o Spy."
 L["EnabledInBattlegrounds"] = "Ativar Spy em CB"
@@ -49,7 +52,20 @@ L["EnabledInWintergrasp"] = "Ativar Spy em Zonas de Combate"
 L["EnabledInWintergraspDescription"] = "Ativa ou desativa o Spy em locais como Invérnia."
 L["DisableWhenPVPUnflagged"] = "Desativar Spy quando JxJ estiver desativado"
 L["DisableWhenPVPUnflaggedDescription"] = "Ativa ou desativa o Spy dependendo se o seu status de JxJ estiver ativado ou desativado."
+L["DisabledInZones"] = "Desative o Spy enquanto estiver nesses locais"
+L["DisabledInZonesDescription"]	= "Selecione locais onde o Spy será desativado"
+L["Booty Bay"] = "Angra do Butim"
+L["Everlook"] = "Visteterna"						
+L["Gadgetzan"] = "Geringontzan"
+L["Ratchet"] = "Vila Catraca"
+L["The Salty Sailor Tavern"] = "Taberna do Lobo do Mar"
+L["Shattrath City"] = "Shattrath"
+L["Area 52"] = "Área 52"
+L["Dalaran"] = "Dalaran"
+L["Bogpaddle"] = "Brejo do Goblin"
+L["The Vindicaar"] = "A Vindicaar"
 
+-- Display
 L["DisplayOptions"] = "Exibição"
 L["DisplayOptionsDescription"] = [[
 Opções para a janela Spy e dicas de ferramentas.
@@ -96,6 +112,7 @@ L["RowHeightDescription"] = "Selecione a altura da linha para a janela Spy."
 L["Texture"] = "Textura"
 L["TextureDescription"] = "Selecione a textura da janela Spy"
 
+-- Alerts
 L["AlertOptions"] = "Alertas"
 L["AlertOptionsDescription"] = [[
 Opções para alertas, anúncios e avisos quando jogadores inimigos são detectados.
@@ -140,6 +157,7 @@ L["OnlySoundKoSDescription"] = "Defina esta opção para reproduzir apenas alert
 L["StopAlertsOnTaxi"] = "Desativar alertas enquanto estiver em uma rota de vôo"
 L["StopAlertsOnTaxiDescription"] = "Interrompa todos os novos alertas e avisos enquanto estiver em uma rota de vôo."
 
+-- Nearby List
 L["ListOptions"] = "Lista de Proximidades"
 L["ListOptionsDescription"] = [[
 Você pode configurar como o Spy adiciona e remove inimigos da lista de Proximidades.
@@ -162,6 +180,7 @@ L["ShowNearbyListDescription"] = "Marque isso para que ao detectar jogadores ini
 L["PrioritiseKoS"] = "Piorizar inimigos da Lista Negra na lista de Proximidades"
 L["PrioritiseKoSDescription"] = "Marque isso para sempre motrar primeiro inimigos da Lista Negra na lista de Proximidades."
 
+-- Map
 L["MapOptions"] = "Mapa"
 L["MapOptionsDescription"] = [[
 Opções para mapa-múndi e minimapa, incluindo ícones e dicas de ferramentas.
@@ -183,6 +202,7 @@ L["LimitSameZoneDescription"] = "Mostrar no mapa somente inimigos que estejam na
 L["LimitSameContinent"] = "Mesmo Continente"
 L["LimitSameContinentDescription"] = "Mostrar no mapa somente inimigos que estejam no mesmo continente que você."
 
+-- Data Management
 L["DataOptions"] = "Gerenciamento de Dados"
 L["DataOptionsDescription"] = [[
 Opções sobre como o Spy mantém e reúne dados.
@@ -211,12 +231,15 @@ L["UseDataDescription"] = "Marque isso para usar dados coletados por outros usu�
 L["ShareKOSBetweenCharacters"] = "Compartilhar Lista Negra entre todos os seus personagens"
 L["ShareKOSBetweenCharactersDescription"] = "Marque isso para que a Lista Negra seja compartilhada entre todos os seus personagens do mesmo reino e facção."
 
+-- Commands
 L["SlashCommand"] = "Slash Command"
 L["SpySlashDescription"] = "Esses botões executam as mesmas funções que aquelas vistas no slash command /spy"
 L["Enable"] = "Enable"
 L["EnableDescription"] = "Permite que o Spy e mostra a janela principal."
 L["Show"] = "Mostrar"
 L["ShowDescription"] = "Mostra a janela principal."
+L["Hide"] = "Esconder "
+L["HideDescription"] = "Oculta a janela principal."
 L["Reset"] = "Reset"
 L["ResetDescription"] = "Reseta a posição e aparencia da janela principal."
 L["ClearSlash"] = "Limpar"
@@ -246,7 +269,11 @@ L["Reason"] = "Motivo"
 L["HonorKills"] = "Honra Mata"
 L["PvPDeaths"] = "Mortes JxJ"	
 
--- Output messages
+-- Output Messages
+L["VersionCheck"] = "|cffc41e3aAtenção! A versão errada do Spy está instalada. Remova esta versão e instale o Spy Classic."
+L["SpyEnabled"] = "|cff9933ffSpy addon ativado."
+L["SpyDisabled"] = "|cff9933ffSpy addon desativado. Digite |cffffffff/spy show|cff9933ff para ativar."
+L["UpgradeAvailable"] = "|cff9933ffA nova versão do Spy está disponivel. Baixe-o em:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
 L["AlertStealthTitle"] = "Jogador invisivel detectado!"
 L["AlertKOSTitle"] = "Jogador na Lista Negra detectado!"
 L["AlertKOSGuildTitle"] = "Guildie de Lista Negra detectado!"

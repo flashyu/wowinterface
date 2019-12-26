@@ -2,26 +2,18 @@ local L = LibStub("AceLocale-3.0"):NewLocale("Spy", "koKR")
 if not L then return end
 -- TOC Note: "근처에 있는 적 플레이어를 탐지하고 경고합니다."
 
--- Addon information
+-- Configuration
 L["Spy"] = "Spy"
 L["Version"] = "버전"
-L["VersionCheck"] = "|cffc41e3a경고! 잘못된 Spy 버전이 설치되었습니다. 이 버전을 제거하고 Spy Classic 을 설치하십시오."
-L["SpyEnabled"] = "|cff9933ffSpy 애드온이 활성화되었습니다.."
-L["SpyDisabled"] = "|cff9933ffSpy 애드온이 비활성화되었습니다. |cffffffff/spy enable|cff9933ff 을 입력해 활성화 시키십시오."
-L["UpgradeAvailable"] = "|cff9933ffA Spy의 새로운 버전을 사용할 수 있습니다. 다운로드 주소:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
-
--- Configuration frame name
 L["Spy Option"] = "Spy"
-
--- Configuration strings
 L["Profiles"] = "프로필"
 
-L["GeneralSettings"] = "일반 설정"
+-- About
+L["About"] = "정보"
 L["SpyDescription1"] = [[
 Spy는 근처에 있는 적 플레이어를 알려주는 애드온 입니다.
 ]]
 L["SpyDescription2"] = [[
-
 |cffffd000근접한 적 목록|cffffffff
 근접한 적 목록은 근처에 있는 탐지 된 적을 표시합니다. 근접한 적 목록을 클릭하면 적을 타겟팅하지만, 전투 상황은 아닙니다. 근접한 적에 등록된 플레이어가 일정 시간이 지나도 탐지되지 않는다면 자동으로 지워집니다.
 
@@ -36,9 +28,20 @@ L["SpyDescription2"] = [[
 
 드롭다운 메뉴로 살생부 명단에 추가한 이유를 설정 할 수 있습니다. 만약 알맞은 이유가 없다면, "이유를 입력하세요..." 를 선택해 직접 작성 할 수 있습니다.
 
+|cffffd000Statistics Window|cffffffff
+The Statistics Window contains a list of all enemy encounters which can be sorted by name, level, guild, wins, losses and the last time an enemy was detected. It also provides the ability to search for a specific enemy by name or guild and has filters to show only enemies that are marked as Kill on Sight, with a Win/Loss or entered Reasons.
+
+|cffffd000Kill On Sight Button|cffffffff
+If enabled, this button will be located on the enemy players target frame. Clicking on this button will add/remove the enemy target to/from the Kill On Sight list. Right clicking on the button will allow you to enter Kill on Sight reasons.
+
 |cffffd000제작자: Slipjack|cffffffff
 ]]
 
+-- General Settings
+L["GeneralSettings"] = "일반 설정"
+L["GeneralSettingsDescription"] = [[
+Spy 가 활성화 또는 비활성화 된 경우에 대한 옵션입니다.
+]] 
 L["EnableSpy"] = "Spy 활성화"
 L["EnableSpyDescription"] = "Spy 활성화 또는 비활성화."
 L["EnabledInBattlegrounds"] = "전장일 때 Spy 활성화"
@@ -49,7 +52,20 @@ L["EnabledInWintergrasp"] = "대규모 전장일 때 Spy 활성화"
 L["EnabledInWintergraspDescription"] = "겨울손아귀 호수와 같은 대규모 전장일 경우 Spy를 활성화 또는 비활성화 합니다."
 L["DisableWhenPVPUnflagged"] = "PVP 상태가 아닐 때 Spy 비활성화"
 L["DisableWhenPVPUnflaggedDescription"] = "PVP 상태일 경우 Spy를 활성화 또는 비활성화 합니다."
+L["DisabledInZones"] = "Disable Spy while in these locations"
+L["DisabledInZonesDescription"]	= "Selecet locations where Spy will be disabled"
+L["Booty Bay"] = "무법항"
+L["Everlook"] = "눈망루 마을"						
+L["Gadgetzan"] = "가젯잔"
+L["Ratchet"] = "톱니항"
+L["The Salty Sailor Tavern"] = "뱃사공의 선술집"
+L["Shattrath City"] = "샤트라스"
+L["Area 52"] = "52번 구역"
+L["Dalaran"] = "달라란"
+L["Bogpaddle"] = "수렁진흙탕"
+L["The Vindicaar"] = "구원호"
 
+-- Display
 L["DisplayOptions"] = "디스플레이"
 L["DisplayOptionsDescription"] = [[
 Spy 창 및 툴팁 옵션.
@@ -96,6 +112,7 @@ L["RowHeightDescription"] = "Spy 창의 열 높이를 설정하세요."
 L["Texture"] = "질감 배경"
 L["TextureDescription"] = "Spy 창의 질감을 선택하십시오"
 
+-- Alerts
 L["AlertOptions"] = "경고"
 L["AlertOptionsDescription"] = [[
 적 플레이어가 감지 될 때 경고, 알림 및 경고 옵션.
@@ -140,6 +157,7 @@ L["OnlySoundKoSDescription"] = "살생부 명단에 있는 적 플레이어를 �
 L["StopAlertsOnTaxi"] = "비행 경로에서 알림 끄기"
 L["StopAlertsOnTaxiDescription"] = "비행 경로에서 모든 새로운 경고 및 경고를 중지."
 
+-- Nearby List
 L["ListOptions"] = "근접한 적 목록"
 L["ListOptionsDescription"] = [[
 적 플레이어를 추가하고 제거하는 방법에 대한 옵션.
@@ -162,6 +180,7 @@ L["ShowNearbyListDescription"] = "근접한 적 목록을 표시하지 않을 �
 L["PrioritiseKoS"] = "살생부 명단에 있는 근접한 적을 우선 표시"
 L["PrioritiseKoSDescription"] = "살생부 명단에 있는 적을 근접한 적 목록의 최우선으로 표시하려면 체크하십시오."
 
+-- Map
 L["MapOptions"] = "지도"
 L["MapOptionsDescription"] = [[
 아이콘 및 툴팁을 포함한 세계지도 및 미니 맵 옵션.
@@ -183,6 +202,7 @@ L["LimitSameZoneDescription"] = "같은 지역에 있는 탐지된 적만 지도
 L["LimitSameContinent"] = "같은 대륙"
 L["LimitSameContinentDescription"] = "같은 대륙에 있는 탐지된 적만 지도에 표시합니다."
 
+-- Data Management
 L["DataOptions"] = "데이터 관리"
 L["DataOptionsDescription"] = [[
 Spy 가 데이터를 유지 관리하고 수집하는 방법에 대한 옵션.
@@ -211,12 +231,15 @@ L["UseDataDescription"] = "Spy 애드온을 사용하는 파티원, 길드원, �
 L["ShareKOSBetweenCharacters"] = "캐릭터 간 살생부 공유"
 L["ShareKOSBetweenCharactersDescription"] = "같은 서버, 같은 진영의 캐릭터와 살생부로 표시한 적 플레이어를 공유하려면 체크하십시오."
 
+-- Commands
 L["SlashCommand"] = "Slash 명령어"
 L["SpySlashDescription"] = "이 버튼은 /spy 명령어와 동일한 작업을 수행합니다."
 L["Enable"] = "활성화"
 L["EnableDescription"] = "Spy를 활성화 하고 Spy 창을 띄웁니다."
 L["Show"] = "표시"
 L["ShowDescription"] = "Spy 창을 띄웁니다."
+L["Hide"] = "숨는 장소"
+L["HideDescription"] = "메인 윈도우를 숨 깁니다."
 L["Reset"] = "초기화"
 L["ResetDescription"] = "Spy 창의 외형과 위치를 초기화 합니다."
 L["ClearSlash"] = "지우기"
@@ -246,7 +269,11 @@ L["Reason"] = "이유"
 L["HonorKills"] = "명예 킬"
 L["PvPDeaths"] = "PvP 죽음"
 
--- Output messages
+-- Output Messages
+L["VersionCheck"] = "|cffc41e3a경고! 잘못된 Spy 버전이 설치되었습니다. 이 버전을 제거하고 Spy Classic 을 설치하십시오."
+L["SpyEnabled"] = "|cff9933ffSpy 애드온이 활성화되었습니다.."
+L["SpyDisabled"] = "|cff9933ffSpy 애드온이 비활성화되었습니다. |cffffffff/spy show|cff9933ff 을 입력해 활성화 시키십시오."
+L["UpgradeAvailable"] = "|cff9933ffA Spy의 새로운 버전을 사용할 수 있습니다. 다운로드 주소:\n|cffffffffhttps://www.curseforge.com/wow/addons/spy-classic"
 L["AlertStealthTitle"] = "은신한 적이 탐지되었습니다!"
 L["AlertKOSTitle"] = "살생부 명단의 적이 탐지되었습니다!"
 L["AlertKOSGuildTitle"] = "살생부 명단의 적 길드가 탐지되었습니다!"
