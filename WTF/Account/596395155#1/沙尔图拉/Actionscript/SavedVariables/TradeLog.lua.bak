@@ -3253,6 +3253,81 @@ TradeLog_TradesHistory = {
 		["result"] = "complete",
 		["where"] = "玛拉顿",
 	}, -- [125]
+	{
+		["targetMoney"] = 0,
+		["playerMoney"] = 0,
+		["id"] = 162,
+		["playerItems"] = {
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 16,
+			}, -- [1]
+			{
+				["texture"] = 133989,
+				["itemLink"] = "|cffffffff|Hitem:8076::::::::60:::::::|h[魔法甜面包]|h|r",
+				["name"] = "魔法甜面包",
+				["numItems"] = 20,
+			}, -- [2]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "Typescript",
+		["when"] = "2019-12-27 23:31:57",
+		["result"] = "complete",
+		["where"] = "黑石深渊",
+	}, -- [126]
+	{
+		["targetMoney"] = 2800000,
+		["playerMoney"] = 0,
+		["id"] = 163,
+		["playerItems"] = {
+			{
+				["texture"] = 134327,
+				["itemLink"] = "|cff1eff00|Hitem:16252::::::::60:::::::|h[公式：附魔武器 - 十字军]|h|r",
+				["name"] = "公式：附魔武器 - 十字军",
+				["numItems"] = 1,
+			}, -- [1]
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "官財",
+		["when"] = "2019-12-28 01:40:20",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [127]
+	{
+		["targetMoney"] = 10000,
+		["playerMoney"] = 0,
+		["id"] = 164,
+		["playerItems"] = {
+		},
+		["targetItems"] = {
+		},
+		["player"] = "Actionscript",
+		["events"] = {
+			"TRADE_SHOW", -- [1]
+			"TRADE_CLOSED", -- [2]
+			"TRADE_CLOSED", -- [3]
+		},
+		["who"] = "莱茵的钻石",
+		["when"] = "2019-12-28 01:51:27",
+		["result"] = "complete",
+		["where"] = "幽暗城",
+	}, -- [128]
 }
 TRADE_LOG_BUTTON_POS = 21.6274248118681
 TradeLog_Announce_Checked = true

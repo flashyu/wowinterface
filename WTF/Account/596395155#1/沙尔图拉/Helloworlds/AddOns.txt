@@ -74,3 +74,5 @@ ElvUI_ExtraActionBars: disabled
 ElvUI_CastBarOverlay: disabled
 ElvUI_EverySecondCounts: disabled
 ElvUI_AuraBarsMovers: disabled
+NugRunning: enabled
+WeakAuras: enabled

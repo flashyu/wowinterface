@@ -101,3 +101,5 @@ ElvUI_EverySecondCounts: disabled
 ElvUI_AuraBarsMovers: disabled
 ConsolePortAdvanced: disabled
 ConsolePortKeyboard: disabled
+NugRunning: enabled
+WeakAuras: enabled

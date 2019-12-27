@@ -1,46 +1,40 @@
-lightweight tag 0d97f2d85c68a4eb8bae8ba7e1b2e50c6d62a520 v2.2.4
+lightweight tag 567f00e18d9e1bb4b6cacca26ec4df976d4c8588 v2.2.6
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Wed Dec 18 17:54:31 2019 -0800
+Date:	Thu Dec 26 20:03:03 2019 -0800
 
-commit 0d97f2d85c68a4eb8bae8ba7e1b2e50c6d62a520
+commit 567f00e18d9e1bb4b6cacca26ec4df976d4c8588
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 17:54:31 2019 -0800
+Date:   Thu Dec 26 20:03:03 2019 -0800
 
-    add ttl
+    add announce
 
-commit f048f05ed0a0c1fbc7dd069b900ee1d6303657d1
+commit a2ddbf1461f80676fdd8348013bc5b16447b2239
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 17:43:34 2019 -0800
+Date:   Wed Dec 25 22:38:12 2019 -0800
 
-    introduce instance time
+    add gradual color for list pos
 
-commit 121f0cdbf175c036ff6a25265e1322b8d915a3e9
+commit b8c198a40101a6b49dc188c2002fccd396f0e337
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 15:38:03 2019 -0800
+Date:   Tue Dec 24 23:03:28 2019 -0800
 
-    introduce zone help
+    add realm count
 
-commit 4f70eef7e1a65fa6c21227f7a72237005df839cd
+commit 6ac2b59909968d79de60c12ab597937690248f2d
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 08:07:18 2019 -0800
+Date:   Tue Dec 24 10:38:42 2019 -0800
 
-    add total bg num
+    reset spirit timer when entering world
 
-commit c23867d0d636328ad6e4c8858258e809ab34eedc
+commit 02cd2fe1346c44ffaa55b820be6b6db626b4287b
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 07:55:24 2019 -0800
+Date:   Tue Dec 24 10:17:51 2019 -0800
 
-    better memory usage
+    fix ctrl + hide does not work with multi queued bg
 
-commit 220991520e29e52deeb54744b4176582850c3907
+commit 465d003161ac0e03bbf61f76b9a2a64838ad918e
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 18 07:44:55 2019 -0800
+Date:   Sun Dec 22 03:56:31 2019 -0800
 
-    optimize code
-
-commit 99dd8e34af91640d677d628ce5e43939ec2f3a24
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Dec 17 21:10:14 2019 -0800
-
-    better label pos
+    add color to bg num
 

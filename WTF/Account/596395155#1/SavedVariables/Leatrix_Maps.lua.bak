@@ -11,6 +11,7 @@ LeaMapsDB = {
 	["ShowCoords"] = "On",
 	["tintAlpha"] = 1,
 	["SetMapOpacity"] = "Off",
+	["StickyMapFrame"] = "Off",
 	["MapPosR"] = "CENTER",
 	["MapPosX"] = 0,
 	["FadeMap"] = "Off",

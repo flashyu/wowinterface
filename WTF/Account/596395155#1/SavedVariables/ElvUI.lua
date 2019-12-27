@@ -6,7 +6,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 35580042,
+			["Actionscript"] = 39283289,
 			["Helloworlds"] = 289000,
 		},
 	},
@@ -48,7 +48,7 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 6,
+			["currentTutorial"] = 5,
 			["general"] = {
 				["backdropfadecolor"] = {
 					["a"] = 0.69,

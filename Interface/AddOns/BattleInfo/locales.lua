@@ -17,10 +17,9 @@ local locale = GetLocale()
 if locale == 'enUs' then
 L["BatteInfo Loaded"] = true
 L["Cannot find battleground %s"] = true
+L["CTRL+Hide=Leave"] = true
 L["List Position"] = true
 L["New"] = true
-L["Old"] = true
-L["Perhaps"] = true
 L["Quick select"] = true
 L["Spirit heal AE in: %s Secs"] = true
 L["Spirit heal AE: not dead"] = true
@@ -34,13 +33,11 @@ elseif locale == 'deDE' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -60,13 +57,11 @@ elseif locale == 'esES' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -86,13 +81,11 @@ elseif locale == 'esMX' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -112,13 +105,11 @@ elseif locale == 'frFR' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -138,13 +129,11 @@ elseif locale == 'itIT' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -164,13 +153,11 @@ elseif locale == 'koKR' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -190,13 +177,11 @@ elseif locale == 'ptBR' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -216,13 +201,11 @@ elseif locale == 'ruRU' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
@@ -239,10 +222,9 @@ elseif locale == 'ruRU' then
 elseif locale == 'zhCN' then
 L["BatteInfo Loaded"] = "BatteInfo 已加载"
 L["Cannot find battleground %s"] = "找不到战场 %s"
+L["CTRL+Hide=Leave"] = "CTRL+隐藏=离开"
 L["List Position"] = "战场列表中位置"
 L["New"] = "新"
-L["Old"] = "旧"
-L["Perhaps"] = "可能"
 L["Quick select"] = "快速选择"
 L["Spirit heal AE in: %s Secs"] = "灵魂医者 %s 秒后群体复活"
 L["Spirit heal AE: not dead"] = "灵魂医者: 未阵亡"
@@ -256,13 +238,11 @@ elseif locale == 'zhTW' then
 --[[Translation missing --]]
 --[[ L["Cannot find battleground %s"] = "Cannot find battleground %s"--]] 
 --[[Translation missing --]]
+--[[ L["CTRL+Hide=Leave"] = "CTRL+Hide=Leave"--]] 
+--[[Translation missing --]]
 --[[ L["List Position"] = "List Position"--]] 
 --[[Translation missing --]]
 --[[ L["New"] = "New"--]] 
---[[Translation missing --]]
---[[ L["Old"] = "Old"--]] 
---[[Translation missing --]]
---[[ L["Perhaps"] = "Perhaps"--]] 
 --[[Translation missing --]]
 --[[ L["Quick select"] = "Quick select"--]] 
 --[[Translation missing --]]
