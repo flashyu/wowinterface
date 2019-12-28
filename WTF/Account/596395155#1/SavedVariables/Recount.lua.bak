@@ -14,7 +14,6 @@ RecountDB = {
 					["h"] = 183.000030517578,
 				},
 			},
-			["MainWindowHeight"] = 183.222244262695,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -28,6 +27,7 @@ RecountDB = {
 			["LastInstanceName"] = "黑石深渊",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
+			["MainWindowHeight"] = 183.222244262695,
 		},
 		["Helloworlds - 沙尔图拉"] = {
 			["MainWindowVis"] = false,

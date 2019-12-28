@@ -4,14 +4,14 @@ NRunDB_Global = {
 		["main"] = {
 			["y"] = -222.443725585938,
 			["x"] = -240.445663452148,
-			["point"] = "TOP",
 			["to"] = "TOP",
+			["point"] = "TOP",
 		},
 		["secondary"] = {
 			["y"] = -222.889587402344,
 			["x"] = -418.223571777344,
-			["point"] = "TOP",
 			["to"] = "TOP",
+			["point"] = "TOP",
 		},
 	},
 	["charspec"] = {
@@ -42,15 +42,6 @@ NugRunningConfigCustom = {
 			[2136] = {
 				["group"] = "procs",
 			},
-			[11426] = {
-				["color"] = {
-					1, -- [1]
-					0.4, -- [2]
-					0.4, -- [3]
-				},
-				["name"] = "Ice Barrier",
-				["group"] = "procs",
-			},
 			[120] = {
 				["color"] = {
 					1, -- [1]
@@ -58,6 +49,15 @@ NugRunningConfigCustom = {
 					0.4, -- [3]
 				},
 				["name"] = "Cone of Cold",
+				["group"] = "procs",
+			},
+			[11426] = {
+				["color"] = {
+					1, -- [1]
+					0.4, -- [2]
+					0.4, -- [3]
+				},
+				["name"] = "Ice Barrier",
 				["group"] = "procs",
 			},
 		},
