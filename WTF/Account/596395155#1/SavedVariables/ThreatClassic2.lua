@@ -37,28 +37,23 @@ TC2_Options = {
 				0, -- [3]
 			},
 		},
-		["hideAlways"] = false,
-		["hideSolo"] = false,
 		["hideInPVP"] = true,
+		["hideSolo"] = false,
+		["hideAlways"] = false,
 	},
 	["warnings"] = {
 		["threshold"] = 80,
 		["pulledFile"] = "Sound\\Interface\\Aggro_Pulled_Aggro.ogg",
-		["visual"] = true,
-		["warningFile"] = "Sound\\Interface\\Aggro_Enter_Warning_State.ogg",
 		["sounds"] = true,
+		["warningFile"] = "Sound\\Interface\\Aggro_Enter_Warning_State.ogg",
+		["visual"] = true,
 	},
 	["frame"] = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
-		["strata"] = "3-MEDIUM",
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
+		["locked"] = false,
+		["test"] = false,
 		["position"] = {
 			"LEFT", -- [1]
 			"UIParent", -- [2]
@@ -66,15 +61,20 @@ TC2_Options = {
 			50, -- [4]
 			0, -- [5]
 		},
-		["test"] = false,
+		["height"] = 161,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.35, -- [4]
 		},
-		["locked"] = false,
-		["height"] = 161,
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
+		},
+		["strata"] = "3-MEDIUM",
 	},
 	["backdrop"] = {
 		["bgColor"] = {
@@ -86,15 +86,15 @@ TC2_Options = {
 		["bgFile"] = "Interface\\ChatFrame\\ChatFrameBackground",
 		["tileSize"] = 0,
 		["edgeFile"] = "Interface\\ChatFrame\\ChatFrameBackground",
-		["tile"] = false,
-		["edgeSize"] = 1,
-		["inset"] = 0,
 		["edgeColor"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			1, -- [4]
 		},
+		["edgeSize"] = 1,
+		["inset"] = 0,
+		["tile"] = false,
 	},
 	["bar"] = {
 		["descend"] = true,

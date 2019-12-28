@@ -38,6 +38,21 @@ ItemRackUser = {
 			["equip"] = {
 			},
 		},
+		["~Unequip"] = {
+			["equip"] = {
+				[14] = "13968::::::::60:::11::::",
+			},
+		},
+		["Q"] = {
+			["equip"] = {
+				[14] = "11122::::::::60:::11::::",
+			},
+			["oldset"] = "A",
+			["icon"] = 132172,
+			["old"] = {
+				[14] = "13968::::::::60:::11::::",
+			},
+		},
 		["N"] = {
 			["equip"] = {
 				0, -- [1]
@@ -63,24 +78,9 @@ ItemRackUser = {
 			["old"] = {
 			},
 		},
-		["Q"] = {
-			["equip"] = {
-				[14] = "11122::::::::60:::11::::",
-			},
-			["oldset"] = "A",
-			["icon"] = 132172,
-			["old"] = {
-				[14] = "13968::::::::60:::11::::",
-			},
-		},
-		["~Unequip"] = {
-			["equip"] = {
-				[14] = "13968::::::::60:::11::::",
-			},
-		},
 	},
 	["EnableQueues"] = "ON",
-	["CurrentSet"] = "A",
+	["EnableEvents"] = "ON",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
 	},
@@ -92,11 +92,11 @@ ItemRackUser = {
 			["骑术装"] = "Q",
 		},
 	},
-	["Queues"] = {
-	},
-	["SetMenuWrap"] = "OFF",
 	["Hidden"] = {
 	},
+	["SetMenuWrap"] = "OFF",
+	["Queues"] = {
+	},
 	["MenuScale"] = 0.85,
-	["EnableEvents"] = "ON",
+	["CurrentSet"] = "A",
 }
