@@ -26,7 +26,7 @@ RecountDB = {
 				},
 			},
 			["MainWindowVis"] = false,
-			["LastInstanceName"] = "奥妮克希亚的巢穴",
+			["LastInstanceName"] = "黑石深渊",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 317.000061035156,
 		},

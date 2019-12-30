@@ -30,8 +30,11 @@ ItemRackUser = {
 				"19310::::::::60:::14::::", -- [17]
 				"13938::::::::60:::1::::", -- [18]
 			},
+			["oldset"] = "A",
 			["icon"] = 134413,
 			["old"] = {
+				[14] = "14022::::::::60:::11::::",
+				[17] = "17067::::::::60:::::::",
 			},
 		},
 		["~CombatQueue"] = {
@@ -82,6 +85,7 @@ ItemRackUser = {
 	["EnableEvents"] = "ON",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
+		["17067"] = 30,
 	},
 	["Events"] = {
 		["Enabled"] = {
@@ -97,5 +101,5 @@ ItemRackUser = {
 	["Queues"] = {
 	},
 	["MenuScale"] = 0.85,
-	["CurrentSet"] = "Q",
+	["CurrentSet"] = "A",
 }

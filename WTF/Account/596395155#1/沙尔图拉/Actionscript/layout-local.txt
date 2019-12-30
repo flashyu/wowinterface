@@ -6,15 +6,8 @@ X: -43
 Y: -207
 W: 170
 H: 35
-Frame: ThreatClassic2BarFrame
-FrameLevel: 1
-Anchor: LEFT
-X: 62
-Y: 49
-W: 219
-H: 161
 Frame: CChatNotifierMMIcon
-FrameLevel: 481
+FrameLevel: 501
 Anchor: TOPRIGHT
 X: -136
 Y: 0

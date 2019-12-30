@@ -52,27 +52,27 @@ TC2_Options = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
-		["locked"] = false,
-		["test"] = false,
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
 		["height"] = 161,
+		["locked"] = false,
+		["position"] = {
+			"LEFT", -- [1]
+			"UIParent", -- [2]
+			"LEFT", -- [3]
+			61.5555725097656, -- [4]
+			48.8888740539551, -- [5]
+		},
+		["test"] = false,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.35, -- [4]
 		},
-		["position"] = {
-			"LEFT", -- [1]
-			"UIParent", -- [2]
-			"LEFT", -- [3]
-			50, -- [4]
-			0, -- [5]
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
 		},
 		["strata"] = "3-MEDIUM",
 	},
