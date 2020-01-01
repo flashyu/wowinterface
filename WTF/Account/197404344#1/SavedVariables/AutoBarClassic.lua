@@ -14,8 +14,8 @@ AutoBarDB = {
 					["hide"] = false,
 					["enabled"] = true,
 					["columns"] = 10,
-					["frameStrata"] = "LOW",
 					["alpha"] = 1,
+					["frameStrata"] = "LOW",
 					["buttonWidth"] = 36,
 					["buttonKeys"] = {
 						"AutoBarButtonShields", -- [1]
@@ -89,9 +89,6 @@ AutoBarDB = {
 				["PALADIN"] = true,
 				["buttonHeight"] = 36,
 				["rows"] = 1,
-				["frameStrata"] = "LOW",
-				["dockShiftY"] = 0,
-				["alignButtons"] = "3",
 				["buttonKeys"] = {
 					"AutoBarButtonHearth", -- [1]
 					"AutoBarButtonBandages", -- [2]
@@ -114,21 +111,24 @@ AutoBarDB = {
 					"AutoBarButtonTrinket1", -- [19]
 					"AutoBarButtonTrinket2", -- [20]
 				},
+				["dockShiftY"] = 0,
+				["scale"] = 1,
+				["alignButtons"] = "3",
 				["posX"] = 300,
 				["enabled"] = true,
 				["DRUID"] = true,
 				["MONK"] = true,
 				["hide"] = false,
 				["DEATHKNIGHT"] = true,
-				["scale"] = 1,
-				["columns"] = 32,
 				["ROGUE"] = true,
+				["columns"] = 32,
 				["MAGE"] = true,
 				["posY"] = 200,
 				["alpha"] = 1,
-				["PRIEST"] = true,
-				["HUNTER"] = true,
+				["frameStrata"] = "LOW",
 				["buttonWidth"] = 36,
+				["HUNTER"] = true,
+				["PRIEST"] = true,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["SHAMAN"] = true,
@@ -142,9 +142,6 @@ AutoBarDB = {
 				["PALADIN"] = true,
 				["buttonHeight"] = 36,
 				["rows"] = 1,
-				["frameStrata"] = "LOW",
-				["dockShiftY"] = 0,
-				["alignButtons"] = "3",
 				["buttonKeys"] = {
 					"AutoBarButtonSpeed", -- [1]
 					"AutoBarButtonFreeAction", -- [2]
@@ -157,21 +154,24 @@ AutoBarDB = {
 					"AutoBarButtonReputation", -- [9]
 					"AutoBarButtonRaidTarget", -- [10]
 				},
+				["dockShiftY"] = 0,
+				["scale"] = 1,
+				["alignButtons"] = "3",
 				["posX"] = 300,
 				["enabled"] = true,
 				["DRUID"] = true,
 				["MONK"] = true,
 				["hide"] = false,
 				["DEATHKNIGHT"] = true,
-				["scale"] = 1,
-				["columns"] = 9,
 				["ROGUE"] = true,
+				["columns"] = 9,
 				["MAGE"] = true,
 				["posY"] = 360,
 				["alpha"] = 1,
-				["PRIEST"] = true,
-				["HUNTER"] = true,
+				["frameStrata"] = "LOW",
 				["buttonWidth"] = 36,
+				["HUNTER"] = true,
+				["PRIEST"] = true,
 				["WARLOCK"] = true,
 				["DEMONHUNTER"] = true,
 				["SHAMAN"] = true,
@@ -288,12 +288,12 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonQuest",
 				["defaultButtonIndex"] = 25,
 			},
-			["AutoBarButtonBattleStandards"] = {
-				["barKey"] = "AutoBarClassBarExtras",
-				["buttonClass"] = "AutoBarButtonBattleStandards",
+			["AutoBarButtonCooldownDrums"] = {
+				["barKey"] = "AutoBarClassBarBasic",
+				["buttonClass"] = "AutoBarButtonCooldownDrums",
 				["enabled"] = true,
-				["buttonKey"] = "AutoBarButtonBattleStandards",
-				["defaultButtonIndex"] = 6,
+				["buttonKey"] = "AutoBarButtonCooldownDrums",
+				["defaultButtonIndex"] = 14,
 			},
 			["AutoBarButtonMana"] = {
 				["barKey"] = "AutoBarClassBarBasic",
@@ -386,12 +386,12 @@ AutoBarDB = {
 				["buttonKey"] = "AutoBarButtonCooldownPotionRejuvenation",
 				["defaultButtonIndex"] = 8,
 			},
-			["AutoBarButtonCooldownDrums"] = {
-				["barKey"] = "AutoBarClassBarBasic",
-				["buttonClass"] = "AutoBarButtonCooldownDrums",
+			["AutoBarButtonBattleStandards"] = {
+				["barKey"] = "AutoBarClassBarExtras",
+				["buttonClass"] = "AutoBarButtonBattleStandards",
 				["enabled"] = true,
-				["buttonKey"] = "AutoBarButtonCooldownDrums",
-				["defaultButtonIndex"] = 14,
+				["buttonKey"] = "AutoBarButtonBattleStandards",
+				["defaultButtonIndex"] = 6,
 			},
 			["AutoBarButtonFishing"] = {
 				["barKey"] = "AutoBarClassBarExtras",

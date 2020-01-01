@@ -7,7 +7,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Typescript"] = 1582528,
+			["Typescript"] = 1672551,
 		},
 	},
 	["class"] = {

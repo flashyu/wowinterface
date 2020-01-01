@@ -1,40 +1,10 @@
-lightweight tag 567f00e18d9e1bb4b6cacca26ec4df976d4c8588 v2.2.6
+lightweight tag 366362cfacb46ba85b9a4e20550f36915cfdd09d v2.3.1
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Thu Dec 26 20:03:03 2019 -0800
+Date:	Tue Dec 31 22:52:24 2019 -0800
 
-commit 567f00e18d9e1bb4b6cacca26ec4df976d4c8588
+commit 366362cfacb46ba85b9a4e20550f36915cfdd09d
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Thu Dec 26 20:03:03 2019 -0800
+Date:   Tue Dec 31 22:52:24 2019 -0800
 
-    add announce
-
-commit a2ddbf1461f80676fdd8348013bc5b16447b2239
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Wed Dec 25 22:38:12 2019 -0800
-
-    add gradual color for list pos
-
-commit b8c198a40101a6b49dc188c2002fccd396f0e337
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Dec 24 23:03:28 2019 -0800
-
-    add realm count
-
-commit 6ac2b59909968d79de60c12ab597937690248f2d
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Dec 24 10:38:42 2019 -0800
-
-    reset spirit timer when entering world
-
-commit 02cd2fe1346c44ffaa55b820be6b6db626b4287b
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Dec 24 10:17:51 2019 -0800
-
-    fix ctrl + hide does not work with multi queued bg
-
-commit 465d003161ac0e03bbf61f76b9a2a64838ad918e
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Dec 22 03:56:31 2019 -0800
-
-    add color to bg num
+    try to fix death diag conflict
 

@@ -7,7 +7,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Typescript"] = 1582528,
+			["Typescript"] = 1643970,
 		},
 	},
 	["class"] = {
@@ -40,10 +40,10 @@ ElvDB = {
 				["ElvUF_RaidMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,427",
 				["ElvUF_RaidpetMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,736",
 			},
-			["v11NamePlateReset"] = true,
 			["chat"] = {
 				["panelColorConverted"] = true,
 			},
+			["v11NamePlateReset"] = true,
 		},
 	},
 }

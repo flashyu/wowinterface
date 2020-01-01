@@ -76,3 +76,4 @@ ElvUI_EverySecondCounts: disabled
 ElvUI_AuraBarsMovers: disabled
 NugRunning: enabled
 WeakAuras: enabled
+WeakAurasCompanion: enabled

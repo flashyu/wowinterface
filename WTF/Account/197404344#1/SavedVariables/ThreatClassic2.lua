@@ -52,12 +52,6 @@ TC2_Options = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
 		["strata"] = "3-MEDIUM",
 		["position"] = {
 			"LEFT", -- [1]
@@ -66,15 +60,21 @@ TC2_Options = {
 			50, -- [4]
 			0, -- [5]
 		},
-		["height"] = 161,
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
+		},
+		["locked"] = false,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.35, -- [4]
 		},
+		["height"] = 161,
 		["test"] = false,
-		["locked"] = false,
 	},
 	["backdrop"] = {
 		["bgColor"] = {

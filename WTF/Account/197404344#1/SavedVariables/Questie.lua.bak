@@ -890,13 +890,13 @@ QuestieConfig = {
 				[503] = true,
 				[883] = true,
 			},
-			["collapsedQuests"] = {
-			},
 			["TrackedQuests"] = {
 			},
-			["TrackerHiddenObjectives"] = {
+			["collapsedQuests"] = {
 			},
 			["TrackerHiddenQuests"] = {
+			},
+			["TrackerHiddenObjectives"] = {
 			},
 		},
 	},

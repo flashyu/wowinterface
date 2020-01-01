@@ -1,9 +1,8 @@
 VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
-/stopcasting
-/cast [@mouseover,nomod,exists] 解除次级诅咒;  [@mouseover,exists,mod:ctrl] 变形术; [@mouseover,exists,mod:shift] 解除次级诅咒
+/script DecursiveRootTable.Dcr:Println('没有相关技能')
 END
 VER 3 0000000000000002 "target宏" "INV_MISC_QUESTIONMARK"
-/target 雷加斯潜行
+/target 逆风术士
 /script SetRaidTarget("target",6)
 END
 VER 3 0000000000000004 "开蚌壳" "136058"

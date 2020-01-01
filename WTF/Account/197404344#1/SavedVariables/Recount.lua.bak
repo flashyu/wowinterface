@@ -20,8 +20,8 @@ RecountDB = {
 					},
 				},
 			},
-			["CurDataSet"] = "OverallData",
 			["MainWindowVis"] = false,
+			["CurDataSet"] = "OverallData",
 		},
 	},
 }

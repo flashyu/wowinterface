@@ -5,9 +5,11 @@
 ## Notes-zhCN: 战场信息增强. 反馈: farmer1992@gmail.com
 ## Author: Boshi Lian(farmer1992@gmail.com)
 ## Version: @project-version
+## SavedVariablesPerCharacter: BatteInfoSettings
 
 locales.lua
 event.lua
+options.lua
 utils.lua
 quickjoin.lua
 newbattle.lua

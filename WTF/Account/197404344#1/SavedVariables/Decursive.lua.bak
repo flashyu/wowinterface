@@ -17,8 +17,9 @@ DecursiveDB = {
 		},
 	},
 	["global"] = {
-		["LastVersionAnnounce"] = 1577716966,
+		["LastVersionAnnounce"] = 1577800516,
 		["NewerVersionName"] = "2.7.6.6",
+		["NewerVersionAlert"] = 1577720986,
 		["NewerVersionDetected"] = 1574060406,
 	},
 	["profiles"] = {
