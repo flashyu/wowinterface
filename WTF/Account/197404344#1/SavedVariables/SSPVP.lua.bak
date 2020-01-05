@@ -1,7 +1,9 @@
 
 SSPVPDB = {
 	["profileKeys"] = {
+		["Nodejs - 沙尔图拉"] = "Default",
 		["Typescript - 沙尔图拉"] = "Default",
+		["Lua - 沙尔图拉"] = "Default",
 	},
 	["namespaces"] = {
 		["overlay"] = {
@@ -12,11 +14,11 @@ SSPVPDB = {
 		},
 		["flags"] = {
 		},
-		["move"] = {
+		["av"] = {
 		},
 		["battlefield"] = {
 		},
-		["av"] = {
+		["move"] = {
 		},
 		["match"] = {
 		},

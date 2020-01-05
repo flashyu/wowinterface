@@ -1,7 +1,10 @@
 
 DecursiveDB = {
-	["profileKeys"] = {
-		["Typescript - 沙尔图拉"] = "Default",
+	["global"] = {
+		["LastVersionAnnounce"] = 1578232980,
+		["NewerVersionName"] = "2.7.6.6",
+		["NewerVersionAlert"] = 1578199580,
+		["NewerVersionDetected"] = 1574060406,
 	},
 	["class"] = {
 		["WARRIOR"] = {
@@ -16,11 +19,10 @@ DecursiveDB = {
 			},
 		},
 	},
-	["global"] = {
-		["LastVersionAnnounce"] = 1577800516,
-		["NewerVersionName"] = "2.7.6.6",
-		["NewerVersionAlert"] = 1577720986,
-		["NewerVersionDetected"] = 1574060406,
+	["profileKeys"] = {
+		["Nodejs - 沙尔图拉"] = "Default",
+		["Typescript - 沙尔图拉"] = "Default",
+		["Lua - 沙尔图拉"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

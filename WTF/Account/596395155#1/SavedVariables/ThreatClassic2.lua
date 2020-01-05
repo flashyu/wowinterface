@@ -37,29 +37,34 @@ TC2_Options = {
 				0, -- [3]
 			},
 		},
-		["hideInPVP"] = true,
-		["hideSolo"] = false,
 		["hideAlways"] = false,
+		["hideSolo"] = false,
+		["hideInPVP"] = true,
 	},
 	["warnings"] = {
 		["threshold"] = 80,
 		["pulledFile"] = "Sound\\Interface\\Aggro_Pulled_Aggro.ogg",
-		["sounds"] = true,
-		["warningFile"] = "Sound\\Interface\\Aggro_Enter_Warning_State.ogg",
 		["visual"] = true,
+		["warningFile"] = "Sound\\Interface\\Aggro_Enter_Warning_State.ogg",
+		["sounds"] = true,
 	},
 	["frame"] = {
 		["headerShow"] = true,
 		["scale"] = 1,
 		["width"] = 217,
-		["test"] = false,
-		["height"] = 161,
+		["strata"] = "3-MEDIUM",
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
+		},
 		["position"] = {
 			"LEFT", -- [1]
 			"UIParent", -- [2]
 			"LEFT", -- [3]
-			61.5555725097656, -- [4]
-			48.8888740539551, -- [5]
+			216.66667175293, -- [4]
+			80.8888854980469, -- [5]
 		},
 		["locked"] = false,
 		["color"] = {
@@ -68,13 +73,8 @@ TC2_Options = {
 			0, -- [3]
 			0.35, -- [4]
 		},
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
-		["strata"] = "3-MEDIUM",
+		["height"] = 161,
+		["test"] = false,
 	},
 	["backdrop"] = {
 		["bgColor"] = {
@@ -86,15 +86,15 @@ TC2_Options = {
 		["bgFile"] = "Interface\\ChatFrame\\ChatFrameBackground",
 		["tileSize"] = 0,
 		["edgeFile"] = "Interface\\ChatFrame\\ChatFrameBackground",
+		["tile"] = false,
+		["edgeSize"] = 1,
+		["inset"] = 0,
 		["edgeColor"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			1, -- [4]
 		},
-		["edgeSize"] = 1,
-		["inset"] = 0,
-		["tile"] = false,
 	},
 	["bar"] = {
 		["descend"] = true,

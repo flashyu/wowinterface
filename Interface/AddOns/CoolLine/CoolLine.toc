@@ -1,0 +1,25 @@
+## Interface: 11303
+## Version: 8.0.008
+
+## Title: CoolLine
+## Notes: Shows cooldowns on a single bar. |cff00b3ff(Classic compatible)|r by LoneWanderer-GH
+
+## Author: TotalPackage, Phanx, LoneWanderer-GH for first classic port
+
+## X-Curse-Project-ID: 356973
+
+## SavedVariables: CoolLineDB
+## SavedVariablesPerCharacter: CoolLineCharDB
+
+## OptionalDeps: LibSharedMedia-3.0
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Always: delayed
+
+# packaged on 20200104002038
+
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+
+core.lua

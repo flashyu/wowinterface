@@ -1,7 +1,25 @@
 
 ItemTooltipIconsConfig = {
 	["沙尔图拉"] = {
+		["Nodejs"] = {
+			["showProfs"] = true,
+			["showDMF"] = true,
+			["profFlags"] = 255,
+			["includeVendor"] = false,
+			["questFlags"] = 1048575,
+			["iconSize"] = 16,
+			["showQuests"] = true,
+		},
 		["Typescript"] = {
+			["showProfs"] = true,
+			["showDMF"] = true,
+			["profFlags"] = 255,
+			["includeVendor"] = false,
+			["questFlags"] = 1048575,
+			["iconSize"] = 16,
+			["showQuests"] = true,
+		},
+		["Lua"] = {
 			["showProfs"] = true,
 			["showDMF"] = true,
 			["profFlags"] = 255,

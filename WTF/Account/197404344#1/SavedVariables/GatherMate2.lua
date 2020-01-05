@@ -1,10 +1,12 @@
 
 GatherMate2DB = {
-	["profileKeys"] = {
-		["Typescript - 沙尔图拉"] = "Default",
-	},
 	["global"] = {
 		["data_version"] = 5,
+	},
+	["profileKeys"] = {
+		["Nodejs - 沙尔图拉"] = "Default",
+		["Typescript - 沙尔图拉"] = "Default",
+		["Lua - 沙尔图拉"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

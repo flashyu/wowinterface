@@ -12,7 +12,7 @@ WeakAurasSaved = {
 	["clearOldHistory"] = 30,
 	["registered"] = {
 	},
+	["login_squelch_time"] = 10,
 	["history"] = {
 	},
-	["login_squelch_time"] = 10,
 }

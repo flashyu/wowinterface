@@ -9,9 +9,9 @@ RecountDB = {
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 378.166625976563,
-					["x"] = -686.944473266602,
+					["x"] = -686.944526672363,
 					["w"] = 318.777801513672,
-					["h"] = 217.666717529297,
+					["h"] = 217.666748046875,
 				},
 			},
 			["MainWindowHeight"] = 217.666717529297,
@@ -25,8 +25,7 @@ RecountDB = {
 					},
 				},
 			},
-			["MainWindowVis"] = false,
-			["LastInstanceName"] = "熔火之心",
+			["LastInstanceName"] = "玛拉顿",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 318.777801513672,
 		},

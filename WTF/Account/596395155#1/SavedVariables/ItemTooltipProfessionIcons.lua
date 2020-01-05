@@ -7,8 +7,8 @@ ItemTooltipIconsConfig = {
 			["profFlags"] = 255,
 			["includeVendor"] = false,
 			["questFlags"] = 1048575,
-			["iconSize"] = 16,
 			["showQuests"] = true,
+			["iconSize"] = 16,
 		},
 		["Helloworlds"] = {
 			["showProfs"] = true,
@@ -16,8 +16,8 @@ ItemTooltipIconsConfig = {
 			["profFlags"] = 255,
 			["includeVendor"] = false,
 			["questFlags"] = 1048575,
-			["iconSize"] = 16,
 			["showQuests"] = true,
+			["iconSize"] = 16,
 		},
 	},
 }
