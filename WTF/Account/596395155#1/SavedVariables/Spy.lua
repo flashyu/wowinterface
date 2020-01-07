@@ -46,6 +46,7 @@ SpyDB = {
 				},
 			},
 			["AppendUnitNameCheck"] = true,
+			["MainWindowVis"] = false,
 			["AppendUnitKoSCheck"] = true,
 		},
 		["Helloworlds - 沙尔图拉"] = {

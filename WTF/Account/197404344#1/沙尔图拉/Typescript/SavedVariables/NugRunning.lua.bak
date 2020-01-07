@@ -1,3 +1,0 @@
-
-NRunDB_Char = {
-}

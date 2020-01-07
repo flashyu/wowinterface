@@ -14,7 +14,6 @@ RecountDB = {
 					["h"] = 217.666748046875,
 				},
 			},
-			["MainWindowHeight"] = 217.666717529297,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -26,11 +25,11 @@ RecountDB = {
 				},
 			},
 			["LastInstanceName"] = "玛拉顿",
-			["CurDataSet"] = "OverallData",
+			["MainWindowHeight"] = 217.666717529297,
 			["MainWindowWidth"] = 318.777801513672,
+			["CurDataSet"] = "OverallData",
 		},
 		["Helloworlds - 沙尔图拉"] = {
-			["MainWindowVis"] = false,
 			["MainWindow"] = {
 				["Position"] = {
 					["w"] = 140.000015258789,
@@ -46,6 +45,7 @@ RecountDB = {
 					},
 				},
 			},
+			["MainWindowVis"] = false,
 			["CurDataSet"] = "OverallData",
 		},
 	},

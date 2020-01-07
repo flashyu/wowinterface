@@ -1,10 +1,52 @@
-lightweight tag 366362cfacb46ba85b9a4e20550f36915cfdd09d v2.3.1
+lightweight tag 8be6b3f06dd9bed04d0625e49a272a5f2e7d96f4 v2.3.2
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Tue Dec 31 22:52:24 2019 -0800
+Date:	Mon Jan 6 02:16:36 2020 -0800
 
-commit 366362cfacb46ba85b9a4e20550f36915cfdd09d
+commit 8be6b3f06dd9bed04d0625e49a272a5f2e7d96f4
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Dec 31 22:52:24 2019 -0800
+Date:   Mon Jan 6 02:16:36 2020 -0800
 
-    try to fix death diag conflict
+    prevent from clicking during combat (may cause wrong click)
+
+commit cf2df2f65c823d98975d345b42b890b1531e174f
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Mon Jan 6 02:10:35 2020 -0800
+
+    option to disable quick join autofocus
+
+commit fd4420a4e002b48b6fd45a319e98c819f08dd326
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Fri Jan 3 09:30:03 2020 -0800
+
+    better spirit healer timer
+
+commit b598e0d82aa47dda1455201e76ac1f17df868167
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Fri Jan 3 09:22:02 2020 -0800
+
+    add color for score panel
+
+commit a4c45d5110a834716de60fa1e125fc5d66842fc4
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Fri Jan 3 08:59:44 2020 -0800
+
+    fix class loc
+
+commit 5a694ba2f88b33c89b2b0c60ce2cc5dec59f93d6
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Fri Jan 3 08:22:30 2020 -0800
+
+    move class loc to util
+
+commit a52ba5403c1433c96939916af453601770c470e7
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Fri Jan 3 08:17:03 2020 -0800
+
+    move search to unify func
+
+commit 2777219f84414f2739c4731b779e133d0813a125
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Wed Jan 1 03:05:53 2020 -0800
+
+    add autoleave
 

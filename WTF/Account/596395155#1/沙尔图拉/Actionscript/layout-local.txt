@@ -1,11 +1,4 @@
 Version: 1
-Frame: Spy_MainWindow
-FrameLevel: 10
-Anchor: TOPRIGHT
-X: -43
-Y: -207
-W: 170
-H: 35
 Frame: Recount_MainWindow
 FrameLevel: 40
 Anchor: TOPLEFT
@@ -14,9 +7,9 @@ Y: 7
 W: 319
 H: 218
 Frame: CChatNotifierMMIcon
-FrameLevel: 743
+FrameLevel: 785
 Anchor: TOPRIGHT
-X: -136
+X: -138
 Y: 0
 W: 31
 H: 31
@@ -55,6 +48,13 @@ X: 0
 Y: 0
 W: 275
 H: 314
+Frame: Spy_MainWindow
+FrameLevel: 10
+Anchor: TOPRIGHT
+X: -43
+Y: -207
+W: 170
+H: 35
 Frame: TradeListFrame
 FrameLevel: 1
 Anchor: LEFT

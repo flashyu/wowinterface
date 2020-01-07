@@ -22,6 +22,7 @@ SpyDB = {
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
+			["AppendUnitNameCheck"] = true,
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 753,
@@ -45,12 +46,10 @@ SpyDB = {
 					},
 				},
 			},
-			["AppendUnitNameCheck"] = true,
-			["MainWindowVis"] = false,
 			["AppendUnitKoSCheck"] = true,
+			["MainWindowVis"] = false,
 		},
 		["Helloworlds - 沙尔图拉"] = {
-			["AppendUnitNameCheck"] = true,
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 740.000183105469,
@@ -66,6 +65,7 @@ SpyDB = {
 					},
 				},
 			},
+			["AppendUnitNameCheck"] = true,
 			["AppendUnitKoSCheck"] = true,
 		},
 	},

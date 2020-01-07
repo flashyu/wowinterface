@@ -53,12 +53,6 @@ TC2_Options = {
 		["scale"] = 1,
 		["width"] = 217,
 		["strata"] = "3-MEDIUM",
-		["headerColor"] = {
-			0, -- [1]
-			0, -- [2]
-			0, -- [3]
-			0.8, -- [4]
-		},
 		["position"] = {
 			"LEFT", -- [1]
 			"UIParent", -- [2]
@@ -66,15 +60,21 @@ TC2_Options = {
 			216.66667175293, -- [4]
 			80.8888854980469, -- [5]
 		},
-		["locked"] = false,
+		["headerColor"] = {
+			0, -- [1]
+			0, -- [2]
+			0, -- [3]
+			0.8, -- [4]
+		},
+		["test"] = false,
 		["color"] = {
 			0, -- [1]
 			0, -- [2]
 			0, -- [3]
 			0.35, -- [4]
 		},
+		["locked"] = false,
 		["height"] = 161,
-		["test"] = false,
 	},
 	["backdrop"] = {
 		["bgColor"] = {
