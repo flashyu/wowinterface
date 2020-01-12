@@ -6,6 +6,7 @@ RecountDB = {
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
+			["MainWindowVis"] = false,
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 378.166625976563,
@@ -24,10 +25,10 @@ RecountDB = {
 					},
 				},
 			},
-			["LastInstanceName"] = "玛拉顿",
 			["MainWindowHeight"] = 217.666717529297,
-			["MainWindowWidth"] = 318.777801513672,
 			["CurDataSet"] = "OverallData",
+			["MainWindowWidth"] = 318.777801513672,
+			["LastInstanceName"] = "玛拉顿",
 		},
 		["Helloworlds - 沙尔图拉"] = {
 			["MainWindow"] = {

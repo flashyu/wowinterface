@@ -1,10 +1,12 @@
 
 BatteInfoSettings = {
-	["replace_enter_battle"] = true,
 	["show_number"] = true,
-	["replace_hide_battle"] = true,
-	["flash_icon"] = true,
+	["auto_leave_bg_time"] = 3,
 	["show_alterac"] = true,
 	["show_time_elapsed"] = true,
+	["replace_enter_battle"] = true,
+	["replace_hide_battle"] = true,
+	["focus_quickjoin"] = true,
+	["flash_icon"] = true,
 	["show_spirit_heal"] = true,
 }

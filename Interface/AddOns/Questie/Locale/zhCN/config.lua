@@ -42,9 +42,9 @@ QuestieLocale.locale['zhCN'] = {
     ['ENABLE_ICON_LIMIT_DESC'] = "启用对每种类型绘制的图标的限制",
     ['ICON_LIMIT'] = "图标限制",
     ['ICON_LIMIT_DESC'] = "限制每种类型绘制的图标数量 ( 默认: %s )",
-    ['ENABLE_AUTO_ACCEPT_QUESTS'] = "Auto Accept Quests",
+    ['ENABLE_AUTO_ACCEPT_QUESTS'] = "自动接受任务",
     ['ENABLE_AUTO_ACCEPT_QUESTS_DESC'] = "Enable or disable Questie auto-accepting quests.",
-    ['ENABLE_AUTO_COMPLETE'] = "Auto Complete",
+    ['ENABLE_AUTO_COMPLETE'] = "自动完成",
     ['ENABLE_AUTO_COMPLETE_DESC'] = "Enable or disable Questie auto-complete quests.",
     
 
@@ -146,7 +146,7 @@ QuestieLocale.locale['zhCN'] = {
 
     -- Advanced tab
     ['ADV_TAB'] = "进阶",
-    ['ADV_SET'] = "高级设置",
+    ['ADV_SET'] = "Advanced Settings",
     ['DEV_OPTIONS'] = "开发选项",
     ['ENABLE_DEBUG'] = "启用除错",
     ['ENABLE_DEBUG_DESC'] = "启用或停用除错功能",
@@ -211,14 +211,16 @@ QuestieLocale.locale['zhCN'] = {
     ['TRACKER_SHOW_QUEST_LEVEL'] = "显示任务等级",
     ['TRACKER_SHOW_QUEST_LEVEL_DESC'] = "勾选后，任务等级将显示在任务跟踪器中。",
     ['TRACKER_SHOW_QUEST_COUNTER'] = "显示任务计数器",
-    ['TRACKER_SHOW_QUEST_COUNTER_DESC'] = "勾选此选项后，您拥有的任务总数将显示在跟踪器上方。",
+    ['TRACKER_SHOW_QUEST_COUNTER_DESC'] = "When this is checked, the total number of quests you have will be shown above the tracker.",
     ['TRACKER_SHOW_BLIZZARD_QUEST_TIMER'] = "显示暴雪任务计时器",
-    ['TRACKER_SHOW_BLIZZARD_QUEST_TIMER_DESC'] = "选中此选项后，将显示任务的默认计时器。",
+    ['TRACKER_SHOW_BLIZZARD_QUEST_TIMER_DESC'] = "When this is checked, the default timer for quests will be shown.",
+    ['TRACKER_STICKY_DURABILITY_FRAME'] = "Sticky Durability Frame",
+    ['TRACKER_STICKY_DURABILITY_FRAME_DESC'] = "When this is checked, the durability frame will be placed on the left side of the Tracker.",
     ['TRACKER_COLOR_OBJECTIVES'] = "目标着色",
     ['TRACKER_COLOR_OBJECTIVES_DESC'] = "按照任务目标的进度，对踪框的任务目标文字染色。",
     ['TRACKER_COLOR_WHITE'] = "白色",
     ['TRACKER_COLOR_WHITE_TO_GREEN'] = "由白至绿", 
-    ['TRACKER_COLOR_WHITE_AND_GREEN'] = "由白至绿",
+    ['TRACKER_COLOR_WHITE_AND_GREEN'] = "White and Green",
     ['TRACKER_COLOR_RED_TO_GREEN'] = "由红至绿", 
     ['TRACKER_FONT_HEADER'] = "任务名字的字号",
     ['TRACKER_FONT_HEADER_DESC'] = "任务追踪框中，任务名字的字号",
@@ -242,7 +244,7 @@ QuestieLocale.locale['zhCN'] = {
     ['TRACKER_SHORTCUT'] = " 快捷键",
     ['TRACKER_SET_TOMTOM_DESC'] = "在任务追踪上开启TomTom的快捷键",
     ['TRACKER_SHOW_QUESTLOG_DESC'] = "在任务追踪上开启任务日志的快捷键",
-    ['TRACKER_UNTRACK_DESC'] = "从追踪器中移除任务",
+    ['TRACKER_UNTRACK_DESC'] = "Removes a quest from the Tracker.",
     ['TRACKER_ACTIVE_QUESTS'] = "当前任务: ",
 
     -- tracker right click menu
@@ -266,6 +268,7 @@ QuestieLocale.locale['zhCN'] = {
     ['JOURNEY_ZONE_TAB'] = "按地区查寻",
     ['JOURNEY_SEARCH_TAB'] = "进阶搜询",
     ['JOURNEY_AVAILABLE_TITLE'] = "可接受",
+    ['JOURNEY_PREQUEST_TITLE'] = "Missing Pre Quest",
     ['JOURNEY_COMPLETE_TITLE'] = "已完成",
     ['JOURNEY_REPEATABLE_TITLE'] = "可重复的任务",
     ['JOURNEY_UNOBTAINABLE_TITLE'] = "未完成的任务",
@@ -287,6 +290,7 @@ QuestieLocale.locale['zhCN'] = {
     ['JOURNEY_QUEST_MINLEVEL'] = "最低等级：",
     ['JOURNEY_QUEST_ID'] = "任务ID： ",
     ['JOURNEY_DIFFICULTY'] = "难度级距：%s",
+    ['JOURNEY_PREQUEST'] = "Pre Quests",
     ['JOURNEY_AUTO_QUEST'] = "这个任务自动完成，所以没有目标。",
     ['JOURNEY_RECENT_EVENTS'] = "近期纪录",
     ['JOURNEY_LEVELUP'] = "恭喜你达到了%s！",
@@ -347,10 +351,10 @@ QuestieLocale.locale['zhCN'] = {
     ['QUESTIE_UPDATED_RESTART'] = "|cFFFF0000警告！|r你没有重开游戏就更新了Questie，这可能会使Questie出现某些错误。请完全关闭魔兽世界再重新启动游戏，确保Questie能正常运作。",
 
     -- TODO finally switch all keys to this style for code readability:
-    ['Show on Map'] = "显示在地图",
-    ['Remove from Map'] = "从地图里删除",
-    ['Starts the following quests:'] = "开始以下任务:",
-    ['Ends the following quests:'] = "结束以下任务:",
-    ['No quests to list.'] = "没有要列出的任务",
-    ['No spawn data available.'] = "没有可用的生成数据",
+    ['Show on Map'] = "Show on Map",
+    ['Remove from Map'] = "Remove from Map",
+    ['Starts the following quests:'] = "Starts the following quests:",
+    ['Ends the following quests:'] = "Ends the following quests:",
+    ['No quests to list.'] = "No quests to list.",
+    ['No spawn data available.'] = "No spawn data available.",
 };

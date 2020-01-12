@@ -617,7 +617,7 @@ do  -- scans spellbook to update cooldowns, throttled since the event fires a lo
 			local currentCharges, maxCharges, cooldownStart, cooldownDuration = GetSpellCharges(id)
 			if cooldownStart and cooldownDuration and currentCharges < maxCharges and not block[name] then
 				local _, _, texture = GetSpellInfo(id)
-				NewCooldown(name, texture, cooldownStart + cooldownDuration, bookType == BOOKTYPE_SPELL)
+				NewCooldown(name, texture, cooldownStart + cooldownDuration, btype == BOOKTYPE_SPELL)
 			else
 				ClearCooldown(nil, name)
 			end

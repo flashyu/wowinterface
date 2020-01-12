@@ -9,6 +9,8 @@ function QuestieQuestBlacklist:Load()
         [787] = true, -- The New Horde is not in the game. See #830
         [6606] = true, -- Quest is not in the game. See #1338
         [6072] = true, -- Ayanna Everstride doesn't start "Hunter's Path" (this quest is most likely simply not in the game) #700
+        [618] = true, -- Duplicate of 8554
+        [9378] = true, -- Naxxramas quest which doesn't seem to be in the game
         --Stray quests
         [3861] = true, --CLUCK!
         --World event quests
@@ -335,20 +337,6 @@ function QuestieQuestBlacklist:Load()
         [8919] = true,
         [8920] = true,
 
-        -- plaguelands quests that arent in phase 1
-        [5403] = true,
-        [5407] = true,
-        [5509] = true,
-        [5510] = true,
-        [5408] = true,
-        [5402] = true,
-        [5401] = true,
-        [5405] = true,
-        [5503] = true,
-        [5404] = true,
-        [5508] = true,
-        [5406] = true,
-
         --Brood of Nozdormu aq40 rep epic ring quest.
         [8747] = true,
         [8748] = true,
@@ -425,7 +413,8 @@ function QuestieQuestBlacklist:Load()
         [8169] = true,
         [8170] = true,
         [8171] = true,
-        -- Warsong Gulch - Quests are not in the game anymore
+        -- PvP Quests which are not in the game anymore
+        -----------------------------------------------
         -- Vanquish the Invaders
         [7788] = true,
         [7871] = true,
@@ -449,7 +438,7 @@ function QuestieQuestBlacklist:Load()
         [7876] = true,
         [8294] = true,
         [8295] = true,
-        -- Mark of Honor
+        -- Warsong Mark of Honor
         [7922] = true,
         [7923] = true,
         [7924] = true,
@@ -457,7 +446,21 @@ function QuestieQuestBlacklist:Load()
         [8293] = true,
         [8296] = true,
         [8568] = true,
+        [8570] = true,
         [8002] = true,
+        -- Arathi Basin
+        [8565] = true,
+        [8566] = true,
+        -- Alterac Valley
+        -- Master Ryson's All Seeing Eye
+        [6847] = true,
+        [6848] = true,
+        -- WANTED: Orcs and WANTED: Dwarves
+        [7402] = true,
+        [7428] = true,
+        [7401] = true,
+        [7427] = true,
+        -----------------------------------------------
 
         -- corrupted windblossom
         [2523] = true,
@@ -820,6 +823,7 @@ function QuestieQuestBlacklist:Load()
         [8765] = true,
         [8766] = true,
       --Phase 6 - Naxxramas
+        [9165] = true,
         [9141] = true,
         [9033] = true,
         [9034] = true,

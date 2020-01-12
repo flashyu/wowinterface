@@ -1,5 +1,5 @@
 ## Interface: 11303
-## Version: 8.0.008
+## Version: 8.0.010
 
 ## Title: CoolLine
 ## Notes: Shows cooldowns on a single bar. |cff00b3ff(Classic compatible)|r by LoneWanderer-GH
@@ -16,7 +16,7 @@
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
 
-# packaged on 20200104002038
+# packaged on 20200108214711
 
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.lua

@@ -83,7 +83,7 @@ function QuestieEventHandler:QUEST_ACCEPTED(questLogIndex, questId)
             QuestieJourney:AcceptQuest(questId)
             timer:Cancel();
             Questie:Debug(DEBUG_DEVELOP, "Accept seems correct, cancel timer");
-        else   
+        else
             Questie:Debug(DEBUG_CRITICAL, "Response is wrong for quest, waiting with timer");
         end
     end)
@@ -160,7 +160,6 @@ end
 -- client/server communication, so not every event really updates the log data.
 function QuestieEventHandler:QUEST_LOG_UPDATE()
     Questie:Debug(DEBUG_DEVELOP, "QUEST_LOG_UPDATE")
-    hasFirstQLU = true
     if playerEntered then
         Questie:Debug(DEBUG_DEVELOP, "---> Player entered world, START.")
         C_Timer.After(1, function ()
