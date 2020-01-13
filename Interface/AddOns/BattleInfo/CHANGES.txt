@@ -1,10 +1,34 @@
-lightweight tag 85161d37ed152f5883f5d1d3e0618de041bcf429 v2.3.3
+lightweight tag 0fd0733bdd78dcd87f1278f84b7b4345ae820e21 v2.3.4
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Tue Jan 7 02:04:04 2020 -0800
+Date:	Sun Jan 12 05:59:46 2020 -0800
 
-commit 85161d37ed152f5883f5d1d3e0618de041bcf429
+commit 0fd0733bdd78dcd87f1278f84b7b4345ae820e21
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Jan 7 02:04:04 2020 -0800
+Date:   Sun Jan 12 05:59:46 2020 -0800
 
-    fix nil when leaving bg
+    do not auto leave if tower/bunker still in conflict
+
+commit 97dba7896b517e5aba2001370ddbdcfeaf7bad57
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Sun Jan 12 04:51:27 2020 -0800
+
+    add setting button
+
+commit 34e39925bd4a07e89017ce22a102e61f3b986002
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Sun Jan 12 04:37:14 2020 -0800
+
+    introduce rank on tooltip
+
+commit 17ddd29927372524903bf820c0545813ddaa6b5a
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Sun Jan 12 04:16:45 2020 -0800
+
+    introduce map unit color
+
+commit 19060b359414957747d10a1f676219c67148968b
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Tue Jan 7 15:44:50 2020 -0800
+
+    fix lint
 

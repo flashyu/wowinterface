@@ -9,4 +9,5 @@ BatteInfoSettings = {
 	["focus_quickjoin"] = true,
 	["flash_icon"] = true,
 	["show_spirit_heal"] = true,
+	["map_unit_color"] = true,
 }

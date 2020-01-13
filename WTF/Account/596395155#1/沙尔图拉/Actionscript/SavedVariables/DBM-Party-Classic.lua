@@ -616,7 +616,7 @@ DBMPartyClassic_SavedStats = {
 		["challengePulls"] = 0,
 	},
 	["431"] = {
-		["normalPulls"] = 208,
+		["normalPulls"] = 212,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -624,8 +624,8 @@ DBMPartyClassic_SavedStats = {
 		["heroic25Pulls"] = 0,
 		["lfr25Pulls"] = 0,
 		["normal25Pulls"] = 0,
-		["normalLastTime"] = 130.584999999963,
-		["normalKills"] = 195,
+		["normalLastTime"] = 142.425999999978,
+		["normalKills"] = 198,
 		["mythicPulls"] = 0,
 		["heroic25Kills"] = 0,
 		["heroicKills"] = 0,
@@ -2481,7 +2481,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["371"] = {
+	["475"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -2637,7 +2637,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["BlindHunter"] = {
+	["375"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -2694,7 +2694,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["458"] = {
+	["371"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -2751,7 +2751,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["471"] = {
+	["BlindHunter"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -2865,7 +2865,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["375"] = {
+	["471"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -2884,7 +2884,7 @@ DBMPartyClassic_SavedStats = {
 		["heroicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["475"] = {
+	["458"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
