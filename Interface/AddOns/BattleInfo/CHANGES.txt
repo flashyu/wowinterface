@@ -1,34 +1,22 @@
-lightweight tag 0fd0733bdd78dcd87f1278f84b7b4345ae820e21 v2.3.4
+lightweight tag c818c83018b078f7878353a1f721248366392c89 v2.3.5
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Sun Jan 12 05:59:46 2020 -0800
+Date:	Mon Jan 13 01:47:09 2020 -0800
 
-commit 0fd0733bdd78dcd87f1278f84b7b4345ae820e21
+commit c818c83018b078f7878353a1f721248366392c89
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 05:59:46 2020 -0800
+Date:   Mon Jan 13 01:47:09 2020 -0800
 
-    do not auto leave if tower/bunker still in conflict
+    hide stat
 
-commit 97dba7896b517e5aba2001370ddbdcfeaf7bad57
+commit d6ae85f7e34848ca8edb263698da0db3886a93b3
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 04:51:27 2020 -0800
+Date:   Sun Jan 12 20:31:18 2020 -0800
 
-    add setting button
+    better addon loading handle
 
-commit 34e39925bd4a07e89017ce22a102e61f3b986002
+commit f39e6c17d721c631254b96f7900b6eb05dbe0590
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 04:37:14 2020 -0800
+Date:   Sun Jan 12 11:45:37 2020 -0800
 
-    introduce rank on tooltip
-
-commit 17ddd29927372524903bf820c0545813ddaa6b5a
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 04:16:45 2020 -0800
-
-    introduce map unit color
-
-commit 19060b359414957747d10a1f676219c67148968b
-Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Tue Jan 7 15:44:50 2020 -0800
-
-    fix lint
+    introduce stat
 

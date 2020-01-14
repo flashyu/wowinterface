@@ -25,10 +25,10 @@ RecountDB = {
 					},
 				},
 			},
-			["MainWindowHeight"] = 217.666717529297,
-			["CurDataSet"] = "OverallData",
-			["MainWindowWidth"] = 318.777801513672,
 			["LastInstanceName"] = "玛拉顿",
+			["MainWindowHeight"] = 217.666717529297,
+			["MainWindowWidth"] = 318.777801513672,
+			["CurDataSet"] = "OverallData",
 		},
 		["Helloworlds - 沙尔图拉"] = {
 			["MainWindow"] = {

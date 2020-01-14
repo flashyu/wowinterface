@@ -7,7 +7,7 @@
 ## Notes-zhTW: 提供更多實用的戰場資訊。問題與建議: farmer1992@gmail.com
 ## Author: Boshi Lian(farmer1992@gmail.com)
 ## Version: @project-version
-## SavedVariablesPerCharacter: BatteInfoSettings
+## SavedVariablesPerCharacter: BatteInfoSettings, BatteInfoStat
 
 locales.lua
 event.lua
@@ -18,4 +18,5 @@ newbattle.lua
 widgetbar.lua
 auto.lua
 map.lua
+stat.lua
 cli.lua

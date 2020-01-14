@@ -8,7 +8,7 @@ HuaJieInit = {
 	["sayck"] = false,
 	["djck"] = true,
 	["r"] = 1,
-	["wsck"] = false,
-	["key"] = true,
 	["mode"] = false,
+	["key"] = true,
+	["wsck"] = false,
 }

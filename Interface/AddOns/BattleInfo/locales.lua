@@ -547,7 +547,6 @@ L["Spirit heal AE: not dead"] = "靈魂治療 AE : 未死亡"
 L["Spirit healing ..."] = "靈魂治療中..."
 L["TITLE"] = "戰場資訊增強"
 L["TOC_NOTES"] = "提供更多實用的戰場資訊。問題與建議: farmer1992@gmail.com"
---[[Translation missing --]]
---[[ L["Wait for Bunker/Tower to be destoryed, stop auto leaving"] = "Wait for Bunker/Tower to be destoryed, stop auto leaving"--]] 
+L["Wait for Bunker/Tower to be destoryed, stop auto leaving"] = "等待堡壘/塔被摧毀，停止自動離開。"
 
 end
