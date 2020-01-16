@@ -22,26 +22,11 @@ RecountPerCharDB = {
 			["LastDamageAbility"] = "Falling",
 			["LastFightIn"] = 0,
 			["type"] = "Self",
-			["LastActive"] = 817332.762,
-			["LastEventHealthMax"] = {
-				70, -- [1]
-			},
+			["LastAbility"] = 905394.517,
+			["UnitLockout"] = 817332.762,
 			["Owner"] = false,
-			["TimeLast"] = {
-				["DamageTaken"] = 817332.762,
-				["OVERALL"] = 817332.762,
-			},
+			["LastDamageTaken"] = 1,
 			["NextEventNum"] = 2,
-			["Name"] = "Helloworlds",
-			["LastEvents"] = {
-				"Environment Falling Helloworlds Hit -1 (Physical)", -- [1]
-			},
-			["LastEventIncoming"] = {
-				true, -- [1]
-			},
-			["LastEventTimes"] = {
-				817333.432, -- [1]
-			},
 			["Fights"] = {
 				["CurrentFightData"] = {
 					["PartialResist"] = {
@@ -152,9 +137,24 @@ RecountPerCharDB = {
 					},
 				},
 			},
-			["LastDamageTaken"] = 1,
-			["UnitLockout"] = 817332.762,
-			["LastAbility"] = 820676.926,
+			["LastEvents"] = {
+				"Environment Falling Helloworlds Hit -1 (Physical)", -- [1]
+			},
+			["Name"] = "Helloworlds",
+			["LastEventTimes"] = {
+				817333.432, -- [1]
+			},
+			["LastEventIncoming"] = {
+				true, -- [1]
+			},
+			["TimeLast"] = {
+				["DamageTaken"] = 817332.762,
+				["OVERALL"] = 817332.762,
+			},
+			["LastEventHealthMax"] = {
+				70, -- [1]
+			},
+			["LastActive"] = 817332.762,
 		},
 	},
 	["FightNum"] = 0,

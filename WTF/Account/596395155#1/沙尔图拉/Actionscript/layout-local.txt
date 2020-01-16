@@ -1,6 +1,6 @@
 Version: 1
 Frame: CChatNotifierMMIcon
-FrameLevel: 953
+FrameLevel: 975
 Anchor: TOPRIGHT
 X: -138
 Y: 0

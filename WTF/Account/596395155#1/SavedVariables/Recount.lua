@@ -14,7 +14,6 @@ RecountDB = {
 					["h"] = 217.666748046875,
 				},
 			},
-			["MainWindowHeight"] = 217.666717529297,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -29,6 +28,7 @@ RecountDB = {
 			["LastInstanceName"] = "玛拉顿",
 			["CurDataSet"] = "OverallData",
 			["MainWindowWidth"] = 318.777801513672,
+			["MainWindowHeight"] = 217.666717529297,
 		},
 		["Helloworlds - 沙尔图拉"] = {
 			["MainWindowVis"] = false,

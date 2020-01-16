@@ -9,6 +9,9 @@ AtlasLootClassicDB = {
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
+			["minimap"] = {
+				["minimapPos"] = 187.051201357046,
+			},
 			["GUI"] = {
 				["point"] = {
 					nil, -- [1]
@@ -24,9 +27,6 @@ AtlasLootClassicDB = {
 					1, -- [4]
 					0, -- [5]
 				},
-			},
-			["minimap"] = {
-				["minimapPos"] = 187.051201357046,
 			},
 		},
 		["Helloworlds - 沙尔图拉"] = {

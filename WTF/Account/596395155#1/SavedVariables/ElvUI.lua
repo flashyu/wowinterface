@@ -6,7 +6,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 59168204,
+			["Actionscript"] = 64216631,
 			["Helloworlds"] = 1481357,
 		},
 	},
@@ -48,7 +48,7 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 6,
+			["currentTutorial"] = 4,
 			["general"] = {
 				["backdropfadecolor"] = {
 					["a"] = 0.69,
@@ -110,6 +110,9 @@ ElvDB = {
 							["enable"] = true,
 						},
 					},
+					["assist"] = {
+						["enable"] = false,
+					},
 					["target"] = {
 						["debuffs"] = {
 							["priority"] = "",
@@ -118,9 +121,6 @@ ElvDB = {
 						["buffs"] = {
 							["priority"] = "",
 						},
-					},
-					["assist"] = {
-						["enable"] = false,
 					},
 				},
 				["colors"] = {

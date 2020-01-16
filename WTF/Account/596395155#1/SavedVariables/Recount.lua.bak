@@ -6,7 +6,6 @@ RecountDB = {
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
-			["MainWindowVis"] = false,
 			["MainWindow"] = {
 				["Position"] = {
 					["y"] = 378.166625976563,
@@ -15,6 +14,7 @@ RecountDB = {
 					["h"] = 217.666748046875,
 				},
 			},
+			["MainWindowHeight"] = 217.666717529297,
 			["Colors"] = {
 				["Bar"] = {
 					["Bar Text"] = {
@@ -25,12 +25,13 @@ RecountDB = {
 					},
 				},
 			},
+			["MainWindowVis"] = false,
 			["LastInstanceName"] = "玛拉顿",
-			["MainWindowHeight"] = 217.666717529297,
-			["MainWindowWidth"] = 318.777801513672,
 			["CurDataSet"] = "OverallData",
+			["MainWindowWidth"] = 318.777801513672,
 		},
 		["Helloworlds - 沙尔图拉"] = {
+			["MainWindowVis"] = false,
 			["MainWindow"] = {
 				["Position"] = {
 					["w"] = 140.000015258789,
@@ -46,7 +47,6 @@ RecountDB = {
 					},
 				},
 			},
-			["MainWindowVis"] = false,
 			["CurDataSet"] = "OverallData",
 		},
 	},

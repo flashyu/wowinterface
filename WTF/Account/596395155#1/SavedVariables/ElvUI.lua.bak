@@ -6,7 +6,7 @@ ElvDB = {
 	},
 	["gold"] = {
 		["沙尔图拉"] = {
-			["Actionscript"] = 59166918,
+			["Actionscript"] = 64215758,
 			["Helloworlds"] = 1481357,
 		},
 	},
@@ -48,21 +48,21 @@ ElvDB = {
 					["height"] = 200,
 				},
 			},
-			["currentTutorial"] = 5,
+			["currentTutorial"] = 3,
 			["general"] = {
-				["bottomPanel"] = false,
-				["bordercolor"] = {
-					["r"] = 0,
-					["g"] = 0,
-					["b"] = 0,
-				},
-				["autoRepair"] = "PLAYER",
 				["backdropfadecolor"] = {
 					["a"] = 0.69,
 					["r"] = 0.13,
 					["g"] = 0.13,
 					["b"] = 0.13,
 				},
+				["bordercolor"] = {
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+				["autoRepair"] = "PLAYER",
+				["bottomPanel"] = false,
 			},
 			["movers"] = {
 				["ElvUF_Raid40Mover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,443",
@@ -90,19 +90,20 @@ ElvDB = {
 			},
 			["v11NamePlateReset"] = true,
 			["chat"] = {
+				["fade"] = false,
 				["panelColorConverted"] = true,
 				["panelHeight"] = 200,
-				["fade"] = false,
 			},
 			["unitframe"] = {
 				["auraBlacklistModifier"] = "NONE",
-				["colors"] = {
-					["colorhealthbyvalue"] = false,
-					["healthclass"] = true,
-				},
 				["units"] = {
 					["tank"] = {
 						["enable"] = false,
+					},
+					["player"] = {
+						["aurabar"] = {
+							["priority"] = "",
+						},
 					},
 					["raid40"] = {
 						["power"] = {
@@ -113,44 +114,43 @@ ElvDB = {
 						["enable"] = false,
 					},
 					["target"] = {
+						["debuffs"] = {
+							["priority"] = "",
+							["maxDuration"] = 0,
+						},
 						["buffs"] = {
 							["priority"] = "",
 						},
-						["debuffs"] = {
-							["maxDuration"] = 0,
-							["priority"] = "",
-						},
 					},
-					["player"] = {
-						["aurabar"] = {
-							["priority"] = "",
-						},
-					},
+				},
+				["colors"] = {
+					["healthclass"] = true,
+					["colorhealthbyvalue"] = false,
 				},
 			},
 			["actionbar"] = {
 				["bar3"] = {
-					["buttonsPerRow"] = 12,
 					["buttons"] = 12,
-				},
-				["bar6"] = {
-					["enabled"] = true,
-					["buttonsPerRow"] = 6,
-					["buttons"] = 6,
-				},
-				["bar2"] = {
-					["enabled"] = true,
-				},
-				["bar1"] = {
-					["backdrop"] = true,
-				},
-				["bar4"] = {
-					["point"] = "BOTTOMRIGHT",
+					["buttonsPerRow"] = 12,
 				},
 				["barPet"] = {
 					["enabled"] = false,
 				},
+				["bar1"] = {
+					["backdrop"] = true,
+				},
+				["bar6"] = {
+					["enabled"] = true,
+					["buttons"] = 6,
+					["buttonsPerRow"] = 6,
+				},
+				["bar2"] = {
+					["enabled"] = true,
+				},
 				["lockActionBars"] = false,
+				["bar4"] = {
+					["point"] = "BOTTOMRIGHT",
+				},
 			},
 			["tooltip"] = {
 				["healthBar"] = {
@@ -558,10 +558,10 @@ ElvPrivateDB = {
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {
-			["theme"] = "classic",
 			["general"] = {
 				["raidUtility"] = false,
 			},
+			["theme"] = "classic",
 			["install_complete"] = "1.07",
 		},
 		["Helloworlds - 沙尔图拉"] = {

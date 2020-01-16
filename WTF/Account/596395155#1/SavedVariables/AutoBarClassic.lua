@@ -144,14 +144,14 @@ AutoBarDB = {
 					["noPopup"] = true,
 				},
 				["AutoBarButtonShields"] = {
-					["enabled"] = true,
-					["max_popup_height"] = 1,
+					["barKey"] = "AutoBarClassBarMage",
+					["drag"] = false,
 					["buttonKey"] = "AutoBarButtonShields",
 					["defaultButtonIndex"] = "*",
 					["arrangeOnUse"] = true,
 					["buttonClass"] = "AutoBarButtonShields",
-					["barKey"] = "AutoBarClassBarMage",
-					["drag"] = false,
+					["enabled"] = true,
+					["max_popup_height"] = 1,
 				},
 				["AutoBarButtonClassBuff"] = {
 					["barKey"] = "AutoBarClassBarMage",
