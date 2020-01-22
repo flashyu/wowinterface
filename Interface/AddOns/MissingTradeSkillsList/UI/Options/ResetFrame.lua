@@ -94,7 +94,7 @@ MTSLOPTUI_RESET_FRAME = {
             end
         end
         -- sort on realm name
-        table.sort(self.realms, function(a, b)  return a.name < b.name end)
+        MTSL_TOOLS:SortArrayByProperty(self.realms, "name")
         -- build list for "first" realm
         if MTSL_TOOLS:CountItemsInArray(self.realms) <= 0 and self.ui_frame.realm_drop_down ~= nil then
             self.player_on_realms = {}
@@ -119,7 +119,7 @@ MTSLOPTUI_RESET_FRAME = {
                 table.insert(self.player_on_realms, new_player)
             end
             -- sort on player name
-            table.sort(self.player_on_realms, function(a, b)  return a.name < b.name end)
+            MTSL_TOOLS:SortArrayByProperty(self.player_on_realms, "name")
             -- Auto select first one
             local key, player = next(self.player_on_realms)
             self.current_player = player.name

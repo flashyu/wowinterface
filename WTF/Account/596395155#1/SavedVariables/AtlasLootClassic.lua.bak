@@ -5,7 +5,7 @@ AtlasLootClassicDB = {
 		["Helloworlds - 沙尔图拉"] = "Helloworlds - 沙尔图拉",
 	},
 	["global"] = {
-		["__addonrevision"] = 1040004,
+		["__addonrevision"] = 1040005,
 	},
 	["profiles"] = {
 		["Actionscript - 沙尔图拉"] = {

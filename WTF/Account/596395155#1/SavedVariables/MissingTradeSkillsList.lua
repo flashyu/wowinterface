@@ -9,8 +9,6 @@ MTSL_PLAYERS = {
 			["TRADESKILLS"] = {
 				["Cooking"] = {
 					["HIGHEST_KNOWN_RANK"] = 4,
-					["SPELLID_HIGHEST_KNOWN_RANK"] = 18260,
-					["NAME"] = "Cooking",
 					["LEARNED_SKILLS"] = {
 						2538, -- [1]
 						21143, -- [2]
@@ -52,6 +50,8 @@ MTSL_PLAYERS = {
 						3413, -- [38]
 						18260, -- [39]
 					},
+					["NAME"] = "Cooking",
+					["SPELLID_HIGHEST_KNOWN_RANK"] = 18260,
 					["AMOUNT_MISSING"] = 43,
 					["SKILL_LEVEL"] = 300,
 					["AMOUNT_LEARNED"] = 39,
@@ -103,7 +103,9 @@ MTSL_PLAYERS = {
 				},
 				["First Aid"] = {
 					["HIGHEST_KNOWN_RANK"] = 4,
-					["SPELLID_HIGHEST_KNOWN_RANK"] = 10846,
+					["MISSING_SKILLS"] = {
+						7935, -- [1]
+					},
 					["NAME"] = "First Aid",
 					["LEARNED_SKILLS"] = {
 						3275, -- [1]
@@ -123,16 +125,12 @@ MTSL_PLAYERS = {
 						10846, -- [15]
 					},
 					["AMOUNT_MISSING"] = 1,
-					["SKILL_LEVEL"] = 300,
 					["AMOUNT_LEARNED"] = 15,
-					["MISSING_SKILLS"] = {
-						7935, -- [1]
-					},
+					["SKILL_LEVEL"] = 300,
+					["SPELLID_HIGHEST_KNOWN_RANK"] = 10846,
 				},
 				["Enchanting"] = {
 					["HIGHEST_KNOWN_RANK"] = 4,
-					["SPELLID_HIGHEST_KNOWN_RANK"] = 13920,
-					["NAME"] = "Enchanting",
 					["LEARNED_SKILLS"] = {
 						7418, -- [1]
 						7421, -- [2]
@@ -241,6 +239,8 @@ MTSL_PLAYERS = {
 						7413, -- [105]
 						13920, -- [106]
 					},
+					["NAME"] = "Enchanting",
+					["SPELLID_HIGHEST_KNOWN_RANK"] = 13920,
 					["AMOUNT_MISSING"] = 24,
 					["SKILL_LEVEL"] = 300,
 					["AMOUNT_LEARNED"] = 106,
@@ -289,14 +289,23 @@ MTSLUI_PLAYER = {
 		["MTSL"] = "Vertical",
 		["DATABASE"] = "Vertical",
 	},
+	["PATCH_LEVEL_MTSL"] = 1,
+	["MINIMAP"] = {
+		["ANGLE"] = 90,
+		["ACTIVE"] = 1,
+		["SHAPE"] = "circle",
+		["RADIUS"] = 0,
+	},
+	["TOOLTIP"] = {
+		["FACTIONS"] = "current character",
+		["ACTIVE"] = 1,
+	},
 	["UI_SCALE"] = {
 		["OPTIONSMENU"] = "1.00",
 		["ACCOUNT"] = "1.00",
 		["MTSL"] = "1.00",
 		["DATABASE"] = "1.00",
 	},
-	["AUTO_SHOW_MTSL"] = 0,
-	["WELCOME_MSG"] = 1,
 	["FONT"] = {
 		["NAME"] = "ARKai_T.ttf",
 		["SIZE"] = {
@@ -305,11 +314,7 @@ MTSLUI_PLAYER = {
 			["TEXT"] = 10,
 		},
 	},
-	["PATCH_LEVEL_MTSL"] = 1,
-	["MINIMAP"] = {
-		["ACTIVE"] = 0,
-		["SHAPE"] = "circle",
-		["RADIUS"] = 0,
-	},
+	["WELCOME_MSG"] = 1,
+	["AUTO_SHOW_MTSL"] = 0,
 	["MTSL_LOCATION"] = "right",
 }

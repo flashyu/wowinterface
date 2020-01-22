@@ -34,6 +34,24 @@ MTSL_LOGIC_FACTION_REPUTATION = {
     end,
 
     ------------------------------------------------------------------------------------------------
+    -- Returns the id of a faction by (English) name
+    --
+    -- @faction_name	String	    The (English) name of the faction
+    --
+    -- returns 			Number		The id of the faction (-1 if not found, 0 for neutral)
+    ------------------------------------------------------------------------------------------------
+    GetFactionIdByName = function(self, faction_name)
+        local faction_id = -1
+        local faction = MTSL_TOOLS:GetItemFromArrayByKeyValueIgnoringLocalisation(MTSL_DATA["factions"], "name", faction_name)
+        if faction ~= nil then
+            faction_id = faction.id
+        elseif faction_name == "Neutral" then
+            faction_id = 0
+        end
+        return faction_id
+    end,
+
+    ------------------------------------------------------------------------------------------------
     -- Returns the name (localised) of a reputation level by id
     --
     -- @level_id		Number		The id of the repuation level

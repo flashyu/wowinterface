@@ -118,15 +118,16 @@ MTSLUI_TOOLS = {
 	----------------------------------------------------------------------------------------
 	PrintHelpMessage = function (self)
 		self:PrintAboutMessage()
-		print("/mtsl"  .. MTSLUI_FONTS.TAB .. MTSLUI_FONTS.TAB .. MTSLUI_FONTS.TAB .."Opens the configuration/options menu")
-		print("/mtsl config")
-		print("/mtsl options")
-		print("/mstl about" .. MTSLUI_FONTS.TAB .. "Print information about this addon")
-		print("/mstl help" .. MTSLUI_FONTS.TAB .. "Print how to use this addon")
-        print("/mstl acc " .. MTSLUI_FONTS.TAB  .. "Opens the account wide frame")
-        print("/mstl account")
-		print("/mstl db" .. MTSLUI_FONTS.TAB .. "Opens the database explorer window")
-        print("/mstl database")
+		local slashtext = "/mtsl"
+		print(slashtext  .. MTSLUI_FONTS.TAB .. MTSLUI_FONTS.TAB .. MTSLUI_FONTS.TAB .. "Opens the configuration/options menu")
+		print(slashtext .. " config")
+		print(slashtext .. " options")
+		print(slashtext .. " about" .. MTSLUI_FONTS.TAB .. "Print information about this addon")
+		print(slashtext .. " help" .. MTSLUI_FONTS.TAB .. "Print how to use this addon")
+        print(slashtext .. " acc" .. MTSLUI_FONTS.TAB  .. "Opens the account wide frame")
+        print(slashtext .. " account")
+		print(slashtext .. " db" .. MTSLUI_FONTS.TAB .. "Opens the database explorer window")
+        print(slashtext .. " database")
 	end,
 
 	------------------------------------------------------------------------------------------------

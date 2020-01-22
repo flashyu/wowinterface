@@ -11,3 +11,14 @@ BatteInfoSettings = {
 	["flash_icon"] = true,
 	["focus_quickjoin"] = true,
 }
+BatteInfoStat = {
+	{
+		["start"] = 1579103756,
+	}, -- [1]
+	{
+		["start"] = 1579103756,
+	}, -- [2]
+	{
+		["start"] = 1579103756,
+	}, -- [3]
+}

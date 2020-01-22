@@ -53,14 +53,25 @@ MTSL_LOGIC_PLAYER_NPC = {
             print(MTSLUI_FONTS.COLORS.TEXT.WARNING .. "MTSL: Saving new player. Please open all profession windows to save skills")
             -- new player added so sort the table (first the realms, then for new realm, sort by name
             MTSL_PLAYERS[realm][name] = current_player
-            table.sort(MTSL_PLAYERS, function(a, b) return a < b end)
-            table.sort(MTSL_PLAYERS[realm], function(a, b) return a.name < b.name end)
+            MTSL_TOOLS:SortArray(MTSL_PLAYERS)
+            MTSL_TOOLS:SortArrayByProperty(MTSL_PLAYERS[realm], "name")
         elseif MTSLUI_SAVED_VARIABLES:GetShowWelcomeMessage() == 1 then
             print(MTSLUI_FONTS.COLORS.TEXT.SUCCESS .. "MTSL: " .. current_player.NAME .. " (" .. current_player.XP_LEVEL .. ", " .. current_player.FACTION .. ") on " .. current_player.REALM .. " loaded")
         end
         -- set the loaded or created player as current one
         MTSL_CURRENT_PLAYER = current_player
         -- Update faction & xp_level, just in case
+        MTSL_CURRENT_PLAYER.XP_LEVEL = xp_level
+        MTSL_CURRENT_PLAYER.FACTION = faction
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    --- Update the XP level & faction of a player (called after a "ding")
+    ------------------------------------------------------------------------------------------------
+    UpdatePlayerInfo = function(self)
+        local faction = UnitFactionGroup("player")
+        local xp_level = UnitLevel("player")
+
         MTSL_CURRENT_PLAYER.XP_LEVEL = xp_level
         MTSL_CURRENT_PLAYER.FACTION = faction
     end,
@@ -103,6 +114,84 @@ MTSL_LOGIC_PLAYER_NPC = {
             return MTSL_PLAYERS[realm][name]
         end
         return nil
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns the players on current realm except current player
+    --
+    -- returns 	Array		The list of players
+    ------------------------------------------------------------------------------------------------
+    GetOtherPlayersOnCurrentRealm = function(self)
+        local players = {}
+        if MTSL_CURRENT_PLAYER ~= nil then
+            -- loop all players on the current realm
+            for k, v in pairs (MTSL_PLAYERS[MTSL_CURRENT_PLAYER.REALM]) do
+                -- skip if name is same as current player
+                if k ~= MTSL_CURRENT_PLAYER.NAME then
+                    table.insert(players, v)
+                end
+            end
+        end
+
+        return MTSL_TOOLS:SortArrayByProperty(players, "NAME")
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns the players on current realm with same faction except current player
+    --
+    -- returns 	Array		The list of players
+    ------------------------------------------------------------------------------------------------
+    GetOtherPlayersOnCurrentRealmSameFaction = function(self)
+        local players = {}
+        if MTSL_CURRENT_PLAYER ~= nil then
+            -- loop all players on the current realm
+            for k, v in pairs (MTSL_PLAYERS[MTSL_CURRENT_PLAYER.REALM]) do
+                -- skip if name is same as current player
+                if k ~= MTSL_CURRENT_PLAYER.NAME and v.FACTION == MTSL_CURRENT_PLAYER.FACTION then
+                    table.insert(players, v)
+                end
+            end
+        end
+
+        return MTSL_TOOLS:SortArrayByProperty(players, "NAME")
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns the players on current realm except current player that learned a profession
+    --
+    -- returns 	Array		The list of players
+    ------------------------------------------------------------------------------------------------
+    GetOtherPlayersOnCurrentRealmLearnedProfession = function(self, profession_name)
+        local other_players = self:GetOtherPlayersOnCurrentRealm()
+        local players = {}
+        -- loop all players on the current realm
+        for k, v in pairs (other_players) do
+           -- skip if he doesnt know the profession
+            if v.TRADESKILLS ~= nil and v.TRADESKILLS[profession_name] ~= nil and v.TRADESKILLS[profession_name] ~= 0 then
+                table.insert(players, v)
+            end
+        end
+
+        return MTSL_TOOLS:SortArrayByProperty(players, "NAME")
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns the players on current realm and same faction except current player that learned a profession
+    --
+    -- returns 	Array		The list of players
+    ------------------------------------------------------------------------------------------------
+    GetOtherPlayersOnCurrentRealmSameFactionLearnedProfession = function(self, profession_name)
+        local other_players = self:GetOtherPlayersOnCurrentRealmSameFaction()
+        local players = {}
+        -- loop all players on the current realm
+        for k, v in pairs (other_players) do
+            -- skip if he doesnt know the profession
+            if v.TRADESKILLS ~= nil and v.TRADESKILLS[profession_name] ~= nil then
+                table.insert(players, v)
+            end
+        end
+
+        return MTSL_TOOLS:SortArrayByProperty(players, "NAME")
     end,
 
     ------------------------------------------------------------------------------------------------
@@ -194,11 +283,7 @@ MTSL_LOGIC_PLAYER_NPC = {
             end
         end
 
-        if learned_skills ~= nil or learned_skills ~= {} then
-            table.sort(learned_skills, function(a, b) return a.min_skill < b.min_skill end)
-        end
-
-        return learned_skills
+        return MTSL_TOOLS:SortArrayByProperty(learned_skills, "min_skill")
     end,
 
     ------------------------------------------------------------------------------------------------
@@ -313,10 +398,10 @@ MTSL_LOGIC_PLAYER_NPC = {
         local known_professions = {}
         if player ~= nil then
             for k, v in pairs(player.TRADESKILLS) do
-                -- only add if actualy initiallised
+                -- only add if initialised
                 if v ~= 0 then
-                    -- add english name to list
-                    table.insert(known_professions, MTSLUI_LOCALES_PROFESSIONS[MTSLUI_CURRENT_LANGUAGE][k])
+                    -- add english name to list (should already be localised when saved)
+                    table.insert(known_professions, k)
                 end
             end
         end
@@ -353,7 +438,7 @@ MTSL_LOGIC_PLAYER_NPC = {
         end
         -- get the list of available skills in the current phase for the profession (= English names)
         -- zone = 0 for all zones
-        local available_skills = MTSL_LOGIC_PROFESSION:GetAllAvailableSkillsForProfessionInZone(profession_name, MTSLUI_SAVED_VARIABLES:GetPatchLevelMTSL(), 0)
+        local available_skills = MTSL_LOGIC_PROFESSION:GetAllAvailableSkillsForProfessionInZone(profession_name,MTSL_DATA.CURRENT_PATCH_LEVEL, 0)
 
         -- Loop all skills of the profession
         for _, skill in pairs(available_skills) do
@@ -436,11 +521,33 @@ MTSL_LOGIC_PLAYER_NPC = {
             end
         end
 
-        -- Sort the mobs by name in the table
-        table.sort(npcs, function(a,b) return a["name"][MTSLUI_CURRENT_LANGUAGE] < b["name"][MTSLUI_CURRENT_LANGUAGE] end)
+        -- Return the found npcs
+        return MTSL_TOOLS:SortArrayByLocalisedProperty(npcs, "name")
+    end,
+
+    -----------------------------------------------------------------------------------------------
+    -- Gets a list of all npcs (based on their ids) ignoring the player's faction
+    --
+    -- @ids					Array		The ids of NPCs to search
+    --
+    -- return				Array		List of found NPCs
+    ------------------------------------------------------------------------------------------------
+    GetNpcsIgnoreFactionByIds = function(self, ids)
+        local npcs = {}
+
+        for k, id in pairs(ids)
+        do
+            local npc = self:GetNpcById(id)
+            -- If we found one, check if the faction is valid (= neutral OR the same faction as player
+            if npc ~= nil then
+                table.insert(npcs, npc)
+            else
+                print(MTSLUI_FONTS.COLORS.TEXT.ERROR .. "MTSL - Could not find NPC with id " .. id .. ". Please report this bug!")
+            end
+        end
 
         -- Return the found npcs
-        return npcs
+        return MTSL_TOOLS:SortArrayByLocalisedProperty(npcs, "name")
     end,
 
     -----------------------------------------------------------------------------------------------
@@ -478,11 +585,8 @@ MTSL_LOGIC_PLAYER_NPC = {
             end
         end
 
-        -- Sort the mobs by name in the table
-        table.sort(mobs, function(a,b) return a["name"][MTSLUI_CURRENT_LANGUAGE] < b["name"][MTSLUI_CURRENT_LANGUAGE] end)
-
-        -- Return the found npcs
-        return mobs
+        -- Return the found mobs sorted by name
+        return MTSL_TOOLS:SortArrayByLocalisedProperty(mobs, "name")
     end,
 
     ----------------------------------------------------------------------------
@@ -557,12 +661,8 @@ MTSL_LOGIC_PLAYER_NPC = {
                 table.insert(realm_names, k)
             end
         end
-        -- sort if we have realms
-        if realm_names ~= {} then
-            table.sort(realm_names, function (a, b) return a < b end)
-        end
 
-        return realm_names
+        return MTSL_TOOLS:SortArray(realm_names)
     end,
 
     -----------------------------------------------------------------------------------------------
@@ -586,12 +686,8 @@ MTSL_LOGIC_PLAYER_NPC = {
                 end
             end
         end
-        -- sort if we have realms
-        if realm_names ~= {} then
-            table.sort(realm_names, function (a, b) return a < b end)
-        end
 
-        return realm_names
+        return MTSL_TOOLS:SortArray(realm_names)
     end,
 
     -----------------------------------------------------------------------------------------------

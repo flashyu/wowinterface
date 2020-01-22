@@ -62,13 +62,13 @@ MTSLUI_LIST_FRAME = {
         -- default sort by name
         self.current_sort = 1
         -- default select current phase
-        self.current_phase = MTSLUI_SAVED_VARIABLES:GetPatchLevelMTSL()
+        self.current_phase = MTSL_DATA.CURRENT_PATCH_LEVEL
         -- Default database wide
         self:UpdatePlayerLevels(0, 0)
         self.profession_skills = {}
         self.shown_skills = {}
         self.amount_shown_skills = 0
-        self.current_specialization = 0
+        self.current_specialisation = 0
         self.search_name_skill = ""
         self.current_source = "any"
         self.player_list_frame = nil
@@ -107,7 +107,7 @@ MTSLUI_LIST_FRAME = {
     UpdateList = function (self, missing_skills)
         self.profession_skills = missing_skills
 
-        self.shown_skills = MTSL_LOGIC_PROFESSION:FilterListOfSkills(self.profession_skills, self.profession_name, self.search_name_skill, self.current_source, self.current_specialization, self.current_phase, self.current_zone)
+        self.shown_skills = MTSL_LOGIC_PROFESSION:FilterListOfSkills(self.profession_skills, self.profession_name, self.search_name_skill, self.current_source, self.current_specialisation, self.current_phase, self.current_zone, self.current_faction_id)
         self.amount_shown_skills = MTSL_TOOLS:CountItemsInArray(self.shown_skills)
 
         -- sort the list
@@ -261,7 +261,7 @@ MTSLUI_LIST_FRAME = {
     -- The list is empty
     ----------------------------------------------------------------------------------------------------------
     NoSkillsToShow = function(self)
-        -- dselect current skill & button
+        -- deselect current skill & button
         self:DeselectCurrentSkillButton()
         self.selected_list_item_index = nil
         self.selected_list_item_id = nil
@@ -340,7 +340,7 @@ MTSLUI_LIST_FRAME = {
                     end
                 end)
             else
-                table.sort(self.shown_skills, function(a, b) return a.name[MTSLUI_CURRENT_LANGUAGE] < b.name[MTSLUI_CURRENT_LANGUAGE] end)
+                MTSL_TOOLS:SortArrayByLocalisedProperty(self.shown_skills, "name")
             end
         end
     end,
@@ -349,9 +349,11 @@ MTSLUI_LIST_FRAME = {
     -- Change the name of skills searched for
     ----------------------------------------------------------------------------------------------------------
     ChangeSearchNameSkill = function(self, new_search_name_skill)
+        print("Searching for " .. new_search_name_skill)
         -- Only change if new one
         if self.search_name_skill ~= new_search_name_skill then
             self.search_name_skill = new_search_name_skill
+            print("Actualy searching")
             self:RefreshList()
         end
     end,
@@ -381,10 +383,10 @@ MTSLUI_LIST_FRAME = {
     ----------------------------------------------------------------------------------------------------------
     -- Change the specialisation of contents shown in the list
     ----------------------------------------------------------------------------------------------------------
-    ChangeSpecialization = function(self, new_specialization)
+    ChangeSpecialisation = function(self, new_specialisation)
         -- Only change if new one
-        if self.current_specialization ~= new_specialization then
-            self.current_specialization = new_specialization
+        if self.current_specialisation ~= new_specialisation then
+            self.current_specialisation = new_specialisation
             self:RefreshList()
         end
     end,
@@ -396,6 +398,17 @@ MTSLUI_LIST_FRAME = {
         -- Only change if new one
         if self.current_zone ~= new_zone then
             self.current_zone = new_zone
+            self:RefreshList()
+        end
+    end,
+
+    ----------------------------------------------------------------------------------------------------------
+    -- Change the phase of contents shown in the list
+    ----------------------------------------------------------------------------------------------------------
+    ChangeFaction = function(self, new_faction_id)
+        -- Only change if new one
+        if self.current_faction_id ~= new_faction_id then
+            self.current_faction_id = new_faction_id
             self:RefreshList()
         end
     end,

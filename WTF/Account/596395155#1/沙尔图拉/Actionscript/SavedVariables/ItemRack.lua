@@ -93,8 +93,7 @@ ItemRackUser = {
 	["EnableEvents"] = "ON",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
-		["14152"] = 30,
-		["14022"] = 30,
+		["17067"] = 30,
 	},
 	["Events"] = {
 		["Enabled"] = {

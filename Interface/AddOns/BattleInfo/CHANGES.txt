@@ -1,22 +1,28 @@
-lightweight tag c818c83018b078f7878353a1f721248366392c89 v2.3.5
+lightweight tag 0c410de020d08d3cc976018103d3016559e4f3d5 v2.3.6
 Author:	Boshi Lian <farmer1992@gmail.com>
-Date:	Mon Jan 13 01:47:09 2020 -0800
+Date:	Sat Jan 18 20:22:40 2020 -0800
 
-commit c818c83018b078f7878353a1f721248366392c89
+commit 0c410de020d08d3cc976018103d3016559e4f3d5
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Mon Jan 13 01:47:09 2020 -0800
+Date:   Sat Jan 18 20:22:40 2020 -0800
 
-    hide stat
+    prevent battle conflict
 
-commit d6ae85f7e34848ca8edb263698da0db3886a93b3
+commit 1c963cdd6e4939e3835c5816e97216ccfe7a2a5f
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 20:31:18 2020 -0800
+Date:   Fri Jan 17 21:02:16 2020 -0800
 
-    better addon loading handle
+    something may cause leave timer reset
 
-commit f39e6c17d721c631254b96f7900b6eb05dbe0590
+commit c8d0f6f1b5cd7c0d44a72110fb0b47eec5c55570
 Author: Boshi Lian <farmer1992@gmail.com>
-Date:   Sun Jan 12 11:45:37 2020 -0800
+Date:   Wed Jan 15 02:24:26 2020 -0800
 
-    introduce stat
+    add rest btn
+
+commit 52a037be2e9e58add528c9762044c79a05e437ae
+Author: Boshi Lian <farmer1992@gmail.com>
+Date:   Wed Jan 15 00:53:50 2020 -0800
+
+    color stat
 

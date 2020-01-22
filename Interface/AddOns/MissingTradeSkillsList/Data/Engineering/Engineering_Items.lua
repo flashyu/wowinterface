@@ -262,6 +262,27 @@ MTSL_DATA["Engineering"]["items"] = {
 		["quality"] = "uncommon",
 	},
 	{
+		["phase"] = 1,
+		["id"] = 7192,
+		["drops"] = {
+			["mobs"] = {
+				7800
+			},
+		},
+		["name"] = {
+			["Russian"] = "Чертеж: гоблинские реактивные сапоги",
+			["Portuguese"] = "Diagrama: Botas-foguete Goblínicas",
+			["Chinese"] = "结构图：地精火箭靴",
+			["Spanish"] = "Esquema: botas cohete goblin",
+			["Mexican"] = "Esquema: botas cohete goblin",
+			["French"] = "Schéma : Bottes-fusées gobelines",
+			["German"] = "Bauplan: Goblin-Raketenstiefel",
+			["Korean"] = "설계도: 고블린 로켓 장화",
+			["English"] = "Schematic: Goblin Rocket Boots",
+		},
+		["quality"] = "uncommon",
+	},
+	{
 		["vendors"] = {
 			["sources"] = {
 				5175,

@@ -177,7 +177,7 @@ MTSL_TOOLS = {
 	----------------------------------------------------------------------------------------------------------
 	CountItemsInArray = function(self, list)
 		local amount = 0
-		if list ~= nil then
+		if list ~= nil and list ~= {} then
 			amount = #list
 		end
 		return amount
@@ -244,6 +244,27 @@ MTSL_TOOLS = {
 	end,
 
 	-----------------------------------------------------------------------------------------------
+	-- Gets an item (based on it's keyvalue) from an array that ignores localisation (so uses English value)
+	--
+	-- @array			Array		The array to search
+	-- @key_name		String		The name of the key to use to compare values
+	-- @key_value		Object		The value of the key to search
+	--
+	-- return			Object		Found item (nil if not found)
+	------------------------------------------------------------------------------------------------
+	GetItemFromArrayByKeyValueIgnoringLocalisation = function(self, array, key_name, key_value)
+		if key_value ~= nil then
+			for k, v in pairs(array) do
+				if v[key_name] ~= nil and v[key_name]["English"] == key_value then
+					return v
+				end
+			end
+		end
+		-- item not found
+		return nil
+	end,
+
+	-----------------------------------------------------------------------------------------------
 	-- Gets all items (based on it's keyvalue) from an array
 	--
 	-- @array			Array		The array to search
@@ -274,14 +295,14 @@ MTSL_TOOLS = {
 	-- return			boolean		Flag indicating if number is foundFound skill (nil if not  in list)
 	------------------------------------------------------------------------------------------------
 	ListContainsNumber = function(self, list, number)
-		if list == nil then
+		if list == nil or list == {} then
 			return false
 		end
 		local i = 1
 		while list[i] ~= nil and list[i] ~= number do
 			i = i + 1
 		end
-		return list[i] == nil
+		return list[i] ~= nil
 	end,
 
 	------------------------------------------------------------------------------------------------
@@ -293,7 +314,7 @@ MTSL_TOOLS = {
 	-- return			boolean		Flag indicating if number is foundFound skill (nil if not  in list)
 	------------------------------------------------------------------------------------------------
 	ListContainsKey = function(self, list, key)
-		if list == nil then
+		if list == nil or list == {} then
 			return false
 		end
 		for _, k in pairs(list) do
@@ -314,7 +335,7 @@ MTSL_TOOLS = {
     -- return			boolean		Flag indicating if number is foundFound skill (nil if not  in list)
     ------------------------------------------------------------------------------------------------
     ListContainsKeyIngoreCasingAndSpaces = function(self, list, key)
-        if list == nil then
+        if list == nil or list == {} then
             return false
         end
         for _, k in pairs(list) do
@@ -335,7 +356,7 @@ MTSL_TOOLS = {
 	-- return			boolean		Flag indicating if number is foundFound skill (nil if not  in list)
 	------------------------------------------------------------------------------------------------
 	NamedListContainsKey = function(self, list, key)
-		if list == nil then
+		if list == nil or list == {} then
 			return false
 		end
 		for k, v in pairs(list) do
@@ -358,5 +379,49 @@ MTSL_TOOLS = {
         local lowered = string.lower(text)
         local stripped_text,_ = string.gsub(lowered, "%s", "")
         return stripped_text
-    end
+    end,
+
+	------------------------------------------------------------------------------------------------
+	-- Sorts an array
+	--
+	-- @array			Array		The array to sort
+	--
+	-- return			Array		Sorted array
+	------------------------------------------------------------------------------------------------
+	SortArray = function (self, array)
+		if array ~= nil and array ~= {} then
+			table.sort(array, function (a, b) return a < b end)
+		end
+		return array
+	end,
+
+	------------------------------------------------------------------------------------------------
+	-- Sorts an array by property
+	--
+	-- @array			Array		The array to sort
+	-- @property			String		The name of the property to sort addon
+	--
+	-- return			Array		Sorted array
+	------------------------------------------------------------------------------------------------
+	SortArrayByProperty = function (self, array, property)
+		if array ~= nil and array ~= {} then
+			table.sort(array, function (a, b) return a[property] < b[property] end)
+		end
+		return array
+	end,
+
+	------------------------------------------------------------------------------------------------
+	-- Sorts an array by property using localisation
+	--
+	-- @array			Array		The array to sort
+	-- @property		String		The name of the property to sort addon
+	--
+	-- return			Array		Sorted array
+	------------------------------------------------------------------------------------------------
+	SortArrayByLocalisedProperty = function (self, array, property)
+		if array ~= nil and array ~= {} then
+			table.sort(array, function (a, b) return a[property][MTSLUI_CURRENT_LANGUAGE] < b[property][MTSLUI_CURRENT_LANGUAGE] end)
+		end
+		return array
+	end,
 }

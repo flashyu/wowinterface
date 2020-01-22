@@ -1,5 +1,40 @@
 ## Version History
 
+### Latest version (v1.13.32)
+
+* Added enhancement to tooltip to show status of your other characters (on same realm) for the recipe
+    * Green = learned
+    * Orange = not learned but high enough skill to learn
+    * Red = not learned and too low skill
+* Added options to optionsmenu
+    * Enhance tooltip (Default on)
+    * Show all alts on same realm or only only alts with same faction (Default = same faction)
+* Removed options from optionsmenu
+    * Set content patch/phase level (now hardcoded again)
+* Added label to show content phase in detailswindow of a skill
+* Fixed a bug where source type for alternative source of skill did not show properly
+* Fixed a bug where searching for partial skill did not always result in correct skills list
+* Fixed a bug where skills with multiple sources did not filter correctly when choosing a specific zone
+* Added an option to filter by faction (Alliance, Horde or any faction that uses reputation)
+* Removed labels in filter frame to save space => added text to the "Any" option for each filter
+ 
+
+### v1.13.31
+
+* Fixed bug that always opened MTSL window even if option was disabled
+* Fixed bug in options menu where checkboxes were always shown as checked even if they were not
+* Added an event to capture "ding" of player to update XP level while playing
+* Fixed bug where MTSL account explorer did not work for other locales then English
+* Fixed a refresh bug in MTSL account explorer when changing characters, the list did not update
+* Slashcommands now work case insensitive
+
+### v1.13.30
+
+* Fixed the help text with wrong slashcommand text
+* Added lots of missing Korean & Chinese quest names
+* Added poisons
+* Fixed bug where Current Zone of player did not update/display correct in the filter frame
+
 ### v1.13.29
 
 * Fixed some wrong Chinese translations
@@ -66,13 +101,13 @@
 
 ### v1.13.21
 
-*   Added specializations to spells (Blacksmithing, Engineering & Leatherworking)
+*   Added specialisations to spells (Blacksmithing, Engineering & Leatherworking)
 *   Fixed some engineering recipes
 *   Fixed bug with lower trained ranks still shown in list
 *   Only hooked MTSL to SkilletFrame if also used/visible
 *   Replaced sort option by level/name by option to search by (partial) name
 *   Added filter option for source type of skill (Trainer, Quest, Vendor, Drop, Object)
-*   Added filter option for specializations
+*   Added filter option for specialisations
 
 ### v1.13.20
 

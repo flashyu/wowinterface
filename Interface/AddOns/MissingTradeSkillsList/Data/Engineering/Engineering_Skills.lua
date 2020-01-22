@@ -1500,13 +1500,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["phase"] = 1,
 	}, -- [56]
 	{
-		["trainers"] = {
-			["price"] = 0,
-			["sources"] = {
-				8126, -- [1]
-				8738, -- [2]
-			},
-		},
+		["item"] = 7192,
 		["name"] = {
 			["German"] = "Goblin-Raketenstiefel",
 			["Spanish"] = "Botas cohete goblin",
@@ -1518,10 +1512,9 @@ MTSL_DATA["Engineering"]["skills"] = {
 			["Russian"] = "Гоблинские реактивные сапоги",
 			["English"] = "Goblin Rocket Boots",
 		},
-		["min_skill"] = 225,
+		["min_skill"] = 130,
 		["phase"] = 1,
-		["id"] = 8895,
-		["specialization"] = 20222,
+		["id"] = 8896,
 	}, -- [57]
 	{
 		["item"] = 7560,
@@ -2118,7 +2111,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12715,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [85]
 	{
 		["trainers"] = {
@@ -2141,7 +2134,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12716,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [86]
 	{
 		["trainers"] = {
@@ -2165,7 +2158,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12717,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [87]
 	{
 		["trainers"] = {
@@ -2189,7 +2182,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12718,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [88]
 	{
 		["trainers"] = {
@@ -2213,7 +2206,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 225,
 		["phase"] = 1,
 		["id"] = 12754,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [89]
 	{
 		["trainers"] = {
@@ -2237,7 +2230,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 230,
 		["phase"] = 1,
 		["id"] = 12755,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [90]
 	{
 		["trainers"] = {
@@ -2261,7 +2254,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 235,
 		["phase"] = 1,
 		["id"] = 12758,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [91]
 	{
 		["trainers"] = {
@@ -2285,7 +2278,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 240,
 		["phase"] = 1,
 		["id"] = 12759,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [92]
 	{
 		["trainers"] = {
@@ -2309,7 +2302,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12760,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [93]
 	{
 		["trainers"] = {
@@ -2334,7 +2327,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 200,
 		["phase"] = 1,
 		["id"] = 12895,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [94]
 	{
 		["trainers"] = {
@@ -2358,7 +2351,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 210,
 		["phase"] = 1,
 		["id"] = 12897,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [95]
 	{
 		["trainers"] = {
@@ -2382,7 +2375,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 12899,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [96]
 	{
 		["trainers"] = {
@@ -2406,7 +2399,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 210,
 		["phase"] = 1,
 		["id"] = 12902,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [97]
 	{
 		["trainers"] = {
@@ -2430,7 +2423,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 215,
 		["phase"] = 1,
 		["id"] = 12903,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [98]
 	{
 		["trainers"] = {
@@ -2454,7 +2447,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 225,
 		["phase"] = 1,
 		["id"] = 12905,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [99]
 	{
 		["trainers"] = {
@@ -2478,7 +2471,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 230,
 		["phase"] = 1,
 		["id"] = 12906,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [100]
 	{
 		["trainers"] = {
@@ -2502,7 +2495,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 215,
 		["phase"] = 1,
 		["id"] = 12907,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [101]
 	{
 		["trainers"] = {
@@ -2526,7 +2519,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 240,
 		["phase"] = 1,
 		["id"] = 12908,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [102]
 	{
 		["trainers"] = {
@@ -2549,7 +2542,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 205,
 		["phase"] = 1,
 		["id"] = 13240,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [103]
 	{
 		["trainers"] = {
@@ -2591,7 +2584,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 			["English"] = "Pet Bombling",
 		},
 		["id"] = 15628,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [105]
 	{
 		["item"] = 11827,
@@ -2609,7 +2602,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 			["English"] = "Lil' Smoky",
 		},
 		["id"] = 15633,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [106]
 	{
 		["trainers"] = {
@@ -3302,7 +3295,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 			["English"] = "World Enlarger",
 		},
 		["id"] = 23129,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [145]
 	{
 		["trainers"] = {
@@ -3325,7 +3318,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 260,
 		["phase"] = 1,
 		["id"] = 23486,
-		["specialization"] = 20222,
+		["specialisation"] = 20222,
 	}, -- [146]
 	{
 		["trainers"] = {
@@ -3348,7 +3341,7 @@ MTSL_DATA["Engineering"]["skills"] = {
 		["min_skill"] = 260,
 		["phase"] = 1,
 		["id"] = 23489,
-		["specialization"] = 20219,
+		["specialisation"] = 20219,
 	}, -- [147]
 	{
 		["item"] = 19027,

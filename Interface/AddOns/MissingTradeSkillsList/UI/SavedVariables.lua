@@ -89,10 +89,17 @@ MTSLUI_SAVED_VARIABLES = {
             MTSLUI_FONTS:Initialise()
 
             -- only reset the minimap
-            if MTSLUI_PLAYER.MINIMAP == nil then
+            if MTSLUI_PLAYER.MINIMAP == nil or MTSLUI_PLAYER.MINIMAP ~= {} then
                 self:ResetMinimap()
             else
                 self:ValidateMinimap()
+            end
+
+            -- only reset the tooltip
+            if MTSLUI_PLAYER.TOOLTIP == nil or MTSLUI_PLAYER.TOOLTIP ~= {} then
+                self:ResetEnhancedTooltip()
+            else
+                self:ValidateEnhancedTooltip()
             end
 
             self:SetMTSLLocation(MTSLUI_PLAYER.MTSL_LOCATION)
@@ -112,6 +119,7 @@ MTSLUI_SAVED_VARIABLES = {
         MTSLUI_PLAYER.AUTO_SHOW_MTSL = 1
         MTSLUI_PLAYER.PATCH_LEVEL_MTSL = MTSL_DATA.MIN_PATCH_LEVEL
         self:ResetMinimap()
+        self:ResetTooltip()
     end,
 
     ------------------------------------------------------------------------------------------------
@@ -191,6 +199,14 @@ MTSLUI_SAVED_VARIABLES = {
         MTSLUI_MINIMAP:Show()
     end,
 
+    ------------------------------------------------------------------------------------------------
+    -- Reset all tooltip values to default
+    ------------------------------------------------------------------------------------------------
+    ResetEnhancedTooltip = function(self)
+        MTSLUI_PLAYER.TOOLTIP = {}
+        MTSLUI_PLAYER.TOOLTIP.FACTIONS = "current character"
+        MTSLUI_PLAYER.TOOLTIP.ACTIVE = 1
+    end,
     ------------------------------------------------------------------------------------------------
     -- Load the saved splitmode from saved variable
     ------------------------------------------------------------------------------------------------
@@ -528,16 +544,75 @@ MTSLUI_SAVED_VARIABLES = {
     end,
 
     ------------------------------------------------------------------------------------------------
+    -- Gets the number of content patch used to show data
+    --
+    -- return			Number          The number of content patch
+    ------------------------------------------------------------------------------------------------
+    GetPatchLevelMTSL = function(self)
+        if MTSLUI_PLAYER.PATCH_LEVEL_MTSL == nil then
+            MTSLUI_PLAYER.PATCH_LEVEL_MTSL = 1
+        end
+        return MTSLUI_PLAYER.PATCH_LEVEL_MTSL
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Sets the flag to say if we enhance tooltip or not
+    --
+    -- @enhance_tooltip        Number          Flag indicating to show or not (1 = yes, 0 = no)
+    ------------------------------------------------------------------------------------------------
+    SetEnhancedTooltipActive = function(self, enhance_tooltip)
+        MTSLUI_PLAYER.TOOLTIP.ACTIVE = 1
+        if enhance_tooltip == 0 or enhance_tooltip == false then
+            MTSLUI_PLAYER.TOOLTIP.ACTIVE = 0
+        end
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Gets the flag to say if we enhance tooltip or not
+    --
+    -- return			Number          Flag indicating to enhance tooltip or not (1 = yes, 0 = no)
+    ------------------------------------------------------------------------------------------------
+    GetEnhancedTooltipActive = function(self)
+        return MTSLUI_PLAYER.TOOLTIP.ACTIVE
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Sets the factions to show in the ehanced tooltip
+    --
+    -- @show_factions        String          Factions to show ("any" or "current player")
+    ------------------------------------------------------------------------------------------------
+    SetEnhancedTooltipFaction = function(self, show_factions)
+        MTSLUI_PLAYER.TOOLTIP.FACTIONS = "current character"
+        if show_factions == "any" then
+            MTSLUI_PLAYER.TOOLTIP.FACTIONS = show_factions
+        end
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Gets the factions to show in the ehanced tooltip
+    --
+    -- return			 String          Factions to show ("any" or "current player")
+    ------------------------------------------------------------------------------------------------
+    GetEnhancedTooltipFaction = function(self)
+        return MTSLUI_PLAYER.TOOLTIP.FACTIONS
+    end,
+
+    ValidateEnhancedTooltip = function(self)
+        self:SetEnhancedTooltipActive(MTSLUI_PLAYER.TOOLTIP.ACTIVE)
+        self:SetEnhancedTooltipFaction(MTSLUI_PLAYER.TOOLTIP.FACTIONS)
+    end,
+
+    ------------------------------------------------------------------------------------------------
     -- Sets the flag to say if we show minimapbutton or not
     --
     -- @show_minimap        Number          Flag indicating to show or not (1 = yes, 0 = no)
     ------------------------------------------------------------------------------------------------
     SetMinimapButtonActive = function(self, show_minimap)
-        MTSLUI_PLAYER.MINIMAP.ACTIVE = 0
-        MTSLUI_MINIMAP:Hide()
-        if show_minimap == 1 or show_minimap == true then
-            MTSLUI_PLAYER.MINIMAP.ACTIVE = 1
-            MTSLUI_MINIMAP:Show()
+        MTSLUI_PLAYER.MINIMAP.ACTIVE = 1
+        MTSLUI_MINIMAP:Show()
+        if show_minimap == 0 or show_minimap == false then
+            MTSLUI_PLAYER.MINIMAP.ACTIVE = 0
+            MTSLUI_MINIMAP:Hide()
         end
     end,
 
@@ -548,18 +623,6 @@ MTSLUI_SAVED_VARIABLES = {
     ------------------------------------------------------------------------------------------------
     GetMinimapButtonActive = function(self)
         return MTSLUI_PLAYER.MINIMAP.ACTIVE
-    end,
-
-    ------------------------------------------------------------------------------------------------
-    -- Gets the number of content patch used to show data
-    --
-    -- return			Number          The number of content patch
-    ------------------------------------------------------------------------------------------------
-    GetPatchLevelMTSL = function(self)
-        if MTSLUI_PLAYER.PATCH_LEVEL_MTSL == nil then
-            MTSLUI_PLAYER.PATCH_LEVEL_MTSL = 1
-        end
-        return MTSLUI_PLAYER.PATCH_LEVEL_MTSL
     end,
 
     ------------------------------------------------------------------------------------------------

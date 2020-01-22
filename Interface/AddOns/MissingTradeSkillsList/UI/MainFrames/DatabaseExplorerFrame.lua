@@ -6,10 +6,10 @@ MTSLUI_DATABASE_EXPLORER_FRAME = MTSL_TOOLS:CopyObject(MTSLUI_BASE_FRAME)
 
 -- Custom properties
 MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_WIDTH_VERTICAL_SPLIT = 1253
-MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_HEIGHT_VERTICAL_SPLIT = 470
+MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_HEIGHT_VERTICAL_SPLIT = 471
 
 MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_WIDTH_HORIZONTAL_SPLIT = 868
-MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_HEIGHT_HORIZONTAL_SPLIT = 740
+MTSLUI_DATABASE_EXPLORER_FRAME.FRAME_HEIGHT_HORIZONTAL_SPLIT = 744
 
     ---------------------------------------------------------------------------------------
     -- Shows the frame
@@ -77,12 +77,12 @@ function MTSLUI_DATABASE_EXPLORER_FRAME:CreateCompontentFrames()
     self.profession_list_frame = MTSL_TOOLS:CopyObject(MTSLUI_PROFESSION_LIST_FRAME)
     self.profession_list_frame:Initialise(self.title_frame.ui_frame, "MTSLDBUI_PROFESSION_LIST_FRAME")
     -- position left under titleframe
-    self.profession_list_frame.ui_frame:SetPoint("TOPLEFT", self.title_frame.ui_frame, "BOTTOMLEFT", 3, -5)
+    self.profession_list_frame.ui_frame:SetPoint("TOPLEFT", self.title_frame.ui_frame, "TOPLEFT", 4, -6)
     -- Copy & init the filter frame
     self.skill_list_filter_frame = MTSL_TOOLS:CopyObject(MTSLUI_FILTER_FRAME)
     self.skill_list_filter_frame:Initialise(self.profession_list_frame.ui_frame, "MTSLDBUI_SKILL_LIST_FILTER_FRAME")
     -- position under TitleFrame and right of ProfessionListFrame
-    self.skill_list_filter_frame.ui_frame:SetPoint("TOPLEFT", self.profession_list_frame.ui_frame, "TOPRIGHT", 0, 0)
+    self.skill_list_filter_frame.ui_frame:SetPoint("TOPLEFT", self.profession_list_frame.ui_frame, "TOPRIGHT", 0, -33)
     -- Copy & init the list frame
     self.skill_list_frame = MTSL_TOOLS:CopyObject(MTSLUI_LIST_FRAME)
     self.skill_list_frame:Initialise(self.skill_list_filter_frame.ui_frame, "MTSLDBUI_SKILL_LIST_FRAME")
@@ -101,7 +101,7 @@ function MTSLUI_DATABASE_EXPLORER_FRAME:CreateCompontentFrames()
     self.player_list_frame = MTSL_TOOLS:CopyObject(MTSLUI_PLAYER_LIST_FRAME)
     self.player_list_frame:Initialise(self.player_filter_frame.ui_frame, "MTSLDBUI_PLAYER_LIST_FRAME")
     -- position under the filter frame
-    self.player_list_frame.ui_frame:SetPoint("TOPLEFT", self.player_filter_frame.ui_frame, "BOTTOMLEFT", 0, -7)
+    self.player_list_frame.ui_frame:SetPoint("TOPLEFT", self.player_filter_frame.ui_frame, "BOTTOMLEFT", 0, -8)
 end
 
 function MTSLUI_DATABASE_EXPLORER_FRAME:LinkFrames()

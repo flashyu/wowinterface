@@ -3,7 +3,7 @@
 ## Author: Thumbkin
 ## Notes: Shows missing skills & recipes for a profession and where to get them.
 ## SavedVariables: MTSL_PLAYERS, MTSLUI_PLAYER
-## Version: 1.13.29
+## Version: 1.13.32
 
 #
 # Load all global variables, saved variables & locale
@@ -11,7 +11,6 @@
 
 Data\GlobalVariables.lua
 
-Logic\GlobalVariables.lua
 Logic\SavedVariables.lua
 
 UI\GlobalVariables.lua
@@ -30,7 +29,7 @@ Data\Objects.lua
 Data\Quests.lua
 Data\Continents.lua
 Data\Zones.lua
-Data\Specializations.lua
+Data\Specialisations.lua
 
 # Alchemy
 Data\Alchemy\Alchemy_Levels.lua
@@ -71,6 +70,11 @@ Data\Leatherworking\Leatherworking_Items.lua
 Data\Mining\Mining_Levels.lua
 Data\Mining\Mining_Skills.lua
 Data\Mining\Mining_Items.lua
+
+# Poisons
+Data\Poisons\Poisons_Levels.lua
+Data\Poisons\Poisons_Skills.lua
+Data\Poisons\Poisons_Items.lua
 
 # Tailoring
 Data\Tailoring\Tailoring_Levels.lua
@@ -126,6 +130,9 @@ UI\MainFrames\MissingTradeSkillsFrame.lua
 
 # MinimapButton
 UI\MinimapButton.lua
+
+# Tooltip
+UI\Tooltip.lua
 
 # Initialise the frames & start the addon
 MissingTradeSkillsList.lua

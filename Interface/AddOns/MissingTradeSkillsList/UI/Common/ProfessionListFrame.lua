@@ -12,7 +12,7 @@ MTSLUI_PROFESSION_LIST_FRAME = {
     -- width of the frame
     FRAME_WIDTH = 45,
     -- height of the frame
-    FRAME_HEIGHT = 415,
+    FRAME_HEIGHT = 465,
     selected_index,
 
 ----------------------------------------------------------------------------------------------------------
@@ -98,6 +98,9 @@ MTSLUI_PROFESSION_LIST_FRAME = {
     ----------------------------------------------------------------------------------------------------------
     ChangePlayer = function(self, player_name, player_realm)
         self.current_player = MTSL_LOGIC_PLAYER_NPC:GetPlayerOnRealm(player_name, player_realm)
+        -- remove current selected profession, to force update later
+        self.selected_index = nil
+        self.list_item_frame.profession_name = nil
 
         local professions_to_show = MTSL_LOGIC_PLAYER_NPC:GetKnownProfessionsForPlayer(player_realm, player_name)
         self:UpdateProfessions(professions_to_show)
@@ -136,7 +139,6 @@ MTSLUI_PROFESSION_LIST_FRAME = {
                 end
                 i = i + 1
             end
-        -- no professions to show so hide all
         else
             local i = 1
             while MTSL_NAME_PROFESSIONS[i] ~= nil do
@@ -156,6 +158,7 @@ MTSLUI_PROFESSION_LIST_FRAME = {
             -- disable the effects of filtering
             self.filter_frame:DisableFiltering()
             -- clear the shown contents
+            self.list_item_frame:UpdateList(nil)
             self.list_item_frame:NoSkillsToShow()
         end
     end,

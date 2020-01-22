@@ -1,6 +1,6 @@
 Version: 1
 Frame: CChatNotifierMMIcon
-FrameLevel: 975
+FrameLevel: 1045
 Anchor: TOPRIGHT
 X: -138
 Y: 0
@@ -62,3 +62,10 @@ X: 10
 Y: 121
 W: 543
 H: 330
+Frame: DBM_GUI_OptionsFrame
+FrameLevel: 5
+Anchor: CENTER
+X: 0
+Y: 0
+W: 800
+H: 510

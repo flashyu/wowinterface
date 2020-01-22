@@ -9,6 +9,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
     -- array holding all labels shown on this panel, for easy acces later
     labels = {
         name = {},
+        phase = {},
         min_skill = {},
         requires_xp = {},
         requires_rep = {},
@@ -42,11 +43,11 @@ MTSLUI_SKILL_DETAIL_FRAME = {
     -- height of the primary sources frame
     FRAME_SOURCES_HEIGHT = 305,
     -- shows up to 17 sources
-    MAX_SOURCES_SHOWN_PRIMARY = 17,
+    MAX_SOURCES_SHOWN_PRIMARY = 16,
     -- height of the frame with alternative source
     FRAME_ALT_SOURCES_HEIGHT = 135,
     -- shows up to 7 alternative sources
-    MAX_SOURCES_SHOWN_SECONDARY = 7,
+    MAX_SOURCES_SHOWN_SECONDARY = 6,
     -- save the texts for the tooltips
     tooltip_skill_name,
     tooltip_source_name,
@@ -78,6 +79,10 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         self.labels.name.tooltip_frame:SetScript("OnEnter", function() event_class:ToolTipShowSkillName() end)
         self.labels.name.tooltip_frame:SetScript("OnLeave", function() _G.GameTooltip:Hide() end)
         text_label_top = text_label_top - text_gap
+        -- Labels to show "Phase: <phase>"
+        self.labels.phase.title = MTSLUI_TOOLS:CreateLabel(self.ui_frame, MTSLUI_LOCALES_LABELS["phase"][MTSLUI_CURRENT_LANGUAGE], text_label_left, text_label_top, "LABEL", "TOPLEFT")
+        self.labels.phase.value = MTSLUI_TOOLS:CreateLabel(self.ui_frame, "-", text_label_right, text_label_top, "TEXT", "TOPLEFT")
+        text_label_top = text_label_top - text_gap
         -- Labels to show "Required skill: <min skill>"
         self.labels.min_skill.title = MTSLUI_TOOLS:CreateLabel(self.ui_frame, MTSLUI_LOCALES_LABELS["needs skill level"][MTSLUI_CURRENT_LANGUAGE], text_label_left, text_label_top, "LABEL", "TOPLEFT")
         self.labels.min_skill.value = MTSLUI_TOOLS:CreateLabel(self.ui_frame, "-", text_label_right, text_label_top, "TEXT", "TOPLEFT")
@@ -91,7 +96,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         self.labels.requires_rep.value = MTSLUI_TOOLS:CreateLabel(self.ui_frame, "-", text_label_right, text_label_top, "TEXT", "TOPLEFT")
         text_label_top = text_label_top - text_gap
         -- Labels to show "Required reputation: <reputation>"
-        self.labels.requires_spec.title = MTSLUI_TOOLS:CreateLabel(self.ui_frame, MTSLUI_LOCALES_LABELS["needs specialization"][MTSLUI_CURRENT_LANGUAGE], text_label_left, text_label_top, "LABEL", "TOPLEFT")
+        self.labels.requires_spec.title = MTSLUI_TOOLS:CreateLabel(self.ui_frame, MTSLUI_LOCALES_LABELS["needs specialisation"][MTSLUI_CURRENT_LANGUAGE], text_label_left, text_label_top, "LABEL", "TOPLEFT")
         self.labels.requires_spec.value = MTSLUI_TOOLS:CreateLabel(self.ui_frame, "-", text_label_right, text_label_top, "TEXT", "TOPLEFT")
         text_label_top = text_label_top - text_gap
         -- Labels to show "Holiday <holiday>"
@@ -142,7 +147,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         -- hide on creation
         self.labels.sources.ui_frame:Show()
         text_label_right = 130
-        text_label_top = text_label_top + 2
+        text_label_top = text_label_top + 2 - text_gap - text_gap - text_gap
         self.labels.alt_type.title = MTSLUI_TOOLS:CreateLabel(self.ui_frame, MTSLUI_LOCALES_LABELS["also learned from"][MTSLUI_CURRENT_LANGUAGE], text_label_left, text_label_top, "LABEL", "TOPLEFT")
         self.labels.alt_type.value = MTSLUI_TOOLS:CreateLabel(self.ui_frame, "-", text_label_right, text_label_top, "TEXT", "TOPLEFT")
         -- create a frame to hover over and show the tooltip
@@ -165,7 +170,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         -- hide on creation
         self.labels.alt_sources.ui_frame:Show()
         self.labels.alt_sources.values = {}
-        text_label_top = -5
+        text_label_top = 0 - 5 - text_gap - text_gap
         text_label_right = 15
         -- Create the labels for sources
         for i=1,self.MAX_SOURCES_SHOWN_SECONDARY do
@@ -255,6 +260,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
     ---------------------------------------------------------------------------
     ShowNoSkillSelected = function(self)
         self.labels.name.value:SetText("-")
+        self.labels.phase.value:SetText("-")
         self.labels.min_skill.value:SetText("-")
         self.labels.requires_xp.value:SetText("-")
         self.labels.requires_rep.value:SetText("-")
@@ -291,11 +297,12 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         if skill ~= nil then
             -- Generic labelsetting for every type
             self.labels.name.value:SetText(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. skill["name"][MTSLUI_CURRENT_LANGUAGE])
+            self:SetRequiredPhase(skill.phase)
             self:SetRequiredSkillLevel(skill.min_skill, current_skill_level)
             -- Set minimum xp level
             self:SetRequiredXPLevel(skill.min_xp_level, current_xp_level)
             self:SetRequiredReputationWithFaction(skill.reputation)
-            self:SetRequiredSpecialization(profession_name, skill.specialization)
+            self:SetRequiredSpecialisation(profession_name, skill.specialisation)
             self:SetRequiredSpecialAction(skill.special_action)
             -- clear the price
             self.labels.price.value:SetText(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. "-")
@@ -325,6 +332,22 @@ MTSLUI_SKILL_DETAIL_FRAME = {
             self.tooltip_skill_name = "spell:"..skill.id
             -- TODO UPDATE: Update the Character Screen
             -- MTSLDBUI_CHARS_SELECTED_SKILL_FRAME:RefreshUI(profession_name, skill.id)
+        end
+    end,
+
+    ----------------------------------------------------------------------------
+    -- Show the details of a phase level required
+    --
+    -- @min_phase               Number	    The minimum phase level required to learn the skill
+    ----------------------------------------------------------------------------
+    SetRequiredPhase = function(self, min_phase)
+        if min_phase == nil or min_phase <= 0  then
+            min_phase = MTSL_DATA.MIN_PATCH_LEVEL
+        end
+        if min_phase <= MTSL_DATA.CURRENT_PATCH_LEVEL then
+            self.labels.phase.value:SetText(MTSLUI_FONTS.COLORS.AVAILABLE.YES .. min_phase)
+        else
+            self.labels.phase.value:SetText(MTSLUI_FONTS.COLORS.AVAILABLE.NO .. min_phase)
         end
     end,
 
@@ -383,20 +406,20 @@ MTSLUI_SKILL_DETAIL_FRAME = {
     end,
 
     ----------------------------------------------------------------------------
-    -- Show the details of a specialization required for the skill
+    -- Show the details of a specialisation required for the skill
     --
     -- @profession_name         String      The name of the profession
     -- @rspecialisation 	    Number      The number of the specialisation
     ----------------------------------------------------------------------------
-    SetRequiredSpecialization = function(self, profession_name, specialization)
-        -- Check if require specialization to acquire
-        if specialization ~= nil and specialization > 0 then
-            local name_spec = MTSL_LOGIC_PROFESSION:GetNameSpecialization(profession_name, specialization)
+    SetRequiredSpecialisation = function(self, profession_name, specialisation)
+        -- Check if require specialisation to acquire
+        if specialisation ~= nil and specialisation > 0 then
+            local name_spec = MTSL_LOGIC_PROFESSION:GetNameSpecialisation(profession_name, specialisation)
             -- global database so show neutral color
             if self.current_xp_level == nil or self.current_xp_level <= 0 then
                 self.labels.requires_spec.value:SetText(MTSLUI_FONTS.COLORS.AVAILABLE.ALL .. name_spec)
             -- check if player knows the specialisation by using its spellid
-            elseif IsSpellKnown(specialization) then
+            elseif IsSpellKnown(specialisation) then
                 self.labels.requires_spec.value:SetText(MTSLUI_FONTS.COLORS.AVAILABLE.YES .. name_spec)
             else
                 self.labels.requires_spec.value:SetText(MTSLUI_FONTS.COLORS.AVAILABLE.NO .. name_spec)
@@ -450,6 +473,7 @@ MTSLUI_SKILL_DETAIL_FRAME = {
     -- @trainers_info		MTSLDATA	Contains the price from trainer and list of souces with npc ids
     ----------------------------------------------------------------------------------------------------
     ShowDetailsOfSkillTypeTrainer = function(self, trainers_info)
+        -- No need to update the phase, all are available since 1
         self.labels.price.value:SetText(MTSL_TOOLS:GetNumberAsMoneyString(trainers_info.price))
         self.labels.type.value:SetText(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. MTSLUI_LOCALES_LABELS["trainer"][MTSLUI_CURRENT_LANGUAGE])
         self.labels.source.value:SetText(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. MTSLUI_LOCALES_LABELS["trainer"][MTSLUI_CURRENT_LANGUAGE])
@@ -489,6 +513,8 @@ MTSLUI_SKILL_DETAIL_FRAME = {
 
         -- check if quest is availbe to us
         if quest ~= nil then
+            -- update phase if needed
+            self:SetRequiredPhase(quest.phase)
             self:SetSourceType(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. MTSLUI_LOCALES_LABELS["quest"][MTSLUI_CURRENT_LANGUAGE] .. " : " .. quest["name"][MTSLUI_CURRENT_LANGUAGE], is_alternative_source, is_primary_type)
             -- show xp level requirements if any
             self:SetRequiredXPLevel(quest.min_xp_level, current_xp_level)
@@ -517,9 +543,9 @@ MTSLUI_SKILL_DETAIL_FRAME = {
                 self:ShowDetailsOfItems(items, is_alternative_source)
                 -- update the corresponding tooltip to show info on the item
                 if is_alternative_source == 0  then
-                    self.tooltip_source_name = "item:" .. quest.items[1].id
+                    self.tooltip_source_name = "item:" .. quest.items[1]
                 else
-                    self.tooltip_alt_source_name  = "item:" ..  quest.items[1].id
+                    self.tooltip_alt_source_name  = "item:" ..  quest.items[1]
                 end
             end
             -- show the objects
@@ -572,6 +598,8 @@ MTSLUI_SKILL_DETAIL_FRAME = {
         if item  == nil then
             print(MTSLUI_FONTS.COLORS.TEXT.ERROR .. "MTSL - Count not find item with id " .. item_id .. " for profession " .. profession_name .. ". Please report this bug!")
         else
+            -- update phase if needed
+            self:SetRequiredPhase(item.phase)
             self:SetRequiredXPLevel(item.min_xp_level)
             self:SetRequiredReputationWithFaction(item.reputation)
             self:SetRequiresHoliday(item.holiday)
@@ -611,6 +639,8 @@ MTSLUI_SKILL_DETAIL_FRAME = {
                 if amount_sources > 1 then
                     -- adjust the height of the source frames to split situation
                     self.labels.alt_sources.title:Show()
+                    self.labels.alt_source.title:Show()
+                    self.labels.alt_source.value:Show()
                     self.labels.alt_type.title:Show()
                     self.labels.alt_type.value:Show()
                 else
@@ -657,8 +687,8 @@ MTSLUI_SKILL_DETAIL_FRAME = {
                     -- alternative/secundary source
                     else
                         -- also set the recipe as alternative source item
-                        self:SetSourceType(MTSLUI_FONTS:GetTextColorByItemQuality(item.quality) .. item["name"][MTSLUI_CURRENT_LANGUAGE], 1, is_primary_type)
-                        self:SetSourceType(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. MTSLUI_LOCALES_LABELS["mobs"][MTSLUI_CURRENT_LANGUAGE], is_alternative_source, 1)
+                        self:SetSourceType(MTSLUI_FONTS:GetTextColorByItemQuality(item.quality) .. item["name"][MTSLUI_CURRENT_LANGUAGE], 1, 0)
+                        self:SetSourceType(MTSLUI_FONTS.COLORS.TEXT.NORMAL .. MTSLUI_LOCALES_LABELS["mobs"][MTSLUI_CURRENT_LANGUAGE], 1, 1)
                         self.labels.alt_sources.title:SetText(MTSLUI_FONTS.COLORS.TEXT.TITLE .. MTSLUI_LOCALES_LABELS["dropped by"][MTSLUI_CURRENT_LANGUAGE])
                         -- check if drop of mob or world drops
                         if item.drops.mobs_range ~= nil then

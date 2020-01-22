@@ -15,6 +15,8 @@ MTSL_DATA = {
     -- Secundary professions (no fishing because it doesn't have atradeskillframe)
     ["Cooking"] = {},
     ["First Aid"] = {},
+    -- Rogue only
+    ["Poisons"] = {},
     -- all game items/objects we need in 1 array
     ["Objects"] = {},
     ["NPCs"] = {},
@@ -24,27 +26,30 @@ MTSL_DATA = {
     -- Counters keeping track of total amount of skill (this includes AMOUNT_TRADESKILL_LEVELS)
     ["AMOUNT_SKILLS"] = {
         ["Tailoring"] = 230,
-        ["Blacksmithing"] = 258,
+        ["Blacksmithing"] = 257,
         ["Alchemy"] = 115,
         ["Mining"] = 16,
         ["First Aid"] = 17,
         ["Cooking"] = 85,
         ["Engineering"] = 170,
         ["Leatherworking"] = 241,
+        ["Poisons"] = 22,
         ["Enchanting"] = 155,
     },
     -- holds counters for how many skills can be learned up the current content phase (counted using DEV MODe of APP)
     ["AMOUNT_SKILLS_CURRENT_PHASE"] = {
         ["Tailoring"] = 203,
-        ["Blacksmithing"] = 222,
+        ["Blacksmithing"] = 221,
         ["Alchemy"] = 109,
         ["Mining"] = 16,
         ["First Aid"] = 16,
         ["Cooking"] = 83,
         ["Engineering"] = 168,
         ["Leatherworking"] = 211,
+        ["Poisons"] = 21,
         ["Enchanting"] = 130,
     },
     MIN_PATCH_LEVEL = 1,
+    CURRENT_PATCH_LEVEL = 3,
     MAX_PATCH_LEVEL = 6,
 }

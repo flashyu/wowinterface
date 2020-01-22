@@ -16,8 +16,8 @@ MTSL_DATA["Blacksmithing"]["items"] = {
 		},
 		["drops"] = {
 			["mobs_range"] = {
-				["min_xp_level"] = 9,
-				["max_xp_level"] = 37,
+				["min_xp_level"] = 10,
+				["max_xp_level"] = 26,
 			},
 		},
 		["id"] = 2881,
@@ -104,8 +104,8 @@ MTSL_DATA["Blacksmithing"]["items"] = {
 		},
 		["drops"] = {
 			["mobs_range"] = {
-				["min_xp_level"] = 1,
-				["max_xp_level"] = 47,
+				["min_xp_level"] = 5,
+				["max_xp_level"] = 17,
 			},
 		},
 		["id"] = 3609,
@@ -126,7 +126,7 @@ MTSL_DATA["Blacksmithing"]["items"] = {
 		},
 		["drops"] = {
 			["mobs_range"] = {
-				["min_xp_level"] = 1,
+				["min_xp_level"] = 5,
 				["max_xp_level"] = 25,
 			},
 		},

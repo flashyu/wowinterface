@@ -16,8 +16,8 @@ MTSL_LOGIC_SKILL = {
         local available = true
         if skill.phase ~= nil and skill.phase > max_phase then
             available = false
-        -- Ignore checks if we check for MTSL_MAX_PHASE cause then all are available
-        elseif max_phase < MTSL_MAX_PHASE then
+        -- Ignore checks if we check for MTSL_DATA.MAX_PATCH_LEVEL cause then all are available
+        elseif max_phase < MTSL_DATA.MAX_PATCH_LEVEL then
             -- check if at least one of the sources is available in the current or previous phases
             -- With trainers, quest or object a skill is always available
             -- Check for the content phase of the item
@@ -199,12 +199,29 @@ MTSL_LOGIC_SKILL = {
                 end
             end
             if order_by_name then
-                table.sort(skills, function (a, b) return a["name"][MTSLUI_CURRENT_LANGUAGE] < b["name"][MTSLUI_CURRENT_LANGUAGE] end)
+                MTSL_TOOLS:SortArrayByLocalisedProperty(skills, "name")
             else
-                table.sort(skills, function (a, b) return a.min_skill < b.min_skill end)
+                MTSL_TOOLS:SortArrayByProperty(skills, "min_skill")
             end
             return skills
         end
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns a skill for a certain profession based on the recipe id its learned from
+    --
+    -- @item_id			Number		The id of the item (source of the skill)
+    -- @prof_name		String		Name of the profession
+    --
+    -- returns	 		Array		The skills
+    ------------------------------------------------------------------------------------------------
+    GetSkillForProfessionByItemId = function(self, item_id, profession_name)
+        local skill = MTSL_TOOLS:GetItemFromArrayByKeyValue(MTSL_DATA[profession_name]["skills"], "item", item_id)
+        -- try a level if nil
+        if skill == nil then
+            skill = MTSL_TOOLS:GetItemFromArrayByKeyValue(MTSL_DATA[profession_name]["levels"], "item", item_id)
+        end
+        return skill
     end,
 
     ------------------------------------------------------------------------------------------------
@@ -290,9 +307,133 @@ MTSL_LOGIC_SKILL = {
     -----------------------------------------------------------------------------------------
     IsAvailableForSourceType = function(self, skill_id, profession_name, source_type)
         local source_types = self:GetSourcesForSkillForProfessionById(skill_id, profession_name)
-        --if MTSL_TOOLS:CountItemsInArray(source_types) <= 0 then
-        --    print(skill_id .. " - " .. profession_name .. " has 0 sources")
-        --end
         return MTSL_TOOLS:ListContainsKey(source_types, source_type)
+    end,
+
+    ------------------------------------------------------------------------------------------------
+    -- Returns a list of factions for a skill for a certain profession by id
+    --
+    -- @skill_id		    Number		The id of the skill
+    -- @profession_name		String		Name of the profession
+    --
+    -- returns	 		    Array		The factions
+    ------------------------------------------------------------------------------------------------
+    GetFactionsForSkillForProfessionById = function(self, skill_id, profession_name)
+        local factions = {}
+        local skill = MTSL_TOOLS:GetItemFromArrayByKeyValue(MTSL_DATA[profession_name]["skills"], "id", skill_id)
+        -- try a level if nil
+        if skill == nil then
+            skill = MTSL_TOOLS:GetItemFromArrayByKeyValue(MTSL_DATA[profession_name]["levels"], "id", skill_id)
+        end
+        -- if we find the skill of the profession, search for factions
+        if skill ~= nil then
+            -- loop trainers
+            if skill.trainers ~= nil then
+                local trainers = MTSL_LOGIC_PLAYER_NPC:GetNpcsIgnoreFactionByIds(skill.trainers.sources)
+                for _, t in pairs(trainers) do
+                    self:AddFactionForDataToArray(factions, t)
+                end
+            end
+            if skill.object then
+                table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Alliance"))
+                table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Horde"))
+            end
+            -- try reputation/reacts on skill itself
+            self:AddFactionForDataToArray(factions, skill)
+            -- if learned from item, add the factions based on the item source
+            if skill.item ~= nil then
+                local item = MTSL_LOGIC_ITEM_OBJECT:GetItemForProfessionById(skill.item, profession_name)
+                if item ~= nil then
+                    self:AddFactionForDataToArray(factions, item)
+                    if item.vendors ~= nil then
+                        local vendors = MTSL_LOGIC_PLAYER_NPC:GetNpcsIgnoreFactionByIds(item.vendors.sources)
+                        -- loop all the vendors
+                        for _, v in pairs(vendors) do
+                            self:AddFactionForDataToArray(factions, v)
+                        end
+                    end
+                    -- it is is a drop of mobs or learned from object or special action, add both alliance and horde
+                    if item.drops or item.object or item.special_action then
+                        table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Alliance"))
+                        table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Horde"))
+                    end
+                    -- if its from quest, add NPC/questgivers
+                    if item.quests then
+                        -- loop all quests
+                        for _, v in pairs(item.quests) do
+                            local quest = MTSL_TOOLS:GetItemFromUnsortedListById(MTSL_DATA["quests"], v)
+                            if quest ~= nil then
+                                self:AddFactionForDataToArray(factions, quest)
+                                -- loop all the NPC/questgivers
+                                if quest.npcs ~= nil then
+                                    local npcs = MTSL_LOGIC_PLAYER_NPC:GetNpcsIgnoreFactionByIds(quest.npcs)
+                                    -- loop all the vendors
+                                    for _, n in pairs(npcs) do
+                                        self:AddFactionForDataToArray(factions, n)
+                                    end
+                                -- no questgivers so assume alliance and horde can get it
+                                else
+                                    table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Alliance"))
+                                    table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Horde"))
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            -- if we learned from object
+            if skill.quests ~= nil then
+                -- loop all quests
+                for _, v in pairs(skill.quests) do
+                    local quest = MTSL_TOOLS:GetItemFromUnsortedListById(MTSL_DATA["quests"], v)
+                    if quest ~= nil then
+                        self:AddFactionForDataToArray(factions, quest)
+                        -- loop all the NPC/questgivers
+                        if quest.npcs ~= nil then
+                            local npcs = MTSL_LOGIC_PLAYER_NPC:GetNpcsIgnoreFactionByIds(quest.npcs)
+                            -- loop all the vendors
+                            for _, n in pairs(npcs) do
+                                self:AddFactionForDataToArray(factions, n)
+                            end
+                            -- no questgivers so assume alliance and horde can get it
+                        else
+                            table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Alliance"))
+                            table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Horde"))
+                        end
+                    end
+                end
+            end
+        end
+
+        return factions
+    end,
+
+    AddFactionForDataToArray = function (self, array, data)
+        if data.reputation ~= nil then
+            table.insert(array, tonumber(data.reputation.faction_id))
+        end
+        if data.reacts ~= nil then
+            table.insert(array, tonumber(MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName(data.reacts)))
+        end
+    end,
+
+    ----------------------------------------------------------------------------------------
+    -- Checks if at skill is avaiable through a source type
+    --
+    -- @skill_id		    Number		The id of the skill
+    -- @profession_name		String		Name of the profession
+    -- @faction_id			Number		The id of the faction from which we must be able to learn skill (0 = all)
+    --
+    -- return				Boolean		Flag indicating obtainable
+    -----------------------------------------------------------------------------------------
+    IsAvailableForFaction = function(self, skill_id, profession_name, faction_id)
+        local factions = self:GetFactionsForSkillForProfessionById(skill_id, profession_name)
+        if MTSL_TOOLS:CountItemsInArray(factions) <= 0 then
+            -- add alliance and horde for now
+            -- print(profession_name .. " skill " .. skill_id .. " has " .. MTSL_TOOLS:CountItemsInArray(factions) .. " available factions")
+            table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Alliance"))
+            table.insert(factions, MTSL_LOGIC_FACTION_REPUTATION:GetFactionIdByName("Horde"))
+        end
+        return MTSL_TOOLS:ListContainsNumber(factions, tonumber(faction_id))
     end,
 }

@@ -93,9 +93,7 @@ ItemRackUser = {
 	["CurrentSet"] = "A",
 	["Alpha"] = 1,
 	["ItemsUsed"] = {
-		["14152"] = 30,
 		["17067"] = 30,
-		["14022"] = 30,
 	},
 	["Events"] = {
 		["Enabled"] = {
